@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+
+// Footer Sub
+.footer-sub {
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .sub-img {
+        margin: 0px 10px;
+    }
+
+    .img-nbtc {
+        width: 70px;
+    }
+
+    .img-yimsoo {
+        width: 90px;
+    }
+
+    .img-nstda {
+        width: 170px;
+        height: auto;
+    }
+
+    .img-nectec {
+        width: 170px;
+        height: auto;
+    }
+}

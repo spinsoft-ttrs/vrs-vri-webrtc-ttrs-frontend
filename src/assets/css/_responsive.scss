@@ -1,0 +1,2069 @@
+@charset 'UTF-8';
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+    .horizontal {
+        display: block !important;
+
+        .no-horizontal {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            z-index: 99999;
+            background: linear-gradient(90deg, rgba(77, 177, 235, 1) 18%, rgba(22, 138, 206, 1) 100%);
+
+            .loading-logo {
+                .logo {
+                    width: 100px;
+                    margin: 0px auto;
+
+                    img {
+                        animation: rotate 2.5s ease infinite backwards;
+                    }
+
+                    @-webkit-keyframes rotate {
+                        0% {
+                            -webkit-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                        }
+
+                        50% {
+                            -webkit-transform: rotate(0deg);
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            -webkit-transform: rotate(0deg);
+                            transform: rotate(0deg);
+                        }
+                    }
+                }
+
+                p {
+                    text-align: center;
+                    color: #fff;
+                    font-size: 18px;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    // index Loading
+    .loading-home {
+
+        .loading-logo {
+
+            .logo {
+                width: 80px;
+            }
+        }
+
+        .loading-holdon {
+
+            .loading {
+
+                p {
+                    margin: 5px auto;
+                }
+
+                .logo {
+                    width: 90px;
+                }
+
+                .progress-center {
+                    height: 5px;
+                    border: 1px solid #fff;
+                }
+            }
+        }
+    }
+
+    // Footer Sub
+    .footer-sub {
+
+        .img-nbtc {
+            width: 30px;
+        }
+
+        .img-yimsoo {
+            width: 35px;
+        }
+
+        .img-nstda {
+            width: 90px;
+            height: auto;
+        }
+
+        .img-nectec {
+            width: 90px;
+            height: auto;
+        }
+    }
+
+    // Log In
+    .log-in {
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        .login_box {
+            .log-in_box {
+                width: 80%;
+
+                .logo {
+                    width: 70px;
+
+                    .logo-hand2-blue {
+                        margin-top: 20px;
+                    }
+                }
+
+                .ipt_log-in {
+
+                    .input-group {
+                        margin: 15px 0px;
+
+                        .input-group-prepend {
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        .form-control {
+                            font-size: 12px;
+                            padding: 0px;
+                        }
+
+                        .forget {
+                            font-size: 12px;
+                            width: 65px;
+                        }
+                    }
+
+                    .btn-login {
+                        font-size: 14px;
+                        padding: 5px 10px;
+                    }
+
+                    .btn:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .register_box {
+
+            .sec_register {
+                width: 80%;
+                margin: 2rem auto;
+
+                .btn-register {
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    background-color: #0E6DAF;
+                    border-color: #0E6DAF;
+                    color: #fff;
+                }
+
+                .btn-guest {
+                    font-size: 14px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+    // Guest User
+    .guest-user {
+        .guest-user_box {
+            .th_national_card {
+                width: 80%;
+
+                .national_card {
+                    width: 80%;
+                    margin: 2rem auto;
+                }
+            }
+        }
+
+        .guest-user_box1 {
+            .ipt_log-in {
+                width: 80%;
+
+                .sec_confirm {
+                    .btn-confirm {
+                        padding: 5px 10px;
+                        margin: 5px 0px;
+                    }
+
+                    .btn-cancel {
+                        padding: 5px 10px;
+                        margin: 5px 0px;
+                    }
+
+                    .mt-5 {
+                        margin-top: 2rem !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // How to Use
+    .how-to-use {
+        height: auto;
+        padding: 2rem 0rem;
+
+        .btn-back {
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-top: 2rem;
+        }
+    }
+
+    // Map Location
+    .map_location {
+        // height: auto;
+        padding: 2rem 0rem;
+
+        .head-title {
+            margin-bottom: 1rem;
+        }
+
+        .exp_box {
+            margin: .5rem 0rem;
+            .exp_vdo {
+                iframe {
+                    height: 350px;
+                }
+            }
+        }
+
+        .btn-back {
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-top: 1rem;
+            background: #1F88CE;
+            color: #fff;
+        }
+    }
+
+    // Modal
+    .modal {
+        .modal_exp_vdo {
+            .close {
+                top: -10px;
+                right: -10px;
+                width: 25px;
+                height: 25px;
+                font-size: 28px;
+
+                span {
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+
+    // Report Problem
+    .report-problem {
+        height: auto;
+        padding: 2rem 0rem;
+
+        .report-problem_box {
+            .form_report {
+                margin-top: 2rem;
+
+                .input-group {
+                    margin: 10px 0px;
+
+                    .form_problem {
+                        .form-control_problem {
+                            padding: 5px 10px;
+                        }
+                    }
+                }
+
+                .sec_confirm {
+                    .btn-cancel {
+                        padding: 5px 10px;
+                    }
+
+                    .btn-send {
+                        padding: 5px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Shortcuts and Phone Keypad
+    .shortcuts-phonekeypad {
+        
+        .vrs_map {
+            // width: 100%;
+            top: 0;
+            right: 0;
+            // background-color: #168ACE;
+            padding: 5px 0px;
+            position: fixed;
+            z-index: 999;
+            // display: flex;
+            // align-items: center;
+
+            .map-location {
+                // width: 100%;
+                // color: #fff;
+                // display: flex;
+                // align-items: center;
+                padding: 0px 5px;
+                // position: absolute;
+            }
+
+            .map-location::before {
+                // content: "";
+                // width: 23px;
+                // height: 23px;
+                // background: url(../img/logo-location.png) center no-repeat;
+                // vertical-align: middle;
+                // display: inline-block;
+                // background-repeat: no-repeat;
+                // background-size: 23px;
+                margin-right: 5px;
+            }
+
+            .txt-vrs {
+                // width: 100%;
+                // color: #fff;
+                // text-align: center;
+                padding: 0px 5px;
+            }
+        }
+
+        .shortcuts {
+            // position: relative;
+            width: 100%;
+            height: calc(100vh - 34px);
+            margin-top: 34px;
+            // padding-right: 1rem;
+            // padding-left: 1rem;
+            // margin-right: auto;
+            // margin-left: auto;
+            // background-color: #FAFAFF;
+
+            .head-title {
+                // color: #414141;
+                font-size: 20px;
+                // text-align: center;
+                margin-top: 1rem;
+            }
+
+            .shortcuts-box {
+                // width: 100%;
+                margin: 10px auto;
+                padding: 10px;
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // border-radius: 15px;
+                // position: relative;
+                // background-color: #fff;
+                // transition: all 1s;
+
+                .img-icon {
+                    width: 80px;
+
+                    .ttrs-vri::before {
+                        content: "";
+                        width: 40px;
+                        height: 40px;
+                        background: url(../img/logo-hand-blue.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 40px;
+                    }
+
+                    .ttrs-helpdesk::before {
+                        content: "";
+                        width: 40px;
+                        height: 40px;
+                        background: url(../img/icon-callcenter-blue.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 40px;
+                    }
+
+                    .ttrs-emergency {
+                        content: "";
+                        width: 40px;
+                        height: 40px;
+                        background: url(../img/icon-emergency.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 40px;
+                    }
+
+                    .phone-keypad::before {
+                        content: "";
+                        width: 40px;
+                        height: 40px;
+                        background: url(../img/icon-call-blue.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 40px;
+                    }
+
+                    .ms-conversation::before {
+                        content: "";
+                        width: 40px;
+                        height: 40px;
+                        background: url(../img/icon-message-blue.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 40px;
+                    }
+
+                    .ms-history::before {
+                        content: "";
+                        width: 40px;
+                        height: 40px;
+                        background: url(../img/icon-conversation-blue.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 40px;
+                    }
+                }
+
+                .txt-desc {
+                    // padding: 0px 15px;
+
+                    .head {
+                        // color: #707070;
+                        // text-align: left !important;
+                        font-size: 14px;
+                    }
+
+                    .desc {
+                        // color: #707070;
+                        font-size: 12px;
+                    }
+                }
+
+                // .exp-vdo {
+                //     color: #1F88CE;
+                //     font-size: 24px;
+                //     cursor: pointer;
+                //     position: absolute;
+                //     z-index: 9;
+                //     right: 10px;
+                // }
+
+                &:hover {
+                    background: linear-gradient(0deg, rgba(52, 162, 237, 1) 28%, rgba(31, 136, 206, 1) 100%);
+
+                    .img-icon {
+                        width: 80px;
+
+                        .ttrs-vri::before {
+                            content: "";
+                            width: 40px;
+                            height: 40px;
+                            background: url(../img/logo-hand-white.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 40px;
+                        }
+
+                        .ttrs-helpdesk::before {
+                            content: "";
+                            width: 40px;
+                            height: 40px;
+                            background: url(../img/icon-callcenter-white.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 40px;
+                        }
+
+                        .ttrs-emergency {
+                            content: "";
+                            width: 40px;
+                            height: 40px;
+                            background: url(../img/icon-emergency-white.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 40px;
+                        }
+
+                        .phone-keypad::before {
+                            content: "";
+                            width: 40px;
+                            height: 40px;
+                            background: url(../img/icon-call-white.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 40px;
+                        }
+
+                        .ms-conversation::before {
+                            content: "";
+                            width: 40px;
+                            height: 40px;
+                            background: url(../img/icon-message-white.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 40px;
+                        }
+
+                        .ms-history::before {
+                            content: "";
+                            width: 40px;
+                            height: 40px;
+                            background: url(../img/icon-conversation-white.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 40px;
+                        }
+                    }
+
+                    .txt-desc {
+
+                        .head {
+                            color: #fff;
+                        }
+
+                        .desc {
+                            color: #fff;
+                        }
+                    }
+
+                    .exp-vdo {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .shortcuts-menu {
+            position: fixed;
+            // bottom: 0;
+            // left: 0;
+            // display: flex;
+            // width: 100%;
+            // background-color: #e4e4e4;
+            // border-top: 1px solid #D6D6D6;
+
+            .btn_shortcuts-menu {
+                width: 33%;
+                text-align: center;
+
+                .txt-menu {
+                    display: grid;
+                    // align-items: center;
+                    // justify-content: center;
+                    // color: #999999;
+                    padding: 0px 0px;
+                }
+
+                .icn-shortcuts::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icon-shortcut-gray.png) center no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    // margin-right: 5px;
+                    margin: 5px auto;
+                }
+
+                .icn-message::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icon-message-gray.png) center no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    // margin-right: 5px;
+                    margin: 5px auto;
+                }
+
+                .icn-call::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icon-call-gray.png) center no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    // margin-right: 5px;
+                    margin: 5px auto;
+                }
+
+                .icn-setting::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icon-settings-gray.png) center no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    // margin-right: 5px;
+                    margin: 5px auto;
+                }
+
+                &:hover {
+                    .icn-shortcuts {
+                        color: #1F88CE;
+                        cursor: pointer;
+
+                        &::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-shortcut-blue.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 20px;
+                            // margin-right: 5px;
+                            margin: 5px auto;
+                        }
+                    }
+
+                    .icn-message {
+                        color: #1F88CE;
+                        cursor: pointer;
+
+                        &::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-message-blue.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 20px;
+                            // margin-right: 5px;
+                            margin: 5px auto;
+                        }
+                    }
+
+                    .icn-call {
+                        color: #1F88CE;
+                        cursor: pointer;
+
+                        &::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-call-blue.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 20px;
+                            // margin-right: 5px;
+                            margin: 5px auto;
+                        }
+                    }
+
+                    .icn-setting {
+                        color: #1F88CE;
+                        cursor: pointer;
+
+                        &::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-settings-blue.png) center no-repeat;
+                            vertical-align: middle;
+                            display: inline-block;
+                            background-repeat: no-repeat;
+                            background-size: 20px;
+                            // margin-right: 5px;
+                            margin: 5px auto;
+                        }
+                    }
+                }
+            }
+
+            .active {
+                .txt-menu {
+                    color: #1F88CE !important;
+                }
+
+                .icn-shortcuts::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icon-shortcut-blue.png) center no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    // margin-right: 5px;
+                    margin: 5px auto;
+                }
+
+                .icn-message::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icon-message-blue.png) center no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    // margin-right: 5px;
+                    margin: 5px auto;
+                }
+
+                .icn-call::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icon-call-blue.png) center no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    // margin-right: 5px;
+                    margin: 5px auto;
+                }
+
+                .icn-setting::before {
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icon-settings-blue.png) center no-repeat;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                    // margin-right: 5px;
+                    margin: 5px auto;
+                }
+            }
+
+        }
+
+        .conversation {
+            padding: 0px;
+
+            .vrs_map {
+                width: 100%;
+                // top: 0;
+                // right: 0;
+                background-color: #168ACE;
+                padding: 5px 0px;
+                // position: absolute;
+                // display: flex;
+                // align-items: center;
+
+                .txt-vrs {
+                    // width: 100%;
+                    color: #fff;
+                    text-align: center;
+                    padding: 0px 15px;
+                }
+            }
+
+            .message-conversation {
+                bottom: 0;
+            }
+        }
+
+        .phonekeypad {
+            width: 100%;
+            border-left: none;
+
+            .container_keypad {
+                width: 100%;
+
+                .title {
+                    font-size: 24px;
+                    margin-top: 0rem;
+                }
+
+                .show-number {
+                    height: 3rem;
+
+                    .dig {
+                        width: 55px;
+                        height: 55px;
+                        font-size: 24px;
+                    }
+
+                    #output {
+                        font-size: 24px;
+                        font-weight: normal;
+                    }
+                }
+
+                .row {
+
+                    .digit {
+                        width: 55px;
+                        height: 55px;
+                        margin: 5px auto;
+                        font-size: 24px;
+                    }
+                }
+
+                .botrow {
+                    margin-top: 1rem;
+
+                    #call {
+                        width: 55px;
+                        height: 55px;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Message Conversation
+    .message-conversation {
+        // position: absolute;
+        top: 0px;
+        // right: 0;
+        // left: 0;
+        bottom: 52px;
+        // overflow: hidden;
+
+        // .show_date_history {
+        //     display: none;
+        // }
+
+        // a.article {
+        //     position: fixed;
+        //     bottom: 15px;
+        //     left: 15px;
+        //     display: table;
+        //     text-decoration: none;
+        //     color: white;
+        //     background-color: #39ACFC;
+        //     padding: 10px 20px;
+        //     border-radius: 25px;
+        //     font: 400 15px 'Open Sans', sans-serif;
+        // }
+
+        // form.chat * {
+        //     transition: all .5s;
+        //     box-sizing: border-box;
+        //     -webkit-box-sizing: border-box;
+        //     -moz-box-sizing: border-box;
+        // }
+
+        // form.chat {
+        //     margin: 0;
+        //     cursor: default;
+        //     position: absolute;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     top: 0;
+        //     -webkit-touch-callout: none;
+        //     /* iOS Safari */
+        //     -webkit-user-select: none;
+        //     /* Chrome/Safari/Opera */
+        //     -khtml-user-select: none;
+        //     /* Konqueror */
+        //     -moz-user-select: none;
+        //     /* Firefox */
+        //     -ms-user-select: none;
+        //     /* IE/Edge */
+        //     user-select: none;
+        // }
+
+        // form.chat span.spinner {
+        //     -moz-animation: loading-bar 1s 1;
+        //     -webkit-animation: loading-bar 1s 1;
+        //     animation: loading-bar 1s 1;
+        //     display: block;
+        //     height: 2px;
+        //     background-color: #39ACFC;
+        //     transition: width 0.2s;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     z-index: 4
+        // }
+
+        // form.chat .messages {
+        //     display: block;
+        //     overflow-x: hidden;
+        //     overflow-y: scroll;
+        //     position: relative;
+        //     height: 90%;
+        //     width: 100%;
+        //     padding: 2% 3%;
+        //     // border-bottom: 1px solid #ecf0f1;
+        // }
+
+        // form.chat ::-webkit-scrollbar {
+        //     width: 3px;
+        //     height: 1px;
+        //     transition: all .5s;
+        //     z-index: 10;
+        // }
+
+        // form.chat ::-webkit-scrollbar-track {
+        //     background-color: white;
+        // }
+
+        // form.chat ::-webkit-scrollbar-thumb {
+        //     background-color: #bec4c8;
+        //     border-radius: 3px;
+        // }
+
+        // form.chat .message {
+        //     display: block;
+        //     width: 98%;
+        //     padding: 0.5%;
+        // }
+
+        // form.chat .message p {
+        //     margin: 0;
+        // }
+
+        // form.chat .myMessage,
+        // form.chat .fromThem {
+        //     max-width: 50%;
+        //     word-wrap: break-word;
+        //     margin-bottom: 20px;
+        // }
+
+        // form.chat .message:hover .myMessage {
+        //     -webkit-transform: translateX(-130px);
+        //     transform: translateX(-130px);
+        // }
+
+        // form.chat .message:hover .fromThem {
+        //     -webkit-transform: translateX(130px);
+        //     transform: translateX(130px);
+        // }
+
+        // form.chat .message:hover date {
+        //     opacity: 1;
+        // }
+
+        // form.chat .myMessage,
+        // .fromThem {
+        //     position: relative;
+        //     padding: 10px 20px;
+        //     color: white;
+        //     border-radius: 25px;
+        //     clear: both;
+        //     font: 400 15px 'Open Sans', sans-serif;
+        // }
+
+        // form.chat .myMessage {
+        //     background: #39ACFC;
+        //     color: white;
+        //     float: right;
+        //     clear: both;
+        //     border-bottom-right-radius: 20px 0px\9;
+        // }
+
+        // form.chat .myMessage:before {
+        //     content: "";
+        //     position: absolute;
+        //     z-index: 1;
+        //     bottom: -2px;
+        //     right: -8px;
+        //     height: 19px;
+        //     border-right: 20px solid #39ACFC;
+        //     border-bottom-left-radius: 16px 14px;
+        //     -webkit-transform: translate(0, -2px);
+        //     transform: translate(0, -2px);
+        //     border-bottom-left-radius: 15px 0px\9;
+        //     transform: translate(-1px, -2px)\9;
+        // }
+
+        // form.chat .myMessage:after {
+        //     content: "";
+        //     position: absolute;
+        //     z-index: 1;
+        //     bottom: -2px;
+        //     right: -42px;
+        //     width: 12px;
+        //     height: 20px;
+        //     background: white;
+        //     border-bottom-left-radius: 10px;
+        //     -webkit-transform: translate(-30px, -2px);
+        //     transform: translate(-30px, -2px);
+        // }
+
+        // form.chat .fromThem {
+        //     background: #E5E5EA;
+        //     color: black;
+        //     float: left;
+        //     clear: both;
+        //     border-bottom-left-radius: 30px 0px\9;
+        // }
+
+        // form.chat .fromThem:before {
+        //     content: "";
+        //     position: absolute;
+        //     z-index: 2;
+        //     bottom: -2px;
+        //     left: -7px;
+        //     height: 19px;
+        //     border-left: 20px solid #E5E5EA;
+        //     border-bottom-right-radius: 16px 14px;
+        //     -webkit-transform: translate(0, -2px);
+        //     transform: translate(0, -2px);
+        //     border-bottom-right-radius: 15px 0px\9;
+        //     transform: translate(-1px, -2px)\9;
+        // }
+
+        // form.chat .fromThem:after {
+        //     content: "";
+        //     position: absolute;
+        //     z-index: 3;
+        //     bottom: -2px;
+        //     left: 4px;
+        //     width: 26px;
+        //     height: 20px;
+        //     background: white;
+        //     border-bottom-right-radius: 10px;
+        //     -webkit-transform: translate(-30px, -2px);
+        //     transform: translate(-30px, -2px);
+        // }
+
+        // form.chat date {
+        //     position: absolute;
+        //     top: 10px;
+        //     font-size: 14px;
+        //     white-space: nowrap;
+        //     vertical-align: middle;
+        //     color: #8b8b90;
+        //     opacity: 0;
+        //     z-index: 4;
+        // }
+
+        // form.chat .myMessage date {
+        //     left: 105%;
+        // }
+
+        // form.chat .fromThem date {
+        //     right: 105%;
+        // }
+
+        .sec-send-message {
+            // display: none;
+            // align-items: center;
+            // justify-content: center;
+            // height: 10%;
+
+            .btn-backpage {
+                display: none;
+            }
+
+            // .btn-no-message::before {
+            //     content: "";
+            //     width: 25px;
+            //     height: 25px;
+            //     background: url(../img/icon-nomessage-blue.png) center no-repeat;
+            //     vertical-align: sub;
+            //     display: inline-block;
+            //     background-repeat: no-repeat;
+            //     background-size: 25px;
+            //     // margin-right: 5px;
+            // }
+        }
+
+        // form.chat input {
+        //     font: 400 13px 'Open Sans', sans-serif;
+        //     border: 0;
+        //     padding: 0 15px;
+        //     outline: 0;
+        // }
+
+        // form.chat input[type='text'] {
+        //     width: 50%;
+        //     border-radius: 20px;
+        //     padding: 6px 12px;
+        //     background-color: #FAFAFA;
+        //     border: 1px solid #C8C7CC;
+        //     float: left;
+        //     margin: 0px 20px;
+        // }
+
+        // form.chat input[type='submit'] {
+        //     width: 15%;
+        //     border-radius: 20px;
+        //     padding: 6px 12px;
+        //     background: #168ACE;
+        //     color: #fff;
+        //     font-weight: 700;
+        //     text-align: "center";
+        //     // float: right;
+
+        //     &:hover {
+        //         background: #39ACFC;
+        //     }
+        // }
+
+        // .btn-backpage {
+        //     display: none;
+        // }
+
+        // form.chat .myMessage,
+        // form.chat .fromThem {
+        //     font-size: 12px;
+        // }
+
+        // form.chat .message:hover .myMessage {
+        //     transform: translateY(18px);
+        //     -webkit-transform: translateY(18px);
+        // }
+
+        // form.chat .message:hover .fromThem {
+        //     transform: translateY(18px);
+        //     -webkit-transform: translateY(18px);
+        // }
+
+        // form.chat .myMessage date,
+        // form.chat .fromThem date {
+        //     top: -20px;
+        //     left: auto;
+        //     right: 0;
+        //     font-size: 12px;
+        // }
+
+        // form.chat .myMessage,
+        // form.chat .fromThem {
+        //     max-width: 90%;
+        // }
+
+        // @-moz-keyframes loading-bar {
+        //     0% {
+        //         width: 0%;
+        //     }
+
+        //     90% {
+        //         width: 90%;
+        //     }
+
+        //     100% {
+        //         width: 100%;
+        //     }
+        // }
+
+        // @-webkit-keyframes loading-bar {
+        //     0% {
+        //         width: 0%;
+        //     }
+
+        //     90% {
+        //         width: 90%;
+        //     }
+
+        //     100% {
+        //         width: 100%;
+        //     }
+        // }
+
+        // @keyframes loading-bar {
+        //     0% {
+        //         width: 0%;
+        //     }
+
+        //     90% {
+        //         width: 90%;
+        //     }
+
+        //     100% {
+        //         width: 100%;
+        //     }
+        // }
+    }
+
+    .history {
+        .messages {
+            height: 90% !important;
+        }
+    }
+
+    // Setting
+    .setting {
+        .setting_form {
+            width: 100%;
+            margin-top: 1rem;
+
+            .title,
+            .number {
+                font-size: 14px;
+            }
+
+            // .usr_name_version {
+            //     width: 100%;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: space-between;
+            //     padding: 10px;
+            //     border: 1px solid rgba(112, 112, 112, 0.2);
+            //     border-radius: 5px;
+            //     margin: 10px 0px;
+            //     background-color: #fff;
+            // }
+
+            .setting_select {
+                width: 100%;
+                // padding: 6px 12px;
+                border: 1px solid rgba(112, 112, 112, 0.2);
+                border-radius: 5px;
+                margin: 10px 0px;
+
+                li {
+                    border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+                    background-color: #fff;
+                    border-radius: 5px;
+
+                    .btn-function_select {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 10px;
+                        box-shadow: none;
+
+                        &:hover {
+                            color: #FFFFFF;
+                            background: #1F88CE;
+                        }
+
+                        i {
+                            transform: rotate(0deg);
+                            transition: transform 0.5s ease 0s;
+                        }
+                    }
+
+                    .btn-function_select.down {
+                        color: #FFFFFF;
+                        background: #1F88CE;
+
+                        i {
+                            transform: rotate(90deg);
+                            transition: transform 0.5s ease 0s;
+                        }
+                    }
+
+                    .function_select {
+                        width: 70%;
+                        // position: absolute;
+                        // right: 10px;
+                        // top: 0;
+                        // z-index: 9;
+                        // box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+
+                        .card-body {
+                            padding: 0.5rem 1.25rem !important;
+                        }
+
+                        p {
+                            font-size: 12px;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    .stun_turn {
+                        // input {
+                        //     border-radius: 5px;
+                        //     box-shadow: none;
+                        //     border: 1px solid #D9D9D9;
+                        //     padding: 6px 12px;
+                        // }
+
+                        // input:focus {
+                        //     outline: none;
+                        // }
+
+                        .btn_cancle {
+                            // display: block;
+                            // width: 45%;
+                            // border: 1px solid #707070;
+                            // background: #FFFFFF;
+                            // color: #707070;
+                            padding: 5px 0px;
+                            // border-radius: 20px;
+                            // text-align: center;
+                            // font-size: 12px;
+                            // margin-top: 0.5rem;
+                            // box-shadow: none;
+
+                            // &:hover {
+                            //     border: 1px solid #FFFFFF;
+                            //     color: #FFFFFF;
+                            //     background: #707070;
+                            // }
+                        }
+
+                        .btn_save {
+                            // display: block;
+                            // width: 45%;
+                            // border: 1px solid #1F88CE;
+                            // background: #1F88CE;
+                            // color: #fff;
+                            padding: 5px 0px;
+                            // border-radius: 20px;
+                            // text-align: center;
+                            // font-size: 12px;
+                            // margin-top: 0.5rem;
+                            // box-shadow: none;
+
+                            // &:hover {
+                            //     border: 1px solid #4DB1EB;
+                            //     color: #FFFFFF;
+                            //     background: #4DB1EB;
+                            // }
+                        }
+                    }
+                }
+
+                li:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            // .btn-logout {
+            //     width: 100%;
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: space-between;
+            //     padding: 10px;
+            //     border: 1px solid rgba(112, 112, 112, 0.2);
+            //     border-radius: 5px;
+            //     margin: 10px 0px;
+            //     box-shadow: none;
+            //     background-color: #fff;
+
+            //     .title {
+            //         color: #B10C0C;
+            //     }
+            // }
+
+            .btn-close_setting {
+                // display: block;
+                // width: 100%;
+                // border: 1px solid #1F88CE;
+                // background: #FFFFFF;
+                // color: #1F88CE;
+                padding: 5px 10px;
+                // border-radius: 20px;
+                // text-align: center;
+                font-size: 16px;
+                margin-top: 1rem;
+                margin-bottom: 61px;
+                // box-shadow: none;
+
+                &:hover {
+                    border: 1px solid #FFFFFF;
+                    color: #FFFFFF;
+                    background: #1F88CE;
+                }
+            }
+
+            .btn:focus {
+                outline: none;
+            }
+        }
+    }
+
+    // Incoming
+    .vdo-calling {
+        .head-sec {
+            width: 100%;
+            top: 0;
+            right: 0;
+            // background-color: #0B2836;
+            padding: 10px 0px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+
+            .head-call {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 12px;
+
+                .phone-numer {
+                    width: 33%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+
+                    &::before {
+                        content: "";
+                        width: 15px;
+                        height: 15px;
+                        background: url(../img/icon-calling-white.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 15px;
+                        margin-right: 5px;
+
+                    }
+                }
+
+                .txt-vrs {
+                    width: 33%;
+                    text-align: center;
+                }
+
+                .calling-time {
+                    width: 33%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    &::before {
+                        content: "";
+                        width: 15px;
+                        height: 15px;
+                        background: url(../img/icon-time-white.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 15px;
+                        margin-right: 5px;
+
+                    }
+                }
+            }
+        }
+
+        .incoming-sec {
+            height: 100vh;
+            // width: 100%;
+            // height: calc(100vh - 38px);
+            // background-color: #0F3548;
+            // background: rgb(15,53,72);
+            background: linear-gradient(180deg, rgba(15,53,72,1) 0%, rgba(14,50,68,1) 67%, rgba(10,36,49,1) 100%);
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // margin-top: 44px;
+
+            .incoming-calls {
+                width: 100%;
+                // text-align: center;
+                // color: #fff;
+
+                .txt-incoming-calls {
+                    font-size: 24px;
+                }
+
+                .txt-phone-number {
+                    font-size: 32px;
+                    margin-top: .5rem;
+                }
+
+                .img-logo {
+                    width: 130px;
+                    margin: 3rem auto;
+
+                    .logo-ttrs {
+                        width: 90px;
+                        margin: 0px auto;
+                    }
+
+                    .logo-hand {
+                        margin-top: 1rem;
+                    }
+                }
+
+                .btn-start-conversation {
+                    // display: block;
+                    width: 90%;
+                    // border: 1px solid #1F88CE;
+                    // background: #00D16B;
+                    // color: #fff;
+                    // padding: 6px 12px;
+                    // border-radius: 20px;
+                    // text-align: center;
+                    // margin: 10px auto;
+                    // box-shadow: none;
+
+                    &:hover {
+                        background: #12e07b;
+                    }
+
+                    .start-conversation::before {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        background: url(../img/icon-calling-white.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 20px;
+                        margin-right: 5px;
+
+                    }
+                }
+
+                .btn-end-conversation {
+                    // display: block;
+                    width: 90%;
+                    background: #F8423B;
+                    color: #fff;
+ 
+
+                    .end-conversation::before {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        background: url(../img/icon-hangup-red.png) center no-repeat;
+                        vertical-align: middle;
+                        display: inline-block;
+                        background-repeat: no-repeat;
+                        background-size: 20px;
+                        margin-right: 5px;
+                    }
+                }
+
+                // .end {
+                //     background: #F8423B;
+                //     color: #fff;
+                //     // display: flex;
+                //     text-align: center;
+
+                //     &:hover {
+                //         background: #F85A54;
+                //     }
+
+                //     .end-conversation::before {
+                //         content: "";
+                //         width: 20px;
+                //         height: 20px;
+                //         background: url(../img/icon-hangup-red.png) center no-repeat;
+                //         vertical-align: middle;
+                //         display: inline-block;
+                //         background-repeat: no-repeat;
+                //         background-size: 20px;
+                //         margin-right: 5px;
+                //     }
+                // }
+
+                .function-calls {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    li {
+                        width: 20%;
+
+                        button {
+                            // color: #fff;
+                            // box-shadow: none;
+                            font-size: 10px;
+                            padding: 0px;
+                        }
+
+                        .icon-novideo::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-novideo-white.png) center no-repeat;
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-size: 20px;
+                            margin: 10px auto;
+                        }
+
+                        .icon-mute::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-mutemicrophone-white.png) center no-repeat;
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-size: 15px;
+                            margin: 10px auto;
+                        }
+
+                        .icon-voiceoff::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-volumeoff-white.png) center no-repeat;
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-size: 20px;
+                            margin: 10px auto;
+                        }
+
+                        .icon-message::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-message-white.png) center no-repeat;
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-size: 20px;
+                            margin: 10px auto;
+                        }
+
+                        .icon-hangup::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            background: url(../img/icon-hangup-white.png) center no-repeat;
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-size: 20px;
+                            margin: 10px auto;
+                        }
+                    }
+                }
+
+                .waiting {
+                    .img-logo_waiting {
+                        width: 100px;
+                        margin: 0px 10px;
+                    }
+
+                    .txt-waiting {
+                        margin: 0px 10px;
+
+                        .no_waiting {
+                            background-color: #fff;
+                            color: #103448;
+                            padding: 5px;
+                            display: block;
+                            text-align: center;
+                            border-radius: 5px;
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+
+                .waiting_vdo {
+                    height: 30vh;
+                    margin: 1rem 0rem 2rem 0rem;
+                }
+            }
+
+            .calls-waiting {
+                width: 90%;
+
+                .waiting {
+                    width: 100%;
+                    height: 30vh;
+                    margin: 0px auto;
+                    background-color: #092736;
+                    border-radius: 5px;
+
+                    .head-title {
+                        color: #fff;
+                        font-size: 24px;
+                        text-align: center;
+                        // margin-top: 5rem;
+                    }
+                }
+
+                .function-calls {
+                    width: 80%;
+                    margin: 0px auto;
+                }
+
+                .function-conversation {
+                    li {
+                        width: 30%;
+
+                        .icon-video_call::before {
+                            content: "";
+                            width: 30px;
+                            height: 30px;
+                            background: url(../img/icon-videocall-white.png) center no-repeat;
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-size: 30px;
+                            margin: 10px auto;
+                        }
+
+                        .icon-conversation::before {
+                            content: "";
+                            width: 30px;
+                            height: 30px;
+                            background: url(../img/icon-message-white.png) center no-repeat;
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-size: 30px;
+                            margin: 10px auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .vdocall-keypad {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+    
+        #main {
+            width: 100%;
+            height: 100vh;
+            transition: margin-right .5s;
+    
+            .function-calls {
+                width: 100%;
+            }
+        }
+    
+        #mySidenav {
+            width: 0%;
+            position: absolute;
+            z-index: 1;
+            transition: 0.5s;
+            top: 0;
+            right: 0;
+    
+            .shortcuts {
+                width: 100%;
+                padding: 0px;
+    
+                .vrs_map {
+                    display: none;
+                }
+            }
+    
+            .conversation {
+                width: 100%;
+    
+                .message-conversation {
+                    bottom: 0px;
+                }
+            }
+        }
+    
+        #open-close {
+            top: 5px;
+            right: 5px;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    // Map Location
+    .map_location {
+        padding: .5rem 0rem;
+
+        .head-title {
+            margin-bottom: .5rem;
+        }
+
+        .exp_box {
+            .exp_vdo {
+                iframe {
+                    height: 250px;
+                }
+            }
+        }
+
+        .btn-back {
+            margin-top: .5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .horizontal {
+        display: none;
+    }
+
+    // Guest User
+    .guest-user {
+        .guest-user_box {
+            .th_national_card {
+                width: 60%;
+            }
+        }
+
+        .guest-user_box1 {
+            .ipt_log-in {
+                width: 45%;
+            }
+        }
+    }
+
+
+
+    .vdo-calling {
+        .head-sec {
+            .head-call {
+                width: 60%;
+            }
+        }
+
+        .incoming-sec {
+            .calls-waiting {
+                width: 60%;
+            }
+
+            .incoming-calls {
+                width: 60%;
+            }
+        }
+    }
+
+    .waiting_vdo {
+        height: 30vh !important;
+        margin: 1rem 0rem 2rem 0rem;
+    }
+
+    .vdo_call_show {
+        position: absolute;
+        width: 150px;
+        height: 180px;
+        top: 60px;
+        left: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .horizontal {
+        display: none;
+    }
+
+        // Log In
+.log-in {
+
+    .login_box {
+
+        .log-in_box {
+            width: 50%;
+        }
+    }
+
+    .register_box {
+
+        .sec_register {
+            width: 50%;
+        }
+    }
+}
+
+.vdo-calling {
+    .head-sec {
+        .head-call {
+            width: 60%;
+        }
+    }
+
+    .incoming-sec {
+        .incoming-calls {
+            width: 60%;
+        }
+    }
+}
+
+.btn-end-conversation {
+    // display: block;
+    width: 90%;
+    background: #F8423B;
+    color: #fff !important;
+
+
+    .end-conversation::before {
+        content: "";
+        width: 25px !important;
+        height: 25px !important;
+        background: url(../img/icon-hangup-red.png) center no-repeat !important;
+        vertical-align: middle !important;
+        display: inline-block !important;
+        background-repeat: no-repeat !important;
+        background-size: 25px !important;
+        margin-right: 5px !important;
+    }
+}
+
+.shortcuts-box {
+    padding: 10px;
+
+    .txt-desc {
+        padding: 0px 10px;
+    }
+
+    .img-icon {
+        width: 80px;
+
+        .ttrs-vri::before {
+            content: "" !important;
+            width: 30px !important;
+            height: 30px !important;
+            background: url(../img/logo-hand-blue.png) center no-repeat !important;
+            vertical-align: middle !important;
+            display: inline-block !important;
+            background-repeat: no-repeat !important;
+            background-size: 30px !important;
+        }
+
+        .ttrs-helpdesk::before {
+            content: "" !important;
+            width: 30px !important;
+            height: 30px !important;
+            background: url(../img/icon-callcenter-blue.png) center no-repeat !important;
+            vertical-align: middle !important;
+            display: inline-block !important;
+            background-repeat: no-repeat !important;
+            background-size: 30px !important;
+        }
+
+        .ttrs-emergency {
+            content: "" !important;
+            width: 30px !important;
+            height: 30px !important;
+            background: url(../img/icon-emergency.png) center no-repeat !important;
+            vertical-align: middle !important;
+            display: inline-block !important;
+            background-repeat: no-repeat !important;
+            background-size: 30px !important;
+        }
+
+        .phone-keypad::before {
+            content: "" !important;
+            width: 30px !important;
+            height: 30px !important;
+            background: url(../img/icon-call-blue.png) center no-repeat !important;
+            vertical-align: middle !important;
+            display: inline-block !important;
+            background-repeat: no-repeat !important;
+            background-size: 30px !important;
+        }
+
+        .ms-conversation::before {
+            content: "" !important;
+            width: 30px !important;
+            height: 30px !important;
+            background: url(../img/icon-message-blue.png) center no-repeat !important;
+            vertical-align: middle !important;
+            display: inline-block !important;
+            background-repeat: no-repeat !important;
+            background-size: 30px !important;
+        }
+
+        .ms-history::before {
+            content: "";
+            width: 30px !important;
+            height: 30px !important;
+            background: url(../img/icon-conversation-blue.png) center no-repeat !important;
+            vertical-align: middle !important;
+            display: inline-block !important;
+            background-repeat: no-repeat !important;
+            background-size: 30px !important;
+        }
+    }
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(52, 162, 237, 1) 28%, rgba(31, 136, 206, 1) 100%);
+
+        .img-icon {
+            width: 80px;
+
+            .ttrs-vri::before {
+                content: "" !important;
+                width: 30px !important;
+                height: 30px !important;
+                background: url(../img/logo-hand-white.png) center no-repeat !important;
+                vertical-align: middle !important;
+                display: inline-block !important;
+                background-repeat: no-repeat !important;
+                background-size: 30px !important;
+            }
+
+            .ttrs-helpdesk::before {
+                content: "" !important;
+                width: 30px !important;
+                height: 30px !important;
+                background: url(../img/icon-callcenter-white.png) center no-repeat !important;
+                vertical-align: middle !important;
+                display: inline-block !important;
+                background-repeat: no-repeat !important;
+                background-size: 30px !important;
+            }
+
+            .ttrs-emergency {
+                content: "" !important;
+                width: 30px !important;
+                height: 30px !important;
+                background: url(../img/icon-emergency-white.png) center no-repeat !important;
+                vertical-align: middle !important;
+                display: inline-block !important;
+                background-repeat: no-repeat !important;
+                background-size: 30px !important;
+            }
+
+            .phone-keypad::before {
+                content: "" !important;
+                width: 30px !important;
+                height: 30px !important;
+                background: url(../img/icon-call-white.png) center no-repeat !important;
+                vertical-align: middle !important;
+                display: inline-block !important;
+                background-repeat: no-repeat !important;
+                background-size: 30px !important;
+            }
+
+            .ms-conversation::before {
+                content: "" !important;
+                width: 30px !important;
+                height: 30px !important;
+                background: url(../img/icon-message-white.png) center no-repeat !important;
+                vertical-align: middle !important;
+                display: inline-block !important;
+                background-repeat: no-repeat !important;
+                background-size: 30px !important;
+            }
+
+            .ms-history::before {
+                content: "" !important;
+                width: 30px !important;
+                height: 30px !important;
+                background: url(../img/icon-conversation-white.png) center no-repeat !important;
+                vertical-align: middle !important;
+                display: inline-block !important;
+                background-repeat: no-repeat !important;
+                background-size: 30px !important;
+            }
+        }
+    }
+}
+}
