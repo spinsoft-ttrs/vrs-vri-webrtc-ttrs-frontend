@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency } from './views';
+import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService } from './views';
 import { setWebStatus, setRegisterData } from './actions';
 import { verifyAuth, verifyUUID, reToken, refreshExtension } from './actions/fetchAPI';
 
@@ -11,51 +11,57 @@ const RouterApp = (props) => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        if(props.uuid.startsWith("login")){
-            verifyToken();
-        }else{
-            verifyUUID(props.uuid, (result) => {
-                localStorage.setItem('uuid', props.uuid);
-                if(result === "expired"){
-                    window.location.href = "https://ttrs.or.th";
-                }else
-                if(JSON.stringify(result) !== "{}"){
-                    setRefreshTimeout(result.extension)
-                    dispatch(setRegisterData("secret", result.secret));
-                    dispatch(setRegisterData("extension", result.extension));
-                    dispatch(setRegisterData("domain", result.domain));
-                    dispatch(setRegisterData("websocket", result.websocket));
-                    switch (result.type) {
-                        case "helpdesk":
-                            // helpdesk ทั้งแบบไม่ login และปกติ
-                            dispatch(setRegisterData("callNumber", 14127));
-                            localStorage.setItem("callType" ,"callHelpdesk")
-                            if(!result.extension.startsWith("0000")){
-                                dispatch(setWebStatus("register"));
-                            }else{
-                                dispatch(setWebStatus("helpDesk"));
-                            }
-                            break;
-                        case "emergency":
-                            // emergency ทั้งแบบไม่ login และปกติ
-                            dispatch(setRegisterData("callNumber", 14121)); // production
-                            // dispatch(setRegisterData("callNumber", 14151)); // devdelop
-
-                            localStorage.setItem("callType", "callEmergency")
-                            // if(!result.extension.startsWith("0000")){
-                            //     dispatch(setWebStatus("register"));
-                            // }else{
-                                dispatch(setWebStatus("emergency"));
-                            // }
-                            break;
-                        default:
-                            dispatch(setWebStatus("dialpad"));
-                            break;
+        switch (props.uuid) {
+            case props.uuid.startsWith("login"):
+                verifyToken();
+                break;
+            case "public":
+                dispatch(setWebStatus("public"))
+                break;
+            default:
+                verifyUUID(props.uuid, (result) => {
+                    localStorage.setItem('uuid', props.uuid);
+                    if(result === "expired"){
+                        window.location.href = "https://ttrs.or.th";
+                    }else
+                    if(JSON.stringify(result) !== "{}"){
+                        setRefreshTimeout(result.extension)
+                        dispatch(setRegisterData("secret", result.secret));
+                        dispatch(setRegisterData("extension", result.extension));
+                        dispatch(setRegisterData("domain", result.domain));
+                        dispatch(setRegisterData("websocket", result.websocket));
+                        switch (result.type) {
+                            case "helpdesk":
+                                // helpdesk ทั้งแบบไม่ login และปกติ
+                                dispatch(setRegisterData("callNumber", 14127));
+                                localStorage.setItem("callType" ,"callHelpdesk")
+                                if(!result.extension.startsWith("0000")){
+                                    dispatch(setWebStatus("register"));
+                                }else{
+                                    dispatch(setWebStatus("helpDesk"));
+                                }
+                                break;
+                            case "emergency":
+                                // emergency ทั้งแบบไม่ login และปกติ
+                                dispatch(setRegisterData("callNumber", 14121)); // production
+                                // dispatch(setRegisterData("callNumber", 14151)); // devdelop
+    
+                                localStorage.setItem("callType", "callEmergency")
+                                // if(!result.extension.startsWith("0000")){
+                                //     dispatch(setWebStatus("register"));
+                                // }else{
+                                    dispatch(setWebStatus("emergency"));
+                                // }
+                                break;
+                            default:
+                                dispatch(setWebStatus("dialpad"));
+                                break;
+                        }
+                    }else{
+                            // dispatch(setWebStatus("login"));
                     }
-                }else{
-                        // dispatch(setWebStatus("login"));
-                }
-            });
+                });
+                break;
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[props.uuid, localStorage.getItem("token")])
@@ -103,9 +109,13 @@ const RouterApp = (props) => {
     }
 
     switch (webStatus) {
+        case "public":
+            return (<PublicService/>)
         case "callVRS":
             return (<VideoCall/>)
         case "callVRI":
+            return (<VideoCall/>)
+        case "callPublic":
             return (<VideoCall/>)
         case "helpDesk":
             return (<HelpDesk/>)

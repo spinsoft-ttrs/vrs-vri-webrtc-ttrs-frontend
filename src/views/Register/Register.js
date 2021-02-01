@@ -40,7 +40,7 @@ const Register = () => {
                 if(localStorage.getItem("directlogin") === "true"){
                     dispatch(setWebStatus("login"));
                 }else{
-                    window.location.href = "https://ttrs.or.th";
+                    // window.location.href = "https://ttrs.or.th";
                 }
             } catch (error) {
                 console.log(error)
@@ -51,7 +51,7 @@ const Register = () => {
                 if(localStorage.getItem("directlogin") === "true"){
                     dispatch(setWebStatus("login"));
                 }else{
-                    window.location.href = "https://ttrs.or.th";
+                    // window.location.href = "https://ttrs.or.th";
                 }
             } catch (error) {
                 console.log(error)

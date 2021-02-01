@@ -21,26 +21,31 @@ const matchMedia = window.matchMedia("(max-width: 768px)");
 
 var constraints;
 
-if(browser.name === "firefox"){
-    constraints = { 
-        audio: true, 
-        video: {
-            frameRate : { max : 15 },
-            width: { min: 352, max: 1000 },
-            height: { min: 240 },
-        },
-        optional: [ { facingMode: "user" }]
-    }
-}else{
-    constraints = { 
-        audio: true, 
-        video: {
-            frameRate : { min: 15, max : 15},
-            width: { min: 352, max: 352 },
-            height: { min: 240, max: 240},    
-        },
-        optional: [ { facingMode: "user" }]
-    }
+// if(browser.name === "firefox"){
+//     constraints = { 
+//         audio: true, 
+//         video: {
+//             frameRate : { max : 15 },
+//             width: { min: 352, max: 1000 },
+//             height: { min: 240 },
+//         },
+//         optional: [ { facingMode: "user" }]
+//     }
+// }else{
+//     constraints = { 
+//         audio: true, 
+//         video: {
+//             frameRate : { min: 15, max : 15},
+//             width: { min: 352, max: 352 },
+//             height: { min: 240, max: 240},    
+//         },
+//         optional: [ { facingMode: "user" }]
+//     }
+// }
+constraints = { 
+    audio: true, 
+    video: true,
+    optional: [ { facingMode: "user" }]
 }
 
 var localVideo, remoteVideo;
@@ -69,9 +74,6 @@ const VideoCall = () => {
         }
     },[size])
 
-    useEffect(() => {
-        console.log(screenOrientation)
-    },[screenOrientation])
 
     useEffect(() => {
         document.body.style.backgroundColor = "#0F3548";
@@ -243,7 +245,7 @@ const VideoCall = () => {
                     'reinvite' : (e) =>{},
                     'sdp' : (e) => {
                         if(e.originator === "local"){
-                            // e.sdp = CodecsHandler.preferCodec(e.sdp);
+                            e.sdp = CodecsHandler.preferCodec(e.sdp, "h264");
                         }
                     }
                 };
@@ -256,10 +258,10 @@ const VideoCall = () => {
                     "iceTransportPolicy":"all",
                     'rtcpMuxPolicy' : "negotiate",
                 }
+                // 'pcConfig' : pcConfig,
                 options = {
                     'eventHandlers'    : eventHandlers,
                     'mediaConstraints' : constraints,
-                    'pcConfig' : pcConfig,
                     'sessionTimersExpires' : 3600
                 };
         
@@ -457,14 +459,24 @@ const VideoCall = () => {
           document.onmousemove = null;
         }
     }
-
+    const detectDeviceAndScreen = () => {
+        if(browser.os === 'Android OS' || browser.os === 'iOS'){
+            if(screenOrientation === "landscape"){
+                return "incoming-calls-mobile";
+            }else {
+                return "";
+            }
+        }else{
+            return "";
+        }
+    }
     return (
         <>
             <div className="vdocall-keypad">
                 {!matchMedia.matches? <Chat messageRealtime={msgRealtime} /> : <div/>}
                 <div className="vdo-calling" id="main">
                     <Statusbar  handleChooseCamera = {handleChooseCamera} stopWatch = {<VideoStopwatch start={connection} />} />
-                    <div className={`incoming-sec ${screenOrientation === "landscape" ? "incoming-calls-mobile":""} `}>
+                    <div className={`incoming-sec ${detectDeviceAndScreen()}`}>
                         <div className="incoming-calls calls-waiting" id="call-mobile">
                             <div className={`${handleIOSClass()} img-vdo d-block mb-3  `} id="img_vdocall" >
 
