@@ -26,15 +26,18 @@ const Register = () => {
             password : registerData.secret,
             register_expires : 60,
         };
+        console.log(configuration)
         setRegisterProgress(60)
         var userAgent = new JsSIP.UA(configuration);
-        userAgent.start();
+        
         userAgent.on("registered", function(){
+            console.log("registered")
             setRegisterProgress(100);
             dispatch(setRegisterData("userAgent", userAgent));
             callback()
         });
         userAgent.on("registrationFailed", function(){
+            console.log("registrationFailed")
             userAgent.unregister();
             try {
                 if(localStorage.getItem("directlogin") === "true"){
@@ -47,16 +50,17 @@ const Register = () => {
             }
         });
         userAgent.on("unregistered", function(){
-            try {
-                if(localStorage.getItem("directlogin") === "true"){
-                    dispatch(setWebStatus("login"));
-                }else{
-                    // window.location.href = "https://ttrs.or.th";
-                }
-            } catch (error) {
-                console.log(error)
-            }
+            // try {
+            //     if(localStorage.getItem("directlogin") === "true"){
+            //         dispatch(setWebStatus("login"));
+            //     }else{
+            //         // window.location.href = "https://ttrs.or.th";
+            //     }
+            // } catch (error) {
+            //     console.log(error)
+            // }
         });
+        userAgent.start();
     }
     return (
         <>

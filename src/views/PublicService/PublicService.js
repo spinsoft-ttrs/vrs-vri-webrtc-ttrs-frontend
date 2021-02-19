@@ -40,8 +40,21 @@ const PublicService = () => {
                 dispatch(setRegisterData("extension", data.data.ext));
                 dispatch(setRegisterData("domain", data.data.domain));
                 dispatch(setRegisterData("websocket", data.data.websocket));
-                dispatch(setRegisterData("callNumber", 14124 ))
-                // dispatch(setRegisterData("callNumber", 9999 ))
+                dispatch(setRegisterData("callNumber", 14124 ));
+
+                // dispatch(setRegisterData("secret", "test1234"));
+                // dispatch(setRegisterData("extension", "5952"));
+                // dispatch(setRegisterData("domain", "sip-51.d1669.in.th"));
+                // dispatch(setRegisterData("websocket", "wss://sip-51.d1669.in.th:8002/ws"));
+                // dispatch(setRegisterData("callNumber", 5953 ));
+
+
+                // 5952
+                // test1234
+                // sip:5952@sip-51.d1669.in.th
+                // wss://sip-51.d1669.in.th:8002/ws
+
+                // dispatch(setRegisterData("callNumber", 9999 ));
                 dispatch(setWebStatus("register"));
             }
         });

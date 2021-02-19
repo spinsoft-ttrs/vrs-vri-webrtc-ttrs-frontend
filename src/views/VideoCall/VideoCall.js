@@ -13,6 +13,10 @@ import { closeRoom } from '../../actions/fetchAPI';
 import adapter from 'webrtc-adapter';
 import "./style.css";
 
+var interop = require('@jitsi/sdp-interop');
+    interop = new interop.Interop();
+// .Interop();
+
 const { detect } = require('detect-browser');
 const browser    = detect();
 const async      = require('async');
@@ -21,32 +25,31 @@ const matchMedia = window.matchMedia("(max-width: 768px)");
 
 var constraints;
 
-// if(browser.name === "firefox"){
-//     constraints = { 
-//         audio: true, 
-//         video: {
-//             frameRate : { max : 15 },
-//             width: { min: 352, max: 1000 },
-//             height: { min: 240 },
-//         },
-//         optional: [ { facingMode: "user" }]
-//     }
-// }else{
-//     constraints = { 
-//         audio: true, 
-//         video: {
-//             frameRate : { min: 15, max : 15},
-//             width: { min: 352, max: 352 },
-//             height: { min: 240, max: 240},    
-//         },
-//         optional: [ { facingMode: "user" }]
-//     }
-// }
-constraints = { 
-    audio: true, 
-    video: true,
-    optional: [ { facingMode: "user" }]
+if(browser.name === "firefox"){
+    constraints = { 
+        audio: true, 
+        video: {
+            frameRate : { max : 15 },
+            width: { min: 352, max: 1000 },
+            height: { min: 240 },
+        },
+        optional: [ { facingMode: "user" }]
+    }
+}else{
+    constraints = { 
+        audio: true, 
+        video: {
+            frameRate : { min: 15, max : 15},
+            width: { min: 352, max: 352 },
+            height: { min: 240, max: 240},    
+        },
+        optional: [ { facingMode: "user" }]
+    }
 }
+// constraints = { 
+//     audio: true, 
+//     video: true
+// }
 
 var localVideo, remoteVideo;
 
@@ -73,7 +76,6 @@ const VideoCall = () => {
             setScreenOrientation("oriented");
         }
     },[size])
-
 
     useEffect(() => {
         document.body.style.backgroundColor = "#0F3548";
@@ -225,6 +227,7 @@ const VideoCall = () => {
     },[controlVideo.openTerminate])
 
     const makeCall = () => {
+        console.log("makecall")
         var options = {};
         async.series([
             (callback) => {
@@ -245,23 +248,35 @@ const VideoCall = () => {
                     'reinvite' : (e) =>{},
                     'sdp' : (e) => {
                         if(e.originator === "local"){
-                            e.sdp = CodecsHandler.preferCodec(e.sdp, "h264");
+
+                            // const videobitrate = 20000;
+                            // Set bandwidth for video
+                            // e.sdp = e.sdp.replace(/(m=video.*\r\n)/g, `$1b=AS:${videobitrate}\r\n`);
+                            e.sdp = interop.toPlanB(e.sdp)
+                            console.log(e.sdp)
+                            // e.sdp = CodecsHandler.preferCodec(e.sdp, "h264");
                         }
                     }
                 };
 
                 var pcConfig = {};
 
+                // pcConfig = {
+                //     "iceServers" : [{ url:"turn:turn.ttrs.in.th?transport=udp", username: "turn01", credential:"Test1234"}],
+                //     "iceTransportPolicy":"relay",
+                //     'rtcpMuxPolicy' : "negotiate",
+                // }
                 pcConfig = {
                     "iceServers" : [{ url:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}],
                     "bundlePolicy" : "max-compat",
                     "iceTransportPolicy":"all",
                     'rtcpMuxPolicy' : "negotiate",
                 }
-                // 'pcConfig' : pcConfig,
+
                 options = {
-                    'eventHandlers'    : eventHandlers,
-                    'mediaConstraints' : constraints,
+                    'eventHandlers'        : eventHandlers,
+                    'mediaConstraints'     : constraints,
+                    'pcConfig'             : pcConfig,
                     'sessionTimersExpires' : 3600
                 };
         
@@ -416,8 +431,7 @@ const VideoCall = () => {
             }
         }else {
             return `remote-video`;
-        }
-            
+        }       
     }
     const dragElement = (elmnt) => {
         var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
