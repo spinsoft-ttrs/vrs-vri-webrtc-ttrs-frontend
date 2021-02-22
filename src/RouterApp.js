@@ -9,10 +9,10 @@ const RouterApp = (props) => {
     const webStatus = useSelector(state => state.webStatus);
     // const [localStream, setLocalStream] = useState(null);
     const dispatch = useDispatch();
-
     useEffect(() => {
         switch (props.uuid) {
-            case props.uuid.startsWith("login"):
+            case "login":
+                
                 verifyToken();
                 break;
             case "public":
@@ -107,7 +107,6 @@ const RouterApp = (props) => {
             });
         }, 15 * 60000); // 60 * 1000 milsec
     }
-
     switch (webStatus) {
         case "public":
             return (<PublicService/>)

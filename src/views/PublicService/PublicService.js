@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setRegisterData, setWebStatus } from '../../actions';
 import './css/style.css';
 
@@ -8,7 +8,6 @@ const PublicService = () => {
     const [locationName, setLocationName] = useState("")
     const [fullName, setFullName] = useState("");
     const [phone, setPhone] = useState("")
-    const registerData = useSelector(state => state.registerData);
     const dispatch  = useDispatch();
     
 
