@@ -6,11 +6,11 @@ import ChatInVideo from './components/ChatInVideo';
 import ControlVideo2 from './components/ControlVideo2';
 import VideoStopwatch from './components/VideoStopwatch';
 import Statusbar from '../../components/Statusbar';
-import { CodecsHandler, PreviewText, DetectSize } from './fuctions';
+import { PreviewText, DetectSize } from './fuctions';
 import { setMessagedata, setRegisterData, setWebStatus, setControlVideo } from '../../actions';
 import { closeRoom } from '../../actions/fetchAPI';
 // eslint-disable-next-line react-hooks/exhaustive-deps
-import adapter from 'webrtc-adapter';
+// import adapter from 'webrtc-adapter';
 import "./style.css";
 
 var interop = require('@jitsi/sdp-interop');
@@ -253,7 +253,6 @@ const VideoCall = () => {
                             // Set bandwidth for video
                             // e.sdp = e.sdp.replace(/(m=video.*\r\n)/g, `$1b=AS:${videobitrate}\r\n`);
                             e.sdp = interop.toPlanB(e.sdp)
-                            console.log(e.sdp)
                             // e.sdp = CodecsHandler.preferCodec(e.sdp, "h264");
                         }
                     }

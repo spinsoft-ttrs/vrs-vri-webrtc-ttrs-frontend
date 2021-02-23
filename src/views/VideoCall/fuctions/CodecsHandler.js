@@ -108,7 +108,7 @@ const CodecsHandler = (function() {
 
         function disableNACK(sdp) {
             if (!sdp || typeof sdp !== 'string') {
-                throw 'Invalid arguments.';
+                // throw 'Invalid arguments.';
             }
 
             sdp = sdp.replace('a=rtcp-fb:126 nack\r\n', '');
@@ -125,13 +125,13 @@ const CodecsHandler = (function() {
             }
 
             if (!codecMimeType || typeof codecMimeType !== 'string') {
-                throw 'Invalid arguments.';
+                // throw 'Invalid arguments.';
             }
 
             peer.getSenders().forEach(function(sender) {
                 var params = sender.getParameters();
                 for (var i = 0; i < params.codecs.length; i++) {
-                    if (params.codecs[i].mimeType == codecMimeType) {
+                    if (params.codecs[i].mimeType === codecMimeType) {
                         params.codecs.unshift(params.codecs.splice(i, 1));
                         break;
                     }
@@ -141,7 +141,7 @@ const CodecsHandler = (function() {
         }
 
         function removeNonG722(sdp) {
-            return sdp.replace(/m=audio ([0-9]+) RTP\/SAVPF ([0-9 ]*)/g, 'm=audio $1 RTP\/SAVPF 9');
+            return sdp.replace(/m=audio ([0-9]+) RTP\/SAVPF ([0-9 ]*)/g, 'm=audio $1 RTP SAVPF 9');
         }
 
         function setBAS(sdp, bandwidth, isScreen) {
