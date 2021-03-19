@@ -9,8 +9,7 @@ import Statusbar from '../../components/Statusbar';
 import { PreviewText, DetectSize } from './fuctions';
 import { setMessagedata, setRegisterData, setWebStatus, setControlVideo } from '../../actions';
 import { closeRoom } from '../../actions/fetchAPI';
-// eslint-disable-next-line react-hooks/exhaustive-deps
-// import adapter from 'webrtc-adapter';
+import adapter from 'webrtc-adapter';
 import "./style.css";
 
 var interop = require('@jitsi/sdp-interop');
@@ -46,10 +45,6 @@ if(browser.name === "firefox"){
         optional: [ { facingMode: "user" }]
     }
 }
-// constraints = { 
-//     audio: true, 
-//     video: true
-// }
 
 var localVideo, remoteVideo;
 
@@ -108,11 +103,9 @@ const VideoCall = () => {
                 document.getElementById("call-mobile").classList.add("call-mobile");
                 document.getElementById("waiting_mobile").classList.add("waiting_mobile");
             }else{
-                // alert("HE")
                 document.getElementById("slideMessage").style.display = "none";
                 document.getElementById("img_vdocall").classList.remove('vdo_call_show');
                 document.getElementById("call-mobile").classList.remove("call-mobile");
-                // document.getElementById("waiting_mobile").classList.remove("waiting_mobile");
             }
         }else{
             if(controlVideo.openMessage){
@@ -248,23 +241,15 @@ const VideoCall = () => {
                     'reinvite' : (e) =>{},
                     'sdp' : (e) => {
                         if(e.originator === "local"){
-
-                            // const videobitrate = 20000;
-                            // Set bandwidth for video
-                            // e.sdp = e.sdp.replace(/(m=video.*\r\n)/g, `$1b=AS:${videobitrate}\r\n`);
-                            e.sdp = interop.toPlanB(e.sdp)
-                            // e.sdp = CodecsHandler.preferCodec(e.sdp, "h264");
+                            e.sdp = interop.toPlanB(e.sdp);
+                            // e.sdp = removeCodec(e.sdp, "H264")
+                            // e.sdp = removeCodec(e.sdp, "VP9")
                         }
                     }
                 };
 
                 var pcConfig = {};
 
-                // pcConfig = {
-                //     "iceServers" : [{ url:"turn:turn.ttrs.in.th?transport=udp", username: "turn01", credential:"Test1234"}],
-                //     "iceTransportPolicy":"relay",
-                //     'rtcpMuxPolicy' : "negotiate",
-                // }
                 pcConfig = {
                     "iceServers" : [{ url:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}],
                     "bundlePolicy" : "max-compat",
@@ -278,23 +263,32 @@ const VideoCall = () => {
                     'pcConfig'             : pcConfig,
                     'sessionTimersExpires' : 3600
                 };
-        
+
                 registerData.userAgent.on('newRTCSession', (data) => {
                     var session = data.session;
 
+                    session.on('peerconnection', (e) =>{
+                        console.log("peerconnection")
+                        console.log(e)
+                    });
                     session.on('ended'    , (e) => {
-                        dispatch(setWebStatus("terminate"))
+                        dispatch(setWebStatus("public"))
                         registerData.userAgent.unregister();
                     });
                     session.on('failed'   , (e) => {
                         console.log("failed", e)
                         registerData.userAgent.unregister();
-                        dispatch(setWebStatus("terminate"))
+                        dispatch(setWebStatus("public"))
                     });
                     session.on("confirmed", (e) => {
+                        // addtrack
+                        // console.log(session.connection.getLocalStreams()[0].sender);
+
                         localVideo.srcObject = session.connection.getLocalStreams()[0];
                         remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
                         setPeerconnection(session);
+
+
                         setConnection(true);
                     });
                 });

@@ -19,7 +19,7 @@ const Register = () => {
 
     const registerSip = (callback) => {
         setRegisterProgress(30)
-        var socket = new JsSIP.WebSocketInterface(`${registerData.websocket}`);
+        var socket = new JsSIP.WebSocketInterface(`${registerData.websocket}?transport=ws`);
         var configuration = {
             sockets : [ socket ],
             uri      : `${registerData.extension}@${registerData.domain}`, 
