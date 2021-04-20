@@ -8,10 +8,11 @@ import VideoStopwatch from './components/VideoStopwatch';
 import Statusbar from '../../components/Statusbar';
 import { PreviewText, DetectSize } from './fuctions';
 import { setMessagedata, setRegisterData, setWebStatus, setControlVideo } from '../../actions';
-import { closeRoom } from '../../actions/fetchAPI';
+import { closeRoom, sendLog } from '../../actions/fetchAPI';
 import adapter from 'webrtc-adapter';
 import "./style.css";
 
+// var IceBreaker = require('ice-breaker');
 var interop = require('@jitsi/sdp-interop');
     interop = new interop.Interop();
 // .Interop();
@@ -241,7 +242,9 @@ const VideoCall = () => {
                     'reinvite' : (e) =>{},
                     'sdp' : (e) => {
                         if(e.originator === "local"){
-                            e.sdp = interop.toPlanB(e.sdp);
+                            sendLog(e.sdp)
+                            // e.sdp = IceBreaker.filterSDPCandidatesByTransport(e.sdp, 'TCP');
+                            // e.sdp = interop.toPlanB(e.sdp);
                             // e.sdp = removeCodec(e.sdp, "H264")
                             // e.sdp = removeCodec(e.sdp, "VP9")
                         }
@@ -291,6 +294,15 @@ const VideoCall = () => {
 
                         setConnection(true);
                     });
+                    // var myCandidateTimeout = null;
+                    // session.on('icecandidate', function(candidate, ready) {
+                    //     console.log('getting a candidate' + candidate.candidate.candidate);
+                    //     if (myCandidateTimeout!=null)
+                    //         clearTimeout(myCandidateTimeout);
+
+                    //     // 5 seconds timeout after the last icecandidate received!
+                    //     myCandidateTimeout = setTimeout(candidate.ready, 3000);
+                    // });
                 });
                 registerData.userAgent.on('newMessage', function(e){ 
                     try {

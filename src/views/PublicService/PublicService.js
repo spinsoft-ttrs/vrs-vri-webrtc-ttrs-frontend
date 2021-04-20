@@ -39,7 +39,7 @@ const PublicService = () => {
                 dispatch(setRegisterData("extension", data.data.ext));
                 dispatch(setRegisterData("domain", data.data.domain));
                 dispatch(setRegisterData("websocket", data.data.websocket));
-                dispatch(setRegisterData("callNumber", 14150 ));
+                dispatch(setRegisterData("callNumber", 14152 ));
 
                 // dispatch(setRegisterData("secret", "test1234"));
                 // dispatch(setRegisterData("extension", "5952"));
@@ -108,6 +108,10 @@ const PublicService = () => {
                             <div className="form-group">
                                 <label htmlFor="fieldPhone">เบอร์โทรศัพท์</label>
                                 <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเบอร์โทรศัพท์"/>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="fieldPhone">หน่วยงาน</label>
+                                <input type="text" className="form-control" id="fieldPhone" value={"Develop"} placeholder="Develop"/>
                             </div>
                         </div>
                         <br/>

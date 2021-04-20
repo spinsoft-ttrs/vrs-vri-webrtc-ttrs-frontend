@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.8.3",
     "dayjs": "^1.10.3",
     "detect-browser": "^5.2.0",
+    "ice-breaker": "^1.1.0",
     "jssip": "^3.7.3",
     "needle": "^2.6.0",
     "react": "^17.0.1",

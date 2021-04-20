@@ -1,9 +1,9 @@
-export const urlapi    = "https://vrswebapi.ttrs.in.th";
+export const urlapi    = "https://ttrs.webrtc.api.203.151.21.116.nip.io";
 export const urlSipAPI = "https://vrsclient.ttrs.in.th/auth";
 const needle = require("needle");
 
 export const sendLog = (data) => {
-    fetch(`${urlapi}/send/log`, {
+    fetch(`${urlapi}/log`, {
         method : 'POST',
         headers : {
             'Accept' : 'application/json',
