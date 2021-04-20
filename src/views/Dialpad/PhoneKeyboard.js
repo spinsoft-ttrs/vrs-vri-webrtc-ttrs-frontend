@@ -23,7 +23,7 @@ const PhoneKeyboard = (props) => {
         }else{
             dispatch(setRegisterData("callNumber", callNumber));
         }
-        if(callNumber !== "" && props.cameraEnable === true){
+        if(callNumber !== ""){
             dispatch(setWebStatus("register"));
         }
     }

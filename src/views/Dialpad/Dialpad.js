@@ -148,12 +148,15 @@ const Dialpad = () => {
                 { facingMode: "user" }
             ]
         };
-        try {
-            await navigator.mediaDevices.getUserMedia(constraints);
-        } catch (e) {
-            setCameraEnable(false);
-            alert("ไม่สามารถเข้าถึงสิทธิ์การใช้งานกล้องวิดีโอ")
-        }
+        navigator.mediaDevices.getUserMedia(constraints)
+        .then(function(stream) {
+            console.log("Permission access")
+        })
+        .catch(function(err) {
+            console.log(err)
+            setCameraEnable(false)
+            alert("ไม่สามารถเข้าถึงสิทธิ์การใช้งานกล้องวิดีโอได้")
+        });
     }
     const isIpadOS = () => {
         return navigator.maxTouchPoints &&

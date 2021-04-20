@@ -111,7 +111,7 @@ const PublicService = () => {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fieldPhone">หน่วยงาน</label>
-                                <input type="text" className="form-control" id="fieldPhone" value={"Develop"} placeholder="Develop"/>
+                                <input type="text" className="form-control" id="fieldPhone" defaultValue={"Develop"} placeholder="Develop"/>
                             </div>
                         </div>
                         <br/>

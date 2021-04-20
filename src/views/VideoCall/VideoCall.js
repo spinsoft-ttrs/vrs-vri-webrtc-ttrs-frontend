@@ -9,12 +9,12 @@ import Statusbar from '../../components/Statusbar';
 import { PreviewText, DetectSize } from './fuctions';
 import { setMessagedata, setRegisterData, setWebStatus, setControlVideo } from '../../actions';
 import { closeRoom, sendLog } from '../../actions/fetchAPI';
-import adapter from 'webrtc-adapter';
+// import adapter from 'webrtc-adapter';
 import "./style.css";
 
 // var IceBreaker = require('ice-breaker');
-var interop = require('@jitsi/sdp-interop');
-    interop = new interop.Interop();
+// var interop = require('@jitsi/sdp-interop');
+    // interop = new interop.Interop();
 // .Interop();
 
 const { detect } = require('detect-browser');
@@ -45,6 +45,10 @@ if(browser.name === "firefox"){
         },
         optional: [ { facingMode: "user" }]
     }
+}
+constraints = {
+    audio : true,
+    video : true
 }
 
 var localVideo, remoteVideo;
