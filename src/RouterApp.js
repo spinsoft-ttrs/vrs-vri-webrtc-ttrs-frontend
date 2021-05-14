@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService } from './views';
+import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService, PublicServiceEmergency } from './views';
 import { setWebStatus, setRegisterData } from './actions';
 import { verifyAuth, verifyUUID, reToken, refreshExtension } from './actions/fetchAPI';
 
@@ -17,6 +17,12 @@ const RouterApp = (props) => {
                 break;
             case "public":
                 dispatch(setWebStatus("public"))
+                break;
+            case "publicEmergency":
+                dispatch(setWebStatus("publicEmergency"))
+                break;
+            case "publicemergency":
+                dispatch(setWebStatus("publicEmergency"))
                 break;
             default:
                 verifyUUID(props.uuid, (result) => {
@@ -110,6 +116,10 @@ const RouterApp = (props) => {
     switch (webStatus) {
         case "public":
             return (<PublicService/>)
+        case "publicEmergency":
+            return (<PublicServiceEmergency/>)
+        case "publicemergency":
+            return (<PublicServiceEmergency/>)
         case "callVRS":
             return (<VideoCall/>)
         case "callVRI":

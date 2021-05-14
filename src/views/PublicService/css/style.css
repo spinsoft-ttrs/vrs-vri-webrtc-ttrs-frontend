@@ -5,7 +5,7 @@
     color : rgb(22, 138, 206) !important
 }
 .emergency{
-    color: Red;
+    color: Red !important;
 }
 .red{
     color:red

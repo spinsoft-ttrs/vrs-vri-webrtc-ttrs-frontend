@@ -1,5 +1,5 @@
-export const urlapi    = "https://ttrs.webrtc.api.203.151.21.116.nip.io";
-export const urlSipAPI = "https://vrsclient.ttrs.in.th/auth";
+export const urlapi    = process.env.REACT_APP_URL_MAIN_API;
+export const urlSipAPI = process.env.REACT_APP_URL_SIP_API;
 const needle = require("needle");
 
 export const sendLog = (data) => {
