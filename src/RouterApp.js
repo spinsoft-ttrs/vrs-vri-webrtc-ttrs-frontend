@@ -5,14 +5,12 @@ import { setWebStatus, setRegisterData } from './actions';
 import { verifyAuth, verifyUUID, reToken, refreshExtension } from './actions/fetchAPI';
 
 const RouterApp = (props) => {
-
     const webStatus = useSelector(state => state.webStatus);
     // const [localStream, setLocalStream] = useState(null);
     const dispatch = useDispatch();
     useEffect(() => {
         switch (props.uuid) {
             case "login":
-                
                 verifyToken();
                 break;
             case "public":

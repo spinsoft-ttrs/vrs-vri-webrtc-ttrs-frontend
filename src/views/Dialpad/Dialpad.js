@@ -154,7 +154,7 @@ const Dialpad = () => {
         })
         .catch(function(err) {
             console.log(err)
-            setCameraEnable(false)
+            // setCameraEnable(false)
             alert("ไม่สามารถเข้าถึงสิทธิ์การใช้งานกล้องวิดีโอได้")
         });
     }

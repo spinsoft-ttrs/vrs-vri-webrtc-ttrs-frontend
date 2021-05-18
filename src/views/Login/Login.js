@@ -4,7 +4,6 @@ import { setWebStatus } from '../../actions';
 import './css/style.css';
 
 const Login = () => {
-
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loginStatus, setLoginStatus] = useState(false);

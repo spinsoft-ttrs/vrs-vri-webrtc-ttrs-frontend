@@ -2,6 +2,33 @@ export const urlapi    = process.env.REACT_APP_URL_MAIN_API;
 export const urlSipAPI = process.env.REACT_APP_URL_SIP_API;
 const needle = require("needle");
 
+export const getExtensionFromToken = (token, callback) => {
+    fetch(`${urlapi}/getextension`, {
+        method : 'GET',
+        headers : {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json',
+            'Authorization' : token
+        }
+    })
+    .then((response) => {return response.json();})
+    .then((data) => {
+        callback(data)
+    });
+}
+export const getextensionEmregency = (callback) => {
+    fetch(`${urlapi}/getextensionemregency`, {
+        method : 'GET',
+        headers : {
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json',
+        }
+    })
+    .then((response) => {return response.json();})
+    .then((data) => {
+        callback(data)
+    });
+}
 export const sendLog = (data) => {
     fetch(`${urlapi}/log`, {
         method : 'POST',
