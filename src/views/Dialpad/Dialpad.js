@@ -292,9 +292,9 @@ const Dialpad = () => {
                                                 <div className="img-icon">
                                                     <img src={require("./img/logout-button.png").default} alt="vri"/>
                                                 </div>
-                                                <div className="txt-desc">
+                                                {/* <div className="txt-desc">
                                                     <div className="head">ออกจากระบบ</div>
-                                                </div>
+                                                </div> */}
                                             </a>
 
                                             <div className="exp-vdo" data-toggle="modal" data-target="#ShowVdo8">

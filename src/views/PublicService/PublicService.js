@@ -16,29 +16,48 @@ const PublicService = () => {
     const handleAgency = (event) => { setAgency(event.target.value) }
 
     const handleAccessPublicService = () => {
-        fetch(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`, {
-            method : 'POST',
-            headers : {
-                'Accept' : 'application/json',
-                'Content-Type' : 'application/json'
-            },
-            body : JSON.stringify({
-                type : "webrtc-public"
+        if(fullName.trim() !== "" && phone.trim() !== "" && agency.trim() !== ""){
+            fetch(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`, {
+                method : 'POST',
+                headers : {
+                    'Accept' : 'application/json',
+                    'Content-Type' : 'application/json'
+                },
+                body : JSON.stringify({
+                    type : "webrtc-public",
+                    agency,
+                    phone,
+                    fullName,
+                    emergency : 0,
+                    emergency_options_data : "",
+                })
             })
-        })
-        .then((response) => {return response.json();})
-        .then((data) => {
-            if(data.status === "OK"){
-                localStorage.setItem("fullname", fullName);
-                localStorage.setItem("phone", phone);
-                dispatch(setRegisterData("secret", data.data.secret));
-                dispatch(setRegisterData("extension", data.data.ext));
-                dispatch(setRegisterData("domain", data.data.domain));
-                dispatch(setRegisterData("websocket", data.data.websocket));
-                dispatch(setRegisterData("callNumber", 14152 ));
-                dispatch(setWebStatus("register"));
-            }
-        });
+            .then((response) => {return response.json();})
+            .then((data) => {
+                if(data.status === "OK"){
+                    localStorage.setItem("fullname", fullName);
+                    localStorage.setItem("phone", phone);
+                    localStorage.setItem("agency", agency);
+                    dispatch(setRegisterData("secret", data.data.secret));
+                    dispatch(setRegisterData("extension", data.data.ext));
+                    dispatch(setRegisterData("domain", data.data.domain));
+                    dispatch(setRegisterData("websocket", data.data.websocket));
+                    dispatch(setRegisterData("callNumber", 1111161700666 ));
+                    dispatch(setWebStatus("register"));
+                }
+            });
+        }else{
+            handleClassInputInvalid(fullName, "fieldFullName", "is-invalid")
+            handleClassInputInvalid(phone, "fieldPhone", "is-invalid")
+            handleClassInputInvalid(agency, "fieldAgency", "is-invalid")
+        }
+    }
+
+    const handleClassInputInvalid = (value, id, className) =>{
+        if(value.trim() === ""){ 
+            document.getElementById(id).classList.add(className) }
+        else{ 
+            document.getElementById(id).classList.remove(className) }
     }
 
     useEffect(() => {
@@ -84,15 +103,24 @@ const PublicService = () => {
                         <div>
                             <div className="form-group">
                                 <label htmlFor="fieldFullName">ชื่อ - นามสกุล</label>
-                                <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} placeholder="กรอกชื่อ - นามสกุล"/>
+                                <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName}/>
+                                <div className="invalid-feedback">
+                                    กรุณากรอกชื่อ - นามสกุล
+                                </div>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fieldPhone">เบอร์โทรศัพท์</label>
                                 <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเบอร์โทรศัพท์"/>
+                                <div className="invalid-feedback">
+                                    กรุณากรอกเบอร์โทรศัพท์
+                                </div>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fieldPhone">หน่วยงาน</label>
-                                <input type="text" className="form-control" id="fieldPhone" onChange={handleAgency} value={agency} placeholder="หน่วยงาน"/>
+                                <input type="text" className="form-control" id="fieldAgency" onChange={handleAgency} value={agency} placeholder="หน่วยงาน"/>
+                                <div className="invalid-feedback">
+                                    กรุณากรอกหน่วยงาน
+                                </div>
                             </div>
                         </div>
                         <br/>

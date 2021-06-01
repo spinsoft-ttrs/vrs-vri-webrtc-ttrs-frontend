@@ -30,19 +30,19 @@ export const getextensionEmregency = (callback) => {
     });
 }
 export const sendLog = (data) => {
-    fetch(`${urlapi}/log`, {
-        method : 'POST',
-        headers : {
-            'Accept' : 'application/json',
-            'Content-Type' : 'application/json'
-        },
-        body : JSON.stringify({
-            data : data
-        })
-    })
-    .then((response) => {return response.json();})
-    .then((data) => {
-    });
+    // fetch(`${urlapi}/log`, {
+    //     method : 'POST',
+    //     headers : {
+    //         'Accept' : 'application/json',
+    //         'Content-Type' : 'application/json'
+    //     },
+    //     body : JSON.stringify({
+    //         data : data
+    //     })
+    // })
+    // .then((response) => {return response.json();})
+    // .then((data) => {
+    // });
 }
 
 export const callLog = (data, callback) => {

@@ -10,7 +10,7 @@ const PublicServiceEmergency = () => {
     const [phone, setPhone] = useState(localStorage.getItem('phone') === null ? "" : localStorage.getItem("phone"));
     const [agency, setAgency] = useState(localStorage.getItem('agency') === null ? "" : localStorage.getItem("agency"));
     const emergencyText = ["","ด่วนหมอ", "ด่วนตำรวจ", "ด่วนไฟไหม้"];
-    const [typeEmergency, setTypeEmergency] = useState("1");
+    const [typeEmergency, setTypeEmergency] = useState(localStorage.getItem('typeEmergency') === null ? "1" : localStorage.getItem("typeEmergency"));
     const dispatch  = useDispatch();
     
     const handleName = (event) => { setFullName(event.target.value) }
@@ -18,30 +18,49 @@ const PublicServiceEmergency = () => {
     const handleAgency = (event) => { setAgency(event.target.value) }
 
     const handleAccessPublicService = () => {
-        fetch(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`, {
-            method : 'POST',
-            headers : {
-                'Accept' : 'application/json',
-                'Content-Type' : 'application/json'
-            },
-            body : JSON.stringify({
-                type : "webrtc-public"
+        if(fullName.trim() !== "" && phone.trim() !== "" && agency.trim() !== ""){
+            fetch(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`, {
+                method : 'POST',
+                headers : {
+                    'Accept' : 'application/json',
+                    'Content-Type' : 'application/json'
+                },
+                body : JSON.stringify({
+                    type : "webrtc-public",
+                    agency,
+                    phone,
+                    fullName,
+                    emergency : 1,
+                    emergency_options_data : emergencyText[typeEmergency]
+                })
             })
-        })
-        .then((response) => {return response.json();})
-        .then((data) => {
-            if(data.status === "OK"){
-                localStorage.setItem("fullname", fullName);
-                localStorage.setItem("phone", phone);
-                localStorage.setItem("agency", agency);
-                dispatch(setRegisterData("secret", data.data.secret));
-                dispatch(setRegisterData("extension", data.data.ext));
-                dispatch(setRegisterData("domain", data.data.domain));
-                dispatch(setRegisterData("websocket", data.data.websocket));
-                dispatch(setRegisterData("callNumber", 14152 ));
-                dispatch(setWebStatus("register"));
-            }
-        });
+            .then((response) => {return response.json();})
+            .then((data) => {
+                if(data.status === "OK"){
+                    localStorage.setItem("fullname", fullName);
+                    localStorage.setItem("phone", phone);
+                    localStorage.setItem("agency", agency);
+                    localStorage.setItem("typeEmergency", typeEmergency);
+                    dispatch(setRegisterData("secret", data.data.secret));
+                    dispatch(setRegisterData("extension", data.data.ext));
+                    dispatch(setRegisterData("domain", data.data.domain));
+                    dispatch(setRegisterData("websocket", data.data.websocket));
+                    dispatch(setRegisterData("callNumber", 14152 ));
+                    dispatch(setWebStatus("register"));
+                }
+            });
+        }else{
+            handleClassInputInvalid(fullName, "fieldFullName", "is-invalid")
+            handleClassInputInvalid(phone, "fieldPhone", "is-invalid")
+            handleClassInputInvalid(agency, "fieldAgency", "is-invalid")
+        }
+    }
+
+    const handleClassInputInvalid = (value, id, className) =>{
+        if(value.trim() === ""){ 
+            document.getElementById(id).classList.add(className) }
+        else{ 
+            document.getElementById(id).classList.remove(className) }
     }
 
     useEffect(() => {
@@ -102,24 +121,30 @@ const PublicServiceEmergency = () => {
                                 <input type="text" className="form-control" id="fieldPhone" onChange={handleAgency} value={agency} placeholder="หน่วยงาน"/>
                             </div>
                         </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio1" onChange={handleRadioEmergency} checked={typeEmergency === "1"} value="1"/>
-                            <label className="form-check-label" htmlFor="emergencyRadio1">
-                                {emergencyText[1]}
-                            </label>
+                        <div 
+                            // className="col offset-3"
+                            style={{textAlign:"center"}}
+                        >
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio1" onChange={handleRadioEmergency} checked={typeEmergency === "1"} value="1"/>
+                                <label className="form-check-label" htmlFor="emergencyRadio1" style={{marginRight:"10px"}}>
+                                    {emergencyText[1]}
+                                </label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio2" onChange={handleRadioEmergency} checked={typeEmergency === "2"} value="2"/>
+                                <label className="form-check-label" htmlFor="emergencyRadio2">
+                                    {emergencyText[2]}
+                                </label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio3" onChange={handleRadioEmergency} checked={typeEmergency === "3"} value="3"/>
+                                <label className="form-check-label" htmlFor="emergencyRadio3">
+                                    {emergencyText[3]}
+                                </label>
+                            </div>
                         </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio2" onChange={handleRadioEmergency} checked={typeEmergency === "2"} value="2"/>
-                            <label className="form-check-label" htmlFor="emergencyRadio2">
-                                {emergencyText[2]}
-                            </label>
-                        </div>
-                        <div className="form-check">
-                            <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio3" onChange={handleRadioEmergency} checked={typeEmergency === "3"} value="3"/>
-                            <label className="form-check-label" htmlFor="emergencyRadio3">
-                                {emergencyText[3]}
-                            </label>
-                        </div>
+ 
                         <br/>
                         <button type="submit" className="btn btn-danger btn-block" onClick={handleAccessPublicService}>เข้าใช้งาน</button>
                     </div>

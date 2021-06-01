@@ -19,7 +19,7 @@ const Register = () => {
 
     const registerSip = (callback) => {
         setRegisterProgress(30)
-        console.log(registerData)
+        // console.log(registerData)
         var socket = new JsSIP.WebSocketInterface(`${registerData.websocket}?transport=ws`);
         var configuration = {
             sockets : [ socket ],
@@ -27,7 +27,7 @@ const Register = () => {
             password : registerData.secret,
             register_expires : 60,
         };
-        console.log(configuration)
+        // console.log(configuration)
         setRegisterProgress(60)
         var userAgent = new JsSIP.UA(configuration);
         
@@ -39,17 +39,17 @@ const Register = () => {
         });
         userAgent.on("registrationFailed", function(error){
             console.log(error)
-            // console.log("registrationFailed")
-            // userAgent.unregister();
-            // try {
-            //     if(localStorage.getItem("directlogin") === "true"){
-            //         dispatch(setWebStatus("login"));
-            //     }else{
-            //         // window.location.href = "https://ttrs.or.th";
-            //     }
-            // } catch (error) {
-            //     console.log(error)
-            // }
+            console.log("registrationFailed")
+            userAgent.unregister();
+            try {
+                if(localStorage.getItem("directlogin") === "true"){
+                    // dispatch(setWebStatus("login"));
+                }else{
+                    window.location.href = "https://ttrs.or.th";
+                }
+            } catch (error) {
+                console.log(error)
+            }
         });
         userAgent.on("unregistered", function(){
             // try {

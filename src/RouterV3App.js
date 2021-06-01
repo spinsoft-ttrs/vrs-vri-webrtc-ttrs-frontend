@@ -6,14 +6,18 @@ import { getExtensionFromToken, getextensionEmregency } from './actions/fetchAPI
 import { AuthProvider } from 'oidc-react';
 
 const RouterV3App = (props) => {
+    console.log(props.uuid)
     const oidcConfig = {
         onSignIn: () => {
+            console.log(`oidc.user:${process.env.REACT_APP_ISSUER}:${process.env.REACT_APP_CLIENT_ID}`)
+            console.log(JSON.parse(sessionStorage.getItem(`oidc.user:${process.env.REACT_APP_ISSUER}:${process.env.REACT_APP_CLIENT_ID}`)))
+            
             setToken(JSON.parse(sessionStorage.getItem(`oidc.user:${process.env.REACT_APP_ISSUER}:${process.env.REACT_APP_CLIENT_ID}`)).access_token)
             window.location.hash = '';
         },
         authority: process.env.REACT_APP_ISSUER,
-        clientId: 'TTRS_LiveChat_Web_Dev',
-        redirectUri: 'http://localhost:3001/v3/normal'
+        clientId: process.env.REACT_APP_CLIENT_ID,
+        redirectUri: `${process.env.REACT_APP_DOMAIN}/v3/normal`
     };    
     
     const [token, setToken] = useState(null)
@@ -28,7 +32,8 @@ const RouterV3App = (props) => {
     },[token])
 
     useEffect(() => {
-        if(token !== null && props.uuid === "normal"){
+        if(token !== "" && props.uuid === "normal"){
+            dispatch(setWebStatus("dialpad"));
             getExtensionFromToken(token, (result) => {
                 if(result === "expired"){
                     window.location.href = "https://ttrs.or.th";
@@ -103,16 +108,17 @@ const RouterV3App = (props) => {
         case "register" : 
             return (<Register/>)
         case "dialpad" : 
-            return (<Dialpad/>)
+            return (<AuthProvider {...oidcConfig}><Dialpad/></AuthProvider>)
         case "login" : 
             return (<Login/>)
         case "help" : 
             return (<Help/>)
         default:
-            return (               
-                <AuthProvider {...oidcConfig}>
-                    <Dialpad/>
-                </AuthProvider> )
+            return (<div></div>)   
+        // return (               
+            //     <AuthProvider {...oidcConfig}>
+            //         <Dialpad/>
+            //     </AuthProvider> )
     }
 }
 export default RouterV3App;
