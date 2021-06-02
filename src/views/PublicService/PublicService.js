@@ -42,7 +42,7 @@ const PublicService = () => {
                     dispatch(setRegisterData("extension", data.data.ext));
                     dispatch(setRegisterData("domain", data.data.domain));
                     dispatch(setRegisterData("websocket", data.data.websocket));
-                    dispatch(setRegisterData("callNumber", 1111161700666 ));
+                    dispatch(setRegisterData("callNumber", 9999 ));
                     dispatch(setWebStatus("register"));
                 }
             });

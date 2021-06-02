@@ -25,27 +25,6 @@ const matchMedia = window.matchMedia("(max-width: 768px)");
 
 var constraints;
 
-if(browser.name === "firefox"){
-    constraints = { 
-        audio: true, 
-        video: {
-            frameRate : { max : 15 },
-            width: { min: 352, max: 1000 },
-            height: { min: 240 },
-        },
-        optional: [ { facingMode: "user" }]
-    }
-}else{
-    constraints = { 
-        audio: true, 
-        video: {
-            frameRate : { min: 15, max : 15},
-            width: { min: 352, max: 352 },
-            height: { min: 240, max: 240},    
-        },
-        optional: [ { facingMode: "user" }]
-    }
-}
 constraints = {
     audio : true,
     video : true
@@ -82,7 +61,7 @@ const VideoCall = () => {
         localVideo  = document.getElementById("local-video");
         remoteVideo = document.getElementById("remote-video"); 
         dragElement(document.getElementById("img_vdocall"))
-        if(browser.os === "Android OS"){
+        // if(browser.os === "Android OS"){
             initAndroid();
             async function initAndroid() {
                 try {
@@ -91,9 +70,9 @@ const VideoCall = () => {
                 } catch (e) {
                 }
             }
-        }else{
-            makeCall(true);
-        }
+        // }else{
+        //     makeCall(true);
+        // }
         if(localStorage.getItem("callType")==="callVRS"){
             dispatch(setControlVideo("openMic", false));
         }
@@ -246,7 +225,7 @@ const VideoCall = () => {
                     'reinvite' : (e) =>{},
                     'sdp' : (e) => {
                         if(e.originator === "local"){
-                            sendLog(e.sdp)
+                            // sendLog(e.sdp)
                             // e.sdp = IceBreaker.filterSDPCandidatesByTransport(e.sdp, 'TCP');
                             // e.sdp = interop.toPlanB(e.sdp);
                             // e.sdp = removeCodec(e.sdp, "H264")
@@ -257,17 +236,9 @@ const VideoCall = () => {
 
                 var pcConfig = {};
 
-                pcConfig = {
-                    "iceServers" : [{ url:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}],
-                    "bundlePolicy" : "max-compat",
-                    "iceTransportPolicy":"all",
-                    'rtcpMuxPolicy' : "negotiate",
-                }
-
                 options = {
                     'eventHandlers'        : eventHandlers,
                     'mediaConstraints'     : constraints,
-                    'pcConfig'             : pcConfig,
                     'sessionTimersExpires' : 3600
                 };
 

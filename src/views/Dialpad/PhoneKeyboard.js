@@ -20,7 +20,10 @@ const PhoneKeyboard = (props) => {
         localStorage.setItem("callType", "callVRS");
         if(callNumber === "9999"){
             dispatch(setRegisterData("callNumber", "9999"));
-        }else{
+        }else if (callNumber === "9002"){
+            dispatch(setRegisterData("callNumber", "9002"));
+        }
+        else {
             dispatch(setRegisterData("callNumber", callNumber));
         }
         if(callNumber !== ""){
