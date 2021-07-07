@@ -9,13 +9,8 @@ import Statusbar from '../../components/Statusbar';
 import { PreviewText, DetectSize } from './fuctions';
 import { setMessagedata, setRegisterData, setWebStatus, setControlVideo } from '../../actions';
 import { closeRoom, sendLog } from '../../actions/fetchAPI';
-// import adapter from 'webrtc-adapter';
+import adapter from 'webrtc-adapter';
 import "./style.css";
-
-// var IceBreaker = require('ice-breaker');
-// var interop = require('@jitsi/sdp-interop');
-    // interop = new interop.Interop();
-// .Interop();
 
 const { detect } = require('detect-browser');
 const browser    = detect();
@@ -25,9 +20,40 @@ const matchMedia = window.matchMedia("(max-width: 768px)");
 
 var constraints;
 
-constraints = {
-    audio : true,
-    video : true
+switch (browser.name) {
+    case "firefox":
+        constraints = { 
+            audio: true, 
+            video: {
+                frameRate : { max : 15 },
+                width: { min: 352, max: 1000 },
+                height: { min: 240 },
+            },
+            optional: [ { facingMode: "user" }]
+        } 
+        break;
+    case "safari" :
+        constraints = {
+            audio: true, 
+            video: {
+                width: { min: 352},
+                height: { min: 240 },
+                frameRate : { max : 15}
+            },
+            optional: [ { facingMode: "user" }]
+        }
+        break;
+    default:
+        constraints = { 
+            audio: true, 
+            video: {
+                frameRate : { min: 15, max : 15},
+                width: { min: 352, max: 352 },
+                height: { min: 240, max: 240},    
+            },
+            optional: [ { facingMode: "user" }]
+        }
+        break;
 }
 
 var localVideo, remoteVideo;

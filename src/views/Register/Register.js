@@ -70,17 +70,18 @@ const Register = () => {
                 <div className="container">
                     <div className="loading-logo">
                         <div className="logo" style={{width:"20vh"}}>
-                            <img src={require("./img/logo-ttrs-white.png")} alt=""/>
-                            <img src={require("./img/logo-hand-white.png")} alt=""/>
+                            {/* <img src={require("./img/logo-ttrs-white.png")} alt=""/> */}
+                            {/* <img src={require("./img/logo-hand-white.png")} alt=""/> */}
                         </div>
                     </div>
                     <div className="loading-holdon">
                         <div className="loading">
-                            <div className="logo" style={{width:"20vh"}}>
+                            <ProgressBar animated now={registerProgress} style={{width:"42vh"}}/>
+                            {/* <div className="logo" style={{width:"20vh"}}>
                                 <img src={require("./img/logo-hand1-white.png")} alt=""/>
                             </div>
                             <br/><br/>
-                            <ProgressBar animated now={registerProgress} style={{width:"42vh"}}/>
+                            <ProgressBar animated now={registerProgress} style={{width:"42vh"}}/> */}
                             <p>โปรดรอสักครู่</p>
                         </div>
                     </div>
