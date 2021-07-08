@@ -46,7 +46,20 @@ const PublicServiceEmergency = () => {
                     dispatch(setRegisterData("extension", data.data.ext));
                     dispatch(setRegisterData("domain", data.data.domain));
                     dispatch(setRegisterData("websocket", data.data.websocket));
-                    dispatch(setRegisterData("callNumber", 14152 ));
+                    switch (typeEmergency) {
+                        case "1":
+                            dispatch(setRegisterData("callNumber", 191 ));
+                            break;
+                        case "2":
+                            dispatch(setRegisterData("callNumber", 1669 ));
+                            break;
+                        case "3":
+                            dispatch(setRegisterData("callNumber", 199 ));
+                            break;
+                        default:
+                            break;
+                    }
+                    // dispatch(setRegisterData("callNumber", 14152 ));
                     dispatch(setWebStatus("register"));
                 }
             });
