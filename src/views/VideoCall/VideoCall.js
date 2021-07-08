@@ -199,15 +199,15 @@ const VideoCall = () => {
                 dispatch(setControlVideo("openTerminate", false))
                 // dispatch(setWebStatus("dialpad"));
                 // window.close();
-                try {
-                    if(localStorage.getItem("directlogin") === "true"){
-                        dispatch(setWebStatus("login"));
-                    }else{
+                // try {
+                //     if(localStorage.getItem("directlogin") === "true"){
+                //         dispatch(setWebStatus("login"));
+                //     }else{
                         window.location.href = "https://ttrs.or.th";
-                    }
-                } catch (error) {
-                    console.log(error)
-                }
+                //     }
+                // } catch (error) {
+                //     console.log(error)
+                // }
                 
             }else{
                 window.close();
@@ -276,13 +276,13 @@ const VideoCall = () => {
                         console.log(e)
                     });
                     session.on('ended'    , (e) => {
-                        dispatch(setWebStatus("public"))
+                        // dispatch(setWebStatus("public"))
                         registerData.userAgent.unregister();
                     });
                     session.on('failed'   , (e) => {
                         console.log("failed", e)
                         registerData.userAgent.unregister();
-                        dispatch(setWebStatus("public"))
+                        // dispatch(setWebStatus("public"))
                     });
                     session.on("confirmed", (e) => {
                         // addtrack

@@ -165,7 +165,7 @@ const ChatInVideo = (props) => {
                     onBlur={handleBlur}
                     value={writeMessage} 
                 />
-                <input type="submit" value="ส่ง" className="input-sendmessage" onClick={event => handleSendMessageButton()}/>
+                <input type="submit" value="ส่ง" className="input-sendmessage" onClick={handleSendMessageButton}/>
             </div>
             <div className="message-conversation" id="slideMessage">
                 <div 

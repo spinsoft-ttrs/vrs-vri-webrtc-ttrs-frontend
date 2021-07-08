@@ -191,7 +191,7 @@ const Chat = (props) => {
                     <input 
                         type="submit" value="ส่ง" 
                         className="input-sendmessage"
-                        onClick={event => handleSendMessageButton()}
+                        onClick={handleSendMessageButton}
                     />
                 </div>
             </div>

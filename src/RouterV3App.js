@@ -28,6 +28,14 @@ const RouterV3App = (props) => {
         try {
             setToken(JSON.parse(sessionStorage.getItem(`oidc.user:${process.env.REACT_APP_ISSUER}:${process.env.REACT_APP_CLIENT_ID}`)).access_token)
         } catch (error) {
+            
+        }
+    },[sessionStorage.getItem(`oidc.user:${process.env.REACT_APP_ISSUER}:${process.env.REACT_APP_CLIENT_ID}`)])
+
+    useEffect(() => {
+        try {
+            setToken(JSON.parse(sessionStorage.getItem(`oidc.user:${process.env.REACT_APP_ISSUER}:${process.env.REACT_APP_CLIENT_ID}`)).access_token)
+        } catch (error) {
         }
     },[token])
 

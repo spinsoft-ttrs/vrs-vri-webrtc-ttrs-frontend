@@ -4,7 +4,7 @@ const needle = require("needle");
 
 export const getExtensionFromToken = (token, callback) => {
     fetch(`${urlapi}/getextension`, {
-        method : 'GET',
+        method : 'PUT',
         headers : {
             'Accept' : 'application/json',
             'Content-Type' : 'application/json',
@@ -18,7 +18,7 @@ export const getExtensionFromToken = (token, callback) => {
 }
 export const getextensionEmregency = (callback) => {
     fetch(`${urlapi}/getextensionemregency`, {
-        method : 'GET',
+        method : 'PUT',
         headers : {
             'Accept' : 'application/json',
             'Content-Type' : 'application/json',
@@ -126,7 +126,8 @@ export const verifyUUID = (uuid, callback) => {
             'Content-Type' : 'application/json'
         },
         body : JSON.stringify({
-            uuid : uuid
+            uuid : uuid,
+            userAgent : navigator.userAgent
         })
     })
     .then((response) => {return response.json();})
