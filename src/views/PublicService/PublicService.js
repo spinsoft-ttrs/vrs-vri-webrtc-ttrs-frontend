@@ -16,6 +16,7 @@ const PublicService = () => {
     const handleAgency = (event) => { setAgency(event.target.value) }
 
     const handleAccessPublicService = () => {
+        console.log(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`)
         if(fullName.trim() !== "" && phone.trim() !== "" && agency.trim() !== ""){
             fetch(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`, {
                 method : 'POST',
@@ -30,6 +31,7 @@ const PublicService = () => {
                     fullName,
                     emergency : 0,
                     emergency_options_data : "",
+                    user_agent : navigator.userAgent + ""
                 })
             })
             .then((response) => {return response.json();})
@@ -42,7 +44,7 @@ const PublicService = () => {
                     dispatch(setRegisterData("extension", data.data.ext));
                     dispatch(setRegisterData("domain", data.data.domain));
                     dispatch(setRegisterData("websocket", data.data.websocket));
-                    dispatch(setRegisterData("callNumber", 9999 ));
+                    dispatch(setRegisterData("callNumber", 1111161700666 ));
                     dispatch(setWebStatus("register"));
                 }
             });
@@ -103,7 +105,7 @@ const PublicService = () => {
                         <div>
                             <div className="form-group">
                                 <label htmlFor="fieldFullName">ชื่อ - นามสกุล</label>
-                                <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName}/>
+                                <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} maxLength={35}/>
                                 <div className="invalid-feedback">
                                     กรุณากรอกชื่อ - นามสกุล
                                 </div>
@@ -117,7 +119,7 @@ const PublicService = () => {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fieldPhone">หน่วยงาน</label>
-                                <input type="text" className="form-control" id="fieldAgency" onChange={handleAgency} value={agency} placeholder="หน่วยงาน"/>
+                                <input type="text" className="form-control" id="fieldAgency" onChange={handleAgency} value={agency} placeholder="หน่วยงาน" maxLength={50}/>
                                 <div className="invalid-feedback">
                                     กรุณากรอกหน่วยงาน
                                 </div>

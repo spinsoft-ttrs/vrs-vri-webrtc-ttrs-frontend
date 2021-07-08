@@ -31,7 +31,8 @@ const PublicServiceEmergency = () => {
                     phone,
                     fullName,
                     emergency : 1,
-                    emergency_options_data : emergencyText[typeEmergency]
+                    emergency_options_data : emergencyText[typeEmergency],
+                    user_agent : navigator.userAgent
                 })
             })
             .then((response) => {return response.json();})
