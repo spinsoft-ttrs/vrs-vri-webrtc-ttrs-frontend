@@ -35,12 +35,7 @@ switch (browser.name) {
     case "safari" :
         constraints = {
             audio: true, 
-            video: {
-                width: { min: 352},
-                height: { min: 240 },
-                frameRate : { max : 15}
-            },
-            optional: [ { facingMode: "user" }]
+            video: true
         }
         break;
     default:
@@ -260,11 +255,16 @@ const VideoCall = () => {
                     }
                 };
 
+
                 var pcConfig = {};
+                pcConfig = {
+                    "iceServers" : [{ url:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}],
+                }
 
                 options = {
                     'eventHandlers'        : eventHandlers,
                     'mediaConstraints'     : constraints,
+                    'pcConfig'             : pcConfig,
                     'sessionTimersExpires' : 3600
                 };
 
