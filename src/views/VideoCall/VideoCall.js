@@ -35,7 +35,11 @@ switch (browser.name) {
     case "safari" :
         constraints = {
             audio: true, 
-            video: true
+            video: {
+                width: 352,
+                height: 240    
+            },
+            optional: [ { facingMode: "user" }]
         }
         break;
     default:
