@@ -2,7 +2,8 @@
     margin : auto;
 }
 .entry-title{
-    color : rgb(22, 138, 206) !important
+    color : rgb(22, 138, 206) !important;
+    font-size : 20px !important;
 }
 .emergency{
     color: Red;
@@ -12,4 +13,13 @@
 }
 .public-image{
     width: 150px;
+}
+.btn-access-public{
+    font-size: 20px !important;
+}
+.public-label{
+    font-size: 18px !important;
+}
+::placeholder{
+    font-size: 16px;
 }

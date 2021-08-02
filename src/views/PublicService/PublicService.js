@@ -99,28 +99,29 @@ const PublicService = () => {
                     <div className="logo">
                         <img src={public_normal} className="public-image" alt="Public Service"/>
                     </div>
-                    <h2 className="entry-title " style={{marginTop:"15px"}}>สนทนาวิดีโอ</h2>
+                    <h2 className="entry-title" style={{marginTop:"15px"}}>สนทนาวิดีโอ </h2>
+                    <h2 className="entry-title">(ติดต่อขอใช้บริการล่ามภาษามืออนไลน์)</h2>
                 </div>
                 <br/>
                 <div className="row justify-content-md-center">
                     <div className="col col-md-6">
                         <div>
                             <div className="form-group">
-                                <label htmlFor="fieldFullName">ชื่อ - นามสกุล</label>
+                                <label htmlFor="fieldFullName" className="public-label">ชื่อ - นามสกุล</label>
                                 <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} maxLength={35}/>
                                 <div className="invalid-feedback">
                                     กรุณากรอกชื่อ - นามสกุล
                                 </div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fieldPhone">เบอร์โทรศัพท์</label>
-                                <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเบอร์โทรศัพท์"/>
+                                <label htmlFor="fieldPhone" className="public-label">หมายเลขโทรศัพท์เพื่อติดต่อกลับ</label>
+                                <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกหมายเลขโทรศัพท์เพื่อติดต่อกลับ"/>
                                 <div className="invalid-feedback">
-                                    กรุณากรอกเบอร์โทรศัพท์
+                                    กรุณากรอหมายเลขโทรศัพท์เพื่อติดต่อกลับ
                                 </div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fieldPhone">หน่วยงาน</label>
+                                <label htmlFor="fieldPhone" className="public-label">หน่วยงาน</label>
                                 <input type="text" className="form-control" id="fieldAgency" onChange={handleAgency} value={agency} placeholder="หน่วยงาน" maxLength={50}/>
                                 <div className="invalid-feedback">
                                     กรุณากรอกหน่วยงาน
@@ -128,7 +129,7 @@ const PublicService = () => {
                             </div>
                         </div>
                         <br/>
-                        <button type="submit" className="btn btn-primary btn-block" onClick={handleAccessPublicService}>เข้าใช้งาน</button>
+                        <button type="submit" className="btn btn-primary btn-block btn-access-public" onClick={handleAccessPublicService}>เข้าใช้งาน</button>
                     </div>
                 </div>
             </div>

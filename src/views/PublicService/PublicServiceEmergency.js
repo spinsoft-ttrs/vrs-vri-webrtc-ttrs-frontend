@@ -124,15 +124,15 @@ const PublicServiceEmergency = () => {
                     <div className="col col-md-6">
                         <div>
                             <div className="form-group">
-                                <label htmlFor="fieldFullName">ชื่อ - นามสกุล</label>
+                                <label htmlFor="fieldFullName" className="public-label">ชื่อ - นามสกุล</label>
                                 <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} placeholder="กรอกชื่อ - นามสกุล" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fieldPhone">เบอร์โทรศัพท์</label>
+                                <label htmlFor="fieldPhone" className="public-label">เบอร์โทรศัพท์</label>
                                 <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเบอร์โทรศัพท์"/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fieldPhone">หน่วยงาน</label>
+                                <label htmlFor="fieldPhone" className="public-label">หน่วยงาน</label>
                                 <input type="text" className="form-control" id="fieldPhone" onChange={handleAgency} value={agency} placeholder="หน่วยงาน"/>
                             </div>
                         </div>
@@ -141,20 +141,20 @@ const PublicServiceEmergency = () => {
                             style={{textAlign:"center"}}
                         >
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio1" onChange={handleRadioEmergency} checked={typeEmergency === "1"} value="1"/>
-                                <label className="form-check-label" htmlFor="emergencyRadio1" style={{marginRight:"10px"}}>
+                                <input className="form-check-input public-label" type="radio" name="emergencyRadio" id="emergencyRadio1" onChange={handleRadioEmergency} checked={typeEmergency === "1"} value="1"/>
+                                <label className="form-check-label public-label" htmlFor="emergencyRadio1" style={{marginRight:"10px"}}>
                                     {emergencyText[1]}
                                 </label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio2" onChange={handleRadioEmergency} checked={typeEmergency === "2"} value="2"/>
-                                <label className="form-check-label" htmlFor="emergencyRadio2">
+                                <input className="form-check-input public-label" type="radio" name="emergencyRadio" id="emergencyRadio2" onChange={handleRadioEmergency} checked={typeEmergency === "2"} value="2"/>
+                                <label className="form-check-label public-label" htmlFor="emergencyRadio2">
                                     {emergencyText[2]}
                                 </label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio3" onChange={handleRadioEmergency} checked={typeEmergency === "3"} value="3"/>
-                                <label className="form-check-label" htmlFor="emergencyRadio3">
+                                <input className="form-check-input public-label" type="radio" name="emergencyRadio" id="emergencyRadio3" onChange={handleRadioEmergency} checked={typeEmergency === "3"} value="3"/>
+                                <label className="form-check-label public-label" htmlFor="emergencyRadio3">
                                     {emergencyText[3]}
                                 </label>
                             </div>

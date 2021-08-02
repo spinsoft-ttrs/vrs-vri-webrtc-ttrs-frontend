@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setWebStatus } from '../../actions';
 import './css/style.css';
+import public_emer from './img/Emer-VDO-Web-circle-01.png';
 
 const HelpDesk = () => {
 
@@ -72,14 +73,14 @@ const HelpDesk = () => {
             <div className="container">
                 <div className="row justify-content-md-center">
                     <div className="logo">
-                        <img className="logo-hand2-blue" src={require("./img/ttrs-video-emergency.png")} alt=""/>
+                        <img className="logo-hand2-blue" src={public_emer} className="public-image" alt=""/>
                         <br/>
                     </div>
                     <h2 className="entry-title">แจ้งเหตุฉุกเฉิน TTRS</h2>
                 </div>
                 <br/>
                 <div className="row justify-content-md-center">
-                    <div className="col col-md-6">
+                    <div className="col col-md-6" >
                         <div className={!isLogin?"hide":""}>
                             <div className="form-group">
                                 <label htmlFor="fieldFullName">ชื่อ - นามสกุล</label>
@@ -90,19 +91,19 @@ const HelpDesk = () => {
                                 <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเบอร์โทรศัพท์"/>
                             </div>
                         </div>
-                        <div className="form-check">
+                        <div className="form-check" style={{marginLeft:"40%"}}>
                             <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio1" onChange={handleRadioEmergency} checked={typeEmergency === "1"} value="1"/>
                             <label className="form-check-label" htmlFor="emergencyRadio1">
                                 {emergencyText[1]}
                             </label>
                         </div>
-                        <div className="form-check">
+                        <div className="form-check" style={{marginLeft:"40%"}}>
                             <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio2" onChange={handleRadioEmergency} checked={typeEmergency === "2"} value="2"/>
                             <label className="form-check-label" htmlFor="emergencyRadio2">
                                 {emergencyText[2]}
                             </label>
                         </div>
-                        <div className="form-check">
+                        <div className="form-check" style={{marginLeft:"40%"}}>
                             <input className="form-check-input" type="radio" name="emergencyRadio" id="emergencyRadio3" onChange={handleRadioEmergency} checked={typeEmergency === "3"} value="3"/>
                             <label className="form-check-label" htmlFor="emergencyRadio3">
                                 {emergencyText[3]}
