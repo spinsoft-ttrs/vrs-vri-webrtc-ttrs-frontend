@@ -23,53 +23,48 @@ const RouterApp = (props) => {
                 dispatch(setWebStatus("publicEmergency"))
                 break;
             default:
-                dispatch(setWebStatus("dialpad"));
-                dispatch(setRegisterData("secret", "kvnwRvNui3rnj51Th1hT"));
-                dispatch(setRegisterData("extension", "0000162584363"));
-                dispatch(setRegisterData("domain", "sipclient.ttrs.in.th"));
-                dispatch(setRegisterData("websocket", "wss://sipclient.ttrs.in.th:8089/ws"));
-                // verifyUUID(props.uuid, (result) => {
-                //     localStorage.setItem('uuid', props.uuid);
-                //     if(result === "expired"){
-                //         window.location.href = "https://ttrs.or.th";
-                //     }else
-                //     if(JSON.stringify(result) !== "{}"){
-                //         setRefreshTimeout(result.extension)
-                //         dispatch(setRegisterData("secret", result.secret));
-                //         dispatch(setRegisterData("extension", result.extension));
-                //         dispatch(setRegisterData("domain", result.domain));
-                //         dispatch(setRegisterData("websocket", result.websocket));
-                //         switch (result.type) {
-                //             case "helpdesk":
-                //                 // helpdesk ทั้งแบบไม่ login และปกติ
-                //                 dispatch(setRegisterData("callNumber", 14127));
-                //                 localStorage.setItem("callType" ,"callHelpdesk")
-                //                 if(!result.extension.startsWith("0000")){
-                //                     dispatch(setWebStatus("register"));
-                //                 }else{
-                //                     dispatch(setWebStatus("helpDesk"));
-                //                 }
-                //                 break;
-                //             case "emergency":
-                //                 // emergency ทั้งแบบไม่ login และปกติ
-                //                 dispatch(setRegisterData("callNumber", 14121)); // production
-                //                 // dispatch(setRegisterData("callNumber", 14151)); // devdelop
+                verifyUUID(props.uuid, (result) => {
+                    localStorage.setItem('uuid', props.uuid);
+                    if(result === "expired"){
+                        window.location.href = "https://ttrs.or.th";
+                    }else
+                    if(JSON.stringify(result) !== "{}"){
+                        setRefreshTimeout(result.extension)
+                        dispatch(setRegisterData("secret", result.secret));
+                        dispatch(setRegisterData("extension", result.extension));
+                        dispatch(setRegisterData("domain", result.domain));
+                        dispatch(setRegisterData("websocket", result.websocket));
+                        switch (result.type) {
+                            case "helpdesk":
+                                // helpdesk ทั้งแบบไม่ login และปกติ
+                                dispatch(setRegisterData("callNumber", 14127));
+                                localStorage.setItem("callType" ,"callHelpdesk")
+                                if(!result.extension.startsWith("0000")){
+                                    dispatch(setWebStatus("register"));
+                                }else{
+                                    dispatch(setWebStatus("helpDesk"));
+                                }
+                                break;
+                            case "emergency":
+                                // emergency ทั้งแบบไม่ login และปกติ
+                                dispatch(setRegisterData("callNumber", 14121)); // production
+                                // dispatch(setRegisterData("callNumber", 14151)); // devdelop
     
-                //                 localStorage.setItem("callType", "callEmergency")
-                //                 // if(!result.extension.startsWith("0000")){
-                //                 //     dispatch(setWebStatus("register"));
-                //                 // }else{
-                //                     dispatch(setWebStatus("emergency"));
-                //                 // }
-                //                 break;
-                //             default:
-                //                 dispatch(setWebStatus("dialpad"));
-                //                 break;
-                //         }
-                //     }else{
-                //             // dispatch(setWebStatus("login"));
-                //     }
-                // });
+                                localStorage.setItem("callType", "callEmergency")
+                                // if(!result.extension.startsWith("0000")){
+                                //     dispatch(setWebStatus("register"));
+                                // }else{
+                                    dispatch(setWebStatus("emergency"));
+                                // }
+                                break;
+                            default:
+                                dispatch(setWebStatus("dialpad"));
+                                break;
+                        }
+                    }else{
+                            // dispatch(setWebStatus("login"));
+                    }
+                });
                 break;
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
