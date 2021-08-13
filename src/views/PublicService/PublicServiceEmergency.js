@@ -118,6 +118,7 @@ const PublicServiceEmergency = () => {
                         <img src={public_emer} className="public-image" alt="Public Service Emergency"/>
                     </div>
                     <h2 className="entry-title emergency " style={{marginTop:"15px"}}>สนทนาวิดีโอ ฉุกเฉิน</h2>
+                    <h2 className="entry-title">(ติดต่อขอใช้บริการล่ามภาษามือทางไกล)</h2>
                 </div>
                 <br/>
                 <div className="row justify-content-md-center">
@@ -128,8 +129,8 @@ const PublicServiceEmergency = () => {
                                 <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} placeholder="กรอกชื่อ - นามสกุล" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fieldPhone" className="public-label">เบอร์โทรศัพท์</label>
-                                <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเบอร์โทรศัพท์"/>
+                                <label htmlFor="fieldPhone" className="public-label">เลขหมายโทรศัพท์เพื่อติดต่อกลับ</label>
+                                <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเลขหมายโทรศัพท์"/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fieldPhone" className="public-label">หน่วยงาน</label>

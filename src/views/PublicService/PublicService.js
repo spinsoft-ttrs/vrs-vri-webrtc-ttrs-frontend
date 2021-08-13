@@ -100,7 +100,7 @@ const PublicService = () => {
                         <img src={public_normal} className="public-image" alt="Public Service"/>
                     </div>
                     <h2 className="entry-title" style={{marginTop:"15px"}}>สนทนาวิดีโอ </h2>
-                    <h2 className="entry-title">(ติดต่อขอใช้บริการล่ามภาษามืออนไลน์)</h2>
+                    <h2 className="entry-title">(ติดต่อขอใช้บริการล่ามภาษามือทางไกล)</h2>
                 </div>
                 <br/>
                 <div className="row justify-content-md-center">
@@ -108,16 +108,16 @@ const PublicService = () => {
                         <div>
                             <div className="form-group">
                                 <label htmlFor="fieldFullName" className="public-label">ชื่อ - นามสกุล</label>
-                                <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} maxLength={35}/>
+                                <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} maxLength={35} placeholder="กรอกชื่อ-นามสกุล"/>
                                 <div className="invalid-feedback">
                                     กรุณากรอกชื่อ - นามสกุล
                                 </div>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fieldPhone" className="public-label">หมายเลขโทรศัพท์เพื่อติดต่อกลับ</label>
-                                <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกหมายเลขโทรศัพท์เพื่อติดต่อกลับ"/>
+                                <label htmlFor="fieldPhone" className="public-label">เลขหมายโทรศัพท์เพื่อติดต่อกลับ</label>
+                                <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเลขหมายโทรศัพท์เพื่อติดต่อกลับ"/>
                                 <div className="invalid-feedback">
-                                    กรุณากรอหมายเลขโทรศัพท์เพื่อติดต่อกลับ
+                                    กรุณากรอกเลขหมายโทรศัพท์เพื่อติดต่อกลับ
                                 </div>
                             </div>
                             <div className="form-group">

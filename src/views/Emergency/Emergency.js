@@ -87,8 +87,8 @@ const HelpDesk = () => {
                                 <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} placeholder="กรอกชื่อ - นามสกุล"/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="fieldPhone">เบอร์โทรศัพท์</label>
-                                <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเบอร์โทรศัพท์"/>
+                                <label htmlFor="fieldPhone">เลขหมายโทรศัพท์เพื่อติดต่อกลับ</label>
+                                <input type="text" className="form-control" id="fieldPhone" onChange={handlePhone} value={phone} placeholder="กรอกเลขหมายโทรศัพท์เพื่อติดต่อกลับ"/>
                             </div>
                         </div>
                         <div className="form-check" style={{marginLeft:"40%"}}>
