@@ -11,6 +11,7 @@
     "detect-browser": "^5.2.0",
     "ice-breaker": "^1.1.0",
     "jssip": "^3.8.0",
+    "linkify-it": "^3.0.2",
     "needle": "^2.8.0",
     "oidc-react": "^1.5.1",
     "react": "^17.0.2",

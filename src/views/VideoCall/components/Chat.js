@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { GoLocation } from "react-icons/go";
 import { savelocation } from '../../../actions/fetchAPI';
 import './chat.css';
+var linkify = require('linkify-it')();
 
 const ResponsiveChatPush = (props) => {
     var originClass;
@@ -39,10 +40,27 @@ const ResponsiveChatPush = (props) => {
             </div>
         )
     }
+    var tmp = props.message;
+    var link = linkify.match(props.message);
+
+    const renderText = (text) => {
+        
+        var urlRegex = /(https?:\/\/[^\s]+)/g;
+        let parts = text.split(urlRegex) // re is a matching regular expression
+
+        for (let i = 1; i < parts.length; i += 2) {
+            parts[i] = <a target="_blank" key={'link' + i} href={parts[i]}>{parts[i]}</a>
+        }
+        return parts
+    }
+
+    if(link !== null){
+        tmp = renderText(tmp);
+    }
 
     return (
         <div className="chat-row">
-            <div className={originClass} id={originClass}  >{props.message}</div>
+            <div className={originClass} id={originClass}  >{tmp}</div>
         </div>
     )
 }

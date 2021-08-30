@@ -79,11 +79,29 @@ const RouterV3App = (props) => {
                     window.location.href = "https://ttrs.or.th";
                 }else
                 if(JSON.stringify(result) !== "{}"){
+
+                    switch (localStorage.getItem("typeEmergency")) {
+                        case "1":
+                            dispatch(setRegisterData("callNumber", 191 ));
+                            break;
+                        case "2":
+                            dispatch(setRegisterData("callNumber", 1669 ));
+                            break;
+                        case "3":
+                            dispatch(setRegisterData("callNumber", 199 ));
+                            break;
+                        default:
+                            // dispatch(setRegisterData("callNumber", 14121));
+                            break;
+                    }
+
+                    // dispatch(setRegisterData("callNumber", 9999 ));
                     dispatch(setRegisterData("secret", result.secret));
                     dispatch(setRegisterData("extension", result.extension));
                     dispatch(setRegisterData("domain", result.domain));
                     dispatch(setRegisterData("websocket", result.websocket));
                     dispatch(setWebStatus("emergency"))
+                    // dispatch(setWebStatus("register"));
                 }
             }) 
         }

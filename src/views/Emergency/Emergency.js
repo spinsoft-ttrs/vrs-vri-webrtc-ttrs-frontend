@@ -38,6 +38,7 @@ const HelpDesk = () => {
 
     const handleRadioEmergency = (event) => {
         setTypeEmergency(event.target.value)
+        localStorage.setItem("typeEmergency", event.target.value);
     }
 
     useEffect(() => {

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { GoLocation } from "react-icons/go";
 import { savelocation } from '../../../actions/fetchAPI';
 import { setControlVideo } from '../../../actions';
+var linkify = require('linkify-it')();
 const { detect } = require('detect-browser');
 const browser    = detect();
 
@@ -13,9 +14,26 @@ const ResponsiveChatPush = (props) => {
     } else {
         originClass = 'chat-item-left-mobile';
     }
+    var tmp = props.message;
+    var link = linkify.match(props.message);
+
+    const renderText = (text) => {
+        
+        var urlRegex = /(https?:\/\/[^\s]+)/g;
+        let parts = text.split(urlRegex) // re is a matching regular expression
+
+        for (let i = 1; i < parts.length; i += 2) {
+            parts[i] = <a target="_blank" key={'link' + i} href={parts[i]}>{parts[i]}</a>
+        }
+        return parts
+    }
+
+    if(link !== null){
+        tmp = renderText(tmp);
+    }
     return (
         <div className="chat-row-mobile">
-            <div className={originClass}>{props.message}</div>
+            <div className={originClass}>{tmp}</div>
             {/* <b>{props.sender}</b> {props.date} */}
         </div>
     )
