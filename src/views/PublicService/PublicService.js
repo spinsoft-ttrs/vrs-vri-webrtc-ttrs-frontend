@@ -48,6 +48,7 @@ const PublicService = () => {
                     dispatch(setRegisterData("websocket", data.data.websocket));
                     // dispatch(setRegisterData("callNumber", 9999 ));
                     dispatch(setRegisterData("callNumber", 14120 ));
+                    // dispatch(setRegisterData("callNumber", 14131 ));
                     dispatch(setWebStatus("register"));
                 }
             });

@@ -295,9 +295,7 @@ const VideoCall = () => {
                         localVideo.srcObject = session.connection.getLocalStreams()[0];
                         remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
                         setPeerconnection(session);
-
-
-                        setConnection(true);
+                        // setConnection(true);
                     });
                     // var myCandidateTimeout = null;
                     // session.on('icecandidate', function(candidate, ready) {
