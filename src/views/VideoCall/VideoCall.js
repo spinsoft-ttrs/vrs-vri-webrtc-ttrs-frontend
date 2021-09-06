@@ -45,17 +45,14 @@ switch (browser.name) {
     default:
         constraints = { 
             audio: true, 
-            video: true
+            video: {
+                frameRate : { min: 15, max : 15},
+                width: { min: 352, max: 352 },
+                height: { min: 240, max: 240},    
+            }
         }
         break;
 }
-
-// {
-//     frameRate : { min: 15, max : 15},
-//     width: { min: 352, max: 352 },
-//     height: { min: 240, max: 240},    
-// },
-// optional: [ { facingMode: "user" }]
 
 var localVideo, remoteVideo;
 
