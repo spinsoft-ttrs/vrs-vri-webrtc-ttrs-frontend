@@ -45,15 +45,17 @@ switch (browser.name) {
     default:
         constraints = { 
             audio: true, 
-            video: {
-                frameRate : { min: 15, max : 15},
-                width: { min: 352, max: 352 },
-                height: { min: 240, max: 240},    
-            },
-            optional: [ { facingMode: "user" }]
+            video: true
         }
         break;
 }
+
+// {
+//     frameRate : { min: 15, max : 15},
+//     width: { min: 352, max: 352 },
+//     height: { min: 240, max: 240},    
+// },
+// optional: [ { facingMode: "user" }]
 
 var localVideo, remoteVideo;
 
@@ -250,11 +252,6 @@ const VideoCall = () => {
                     'reinvite' : (e) =>{},
                     'sdp' : (e) => {
                         if(e.originator === "local"){
-                            // sendLog(e.sdp)
-                            // e.sdp = IceBreaker.filterSDPCandidatesByTransport(e.sdp, 'TCP');
-                            // e.sdp = interop.toPlanB(e.sdp);
-                            // e.sdp = removeCodec(e.sdp, "H264")
-                            // e.sdp = removeCodec(e.sdp, "VP9")
                         }
                     }
                 };
