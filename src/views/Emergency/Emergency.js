@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setWebStatus } from '../../actions';
+import { setWebStatus, setRegisterData } from '../../actions';
 import './css/style.css';
 import public_emer from './img/Emer-VDO-Web-circle-01.png';
 
@@ -32,7 +32,21 @@ const HelpDesk = () => {
     const handleAccessEmergency = () => {
         localStorage.setItem("fullname", fullName);
         localStorage.setItem("phone", phone);
-        localStorage.setItem("typeEmergency", emergencyText[typeEmergency]);
+        localStorage.setItem("typeEmergency", typeEmergency);
+        switch (typeEmergency) {
+            case "1":
+                dispatch(setRegisterData("callNumber", 1669 ));
+                break;
+            case "2":
+                dispatch(setRegisterData("callNumber", 191 ));
+                break;
+            case "3":
+                dispatch(setRegisterData("callNumber", 199 ));
+                break;
+            default:
+                // dispatch(setRegisterData("callNumber", 14121));
+                break;
+        }
         dispatch(setWebStatus("register"));
     }
 
@@ -40,7 +54,6 @@ const HelpDesk = () => {
         setTypeEmergency(event.target.value)
         localStorage.setItem("typeEmergency", event.target.value);
     }
-
     useEffect(() => {
         getCurrentLocation();
     },[])

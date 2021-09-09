@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService, PublicServiceEmergency } from './views';
+import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService, PublicServiceEmergency, TestView } from './views';
 import { setWebStatus, setRegisterData } from './actions';
 import { getExtensionFromToken, getextensionEmregency } from './actions/fetchAPI';
 import { AuthProvider } from 'oidc-react';
@@ -77,15 +77,16 @@ const RouterV3App = (props) => {
             getextensionEmregency((result) => {
                 if(result === "expired"){
                     window.location.href = "https://ttrs.or.th";
-                }else
-                if(JSON.stringify(result) !== "{}"){
-
+                }
+                
+                // if(JSON.stringify(result) !== "{}"){
+                    // console.log(localStorage.getItem("typeEmergency"))
                     switch (localStorage.getItem("typeEmergency")) {
                         case "1":
-                            dispatch(setRegisterData("callNumber", 191 ));
+                            dispatch(setRegisterData("callNumber", 1669 ));
                             break;
                         case "2":
-                            dispatch(setRegisterData("callNumber", 1669 ));
+                            dispatch(setRegisterData("callNumber", 191 ));
                             break;
                         case "3":
                             dispatch(setRegisterData("callNumber", 199 ));
@@ -102,12 +103,14 @@ const RouterV3App = (props) => {
                     dispatch(setRegisterData("websocket", result.websocket));
                     dispatch(setWebStatus("emergency"))
                     // dispatch(setWebStatus("register"));
-                }
+                // }
             }) 
         }
     },[token, props.uuid])
 
     switch (webStatus) {
+        case "test":
+            return (<TestView/>)
         case "public":
             return (<PublicService/>)
         case "publicEmergency":

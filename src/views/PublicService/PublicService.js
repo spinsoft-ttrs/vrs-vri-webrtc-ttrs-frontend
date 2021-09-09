@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { setRegisterData, setWebStatus } from '../../actions';
 import './css/style.css';
 import public_normal from './img/Web-TTRS VDO-circle-01.png';
-import public_emer from './img/Emer-VDO-Web-circle-01.png';
 
 const PublicService = () => {
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService, PublicServiceEmergency } from './views';
+import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService, PublicServiceEmergency, TestView } from './views';
 import { setWebStatus, setRegisterData } from './actions';
 import { verifyAuth, verifyUUID, reToken, refreshExtension } from './actions/fetchAPI';
 
@@ -12,6 +12,9 @@ const RouterApp = (props) => {
         switch (props.uuid) {
             case "login":
                 verifyToken();
+                break;
+            case "test":
+                dispatch(setWebStatus("test"))
                 break;
             case "public":
                 dispatch(setWebStatus("public"))
@@ -112,6 +115,8 @@ const RouterApp = (props) => {
         }, 15 * 60000); // 60 * 1000 milsec
     }
     switch (webStatus) {
+        case "test":
+            return (<TestView/>)
         case "public":
             return (<PublicService/>)
         case "publicEmergency":

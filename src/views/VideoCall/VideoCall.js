@@ -193,28 +193,37 @@ const VideoCall = () => {
                 remoteVideo.srcObject = null;
                 peerconnection.terminate();
                 registerData.userAgent.unregister();
-                // dispatch(setRegisterData("userAgent", null));
                 dispatch(setControlVideo("openTerminate", false))
-                // dispatch(setWebStatus("dialpad"));
-                // window.close();
-                // try {
-                //     if(localStorage.getItem("directlogin") === "true"){
-                //         dispatch(setWebStatus("login"));
-                //     }else{
-                        window.location.href = "https://ttrs.or.th";
-                //     }
-                // } catch (error) {
-                //     console.log(error)
-                // }
+                try {
+                    switch (localStorage.getItem("directlogin")) {
+                        case "true":
+                            dispatch(setWebStatus("login"));
+                            break;
+                        case "test":
+                            dispatch(setWebStatus("test"));
+                            break;
+                        default:
+                            window.location.href = "https://ttrs.or.th";
+                            break;
+                    }
+                } catch (error) {
+                    console.log(error)
+                }
                 
             }else{
                 window.close();
                 registerData.userAgent.unregister();
                 try {
-                    if(localStorage.getItem("directlogin") === "true"){
-                        dispatch(setWebStatus("login"));
-                    }else{
-                        window.location.href = "https://ttrs.or.th";
+                    switch (localStorage.getItem("directlogin")) {
+                        case "true":
+                            dispatch(setWebStatus("login"));
+                            break;
+                        case "test":
+                            dispatch(setWebStatus("test"));
+                            break;
+                        default:
+                            window.location.href = "https://ttrs.or.th";
+                            break;
                     }
                 } catch (error) {
                     console.log(error)

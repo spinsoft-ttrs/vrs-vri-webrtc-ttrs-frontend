@@ -1,0 +1,25 @@
+.logo{
+    margin : auto;
+}
+.entry-title{
+    color : rgb(22, 138, 206) !important;
+    font-size : 20px !important;
+}
+.emergency{
+    color: Red;
+}
+.red{
+    color:red
+}
+.public-image{
+    width: 150px;
+}
+.btn-access-public{
+    font-size: 20px !important;
+}
+.public-label{
+    font-size: 18px !important;
+}
+::placeholder{
+    font-size: 16px;
+}
