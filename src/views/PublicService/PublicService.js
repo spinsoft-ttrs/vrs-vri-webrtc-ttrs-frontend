@@ -17,6 +17,7 @@ const PublicService = () => {
     const handleAgency = (event) => { setAgency(event.target.value) }
 
     const handleAccessPublicService = () => {
+        localStorage.setItem("directlogin", "");
         console.log(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`)
         if(fullName.trim() !== "" && phone.trim() !== "" && agency.trim() !== ""){
             fetch(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`, {
@@ -46,8 +47,10 @@ const PublicService = () => {
                     dispatch(setRegisterData("domain", data.data.domain));
                     dispatch(setRegisterData("websocket", data.data.websocket));
                     // dispatch(setRegisterData("callNumber", 9999 ));
+
                     dispatch(setRegisterData("callNumber", 14120 ));
                     // dispatch(setRegisterData("callNumber", 14131 ));
+
                     dispatch(setWebStatus("register"));
                 }
             });

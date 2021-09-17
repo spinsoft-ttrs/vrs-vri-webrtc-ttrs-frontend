@@ -231,9 +231,10 @@ const VideoCall = () => {
                 // dispatch(setWebStatus("dialpad"));
                 dispatch(setControlVideo("openTerminate", false))
             }
+            localStorage.setItem("directlogin", "");
             closeRoom(localStorage.getItem('uuid'));
         }
-         // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[controlVideo.openTerminate])
 
     const makeCall = () => {
