@@ -266,6 +266,12 @@ const VideoCall = () => {
                 var pcConfig = {};
                 pcConfig = {
                     "iceServers" : [{ url:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}],
+                    "iceTransportPolicy": "all",
+                    "bundlePolicy" : "max-compat",
+                    "rtcpMuxPolicy": "require", 
+                    "iceCandidatePoolSize": 0, 
+                    "sdpSemantics": "unified-plan", 
+                    "extmapAllowMixed": true
                 }
 
                 options = {
