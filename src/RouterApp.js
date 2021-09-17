@@ -8,6 +8,11 @@ const RouterApp = (props) => {
     const webStatus = useSelector(state => state.webStatus);
     // const [localStream, setLocalStream] = useState(null);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        console.log("webStatus", webStatus)
+    }, [webStatus])
+
     useEffect(() => {
         switch (props.uuid) {
             case "login":

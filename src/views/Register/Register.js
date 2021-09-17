@@ -12,6 +12,7 @@ const Register = () => {
     useEffect(()=>{
         setRegisterProgress(20)
         registerSip(() => {
+            console.log("Local CallType", localStorage.getItem("callType"))
             dispatch(setWebStatus(localStorage.getItem("callType")));
         });
          // eslint-disable-next-line react-hooks/exhaustive-deps
