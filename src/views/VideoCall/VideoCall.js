@@ -328,18 +328,8 @@ const VideoCall = () => {
                             }, 5000)
                             e.message._request.body = "";
                         }
-                        if(e.message._request.body.startsWith("@switch")){ 
 
-                            localVideo.srcObject.getTracks().forEach(function(track){
-                                if(track.kind === "video"){ track.enabled = false; }
-                            }); 
-                            setTimeout(() => {
-                                localVideo.srcObject.getTracks().forEach(function(track){
-                                    console.log("turn on camera")
-                                    if(track.kind === "video"){ track.enabled = true; }
-                                }); 
-                                setConnection(true)
-                            }, 4000)
+                        if(e.message._request.body.startsWith("@switch")){ 
 
                             dispatch(setRegisterData("callNumber", e.message._request.body.split("|")[1]));
                             if(localStorage.getItem("callType") === "callEmergency"){
@@ -361,8 +351,19 @@ const VideoCall = () => {
                             }
                         }else{
             
-                            if(e.message._request.body === "@open_chat"){
-        
+                            if(e.message._request.body.startsWith("@open_chat")){
+
+                                localVideo.srcObject.getTracks().forEach(function(track){
+                                    if(track.kind === "video"){ track.enabled = false; }
+                                }); 
+                                setTimeout(() => {
+                                    localVideo.srcObject.getTracks().forEach(function(track){
+                                        console.log("turn on camera")
+                                        if(track.kind === "video"){ track.enabled = true; }
+                                    }); 
+                                    setConnection(true)
+                                }, 4000)
+
                             }else if(!e.message._request.body.startsWith("<rtt")){
                                 dispatch(setMessagedata(e.originator, e.originator, dayjs().format('HH:mm:ss'), e.message._request.body));
                                 setMsgRealtime("");
