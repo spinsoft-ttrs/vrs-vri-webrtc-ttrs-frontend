@@ -70,7 +70,7 @@ const Dialpad = () => {
             try {
                 if(localStorage.getItem("directlogin") === "true"){
                     console.log("logout")
-                    dispatch(setWebStatus("login"));
+                    // dispatch(setWebStatus("login"));
                 }else{
                     console.log("redirect")
                     window.location.href = "https://ttrs.or.th";

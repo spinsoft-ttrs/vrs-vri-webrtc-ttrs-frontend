@@ -6,7 +6,7 @@ import ChatInVideo from './components/ChatInVideo';
 import ControlVideo2 from './components/ControlVideo2';
 import VideoStopwatch from './components/VideoStopwatch';
 import Statusbar from '../../components/Statusbar';
-import { PreviewText, DetectSize } from './fuctions';
+import { PreviewText, DetectSize, CodecsHandler } from './fuctions';
 import { setMessagedata, setRegisterData, setWebStatus, setControlVideo } from '../../actions';
 import { closeRoom, sendLog } from '../../actions/fetchAPI';
 import adapter from 'webrtc-adapter';
@@ -18,41 +18,51 @@ const async      = require('async');
 const dayjs      = require('dayjs');
 const matchMedia = window.matchMedia("(max-width: 768px)");
 
-var constraints;
+// var constraints;
 
-switch (browser.name) {
-    case "firefox":
-        constraints = { 
-            audio: true, 
-            video: {
-                frameRate : { max : 15 },
-                width: { min: 352, max: 1000 },
-                height: { min: 240 },
-            },
-            optional: [ { facingMode: "user" }]
-        } 
-        break;
-    case "safari" :
-        constraints = {
-            audio: true, 
-            video: {
-                width: 352,
-                height: 240    
-            },
-            optional: [ { facingMode: "user" }]
-        }
-        break;
-    default:
-        constraints = { 
-            audio: true, 
-            video: {
-                frameRate : { min: 15, max : 15},
-                width: { min: 352, max: 352 },
-                height: { min: 240, max: 240},    
-            }
-        }
-        break;
+// switch (browser.name) {
+//     case "firefox":
+//         constraints = { 
+//             audio: true, 
+//             video: {
+//                 frameRate : { max : 15 },
+//                 width: { min: 352, max: 1000 },
+//                 height: { min: 240 },
+//             },
+//             optional: [ { facingMode: "user" }]
+//         } 
+//         break;
+//     case "safari" :
+//         constraints = {
+//             audio: true, 
+//             video: {
+//                 width: 352,
+//                 height: 240    
+//             },
+//             optional: [ { facingMode: "user" }]
+//         }
+//         break;
+//     default:
+//         constraints = { 
+//             audio: true, 
+//             video: {
+//                 frameRate : { min: 15, max : 15},
+//                 width: { min: 352, max: 352 },
+//                 height: { min: 240, max: 240},    
+//             }
+//         }
+//         break;
+// }
+
+var constraints = {
+    audio: true, 
+    video: {
+        frameRate : { min: 15, max : 15},
+        width: { min: 352, max: 352 },
+        height: { min: 352, max: 352},    
+    }
 }
+
 
 var localVideo, remoteVideo;
 
@@ -67,6 +77,7 @@ const VideoCall = () => {
     const [iOSDevice, setiOSDevice] = useState("");
     const controlVideo = useSelector(state => state.controlVideo);
     const registerData = useSelector(state => state.registerData);
+    const webStatus = useSelector(state => state.webStatus);
     // const selectDeviceLabel = useSelector(state => state.chooseCamera);
     const dispatch = useDispatch();
 
@@ -89,7 +100,8 @@ const VideoCall = () => {
             initAndroid();
             async function initAndroid() {
                 try {
-                    await navigator.mediaDevices.getUserMedia(constraints);
+                    localVideo.srcObject =  await navigator.mediaDevices.getUserMedia(constraints);
+                    // localVideo
                     makeCall(true);
                 } catch (e) {
                 }
@@ -197,13 +209,13 @@ const VideoCall = () => {
                 try {
                     switch (localStorage.getItem("directlogin")) {
                         case "true":
-                            dispatch(setWebStatus("login"));
+                            // dispatch(setWebStatus("login"));
                             break;
                         case "test":
-                            dispatch(setWebStatus("test"));
+                            // dispatch(setWebStatus("test"));
                             break;
                         default:
-                            window.location.href = "https://ttrs.or.th";
+                            // window.location.href = "https://ttrs.or.th";
                             break;
                     }
                 } catch (error) {
@@ -216,13 +228,13 @@ const VideoCall = () => {
                 try {
                     switch (localStorage.getItem("directlogin")) {
                         case "true":
-                            dispatch(setWebStatus("login"));
+                            // dispatch(setWebStatus("login"));
                             break;
                         case "test":
-                            dispatch(setWebStatus("test"));
+                            // dispatch(setWebStatus("test"));
                             break;
                         default:
-                            window.location.href = "https://ttrs.or.th";
+                            // window.location.href = "https://ttrs.or.th";
                             break;
                     }
                 } catch (error) {
@@ -246,19 +258,24 @@ const VideoCall = () => {
                     'progress':  (e) => {
                         console.log('call is in progress') },
                     'failed':    (e) => {
+                        console.log(e)
                         if(e.cause === "User Denied Media Access"){
                             alert("ไม่สามารถเข้าถึงสิทธิ์การใช้งานกล้องวิดีโอ")
                         }
                     },
                     'ended':     (e) => {
                         console.log("ended", e)
-                        registerData.userAgent.unregister();
+                        // registerData.userAgent.unregister();
                     },
                     'confirmed': (e) => {},
                     'icecandidate' : (e) => {},
                     'reinvite' : (e) =>{},
                     'sdp' : (e) => {
+                        
                         if(e.originator === "local"){
+                            e.sdp = CodecsHandler.preferCodec(e.sdp, "h264")
+                            // console.log("local")
+                            // console.log(e.sdp)
                         }
                     }
                 };
@@ -266,7 +283,7 @@ const VideoCall = () => {
 
                 var pcConfig = {};
                 pcConfig = {
-                    "iceServers" : [{ url:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}],
+                    "iceServers" : [{ urls:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}],
                     "iceTransportPolicy": "all",
                     "bundlePolicy" : "max-compat",
                     "rtcpMuxPolicy": "require", 
@@ -290,15 +307,18 @@ const VideoCall = () => {
                         console.log(e)
                     });
                     session.on('ended'    , (e) => {
+                        console.log(e)
                         // dispatch(setWebStatus("public"))
                         registerData.userAgent.unregister();
                     });
                     session.on('failed'   , (e) => {
-                        console.log("failed", e)
+                        console.log(e)
                         registerData.userAgent.unregister();
                         // dispatch(setWebStatus("public"))
                     });
                     session.on("confirmed", (e) => {
+                        console.log("confirmed", e)
+                        console.log("session.connection", session.connection.getLocalStreams()[0])
                         // addtrack
                         // console.log(session.connection.getLocalStreams()[0].sender);
 

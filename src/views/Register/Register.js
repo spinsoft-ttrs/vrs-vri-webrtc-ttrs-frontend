@@ -42,15 +42,15 @@ const Register = () => {
             console.log(error)
             console.log("registrationFailed")
             userAgent.unregister();
-            try {
-                if(localStorage.getItem("directlogin") === "true"){
-                    // dispatch(setWebStatus("login"));
-                }else{
-                    window.location.href = "https://ttrs.or.th";
-                }
-            } catch (error) {
-                console.log(error)
-            }
+            // try {
+            //     if(localStorage.getItem("directlogin") === "true"){
+            //          dispatch(setWebStatus("login"));
+            //     }else{
+            //         window.location.href = "https://ttrs.or.th";
+            //     }
+            // } catch (error) {
+            //     console.log(error)
+            // }
         });
         userAgent.on("unregistered", function(){
             // try {
