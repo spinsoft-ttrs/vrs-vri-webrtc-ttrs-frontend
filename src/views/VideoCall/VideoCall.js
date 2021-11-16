@@ -59,7 +59,7 @@ var constraints = {
     video: {
         frameRate : { min: 15, max : 15},
         width: { min: 352, max: 352 },
-        height: { min: 352, max: 352},    
+        height: { min: 240, max: 240},    
     }
 }
 
@@ -273,7 +273,7 @@ const VideoCall = () => {
                     'sdp' : (e) => {
                         
                         if(e.originator === "local"){
-                            e.sdp = CodecsHandler.preferCodec(e.sdp, "h264")
+                            // e.sdp = CodecsHandler.preferCodec(e.sdp, "vp9")
                             // console.log("local")
                             // console.log(e.sdp)
                         }
