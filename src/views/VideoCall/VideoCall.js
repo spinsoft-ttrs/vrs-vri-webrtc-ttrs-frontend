@@ -318,11 +318,13 @@ const VideoCall = () => {
                     });
                     session.on("confirmed", (e) => {
                         console.log("confirmed", e)
-                        console.log("session.connection", session.connection.getLocalStreams()[0])
+                        console.log("session.connection", JSON.stringify(session.connection.getLocalStreams()[0].id))
+                        console.log("session.connection", JSON.stringify(session.connection.getRemoteStreams()[0].id))
                         // addtrack
                         // console.log(session.connection.getLocalStreams()[0].sender);
 
                         localVideo.srcObject = session.connection.getLocalStreams()[0];
+                        console.log(localVideo.srcObject)
                         remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
                         setPeerconnection(session);
                         // setConnection(true);
