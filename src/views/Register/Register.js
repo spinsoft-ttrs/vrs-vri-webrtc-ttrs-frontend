@@ -25,8 +25,7 @@ const Register = () => {
         var configuration = {
             sockets : [ socket ],
             uri      : `${registerData.extension}@${registerData.domain}`, 
-            password : registerData.secret,
-            register_expires : 60,
+            password : registerData.secret
         };
         // console.log(configuration)
         setRegisterProgress(60)
@@ -34,11 +33,13 @@ const Register = () => {
         
         userAgent.on("registered", function(){
             console.log("registered")
+            alert("registered")
             setRegisterProgress(100);
             dispatch(setRegisterData("userAgent", userAgent));
             callback()
         });
         userAgent.on("registrationFailed", function(error){
+            alert("registrationFailed")
             console.log(error)
             console.log("registrationFailed")
             userAgent.unregister();

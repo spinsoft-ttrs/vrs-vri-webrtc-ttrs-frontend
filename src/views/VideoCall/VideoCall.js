@@ -18,7 +18,7 @@ const async      = require('async');
 const dayjs      = require('dayjs');
 const matchMedia = window.matchMedia("(max-width: 768px)");
 
-// var constraints;
+var constraints;
 
 // switch (browser.name) {
 //     case "firefox":
@@ -54,7 +54,7 @@ const matchMedia = window.matchMedia("(max-width: 768px)");
 //         break;
 // }
 
-var constraints = {
+constraints = { 
     audio: true, 
     video: {
         frameRate : { min: 15, max : 15},
@@ -62,7 +62,6 @@ var constraints = {
         height: { min: 240, max: 240},    
     }
 }
-
 
 var localVideo, remoteVideo;
 
@@ -283,20 +282,17 @@ const VideoCall = () => {
 
                 var pcConfig = {};
                 pcConfig = {
-                    "iceServers" : [{ urls:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}],
-                    "iceTransportPolicy": "all",
-                    "bundlePolicy" : "max-compat",
-                    "rtcpMuxPolicy": "require", 
-                    "iceCandidatePoolSize": 0, 
-                    "sdpSemantics": "unified-plan", 
-                    "extmapAllowMixed": true
+                    "iceServers" : [{ urls:"turn:turn.ttrs.in.th?transport=tcp", username: "turn01", credential:"Test1234"}]
                 }
 
+                // pcConfig = {
+                //     iceServers: [{urls: "stun:stun.l.google.com:19302"}]
+                // }
+                
                 options = {
                     'eventHandlers'        : eventHandlers,
                     'mediaConstraints'     : constraints,
                     'pcConfig'             : pcConfig,
-                    'sessionTimersExpires' : 3600
                 };
 
                 registerData.userAgent.on('newRTCSession', (data) => {
@@ -317,14 +313,11 @@ const VideoCall = () => {
                         // dispatch(setWebStatus("public"))
                     });
                     session.on("confirmed", (e) => {
-                        console.log("confirmed", e)
-                        console.log("session.connection", JSON.stringify(session.connection.getLocalStreams()[0].id))
-                        console.log("session.connection", JSON.stringify(session.connection.getRemoteStreams()[0].id))
+                        console.log("confirmed", e);
                         // addtrack
                         // console.log(session.connection.getLocalStreams()[0].sender);
 
-                        localVideo.srcObject = session.connection.getLocalStreams()[0];
-                        console.log(localVideo.srcObject)
+                        localVideo.srcObject  = session.connection.getLocalStreams()[0];
                         remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
                         setPeerconnection(session);
                         // setConnection(true);
@@ -335,7 +328,7 @@ const VideoCall = () => {
                     //     if (myCandidateTimeout!=null)
                     //         clearTimeout(myCandidateTimeout);
 
-                    //     // 5 seconds timeout after the last icecandidate received!
+                    //     // // 5 seconds timeout after the last icecandidate received!
                     //     myCandidateTimeout = setTimeout(candidate.ready, 3000);
                     // });
                 });

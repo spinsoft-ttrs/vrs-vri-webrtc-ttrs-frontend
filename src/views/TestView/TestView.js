@@ -11,16 +11,13 @@ const PublicService = () => {
 
     useEffect(() => {
         document.body.style.backgroundColor = "white";
-        const callnum = "9999";
-        // dispatch(setRegisterData("extension", "0000163050082"));
-        // dispatch(setRegisterData("secret", "R6LMTpLZ5K6N7u7yZZGd"));
-        // dispatch(setRegisterData("domain", "vrsclient.203.150.245.34.nip.io"));
-        // dispatch(setRegisterData("websocket", "wss://vrsclient.203.150.245.34.nip.io:8089/ws"));
+        const callnum = "14131";
 
-        dispatch(setRegisterData("extension", "163582669717928"));
-        dispatch(setRegisterData("secret", "pXW4tuXBtLdnXFRJqD5X"));
-        dispatch(setRegisterData("domain", "sip-93.d1669.in.th"));
-        dispatch(setRegisterData("websocket", "wss://sip-93.d1669.in.th:8002/ws"));
+        dispatch(setRegisterData("extension", "0000163050082"));
+        dispatch(setRegisterData("secret", "R6LMTpLZ5K6N7u7yZZGd"));
+        dispatch(setRegisterData("domain", "vrsclient.203.150.245.34.nip.io"));
+        dispatch(setRegisterData("websocket", "wss://vrsclient.203.150.245.34.nip.io:8089/ws"));
+
 
         dispatch(setRegisterData("callNumber", callnum ));
         setCalloutNumber(callnum)
