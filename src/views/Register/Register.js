@@ -33,13 +33,13 @@ const Register = () => {
         
         userAgent.on("registered", function(){
             console.log("registered")
-            alert("registered")
+            // alert("registered")
             setRegisterProgress(100);
             dispatch(setRegisterData("userAgent", userAgent));
             callback()
         });
         userAgent.on("registrationFailed", function(error){
-            alert("registrationFailed")
+            // alert("registrationFailed")
             console.log(error)
             console.log("registrationFailed")
             userAgent.unregister();
