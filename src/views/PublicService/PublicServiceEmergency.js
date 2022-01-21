@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { setRegisterData, setWebStatus } from '../../actions';
 import './css/style.css';
 import public_emer from './img/Emer-VDO-Web-circle-01.png';
+const { detect } = require('detect-browser');
+const browser    = detect();
 
 const PublicServiceEmergency = () => {
 
@@ -77,8 +79,21 @@ const PublicServiceEmergency = () => {
         else{ 
             document.getElementById(id).classList.remove(className) }
     }
-
+    const isIpadOS = () => {
+        return navigator.maxTouchPoints &&
+          navigator.maxTouchPoints > 2 &&
+          /MacIntel/.test(navigator.platform);
+    }
     useEffect(() => {
+        if(!isIpadOS()){                
+            if(browser.os === "Android OS"){
+                alert("อุปกรณ์ไม่รองรับการใช้งาน");
+                window.location.href = "https://play.google.com/store/apps/details?id=ttrs.vrs&hl=en_GB&gl=th";
+            }else if(browser.os === "iOS"){
+                alert("อุปกรณ์ไม่รองรับการใช้งาน");
+                window.location.href = "https://apps.apple.com/th/app/ttrs-video/id1467360876?l=th";
+            }
+        }
         localStorage.setItem("callType", "callPublic");
         getCurrentLocation();
     },[])

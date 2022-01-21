@@ -8,7 +8,7 @@ import VideoStopwatch from './components/VideoStopwatch';
 import Statusbar from '../../components/Statusbar';
 import { PreviewText, DetectSize } from './fuctions';
 import { setMessagedata, setRegisterData, setWebStatus, setControlVideo } from '../../actions';
-import { closeRoom, sendLog } from '../../actions/fetchAPI';
+import { closeRoom } from '../../actions/fetchAPI';
 import adapter from 'webrtc-adapter';
 import "./style.css";
 

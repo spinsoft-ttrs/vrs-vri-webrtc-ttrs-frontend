@@ -69,7 +69,11 @@ const PublicService = () => {
         else{ 
             document.getElementById(id).classList.remove(className) }
     }
-
+    const isIpadOS = () => {
+        return navigator.maxTouchPoints &&
+          navigator.maxTouchPoints > 2 &&
+          /MacIntel/.test(navigator.platform);
+    }
     useEffect(() => {
         if(!isIpadOS()){                
             if(browser.os === "Android OS"){
@@ -83,11 +87,7 @@ const PublicService = () => {
         localStorage.setItem("callType", "callPublic");
         getCurrentLocation();
     },[])
-    const isIpadOS = () => {
-        return navigator.maxTouchPoints &&
-          navigator.maxTouchPoints > 2 &&
-          /MacIntel/.test(navigator.platform);
-    }
+
     const getCurrentLocation = () => {
         if(localStorage.getItem("locationName") === null){
             navigator.geolocation.getCurrentPosition((position) => {
