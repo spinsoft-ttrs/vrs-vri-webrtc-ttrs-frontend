@@ -1,5 +1,6 @@
 #!/bin/sh
-buildversion=develop_2
-docker rmi registry.gitlab.spinsoft.co.th/voip/webrtc_frontend_react:$buildversion
-docker build -t registry.gitlab.spinsoft.co.th/voip/webrtc_frontend_react:$buildversion .
-docker push registry.gitlab.spinsoft.co.th/voip/webrtc_frontend_react:$buildversion
+VERSION=3.2
+GITREMOTE=registry.gitlab.spinsoft.co.th/ttrs/vrs/frontend/ttrs-vrs-webrtc-frontend-react
+docker rmi $GITREMOTE:$VERSION
+docker build -t $GITREMOTE:$VERSION .
+docker push $GITREMOTE:$VERSION
