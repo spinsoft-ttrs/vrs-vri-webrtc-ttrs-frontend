@@ -87,7 +87,7 @@ const HelpDesk = () => {
             <div className="container">
                 <div className="row justify-content-md-center">
                     <div className="logo">
-                        <img className="logo-hand2-blue" src={public_emer} className="public-image" alt=""/>
+                        <img src={public_emer} className="public-image logo-hand2-blue" alt=""/>
                         <br/>
                     </div>
                     <h2 className="entry-title">แจ้งเหตุฉุกเฉิน TTRS</h2>

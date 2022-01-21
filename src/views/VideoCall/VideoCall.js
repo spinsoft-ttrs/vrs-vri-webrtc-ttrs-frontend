@@ -6,7 +6,7 @@ import ChatInVideo from './components/ChatInVideo';
 import ControlVideo2 from './components/ControlVideo2';
 import VideoStopwatch from './components/VideoStopwatch';
 import Statusbar from '../../components/Statusbar';
-import { PreviewText, DetectSize, CodecsHandler } from './fuctions';
+import { PreviewText, DetectSize } from './fuctions';
 import { setMessagedata, setRegisterData, setWebStatus, setControlVideo } from '../../actions';
 import { closeRoom, sendLog } from '../../actions/fetchAPI';
 import adapter from 'webrtc-adapter';

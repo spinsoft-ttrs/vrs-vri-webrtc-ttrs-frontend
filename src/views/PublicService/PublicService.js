@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { setRegisterData, setWebStatus } from '../../actions';
 import './css/style.css';
 import public_normal from './img/Web-TTRS VDO-circle-01.png';
+const { detect } = require('detect-browser');
+const browser    = detect();
 
 const PublicService = () => {
 
@@ -69,10 +71,21 @@ const PublicService = () => {
     }
 
     useEffect(() => {
+        if(!isIpadOS()){                
+            if(browser.os === "Android OS"){
+                window.location.href = "https://play.google.com/store/apps/details?id=ttrs.vrs&hl=en_GB&gl=th";
+            }else if(browser.os === "iOS"){
+                window.location.href = "https://apps.apple.com/th/app/ttrs-video/id1467360876?l=th";
+            }
+        }
         localStorage.setItem("callType", "callPublic");
         getCurrentLocation();
     },[])
-
+    const isIpadOS = () => {
+        return navigator.maxTouchPoints &&
+          navigator.maxTouchPoints > 2 &&
+          /MacIntel/.test(navigator.platform);
+    }
     const getCurrentLocation = () => {
         if(localStorage.getItem("locationName") === null){
             navigator.geolocation.getCurrentPosition((position) => {
