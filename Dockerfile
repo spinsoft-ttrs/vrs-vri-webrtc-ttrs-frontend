@@ -1,4 +1,4 @@
-FROM node as build-stage
+FROM node:16.14 as build-stage
 WORKDIR /usr/src/app
 COPY package.json package.json
 RUN npm install
