@@ -164,6 +164,7 @@ const VideoCall = () => {
             localVideo.srcObject.getTracks().forEach(function(track){
                 if(track.kind === "video"){ 
                     track.enabled = controlVideo.openVideo;  
+                    console.log("openVideo", controlVideo.openVideo)
                 }
             }); 
         }
@@ -214,7 +215,7 @@ const VideoCall = () => {
                             // dispatch(setWebStatus("test"));
                             break;
                         default:
-                            // window.location.href = "https://ttrs.or.th";
+                            window.location.href = "https://ttrs.or.th";
                             break;
                     }
                 } catch (error) {
@@ -233,7 +234,7 @@ const VideoCall = () => {
                             // dispatch(setWebStatus("test"));
                             break;
                         default:
-                            // window.location.href = "https://ttrs.or.th";
+                            window.location.href = "https://ttrs.or.th";
                             break;
                     }
                 } catch (error) {

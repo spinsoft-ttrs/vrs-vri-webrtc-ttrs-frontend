@@ -17,7 +17,7 @@ const Login = () => {
         setPassword(event.target.value)
     }
     const handleLogin = (event) => {
-        fetch(`https://vrswebapi.ttrs.in.th/auth/loginwebrtc`, {
+        fetch(`${process.env.REACT_APP_URL_MAIN_API}/auth/loginwebrtc`, {
             method : 'POST',
             headers : {
                 'Accept' : 'application/json',
