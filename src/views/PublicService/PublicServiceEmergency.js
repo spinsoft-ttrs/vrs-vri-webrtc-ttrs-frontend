@@ -49,19 +49,7 @@ const PublicServiceEmergency = () => {
                     dispatch(setRegisterData("extension", data.data.ext));
                     dispatch(setRegisterData("domain", data.data.domain));
                     dispatch(setRegisterData("websocket", data.data.websocket));
-                    switch (typeEmergency) {
-                        case "1":
-                            dispatch(setRegisterData("callNumber", 191 ));
-                            break;
-                        case "2":
-                            dispatch(setRegisterData("callNumber", 1669 ));
-                            break;
-                        case "3":
-                            dispatch(setRegisterData("callNumber", 199 ));
-                            break;
-                        default:
-                            break;
-                    }
+                    dispatch(setRegisterData("callNumber", 14124 ));
                     // dispatch(setRegisterData("callNumber", 14152 ));
                     dispatch(setWebStatus("register"));
                 }
@@ -74,10 +62,15 @@ const PublicServiceEmergency = () => {
     }
 
     const handleClassInputInvalid = (value, id, className) =>{
-        if(value.trim() === ""){ 
-            document.getElementById(id).classList.add(className) }
-        else{ 
-            document.getElementById(id).classList.remove(className) }
+        try {
+            if(value.trim() === ""){ 
+                document.getElementById(id).classList.add(className) }
+            else{ 
+                document.getElementById(id).classList.remove(className) }
+        } catch (error) {
+            
+        }
+
     }
     const isIpadOS = () => {
         return navigator.maxTouchPoints &&
@@ -141,7 +134,7 @@ const PublicServiceEmergency = () => {
                         <div>
                             <div className="form-group">
                                 <label htmlFor="fieldFullName" className="public-label">ชื่อ - นามสกุล</label>
-                                <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} placeholder="กรอกชื่อ - นามสกุล" />
+                                <input type="text" className="form-control" id="fieldFullName" onChange={handleName} value={fullName} maxLength={35} placeholder="กรอกชื่อ - นามสกุล" />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fieldPhone" className="public-label">เลขหมายโทรศัพท์เพื่อติดต่อกลับ</label>
@@ -149,10 +142,10 @@ const PublicServiceEmergency = () => {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fieldPhone" className="public-label">หน่วยงาน</label>
-                                <input type="text" className="form-control" id="fieldPhone" onChange={handleAgency} value={agency} placeholder="หน่วยงาน"/>
+                                <input type="text" className="form-control" id="fieldPhone" onChange={handleAgency} value={agency} placeholder="หน่วยงาน" maxLength={45} />
                             </div>
                         </div>
-                        <div 
+                        {/* <div 
                             // className="col offset-3"
                             style={{textAlign:"center"}}
                         >
@@ -174,7 +167,7 @@ const PublicServiceEmergency = () => {
                                     {emergencyText[3]}
                                 </label>
                             </div>
-                        </div>
+                        </div> */}
  
                         <br/>
                         <button type="submit" className="btn btn-danger btn-block" onClick={handleAccessPublicService}>เข้าใช้งาน</button>

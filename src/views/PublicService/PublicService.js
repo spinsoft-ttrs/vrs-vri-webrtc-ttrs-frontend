@@ -140,7 +140,7 @@ const PublicService = () => {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="fieldPhone" className="public-label">หน่วยงาน</label>
-                                <input type="text" className="form-control" id="fieldAgency" onChange={handleAgency} value={agency} placeholder="หน่วยงาน" maxLength={50}/>
+                                <input type="text" className="form-control" id="fieldAgency" onChange={handleAgency} value={agency} placeholder="หน่วยงาน" maxLength={45}/>
                                 <div className="invalid-feedback">
                                     กรุณากรอกหน่วยงาน
                                 </div>
