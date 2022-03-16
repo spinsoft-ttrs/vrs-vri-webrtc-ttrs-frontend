@@ -1,0 +1,135 @@
+.shortcuts-box {
+    height: 11vh !important;
+}
+/* .shortcuts {
+    margin-top: 29px !important;
+} */
+
+.delete-callnumber {
+    cursor: pointer;
+    margin-right: 28%;
+}
+
+.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-hangup::before {
+    width: 35px !important;
+    background-size: 35px !important;
+}
+.input-setting{
+    width: 100%;
+}
+
+.custom-control {
+    width: 50% !important;
+    display: inline-block !important;
+}
+/* .ipad-control {
+
+} */
+.iphone-control {
+    margin-top: 320px;
+}
+
+.shortcuts-phonekeypad .phonekeypad .container_keypad .row {
+    width: 43% !important;
+}
+
+@media only screen and (max-width: 767px){
+    .shortcuts-phonekeypad .phonekeypad .container_keypad .row {
+        width: 78% !important;
+    }
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad {
+    background-color: transparent;
+}
+.shorcut-custom {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    /* border-style: solid; */
+    border-bottom: 0.01em solid #dadada;
+}
+.shorcut-logout {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    /* border-style: solid; */
+    border-bottom: 0.01em solid #c18b8b;
+    border-top: 0.01em solid #c18b8b;
+}
+.d-flex{
+    margin-top: 0px !important;
+}
+.shorcut-link{
+    margin-left: 15%;
+    display: flex;
+    width: 100%;
+}
+.shortcuts-phonekeypad .shortcuts-menu {
+    background-color: #005980 !important;
+    height: 9vh !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.title-input{
+    border-bottom: 1px solid #dadada; 
+}
+#output {
+    font-size: 5vh !important;
+    line-height: 2em !important;
+    margin-left: 28% !important;
+}
+.img-icon{
+    width: 8.5vh !important;
+}
+.txt-desc{
+    margin-left: 20px;
+    text-align: center;
+}
+.head {
+    position: absolute !important;
+    top : 30%;
+}
+.shortcut-menu-icon{
+    color: white;
+    font-size: 20px;
+    line-height: 0px;
+}
+.active {
+    /* background-color: cornflowerblue; */
+}
+.bar-img-menu{
+    /* margin-top: 16px; */
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5vh;
+    margin-bottom : 6px;
+}
+.txt-vrs{
+    font-size: 15px !important;
+}
+.txt-resize{
+    font-size: 22px;
+    color: white;
+    /* text-align : left; */
+    margin: auto;
+    margin-top: 3px;
+    cursor: pointer;
+}
+.shortcuts-call{
+    position: fixed;
+    background-color: #00CD73;
+    height: 9vh;
+    /* bottom: 35px; */
+    width: 100%;
+    bottom: calc(0px + 9vh);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+.txt-vrs-keyboard{
+    font-weight: bold;
+    color: white;
+}
+.btn_shortcuts-menu{
+    width: 100% !important;
+}

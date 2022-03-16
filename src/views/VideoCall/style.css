@@ -1,0 +1,38 @@
+#img_videocallheader{
+    cursor: move;
+}
+#img_videocall {
+    position: absolute !important;
+}
+.vdo_call_show_pc{
+    position: absolute;
+    width: 20vh;
+    top: 35px;
+    z-index: 9999;
+}
+.vdo_call_show_android{
+    position: absolute !important;
+    width: 100px !important;
+    top: 35px !important;
+}
+.vdo_call_show_ios{
+    position: absolute !important;
+    width: 100px !important;
+    top: 35px !important;
+}
+#waiting_mobile {
+    margin-bottom: 10px !important;
+    margin-top: 115px !important;
+}
+.vdocall-keypad {
+    overflow-y: hidden;
+}
+.vdo-calling {
+    overflow-y: hidden;
+}
+
+.incoming-calls-mobile {
+    margin-top: -115px !important;
+    background-color: transparent;
+    height: 100%;
+}
