@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "async": "^3.2.4",
     "dayjs": "^1.10.6",
     "detect-browser": "^5.2.0",
     "ice-breaker": "^1.1.0",
@@ -25,7 +26,7 @@
     "redux": "^4.1.1",
     "sip.js": "^0.20.0",
     "web-vitals": "^2.1.0",
-    "webrtc-adapter": "^8.0.0",
+    "webrtc-adapter": "8.2.1",
     "xml-js": "^1.6.11"
   },
   "scripts": {
