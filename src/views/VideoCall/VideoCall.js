@@ -309,7 +309,7 @@ const VideoCall = () => {
         pcConfig = {
           iceServers: [
             {
-              urls: "turn:turn.ttrs.in.th?transport=udp",
+              urls: "turn:turn.ttrs.in.th?transport=tcp",
               username: "turn01",
               credential: "Test1234",
             },
