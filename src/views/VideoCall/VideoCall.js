@@ -342,8 +342,25 @@ const VideoCall = () => {
             // console.log(session.connection.getLocalStreams()[0].sender);
 
             localVideo.srcObject = session.connection.getLocalStreams()[0];
-            remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
-            setPeerconnection(session);
+            // console.log(session.connection.getRemoteStreams());
+            // console.log(session.connection.getReceivers());
+            // remoteVideo.srcObject = session.connection.getReceivers()[1];
+            // remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
+            // console.log(session.connection.getReceivers()[1].track);
+            // new MediaStream(session.connection.getReceivers()[1].track);
+            // console.log(session.connection.getReceivers()[1].track);
+            // const remoteTrack = session.connection.getReceivers()[1].track;
+            // console.log(session.connection.getRemoteStreams()[0]);
+            // console.log(
+            //   new MediaStream(
+            //     session.connection.getReceivers().map((r) => r.track)
+            //   )
+            // );
+            remoteVideo.srcObject = new MediaStream(
+              session.connection.getReceivers().map((r) => r.track)
+            );
+            // remoteVideo.srcObject = session.connection.getReceivers()[1].track;
+            // setPeerconnection(session);
             // setConnection(true);
           });
         });
