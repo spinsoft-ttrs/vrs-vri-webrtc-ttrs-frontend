@@ -297,15 +297,15 @@ const VideoCall = () => {
         };
 
         let pcConfig = {};
-        pcConfig = {
-          iceServers: [
-            {
-              urls: "turn:turn.ttrs.in.th?transport=tcp",
-              username: "turn01",
-              credential: "Test1234",
-            },
-          ],
-        };
+        // pcConfig = {
+        //   iceServers: [
+        //     {
+        //       urls: "turn:turn.ttrs.in.th?transport=tcp",
+        //       username: "turn01",
+        //       credential: "Test1234",
+        //     },
+        //   ],
+        // };
         // pcConfig = {
         //     iceServers: [{urls: "stun:stun.l.google.com:19302"}]
         // }
