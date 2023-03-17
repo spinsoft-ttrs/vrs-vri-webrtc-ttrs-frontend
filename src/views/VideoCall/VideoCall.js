@@ -377,10 +377,10 @@ const VideoCall = () => {
             }
 
             if (e.message._request.body.startsWith("@switch")) {
-              // setInterval(() => {
-              //   const resp = session.renegotiate();
-              //   console.log(resp);
-              // }, [4000]);
+              setInterval(() => {
+                const resp = session.renegotiate();
+                console.log(resp);
+              }, [4000]);
 
               dispatch(
                 setRegisterData(
