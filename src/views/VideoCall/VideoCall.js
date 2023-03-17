@@ -338,33 +338,17 @@ const VideoCall = () => {
           });
           session.on("confirmed", (e) => {
             console.log("confirmed", e);
-            // addtrack
-            // console.log(session.connection.getLocalStreams()[0].sender);
-
             localVideo.srcObject = session.connection.getLocalStreams()[0];
-            // console.log(session.connection.getRemoteStreams());
-            // console.log(session.connection.getReceivers());
-            // remoteVideo.srcObject = session.connection.getReceivers()[1];
-            // remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
+            remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
 
-            remoteVideo.srcObject = new MediaStream(
-              session.connection.getReceivers().map((r) => r.track)
-            );
-            // console.log(session.connection.getReceivers()[1].track);
-            // console.log(
-            //   new MediaStream(
-            //     session.connection.getReceivers().map((r) => {
-            //       console.log(r.track);
-            //     })
-            //   )
+            // remoteVideo.srcObject = new MediaStream(
+            //   session.connection.getReceivers().map((r) => r.track)
             // );
-            // remoteVideo.srcObject = session.connection.getReceivers()[1].track;
-            // setPeerconnection(session);
+            setPeerconnection(session);
             // setConnection(true);
           });
         });
         registerData.userAgent.on("newMessage", function (e) {
-          console.log("newMessage");
           try {
             if (e.message._request.body.startsWith("@MCU")) {
               setTimeout(() => {
