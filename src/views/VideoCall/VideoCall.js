@@ -350,6 +350,14 @@ const VideoCall = () => {
             remoteVideo.srcObject = new MediaStream(
               session.connection.getReceivers().map((r) => r.track)
             );
+            // console.log(session.connection.getReceivers()[1].track);
+            // console.log(
+            //   new MediaStream(
+            //     session.connection.getReceivers().map((r) => {
+            //       console.log(r.track);
+            //     })
+            //   )
+            // );
             // remoteVideo.srcObject = session.connection.getReceivers()[1].track;
             // setPeerconnection(session);
             // setConnection(true);
@@ -377,10 +385,10 @@ const VideoCall = () => {
             }
 
             if (e.message._request.body.startsWith("@switch")) {
-              setInterval(() => {
-                const resp = session.renegotiate();
-                console.log(resp);
-              }, [4000]);
+              // setInterval(() => {
+              //   const resp = session.renegotiate();
+              //   console.log(resp);
+              // }, [4000]);
 
               dispatch(
                 setRegisterData(
