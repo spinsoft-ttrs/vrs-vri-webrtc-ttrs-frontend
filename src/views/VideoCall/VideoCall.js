@@ -71,7 +71,7 @@ constraints = {
   video: {
     frameRate: { min: 15, max: 15 },
     width: { min: 352, max: 352 },
-    height: { min: 240, max: 240 },
+    height: { min: 352, max: 352 },
   },
 };
 
@@ -277,10 +277,10 @@ const VideoCall = () => {
 
   const makeCall = (mediaStream) => {
     console.log("makecall");
-    var options = {};
+    let options = {};
     async.series([
       (callback) => {
-        var eventHandlers = {
+        let eventHandlers = {
           progress: (e) => {
             console.log("call is in progress");
           },
@@ -292,21 +292,11 @@ const VideoCall = () => {
           },
           ended: (e) => {
             console.log("ended", e);
-            // registerData.userAgent.unregister();
           },
-          confirmed: (e) => {},
-          icecandidate: (e) => {},
-          reinvite: (e) => {},
-          sdp: (e) => {
-            if (e.originator === "local") {
-              // e.sdp = CodecsHandler.preferCodec(e.sdp, "vp9")
-              // console.log("local")
-              // console.log(e.sdp)
-            }
-          },
+          sdp: (e) => {},
         };
 
-        var pcConfig = {};
+        let pcConfig = {};
         pcConfig = {
           iceServers: [
             {
@@ -316,7 +306,6 @@ const VideoCall = () => {
             },
           ],
         };
-
         // pcConfig = {
         //     iceServers: [{urls: "stun:stun.l.google.com:19302"}]
         // }
@@ -380,10 +369,10 @@ const VideoCall = () => {
             }
 
             if (e.message._request.body.startsWith("@switch")) {
-              // setInterval(() => {
-              //   const resp = session.renegotiate();
-              //   console.log(resp);
-              // }, [3000]);
+              setInterval(() => {
+                const resp = session.renegotiate();
+                console.log(resp);
+              }, [4000]);
 
               dispatch(
                 setRegisterData(
