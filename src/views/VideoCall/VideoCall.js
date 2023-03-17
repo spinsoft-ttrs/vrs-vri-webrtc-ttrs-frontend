@@ -15,6 +15,7 @@ import {
   setControlVideo,
 } from "../../actions";
 import { closeRoom } from "../../actions/fetchAPI";
+// eslint-disable-next-line no-unused-vars
 import adapter from "webrtc-adapter";
 import "./style.css";
 
@@ -70,7 +71,7 @@ constraints = {
   video: {
     frameRate: { min: 15, max: 15 },
     width: { min: 352, max: 352 },
-    height: { min: 352, max: 352 },
+    height: { min: 240, max: 240 },
   },
 };
 
