@@ -6,6 +6,7 @@ import ChatInVideo from "./components/ChatInVideo";
 import ControlVideo2 from "./components/ControlVideo2";
 import VideoStopwatch from "./components/VideoStopwatch";
 import Statusbar from "../../components/Statusbar";
+import { isFirefox } from "react-device-detect";
 import { PreviewText, DetectSize } from "./fuctions";
 import {
   setMessagedata,
@@ -66,12 +67,11 @@ constraints = {
     sampleRate: 16000,
     sampleSize: 16,
   },
-  video: true,
-  // video: {
-  //   frameRate: { min: 15, max: 15 },
-  //   width: { min: 352, max: 352 },
-  //   height: { min: 352, max: 352 },
-  // },
+  video: {
+    frameRate: { min: 15, max: 15 },
+    width: { min: 352, max: 352 },
+    height: { min: 352, max: 352 },
+  },
 };
 
 var localVideo, remoteVideo;
@@ -110,6 +110,17 @@ const VideoCall = () => {
     async function initAndroid() {
       console.log("initAndroid");
       try {
+        if (isFirefox) {
+          console.log("isFirefox");
+          constraints.video = {
+            width: 352,
+            height: 352,
+            frameRate: {
+              min: 15,
+              max: 30,
+            },
+          };
+        }
         mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
         localVideo.srcObject = mediaStream;
         makeCall(mediaStream);
@@ -475,6 +486,7 @@ const VideoCall = () => {
         } else {
           constraints.video.facingMode = "user";
         }
+
         constraints.video.facingMode = chooseCamera;
         navigator.mediaDevices
           .getUserMedia(constraints)
