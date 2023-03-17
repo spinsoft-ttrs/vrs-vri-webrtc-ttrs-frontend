@@ -69,8 +69,8 @@ const PublicService = () => {
             // dispatch(setRegisterData("callNumber", 14120 ));
 
             // เบอร์ทดสอบระบบไปเครื่อง MA
-            // dispatch(setRegisterData("callNumber", 14131));
-            dispatch(setRegisterData("callNumber", 9999));
+            dispatch(setRegisterData("callNumber", 14131));
+            // dispatch(setRegisterData("callNumber", 9999));
 
             dispatch(setWebStatus("register"));
           }
