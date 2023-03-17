@@ -1,1 +1,1 @@
-export { default } from './Emergency';
+export { default } from "./Emergency";

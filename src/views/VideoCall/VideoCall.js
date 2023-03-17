@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ControlVideo from "./components/ControlVideo";
 import { useDispatch, useSelector } from "react-redux";
 import Chat from "./components/Chat";
@@ -78,6 +78,7 @@ constraints = {
 var localVideo, remoteVideo;
 
 const VideoCall = () => {
+  const remoteAudioRef = useRef(null);
   const [msgRealtime, setMsgRealtime] = useState("");
   const [screenOrientation, setScreenOrientation] = useState("oriented");
   const [msgRealtimeRaw, setMsgRealtimeRaw] = useState("");
@@ -337,13 +338,20 @@ const VideoCall = () => {
             // dispatch(setWebStatus("public"))
           });
           session.on("confirmed", (e) => {
-            console.log("confirmed", e);
-            localVideo.srcObject = session.connection.getLocalStreams()[0];
-            remoteVideo.srcObject = session.connection.getRemoteStreams()[0];
+            // Local Video
+            const localTracks = session.connection.getSenders();
+            const localStream = new MediaStream();
+            localStream.addTrack(localTracks[0].track);
+            localStream.addTrack(localTracks[1].track);
+            localVideo.srcObject = localStream;
 
-            // remoteVideo.srcObject = new MediaStream(
-            //   session.connection.getReceivers().map((r) => r.track)
-            // );
+            // Remote Video
+            const remoteTracks = session.connection.getReceivers();
+            const remoteStream = new MediaStream();
+            remoteStream.addTrack(remoteTracks[0].track);
+            remoteStream.addTrack(remoteTracks[1].track);
+            remoteVideo.srcObject = remoteStream;
+
             setPeerconnection(session);
             // setConnection(true);
           });
@@ -608,6 +616,7 @@ const VideoCall = () => {
                 className={`${handleIOSClass()} img-vdo d-block mb-3  `}
                 id="img_vdocall"
               >
+                <audio ref={remoteAudioRef}></audio>
                 <div id="img_videocallheader">
                   {matchMedia.matches ? (
                     <div>
@@ -624,7 +633,6 @@ const VideoCall = () => {
                   <video
                     id="local-video"
                     className="local-video"
-                    alt="local-video"
                     muted
                     autoPlay
                     playsInline

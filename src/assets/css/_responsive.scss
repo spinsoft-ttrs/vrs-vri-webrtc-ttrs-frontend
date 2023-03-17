@@ -53,21 +53,16 @@
 }
 
 @media only screen and (max-width: 767px) {
-
     // index Loading
     .loading-home {
-
         .loading-logo {
-
             .logo {
                 width: 80px;
             }
         }
 
         .loading-holdon {
-
             .loading {
-
                 p {
                     margin: 5px auto;
                 }
@@ -86,7 +81,6 @@
 
     // Footer Sub
     .footer-sub {
-
         .img-nbtc {
             width: 30px;
         }
@@ -127,7 +121,6 @@
                 }
 
                 .ipt_log-in {
-
                     .input-group {
                         margin: 15px 0px;
 
@@ -160,7 +153,6 @@
         }
 
         .register_box {
-
             .sec_register {
                 width: 80%;
                 margin: 2rem auto;
@@ -168,8 +160,8 @@
                 .btn-register {
                     font-size: 14px;
                     padding: 5px 10px;
-                    background-color: #0E6DAF;
-                    border-color: #0E6DAF;
+                    background-color: #0e6daf;
+                    border-color: #0e6daf;
                     color: #fff;
                 }
 
@@ -239,7 +231,7 @@
         }
 
         .exp_box {
-            margin: .5rem 0rem;
+            margin: 0.5rem 0rem;
             .exp_vdo {
                 iframe {
                     height: 350px;
@@ -251,7 +243,7 @@
             padding: 5px 10px;
             font-size: 16px;
             margin-top: 1rem;
-            background: #1F88CE;
+            background: #1f88ce;
             color: #fff;
         }
     }
@@ -307,7 +299,6 @@
 
     // Shortcuts and Phone Keypad
     .shortcuts-phonekeypad {
-        
         .vrs_map {
             // width: 100%;
             top: 0;
@@ -546,7 +537,6 @@
                     }
 
                     .txt-desc {
-
                         .head {
                             color: #fff;
                         }
@@ -638,7 +628,7 @@
 
                 &:hover {
                     .icn-shortcuts {
-                        color: #1F88CE;
+                        color: #1f88ce;
                         cursor: pointer;
 
                         &::before {
@@ -656,7 +646,7 @@
                     }
 
                     .icn-message {
-                        color: #1F88CE;
+                        color: #1f88ce;
                         cursor: pointer;
 
                         &::before {
@@ -674,7 +664,7 @@
                     }
 
                     .icn-call {
-                        color: #1F88CE;
+                        color: #1f88ce;
                         cursor: pointer;
 
                         &::before {
@@ -692,7 +682,7 @@
                     }
 
                     .icn-setting {
-                        color: #1F88CE;
+                        color: #1f88ce;
                         cursor: pointer;
 
                         &::before {
@@ -713,7 +703,7 @@
 
             .active {
                 .txt-menu {
-                    color: #1F88CE !important;
+                    color: #1f88ce !important;
                 }
 
                 .icn-shortcuts::before {
@@ -768,7 +758,6 @@
                     margin: 5px auto;
                 }
             }
-
         }
 
         .conversation {
@@ -778,7 +767,7 @@
                 width: 100%;
                 // top: 0;
                 // right: 0;
-                background-color: #168ACE;
+                background-color: #168ace;
                 padding: 5px 0px;
                 // position: absolute;
                 // display: flex;
@@ -825,7 +814,6 @@
                 }
 
                 .row {
-
                     .digit {
                         width: 55px;
                         height: 55px;
@@ -1257,8 +1245,8 @@
                         box-shadow: none;
 
                         &:hover {
-                            color: #FFFFFF;
-                            background: #1F88CE;
+                            color: #ffffff;
+                            background: #1f88ce;
                         }
 
                         i {
@@ -1268,8 +1256,8 @@
                     }
 
                     .btn-function_select.down {
-                        color: #FFFFFF;
-                        background: #1F88CE;
+                        color: #ffffff;
+                        background: #1f88ce;
 
                         i {
                             transform: rotate(90deg);
@@ -1386,9 +1374,9 @@
                 // box-shadow: none;
 
                 &:hover {
-                    border: 1px solid #FFFFFF;
-                    color: #FFFFFF;
-                    background: #1F88CE;
+                    border: 1px solid #ffffff;
+                    color: #ffffff;
+                    background: #1f88ce;
                 }
             }
 
@@ -1435,7 +1423,6 @@
                         background-repeat: no-repeat;
                         background-size: 15px;
                         margin-right: 5px;
-
                     }
                 }
 
@@ -1460,7 +1447,6 @@
                         background-repeat: no-repeat;
                         background-size: 15px;
                         margin-right: 5px;
-
                     }
                 }
             }
@@ -1472,7 +1458,7 @@
             // height: calc(100vh - 38px);
             // background-color: #0F3548;
             // background: rgb(15,53,72);
-            background: linear-gradient(180deg, rgba(15,53,72,1) 0%, rgba(14,50,68,1) 67%, rgba(10,36,49,1) 100%);
+            background: linear-gradient(180deg, rgba(15, 53, 72, 1) 0%, rgba(14, 50, 68, 1) 67%, rgba(10, 36, 49, 1) 100%);
             // display: flex;
             // justify-content: center;
             // align-items: center;
@@ -1489,7 +1475,7 @@
 
                 .txt-phone-number {
                     font-size: 32px;
-                    margin-top: .5rem;
+                    margin-top: 0.5rem;
                 }
 
                 .img-logo {
@@ -1532,16 +1518,14 @@
                         background-repeat: no-repeat;
                         background-size: 20px;
                         margin-right: 5px;
-
                     }
                 }
 
                 .btn-end-conversation {
                     // display: block;
                     width: 90%;
-                    background: #F8423B;
+                    background: #f8423b;
                     color: #fff;
- 
 
                     .end-conversation::before {
                         content: "";
@@ -1737,17 +1721,17 @@
         position: relative;
         display: flex;
         align-items: flex-end;
-    
+
         #main {
             width: 100%;
             height: 100vh;
-            transition: margin-right .5s;
-    
+            transition: margin-right 0.5s;
+
             .function-calls {
                 width: 100%;
             }
         }
-    
+
         #mySidenav {
             width: 0%;
             position: absolute;
@@ -1755,25 +1739,25 @@
             transition: 0.5s;
             top: 0;
             right: 0;
-    
+
             .shortcuts {
                 width: 100%;
                 padding: 0px;
-    
+
                 .vrs_map {
                     display: none;
                 }
             }
-    
+
             .conversation {
                 width: 100%;
-    
+
                 .message-conversation {
                     bottom: 0px;
                 }
             }
         }
-    
+
         #open-close {
             top: 5px;
             right: 5px;
@@ -1784,10 +1768,10 @@
 @media only screen and (max-width: 320px) {
     // Map Location
     .map_location {
-        padding: .5rem 0rem;
+        padding: 0.5rem 0rem;
 
         .head-title {
-            margin-bottom: .5rem;
+            margin-bottom: 0.5rem;
         }
 
         .exp_box {
@@ -1799,7 +1783,7 @@
         }
 
         .btn-back {
-            margin-top: .5rem;
+            margin-top: 0.5rem;
         }
     }
 }
@@ -1823,8 +1807,6 @@
             }
         }
     }
-
-
 
     .vdo-calling {
         .head-sec {
@@ -1863,137 +1845,60 @@
         display: none;
     }
 
-        // Log In
-.log-in {
+    // Log In
+    .log-in {
+        .login_box {
+            .log-in_box {
+                width: 50%;
+            }
+        }
 
-    .login_box {
-
-        .log-in_box {
-            width: 50%;
+        .register_box {
+            .sec_register {
+                width: 50%;
+            }
         }
     }
 
-    .register_box {
+    .vdo-calling {
+        .head-sec {
+            .head-call {
+                width: 60%;
+            }
+        }
 
-        .sec_register {
-            width: 50%;
+        .incoming-sec {
+            .incoming-calls {
+                width: 60%;
+            }
         }
     }
-}
 
-.vdo-calling {
-    .head-sec {
-        .head-call {
-            width: 60%;
-        }
-    }
+    .btn-end-conversation {
+        // display: block;
+        width: 90%;
+        background: #f8423b;
+        color: #fff !important;
 
-    .incoming-sec {
-        .incoming-calls {
-            width: 60%;
-        }
-    }
-}
-
-.btn-end-conversation {
-    // display: block;
-    width: 90%;
-    background: #F8423B;
-    color: #fff !important;
-
-
-    .end-conversation::before {
-        content: "";
-        width: 25px !important;
-        height: 25px !important;
-        background: url(../img/icon-hangup-red.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 25px !important;
-        margin-right: 5px !important;
-    }
-}
-
-.shortcuts-box {
-    padding: 10px;
-
-    .txt-desc {
-        padding: 0px 10px;
-    }
-
-    .img-icon {
-        width: 80px;
-
-        .ttrs-vri::before {
-            content: "" !important;
-            width: 30px !important;
-            height: 30px !important;
-            background: url(../img/logo-hand-blue.png) center no-repeat !important;
-            vertical-align: middle !important;
-            display: inline-block !important;
-            background-repeat: no-repeat !important;
-            background-size: 30px !important;
-        }
-
-        .ttrs-helpdesk::before {
-            content: "" !important;
-            width: 30px !important;
-            height: 30px !important;
-            background: url(../img/icon-callcenter-blue.png) center no-repeat !important;
-            vertical-align: middle !important;
-            display: inline-block !important;
-            background-repeat: no-repeat !important;
-            background-size: 30px !important;
-        }
-
-        .ttrs-emergency {
-            content: "" !important;
-            width: 30px !important;
-            height: 30px !important;
-            background: url(../img/icon-emergency.png) center no-repeat !important;
-            vertical-align: middle !important;
-            display: inline-block !important;
-            background-repeat: no-repeat !important;
-            background-size: 30px !important;
-        }
-
-        .phone-keypad::before {
-            content: "" !important;
-            width: 30px !important;
-            height: 30px !important;
-            background: url(../img/icon-call-blue.png) center no-repeat !important;
-            vertical-align: middle !important;
-            display: inline-block !important;
-            background-repeat: no-repeat !important;
-            background-size: 30px !important;
-        }
-
-        .ms-conversation::before {
-            content: "" !important;
-            width: 30px !important;
-            height: 30px !important;
-            background: url(../img/icon-message-blue.png) center no-repeat !important;
-            vertical-align: middle !important;
-            display: inline-block !important;
-            background-repeat: no-repeat !important;
-            background-size: 30px !important;
-        }
-
-        .ms-history::before {
+        .end-conversation::before {
             content: "";
-            width: 30px !important;
-            height: 30px !important;
-            background: url(../img/icon-conversation-blue.png) center no-repeat !important;
+            width: 25px !important;
+            height: 25px !important;
+            background: url(../img/icon-hangup-red.png) center no-repeat !important;
             vertical-align: middle !important;
             display: inline-block !important;
             background-repeat: no-repeat !important;
-            background-size: 30px !important;
+            background-size: 25px !important;
+            margin-right: 5px !important;
         }
     }
 
-    &:hover {
-        background: linear-gradient(0deg, rgba(52, 162, 237, 1) 28%, rgba(31, 136, 206, 1) 100%);
+    .shortcuts-box {
+        padding: 10px;
+
+        .txt-desc {
+            padding: 0px 10px;
+        }
 
         .img-icon {
             width: 80px;
@@ -2002,7 +1907,7 @@
                 content: "" !important;
                 width: 30px !important;
                 height: 30px !important;
-                background: url(../img/logo-hand-white.png) center no-repeat !important;
+                background: url(../img/logo-hand-blue.png) center no-repeat !important;
                 vertical-align: middle !important;
                 display: inline-block !important;
                 background-repeat: no-repeat !important;
@@ -2013,7 +1918,7 @@
                 content: "" !important;
                 width: 30px !important;
                 height: 30px !important;
-                background: url(../img/icon-callcenter-white.png) center no-repeat !important;
+                background: url(../img/icon-callcenter-blue.png) center no-repeat !important;
                 vertical-align: middle !important;
                 display: inline-block !important;
                 background-repeat: no-repeat !important;
@@ -2024,7 +1929,7 @@
                 content: "" !important;
                 width: 30px !important;
                 height: 30px !important;
-                background: url(../img/icon-emergency-white.png) center no-repeat !important;
+                background: url(../img/icon-emergency.png) center no-repeat !important;
                 vertical-align: middle !important;
                 display: inline-block !important;
                 background-repeat: no-repeat !important;
@@ -2035,7 +1940,7 @@
                 content: "" !important;
                 width: 30px !important;
                 height: 30px !important;
-                background: url(../img/icon-call-white.png) center no-repeat !important;
+                background: url(../img/icon-call-blue.png) center no-repeat !important;
                 vertical-align: middle !important;
                 display: inline-block !important;
                 background-repeat: no-repeat !important;
@@ -2046,7 +1951,7 @@
                 content: "" !important;
                 width: 30px !important;
                 height: 30px !important;
-                background: url(../img/icon-message-white.png) center no-repeat !important;
+                background: url(../img/icon-message-blue.png) center no-repeat !important;
                 vertical-align: middle !important;
                 display: inline-block !important;
                 background-repeat: no-repeat !important;
@@ -2054,16 +1959,89 @@
             }
 
             .ms-history::before {
-                content: "" !important;
+                content: "";
                 width: 30px !important;
                 height: 30px !important;
-                background: url(../img/icon-conversation-white.png) center no-repeat !important;
+                background: url(../img/icon-conversation-blue.png) center no-repeat !important;
                 vertical-align: middle !important;
                 display: inline-block !important;
                 background-repeat: no-repeat !important;
                 background-size: 30px !important;
             }
         }
+
+        &:hover {
+            background: linear-gradient(0deg, rgba(52, 162, 237, 1) 28%, rgba(31, 136, 206, 1) 100%);
+
+            .img-icon {
+                width: 80px;
+
+                .ttrs-vri::before {
+                    content: "" !important;
+                    width: 30px !important;
+                    height: 30px !important;
+                    background: url(../img/logo-hand-white.png) center no-repeat !important;
+                    vertical-align: middle !important;
+                    display: inline-block !important;
+                    background-repeat: no-repeat !important;
+                    background-size: 30px !important;
+                }
+
+                .ttrs-helpdesk::before {
+                    content: "" !important;
+                    width: 30px !important;
+                    height: 30px !important;
+                    background: url(../img/icon-callcenter-white.png) center no-repeat !important;
+                    vertical-align: middle !important;
+                    display: inline-block !important;
+                    background-repeat: no-repeat !important;
+                    background-size: 30px !important;
+                }
+
+                .ttrs-emergency {
+                    content: "" !important;
+                    width: 30px !important;
+                    height: 30px !important;
+                    background: url(../img/icon-emergency-white.png) center no-repeat !important;
+                    vertical-align: middle !important;
+                    display: inline-block !important;
+                    background-repeat: no-repeat !important;
+                    background-size: 30px !important;
+                }
+
+                .phone-keypad::before {
+                    content: "" !important;
+                    width: 30px !important;
+                    height: 30px !important;
+                    background: url(../img/icon-call-white.png) center no-repeat !important;
+                    vertical-align: middle !important;
+                    display: inline-block !important;
+                    background-repeat: no-repeat !important;
+                    background-size: 30px !important;
+                }
+
+                .ms-conversation::before {
+                    content: "" !important;
+                    width: 30px !important;
+                    height: 30px !important;
+                    background: url(../img/icon-message-white.png) center no-repeat !important;
+                    vertical-align: middle !important;
+                    display: inline-block !important;
+                    background-repeat: no-repeat !important;
+                    background-size: 30px !important;
+                }
+
+                .ms-history::before {
+                    content: "" !important;
+                    width: 30px !important;
+                    height: 30px !important;
+                    background: url(../img/icon-conversation-white.png) center no-repeat !important;
+                    vertical-align: middle !important;
+                    display: inline-block !important;
+                    background-repeat: no-repeat !important;
+                    background-size: 30px !important;
+                }
+            }
+        }
     }
-}
 }

@@ -1,1 +1,1 @@
-export { default } from './VideoCall';
+export { default } from "./VideoCall";

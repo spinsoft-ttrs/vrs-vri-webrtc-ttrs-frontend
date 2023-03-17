@@ -1,13 +1,13 @@
-const { detect } = require('detect-browser');
-const browser    = detect();
+const { detect } = require("detect-browser");
+const browser = detect();
 
 const CheckMobile = () => {
     var isMobile = false;
     switch (browser.os) {
-        case 'Android OS':
+        case "Android OS":
             isMobile = true;
             break;
-        case 'iOS':
+        case "iOS":
             isMobile = true;
             break;
         default:
@@ -15,6 +15,6 @@ const CheckMobile = () => {
     }
 
     return isMobile;
-}
+};
 
 export default CheckMobile;

@@ -73,8 +73,6 @@
                 }
             }
         }
-
-
     }
 }
 
@@ -91,7 +89,7 @@
     justify-content: center;
 
     .login_box {
-        background-color: #FAFAFF;
+        background-color: #fafaff;
         width: 100%;
         height: 65vh;
         display: flex;
@@ -143,7 +141,7 @@
 
                 .btn-login {
                     width: 100%;
-                    background-color: #1F88CE;
+                    background-color: #1f88ce;
                     color: #fff;
                     border: none;
                     border-radius: 20px;
@@ -151,7 +149,7 @@
                     box-shadow: none;
 
                     &:hover {
-                        background-color: #4DB1EB;
+                        background-color: #4db1eb;
                         box-shadow: none;
                     }
                 }
@@ -178,15 +176,15 @@
 
             .btn-register {
                 width: 100%;
-                border: 1px solid #1F88CE;
-                color: #1F88CE;
+                border: 1px solid #1f88ce;
+                color: #1f88ce;
                 border-radius: 20px;
                 padding: 10px;
                 margin: 5px 0px;
                 box-shadow: none;
 
                 &:hover {
-                    background-color: #1F88CE;
+                    background-color: #1f88ce;
                     color: #fff;
                 }
             }
@@ -353,8 +351,6 @@
             }
         }
     }
-
-
 }
 
 // Guest User
@@ -371,10 +367,10 @@
         display: flex;
         align-items: flex-end;
         justify-content: center;
-        background-color: #FAFAFF;
+        background-color: #fafaff;
 
         .th_national_card {
-            color: #026FAF;
+            color: #026faf;
             text-align: center;
             width: 50%;
 
@@ -408,7 +404,7 @@
 
                 .form-control {
                     border: none;
-                    border-bottom: 1px solid #C7C7CC;
+                    border-bottom: 1px solid #c7c7cc;
                     box-shadow: none;
                 }
             }
@@ -416,7 +412,7 @@
             .sec_confirm {
                 .btn-confirm {
                     width: 100%;
-                    background-color: #1F88CE;
+                    background-color: #1f88ce;
                     color: #fff;
                     border: none;
                     border-radius: 20px;
@@ -425,7 +421,7 @@
                     margin: 10px 0px;
 
                     &:hover {
-                        background-color: #4DB1EB;
+                        background-color: #4db1eb;
                         box-shadow: none;
                     }
                 }
@@ -459,8 +455,6 @@
                     margin-right: 5px;
                 }
             }
-
-
         }
     }
 }
@@ -496,7 +490,7 @@
                 .form-control {
                     width: 100%;
                     border: none;
-                    border-bottom: 1px solid #C7C7CC;
+                    border-bottom: 1px solid #c7c7cc;
                     box-shadow: none;
                     margin: 5px 0px;
                     border-radius: 0%;
@@ -515,7 +509,7 @@
 
                     .form-control_problem {
                         width: 100%;
-                        border: 1px solid #C7C7CC;
+                        border: 1px solid #c7c7cc;
                         border-radius: 5px;
                         box-shadow: none;
                         padding: 6px 12px;
@@ -541,7 +535,7 @@
                         text-align: center;
                         color: #707070;
                         background-color: #fff;
-                        border: 1px solid #CBCBCB;
+                        border: 1px solid #cbcbcb;
                         border-radius: 20px;
                         padding: 6px 10px !important;
                         margin: 0px !important;
@@ -578,7 +572,7 @@
 
                 .btn-send {
                     width: 45%;
-                    background-color: #1F88CE;
+                    background-color: #1f88ce;
                     color: #fff;
                     border: none;
                     border-radius: 20px;
@@ -586,7 +580,7 @@
                     box-shadow: none;
 
                     &:hover {
-                        background-color: #4DB1EB;
+                        background-color: #4db1eb;
                         box-shadow: none;
                     }
                 }
@@ -608,7 +602,7 @@
         width: 100%;
         // top: 0;
         // right: 0;
-        background-color: #168ACE;
+        background-color: #168ace;
         padding: 10px 0px;
         // position: absolute;
         display: flex;
@@ -676,7 +670,7 @@
         padding-left: 1rem;
         margin-right: auto;
         margin-left: auto;
-        background-color: #FAFAFF;
+        background-color: #fafaff;
 
         .head-title {
             color: #414141;
@@ -784,7 +778,7 @@
             }
 
             .exp-vdo {
-                color: #1F88CE;
+                color: #1f88ce;
                 font-size: 26px;
                 cursor: pointer;
                 position: absolute;
@@ -866,7 +860,6 @@
                 }
 
                 .txt-desc {
-
                     .head {
                         color: #fff;
                     }
@@ -890,7 +883,7 @@
         display: flex;
         width: 100%;
         background-color: #e4e4e4;
-        border-top: 1px solid #D6D6D6;
+        border-top: 1px solid #d6d6d6;
 
         .btn_shortcuts-menu {
             width: 33%;
@@ -954,7 +947,7 @@
 
             &:hover {
                 .icn-shortcuts {
-                    color: #1F88CE;
+                    color: #1f88ce;
                     cursor: pointer;
 
                     &::before {
@@ -971,7 +964,7 @@
                 }
 
                 .icn-message {
-                    color: #1F88CE;
+                    color: #1f88ce;
                     cursor: pointer;
 
                     &::before {
@@ -988,7 +981,7 @@
                 }
 
                 .icn-call {
-                    color: #1F88CE;
+                    color: #1f88ce;
                     cursor: pointer;
 
                     &::before {
@@ -1005,7 +998,7 @@
                 }
 
                 .icn-setting {
-                    color: #1F88CE;
+                    color: #1f88ce;
                     cursor: pointer;
 
                     &::before {
@@ -1025,7 +1018,7 @@
 
         .active {
             .txt-menu {
-                color: #1F88CE !important;
+                color: #1f88ce !important;
             }
 
             .icn-shortcuts::before {
@@ -1064,7 +1057,6 @@
                 margin-right: 5px;
             }
         }
-
     }
 
     .conversation {
@@ -1074,7 +1066,7 @@
             width: 100%;
             // top: 0;
             // right: 0;
-            background-color: #168ACE;
+            background-color: #168ace;
             padding: 10px 0px;
             // position: absolute;
             display: flex;
@@ -1110,8 +1102,6 @@
                 margin-right: 5px;
             }
 
-           
-
             .txt-vrs {
                 // width: 100%;
                 color: #fff;
@@ -1125,7 +1115,7 @@
         width: 50%;
         // height: calc(100vh - 44px);
         height: 100vh;
-        border-left: 1px solid #D6D6D6;
+        border-left: 1px solid #d6d6d6;
         position: relative;
         // margin-top: 44px;
 
@@ -1208,7 +1198,7 @@
                     font-size: 28px;
 
                     &:hover {
-                        background-color: #168ACE;
+                        background-color: #168ace;
                         color: #fff;
                     }
                 }
@@ -1266,14 +1256,14 @@
         display: table;
         text-decoration: none;
         color: white;
-        background-color: #39ACFC;
+        background-color: #39acfc;
         padding: 10px 20px;
         border-radius: 25px;
-        font: 400 15px 'Open Sans', sans-serif;
+        font: 400 15px "Open Sans", sans-serif;
     }
 
     form.chat * {
-        transition: all .5s;
+        transition: all 0.5s;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -1306,13 +1296,13 @@
         animation: loading-bar 1s 1;
         display: block;
         height: 2px;
-        background-color: #39ACFC;
+        background-color: #39acfc;
         transition: width 0.2s;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 4
+        z-index: 4;
     }
 
     form.chat .messages {
@@ -1329,7 +1319,7 @@
     form.chat ::-webkit-scrollbar {
         width: 3px;
         height: 1px;
-        transition: all .5s;
+        transition: all 0.5s;
         z-index: 10;
     }
 
@@ -1380,11 +1370,11 @@
         color: white;
         border-radius: 20px;
         clear: both;
-        font: 400 15px 'Open Sans', sans-serif;
+        font: 400 15px "Open Sans", sans-serif;
     }
 
     form.chat .myMessage {
-        background: #39ACFC;
+        background: #39acfc;
         color: white;
         float: right;
         clear: both;
@@ -1398,13 +1388,13 @@
         bottom: -2px;
         right: 0px;
         height: 19px;
-        border-right: 20px solid #39ACFC;
+        border-right: 20px solid #39acfc;
         // border-bottom-left-radius: 3px;
         border-radius: 2px;
         -webkit-transform: translate(0, -2px);
         transform: translate(0, -2px);
         border-bottom-left-radius: 15px 0px\9;
-        transform: translate(-1px, -2px)\9;
+        transform: translate(-1px, -2px) \9;
     }
 
     form.chat .myMessage:after {
@@ -1423,7 +1413,7 @@
     }
 
     form.chat .fromThem {
-        background: #E5E5EA;
+        background: #e5e5ea;
         color: black;
         float: left;
         clear: both;
@@ -1437,13 +1427,13 @@
         bottom: -2px;
         left: 0px;
         height: 19px;
-        border-left: 20px solid #E5E5EA;
+        border-left: 20px solid #e5e5ea;
         // border-bottom-right-radius: 3px;
         border-radius: 2px;
         -webkit-transform: translate(0, -2px);
         transform: translate(0, -2px);
         border-bottom-right-radius: 15px 0px\9;
-        transform: translate(-1px, -2px)\9;
+        transform: translate(-1px, -2px) \9;
     }
 
     form.chat .fromThem:after {
@@ -1501,34 +1491,34 @@
     }
 
     form.chat input {
-        font: 400 13px 'Open Sans', sans-serif;
+        font: 400 13px "Open Sans", sans-serif;
         border: 0;
         padding: 0 15px;
         outline: 0;
     }
 
-    form.chat input[type='text'] {
+    form.chat input[type="text"] {
         width: 50%;
         border-radius: 20px;
         padding: 6px 12px;
-        background-color: #FAFAFA;
-        border: 1px solid #C8C7CC;
+        background-color: #fafafa;
+        border: 1px solid #c8c7cc;
         float: left;
         margin: 0px 20px;
     }
 
-    form.chat input[type='submit'] {
+    form.chat input[type="submit"] {
         width: 15%;
         border-radius: 20px;
         padding: 6px 12px;
-        background: #168ACE;
+        background: #168ace;
         color: #fff;
         font-weight: 700;
         text-align: "center";
         // float: right;
 
         &:hover {
-            background: #39ACFC;
+            background: #39acfc;
         }
     }
 
@@ -1609,13 +1599,12 @@
 
 // Message History
 .history {
-
     .show_date_history {
         padding: 10px 0px;
         display: block;
         width: 100%;
         text-align: center;
-        color: #668A9F;
+        color: #668a9f;
     }
 
     form.chat .messages {
@@ -1626,17 +1615,17 @@
         .btn-backpage {
             display: block;
             width: 80%;
-            border: 1px solid #1F88CE;
+            border: 1px solid #1f88ce;
             // background: #FFFFFF;
-            color: #1F88CE;
+            color: #1f88ce;
             padding: 6px 12px;
             border-radius: 20px;
             text-align: center;
 
             &:hover {
-                border: 1px solid #FFFFFF;
-                color: #FFFFFF;
-                background: #1F88CE;
+                border: 1px solid #ffffff;
+                color: #ffffff;
+                background: #1f88ce;
             }
         }
 
@@ -1644,15 +1633,14 @@
             display: none;
         }
 
-        input[type='text'] {
+        input[type="text"] {
             display: none;
         }
 
-        input[type='submit'] {
+        input[type="submit"] {
             display: none;
         }
     }
-
 }
 
 // Setting
@@ -1660,7 +1648,7 @@
     .txt-back {
         display: flex;
         align-items: center;
-        color: #1F88CE;
+        color: #1f88ce;
         // padding: 0px;
         font-size: 14px;
         position: absolute;
@@ -1733,8 +1721,8 @@
                     box-shadow: none;
 
                     &:hover {
-                        color: #FFFFFF;
-                        background: #1F88CE;
+                        color: #ffffff;
+                        background: #1f88ce;
                     }
 
                     i {
@@ -1744,8 +1732,8 @@
                 }
 
                 .btn-function_select.down {
-                    color: #FFFFFF;
-                    background: #1F88CE;
+                    color: #ffffff;
+                    background: #1f88ce;
 
                     i {
                         transform: rotate(90deg);
@@ -1760,7 +1748,7 @@
                     top: 0;
                     z-index: 9;
                     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-                    border-radius: .25rem;
+                    border-radius: 0.25rem;
 
                     p {
                         margin-bottom: 10px;
@@ -1771,7 +1759,7 @@
                     input {
                         border-radius: 5px;
                         box-shadow: none;
-                        border: 1px solid #D9D9D9;
+                        border: 1px solid #d9d9d9;
                         padding: 6px 12px;
                     }
 
@@ -1783,7 +1771,7 @@
                         display: block;
                         width: 45%;
                         border: 1px solid #707070;
-                        background: #FFFFFF;
+                        background: #ffffff;
                         color: #707070;
                         padding: 6px 0px;
                         border-radius: 20px;
@@ -1793,8 +1781,8 @@
                         box-shadow: none;
 
                         &:hover {
-                            border: 1px solid #FFFFFF;
-                            color: #FFFFFF;
+                            border: 1px solid #ffffff;
+                            color: #ffffff;
                             background: #707070;
                         }
                     }
@@ -1802,8 +1790,8 @@
                     .btn_save {
                         display: block;
                         width: 45%;
-                        border: 1px solid #1F88CE;
-                        background: #1F88CE;
+                        border: 1px solid #1f88ce;
+                        background: #1f88ce;
                         color: #fff;
                         padding: 6px 0px;
                         border-radius: 20px;
@@ -1813,9 +1801,9 @@
                         box-shadow: none;
 
                         &:hover {
-                            border: 1px solid #4DB1EB;
-                            color: #FFFFFF;
-                            background: #4DB1EB;
+                            border: 1px solid #4db1eb;
+                            color: #ffffff;
+                            background: #4db1eb;
                         }
                     }
                 }
@@ -1839,16 +1827,16 @@
             background-color: #fff;
 
             .title {
-                color: #B10C0C;
+                color: #b10c0c;
             }
         }
 
         .btn-close_setting {
             display: block;
             width: 100%;
-            border: 1px solid #1F88CE;
+            border: 1px solid #1f88ce;
             // background: #FFFFFF;
-            color: #1F88CE;
+            color: #1f88ce;
             padding: 6px 12px;
             border-radius: 20px;
             text-align: center;
@@ -1857,9 +1845,9 @@
             box-shadow: none;
 
             &:hover {
-                border: 1px solid #FFFFFF;
-                color: #FFFFFF;
-                background: #1F88CE;
+                border: 1px solid #ffffff;
+                color: #ffffff;
+                background: #1f88ce;
             }
         }
 
@@ -1876,7 +1864,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FAFAFF;
+    background-color: #fafaff;
 
     .head-title {
         color: #414141;
@@ -1905,9 +1893,9 @@
     .btn-back {
         display: block;
         width: 100%;
-        border: 1px solid #1F88CE;
+        border: 1px solid #1f88ce;
         // background: #FFFFFF;
-        color: #1F88CE;
+        color: #1f88ce;
         padding: 6px 12px;
         border-radius: 20px;
         text-align: center;
@@ -1916,9 +1904,9 @@
         box-shadow: none;
 
         &:hover {
-            border: 1px solid #FFFFFF;
-            color: #FFFFFF;
-            background: #1F88CE;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            background: #1f88ce;
         }
     }
 
@@ -1934,12 +1922,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FAFAFF;
+    background-color: #fafaff;
 
     .txt-back {
         display: flex;
         align-items: center;
-        color: #1F88CE;
+        color: #1f88ce;
         padding: 0px;
         font-size: 14px;
         position: absolute;
@@ -1968,7 +1956,7 @@
         background-size: 7px;
         margin-right: 5px;
     }
-    
+
     .head-title {
         color: #414141;
         font-size: 24px;
@@ -1993,9 +1981,9 @@
     .btn-back {
         display: block;
         width: 100%;
-        border: 1px solid #1F88CE;
+        border: 1px solid #1f88ce;
         // background: #FFFFFF;
-        color: #1F88CE;
+        color: #1f88ce;
         padding: 6px 12px;
         border-radius: 20px;
         text-align: center;
@@ -2004,9 +1992,9 @@
         box-shadow: none;
 
         &:hover {
-            border: 1px solid #FFFFFF;
-            color: #FFFFFF;
-            background: #1F88CE;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            background: #1f88ce;
         }
     }
 
@@ -2029,15 +2017,15 @@
             width: 30px;
             height: 30px;
             background-color: #fff;
-            border: 1px solid #168ACE;
+            border: 1px solid #168ace;
             opacity: 1 !important;
             border-radius: 50%;
             font-size: 30px;
             font-weight: 100;
             z-index: 9;
-            color: #168ACE;
+            color: #168ace;
             box-shadow: none;
-            transition: all .5s;
+            transition: all 0.5s;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -2048,8 +2036,8 @@
             }
 
             &:hover {
-                background-color: #168ACE;
-                border: 1px solid #168ACE;
+                background-color: #168ace;
+                border: 1px solid #168ace;
                 color: #fff;
             }
         }
@@ -2089,7 +2077,7 @@
         background: none;
         border: none;
         box-shadow: none;
-        color: #8E8E93;
+        color: #8e8e93;
     }
 
     .btn_search:focus {
@@ -2116,7 +2104,7 @@
         width: 100%;
         // top: 0;
         // right: 0;
-        background-color: #0B2836;
+        background-color: #0b2836;
         padding: 10px 0px;
         // position: absolute;
         display: flex;
@@ -2147,7 +2135,6 @@
                     background-repeat: no-repeat;
                     background-size: 15px;
                     margin-right: 5px;
-
                 }
             }
 
@@ -2176,7 +2163,6 @@
                     background-repeat: no-repeat;
                     background-size: 15px;
                     margin-right: 5px;
-
                 }
             }
         }
@@ -2185,7 +2171,7 @@
     .incoming-sec {
         width: 100%;
         height: calc(100vh - 44px);
-        background-color: #0F3548;
+        background-color: #0f3548;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -2202,7 +2188,7 @@
 
             .txt-phone-number {
                 font-size: 32px;
-                margin-top: .5rem;
+                margin-top: 0.5rem;
             }
 
             .img-logo {
@@ -2223,7 +2209,7 @@
                 display: block;
                 width: 70%;
                 // border: 1px solid #1F88CE;
-                background: #00D16B;
+                background: #00d16b;
                 color: #fff;
                 padding: 6px 12px;
                 border-radius: 20px;
@@ -2245,16 +2231,15 @@
                     background-repeat: no-repeat;
                     background-size: 20px;
                     margin-right: 5px;
-
                 }
             }
 
             .btn-end-conversation {
                 display: block;
                 width: 70%;
-                border: 1px solid #F8423B;
+                border: 1px solid #f8423b;
                 // background: #00D16B;
-                color: #F8423B;
+                color: #f8423b;
                 padding: 6px 12px;
                 border-radius: 20px;
                 text-align: center;
@@ -2262,7 +2247,7 @@
                 box-shadow: none;
 
                 &:hover {
-                    background: #F8423B;
+                    background: #f8423b;
                     color: #fff;
 
                     .end-conversation::before {
@@ -2275,8 +2260,6 @@
                         background-repeat: no-repeat;
                         background-size: 20px;
                         margin-right: 5px;
-
-
                     }
                 }
 
@@ -2294,13 +2277,13 @@
             }
 
             .end {
-                background: #F8423B;
+                background: #f8423b;
                 color: #fff;
                 // display: flex;
                 text-align: center;
 
                 &:hover {
-                    background: #F85A54;
+                    background: #f85a54;
                 }
 
                 .end-conversation::before {
@@ -2473,7 +2456,7 @@
 
     #main {
         width: 100%;
-        transition: margin-right .5s;
+        transition: margin-right 0.5s;
 
         .function-calls {
             width: 100%;

@@ -1,22 +1,22 @@
 @charset 'UTF-8';
 //Variables
 // Color
-$color-pri:#333;
-$color-sec:#666;
-$color-border: #EEE;
+$color-pri: #333;
+$color-sec: #666;
+$color-border: #eee;
 $color-link: #fff;
 
 // Font
-$font-pri: 'SF Pro Display';
+$font-pri: "SF Pro Display";
 
 html,
 body {
     font-size: 16px;
-    font-family: $font-pri; 
+    font-family: $font-pri;
 }
 
 a {
-    color: #1F88CE;
+    color: #1f88ce;
     font-size: 14px;
     text-decoration: none !important;
 }
@@ -51,7 +51,13 @@ h6 {
     font-size: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0px;
     padding: 0px;
 }
@@ -62,7 +68,7 @@ ul {
 
     li {
         list-style: none;
-      }
+    }
 }
 
 img {
@@ -79,15 +85,15 @@ figure {
 .clearfloat {
     &:after {
         display: table;
-        content: '';
+        content: "";
         clear: both;
     }
 }
 
 // Import
-@import 'bootstrap.min.css';
+@import "bootstrap.min.css";
 
-@import '_head';
-@import '_body';
-@import '_foot';
-@import '_responsive';
+@import "_head";
+@import "_body";
+@import "_foot";
+@import "_responsive";
