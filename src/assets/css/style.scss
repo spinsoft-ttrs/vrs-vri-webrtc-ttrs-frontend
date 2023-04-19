@@ -11,44 +11,44 @@ $font-pri: "SF Pro Display";
 
 html,
 body {
-    font-size: 16px;
-    font-family: $font-pri;
+  font-size: 16px;
+  font-family: $font-pri;
 }
 
 a {
-    color: #1f88ce;
-    font-size: 14px;
-    text-decoration: none !important;
+  color: #1f88ce;
+  font-size: 14px;
+  text-decoration: none !important;
 }
 
 span {
-    // color: #fff;
-    color: var(--font-color);
+  // color: #fff;
+  color: var(--font-color);
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 h4 {
-    font-size: 12px;
-    font-weight: 200;
+  font-size: 12px;
+  font-weight: 200;
 }
 
 h5 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 h6 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 h1,
@@ -58,36 +58,36 @@ h4,
 h5,
 h6,
 p {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 
-    li {
-        list-style: none;
-    }
+  li {
+    list-style: none;
+  }
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .clearfloat {
-    &:after {
-        display: table;
-        content: "";
-        clear: both;
-    }
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
 }
 
 // Import

@@ -1,429 +1,429 @@
 .bg {
-    overflow-y: hidden;
-    /* background-color: #0F3548; */
+  overflow-y: hidden;
+  /* background-color: #0F3548; */
 }
 .vdocall-keypad {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 .vdo-calling {
-    overflow-y: hidden;
+  overflow-y: hidden;
 }
 .btn:hover {
-    color: #212529;
-    text-decoration: none;
+  color: #212529;
+  text-decoration: none;
 }
 
 .control-icon-active {
-    background-color: #9e5555ad !important;
-    border-radius: 10px !important;
+  background-color: #9e5555ad !important;
+  border-radius: 10px !important;
 }
 
 .btn.focus,
 .btn:focus {
-    outline: 0 !important;
-    box-shadow: none !important;
-    border-radius: 10px !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
 }
 
 .control-icon {
-    width: 22px;
-    height: 22px;
-    margin: auto;
-    margin-bottom: 4px;
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  margin-bottom: 4px;
 }
 
 .log-in {
-    height: 82vh !important;
+  height: 82vh !important;
 }
 
 #waiting_mobile {
-    margin-bottom: 10px !important;
-    margin-top: 27px !important;
+  margin-bottom: 10px !important;
+  margin-top: 27px !important;
 }
 
 #bg {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 .txt-incoming-calls {
-    margin-top: 16vh;
+  margin-top: 16vh;
 }
 
 .call-mobile {
-    margin-top: 183px;
+  margin-top: 183px;
 }
 .incoming-sec {
-    display: inline-block !important;
-    margin-top: 10px;
-    /* height: calc(102vh - 44px) !important; */
+  display: inline-block !important;
+  margin-top: 10px;
+  /* height: calc(102vh - 44px) !important; */
 }
 .v-video {
-    width: 100%;
-    margin: auto;
-    margin-top: 10px;
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
 }
 
 .v-local {
-    width: 100%;
-    margin: auto;
-    margin-top: 15px;
+  width: 100%;
+  margin: auto;
+  margin-top: 15px;
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
-    .v-video {
-        width: 100%;
-        margin: auto;
-        margin-top: 10px;
-    }
+  .v-video {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+  }
 }
 @media only screen and (max-width: 768px) {
-    .waiting_vdo_remote {
-        margin-bottom: -70px !important;
-    }
-    .waiting_mobile {
-        /* height: 20vh !important; */
-        margin-top: 18vh;
-    }
-    .v-video {
-        width: 100%;
-        margin: auto;
-        margin-top: 40px;
-    }
+  .waiting_vdo_remote {
+    margin-bottom: -70px !important;
+  }
+  .waiting_mobile {
+    /* height: 20vh !important; */
+    margin-top: 18vh;
+  }
+  .v-video {
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+  }
 }
 
 .remote-video {
-    max-height: 60vh;
-    background-color: #c6defa2b;
+  max-height: 60vh;
+  background-color: #c6defa2b;
 }
 .remote-video-mobile {
-    max-height: 55vh;
-    background-color: #c6defa2b;
+  max-height: 55vh;
+  background-color: #c6defa2b;
 }
 .remote-video-mobile-with-keyboard-android {
-    max-height: 36vh;
-    background-color: #c6defa2b;
+  max-height: 36vh;
+  background-color: #c6defa2b;
 }
 .remote-video-mobile-with-keyboard-ios {
-    max-height: 36vh !important;
-    background-color: #c6defa2b;
+  max-height: 36vh !important;
+  background-color: #c6defa2b;
 }
 .local-video {
-    max-height: 28vh;
-    /* width: 22%; */
-    /* background-color: #c0e5f5; */
-    background-color: #c6defa2b;
-    /* margin-left: 8px; */
+  max-height: 28vh;
+  /* width: 22%; */
+  /* background-color: #c0e5f5; */
+  background-color: #c6defa2b;
+  /* margin-left: 8px; */
 }
 .vrs_map {
-    height: 29px;
+  height: 29px;
 }
 .d-flex {
-    margin-top: -7px;
+  margin-top: -7px;
 }
 .function-calls {
-    z-index: 999;
+  z-index: 999;
 }
 .function-calls-mobile {
-    z-index: 999;
+  z-index: 999;
 }
 .head-sec {
-    height: 29px;
+  height: 29px;
 }
 .control-list li {
-    cursor: pointer;
+  cursor: pointer;
 }
 .cam_img {
-    cursor: pointer;
+  cursor: pointer;
 }
 .control-button {
-    color: white !important;
-    background-color: transparent;
-    border: none;
-    margin-right: 3px;
-    font-size: 11px !important;
-    cursor: pointer;
+  color: white !important;
+  background-color: transparent;
+  border: none;
+  margin-right: 3px;
+  font-size: 11px !important;
+  cursor: pointer;
 }
 .control-list {
-    position: fixed;
-    bottom: 50px;
-    z-index: 999;
-    width: 100%;
-    text-align: center;
+  position: fixed;
+  bottom: 50px;
+  z-index: 999;
+  width: 100%;
+  text-align: center;
 }
 .control-list li {
-    align-items: center;
-    display: inline-block;
-    /* margin: 6px; */
+  align-items: center;
+  display: inline-block;
+  /* margin: 6px; */
 
-    /* pos */
+  /* pos */
 }
 .control-list li > img {
-    content: "";
-    width: 23px;
-    height: 23px;
-    /* background: url(../img/icon-message-white.png) center no-repeat; */
-    display: block;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    margin: 10px auto;
-    margin-bottom: 2px;
+  content: "";
+  width: 23px;
+  height: 23px;
+  /* background: url(../img/icon-message-white.png) center no-repeat; */
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin: 10px auto;
+  margin-bottom: 2px;
 }
 .chat-send-message {
-    bottom: 8px;
-    position: fixed;
-    width: 31%;
+  bottom: 8px;
+  position: fixed;
+  width: 31%;
 }
 .chat-send-message-mobile {
-    width: 90%;
-    bottom: 8px;
-    position: fixed;
-    left: 15px;
-    float: left;
+  width: 90%;
+  bottom: 8px;
+  position: fixed;
+  left: 15px;
+  float: left;
 }
 .input-location {
-    width: 7%;
-    font-size: 30px;
-    float: left;
-    color: white;
-    margin: 2px;
-    margin-left: 7px;
-    margin-right: -7px;
-    cursor: pointer;
+  width: 7%;
+  font-size: 30px;
+  float: left;
+  color: white;
+  margin: 2px;
+  margin-left: 7px;
+  margin-right: -7px;
+  cursor: pointer;
 }
 .input-location-fullscreen {
-    width: 7%;
-    font-size: 30px;
-    float: left;
-    margin: 2px;
-    margin-left: 7px;
-    margin-right: -7px;
-    cursor: pointer;
-    color: #414141e8;
+  width: 7%;
+  font-size: 30px;
+  float: left;
+  margin: 2px;
+  margin-left: 7px;
+  margin-right: -7px;
+  cursor: pointer;
+  color: #414141e8;
 }
 .input-sendmessage {
-    width: 15%;
-    border-radius: 20px;
-    padding: 6px 12px;
-    background: #168ace;
-    color: #fff;
-    font-weight: 700;
-    border: none;
-    outline: none !important;
-    z-index: 999;
+  width: 15%;
+  border-radius: 20px;
+  padding: 6px 12px;
+  background: #168ace;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  outline: none !important;
+  z-index: 999;
 }
 .input-message {
-    width: 70%;
-    border-radius: 20px;
-    padding: 6px 12px;
-    background-color: #fafafa;
-    border: 1px solid #c8c7cc;
-    float: left;
-    margin: 0px 10px;
-    outline: none !important;
+  width: 70%;
+  border-radius: 20px;
+  padding: 6px 12px;
+  background-color: #fafafa;
+  border: 1px solid #c8c7cc;
+  float: left;
+  margin: 0px 10px;
+  outline: none !important;
 }
 .chat-item-left:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0px;
-    left: 0px;
-    height: 16px;
-    /* border-left: 20px solid #E5E5EA; */
-    /* border-radius: 2px; */
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  left: 0px;
+  height: 16px;
+  /* border-left: 20px solid #E5E5EA; */
+  /* border-radius: 2px; */
 }
 .chat-item-right:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0px;
-    right: 0px;
-    height: 16px;
-    border-right: 20px solid #39acfc;
-    border-radius: 2px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  right: 0px;
+  height: 16px;
+  border-right: 20px solid #39acfc;
+  border-radius: 2px;
 }
 
 .chat-item-right {
-    float: right;
-    background: #39acfc;
-    color: white;
-    clear: both;
-    position: relative;
-    padding: 10px 15px;
-    color: white;
-    border-radius: 20px;
-    clear: both;
-    font: 400 13px "Open Sans", sans-serif;
+  float: right;
+  background: #39acfc;
+  color: white;
+  clear: both;
+  position: relative;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 20px;
+  clear: both;
+  font: 400 13px "Open Sans", sans-serif;
 }
 .chat-item-left {
-    float: left;
-    background: #e5e5ea;
-    clear: both;
-    position: relative;
-    padding: 10px 15px;
-    border-radius: 20px;
-    clear: both;
-    font: 400 13px "Open Sans", sans-serif;
+  float: left;
+  background: #e5e5ea;
+  clear: both;
+  position: relative;
+  padding: 10px 15px;
+  border-radius: 20px;
+  clear: both;
+  font: 400 13px "Open Sans", sans-serif;
 }
 .chat-item-left-mobile {
-    float: right;
-    clear: both;
-    color: white;
-    position: relative;
-    font-weight: bold;
-    clear: both;
-    font: 400 14px "Open Sans", sans-serif;
+  float: right;
+  clear: both;
+  color: white;
+  position: relative;
+  font-weight: bold;
+  clear: both;
+  font: 400 14px "Open Sans", sans-serif;
 }
 .chat-item-right-mobile {
-    float: right;
-    color: #39acfc;
-    font-weight: bold;
-    clear: both;
-    position: relative;
-    clear: both;
-    font: 400 14px "Open Sans", sans-serif;
+  float: right;
+  color: #39acfc;
+  font-weight: bold;
+  clear: both;
+  position: relative;
+  clear: both;
+  font: 400 14px "Open Sans", sans-serif;
 }
 .chat-row {
-    display: inline-block;
-    position: relative;
-    margin: 8px;
-    background-size: 100%;
-    white-space: pre-wrap;
-    width: calc(100% - 15px);
-    top: 8px;
-    padding-left: 5px;
+  display: inline-block;
+  position: relative;
+  margin: 8px;
+  background-size: 100%;
+  white-space: pre-wrap;
+  width: calc(100% - 15px);
+  top: 8px;
+  padding-left: 5px;
 }
 .chat-row-mobile {
-    display: inline-block;
-    position: relative;
-    background-size: 100%;
-    white-space: pre-wrap;
-    width: calc(100% - 15px);
-    top: 8px;
-    margin: 2px;
-    padding-left: 5px;
+  display: inline-block;
+  position: relative;
+  background-size: 100%;
+  white-space: pre-wrap;
+  width: calc(100% - 15px);
+  top: 8px;
+  margin: 2px;
+  padding-left: 5px;
 }
 .chat-data {
-    display: table-cell;
-    vertical-align: bottom;
-    height: calc(100vh - 28px);
-    width: 10000px;
-    background-color: #fafaff;
+  display: table-cell;
+  vertical-align: bottom;
+  height: calc(100vh - 28px);
+  width: 10000px;
+  background-color: #fafaff;
 }
 .chat-data-mobile {
-    /* position: absolute; */
-    display: table-cell;
-    vertical-align: bottom;
-    /* height: calc(100vh - 28px); */
-    width: 10000px;
+  /* position: absolute; */
+  display: table-cell;
+  vertical-align: bottom;
+  /* height: calc(100vh - 28px); */
+  width: 10000px;
 }
 .chat-content {
-    position: fixed;
-    top: 44px;
-    bottom: 69px;
-    background-color: white;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  position: fixed;
+  top: 44px;
+  bottom: 69px;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .chat-content {
-    position: fixed;
-    top: 44px;
-    bottom: 69px;
-    background-color: white;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  position: fixed;
+  top: 44px;
+  bottom: 69px;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .chat-content-mobile {
-    position: fixed;
-    top: 44px;
-    bottom: 120px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  position: fixed;
+  top: 44px;
+  bottom: 120px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .chat-content-mobile-ios {
-    position: fixed;
-    top: 0px;
-    bottom: 120px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  position: fixed;
+  top: 0px;
+  bottom: 120px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .chat-content-mobile-ios-keyboard {
-    position: fixed;
-    top: 230px;
-    bottom: calc(100% - 20vh);
-    overflow-y: scroll;
-    overflow-x: hidden;
+  position: fixed;
+  top: 230px;
+  bottom: calc(100% - 20vh);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .messages-mobile {
-    width: 72%;
-    float: right;
-    overflow-y: auto !important;
-    height: 135px !important;
-    position: fixed !important;
-    margin-left: 27% !important;
-    outline: none !important;
-    z-index: 999 !important;
-    float: right !important;
+  width: 72%;
+  float: right;
+  overflow-y: auto !important;
+  height: 135px !important;
+  position: fixed !important;
+  margin-left: 27% !important;
+  outline: none !important;
+  z-index: 999 !important;
+  float: right !important;
 }
 .messages-mobile-ios {
-    width: 67%;
-    float: right;
-    overflow-y: auto !important;
-    height: 250px !important;
-    position: fixed !important;
-    margin-left: 34% !important;
-    outline: none !important;
-    z-index: 999 !important;
-    float: right !important;
+  width: 67%;
+  float: right;
+  overflow-y: auto !important;
+  height: 250px !important;
+  position: fixed !important;
+  margin-left: 34% !important;
+  outline: none !important;
+  z-index: 999 !important;
+  float: right !important;
 }
 .incoming-sec {
-    overflow-y: hidden !important;
+  overflow-y: hidden !important;
 }
 .messages {
-    position: absolute !important;
-    margin-top: -151px !important;
-    margin-left: 116px !important;
-    outline: none !important;
-    height: 300px;
+  position: absolute !important;
+  margin-top: -151px !important;
+  margin-left: 116px !important;
+  outline: none !important;
+  height: 300px;
 }
 .dialpad-input {
-    width: 70%;
-    text-align: center;
-    outline: none;
-    border: none;
-    background-color: transparent;
+  width: 70%;
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 .entry-title {
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 5px;
-    width: 100%;
-    /* line-height: 1.5em; */
-    text-align: center;
-    color: #00446b !important;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 5px;
+  width: 100%;
+  /* line-height: 1.5em; */
+  text-align: center;
+  color: #00446b !important;
 }
 /* .log-in {
     width: 35% !important;
 } */
 
 .shortcuts-phonekeypad .conversation .vrs_map {
-    padding: 18px 0px !important;
+  padding: 18px 0px !important;
 }
 .txt-vrs {
-    text-align: left;
-    width: 100%;
-    cursor: pointer;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
 }
 .d-flex {
-    margin-top: -20px !important;
+  margin-top: -20px !important;
 }
 #img_videocallheader {
-    cursor: move;
+  cursor: move;
 }
 #img_videocall {
-    position: absolute !important;
+  position: absolute !important;
 }

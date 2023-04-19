@@ -1,54 +1,54 @@
 /* @import url(bootstrap.min.css); */
 @font-face {
-    font-family: "Pridi";
-    src: local("Pridi"), /* url(../fonts/Pridi/Pridi-Bold.ttf) format('truetype'), */ url(../fonts/Pridi/Pridi-ExtraLight.ttf) format("truetype"),
-        url(../fonts/Pridi/Pridi-Light.ttf) format("truetype"), url(../fonts/Pridi/Pridi-Medium.ttf) format("truetype"),
-        url(../fonts/Pridi/Pridi-Regular.ttf) format("truetype"), url(../fonts/Pridi/Pridi-SemiBold.ttf) format("truetype");
+  font-family: "Pridi";
+  src: local("Pridi"), /* url(../fonts/Pridi/Pridi-Bold.ttf) format('truetype'), */ url(../fonts/Pridi/Pridi-ExtraLight.ttf) format("truetype"),
+    url(../fonts/Pridi/Pridi-Light.ttf) format("truetype"), url(../fonts/Pridi/Pridi-Medium.ttf) format("truetype"),
+    url(../fonts/Pridi/Pridi-Regular.ttf) format("truetype"), url(../fonts/Pridi/Pridi-SemiBold.ttf) format("truetype");
 }
 * {
-    font-family: "Pridi" !important;
-    font-weight: bold !important;
+  font-family: "Pridi" !important;
+  font-weight: bold !important;
 }
 html,
 body {
-    font-size: 16px;
-    font-family: "SF Pro Display";
-    touch-action: manipulation;
+  font-size: 16px;
+  font-family: "SF Pro Display";
+  touch-action: manipulation;
 }
 
 a {
-    color: #1f88ce;
-    font-size: 14px;
-    text-decoration: none !important;
+  color: #1f88ce;
+  font-size: 14px;
+  text-decoration: none !important;
 }
 
 span {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 h4 {
-    font-size: 12px;
-    font-weight: 200;
+  font-size: 12px;
+  font-weight: 200;
 }
 
 h5 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 h6 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 h1,
@@ -58,286 +58,2598 @@ h4,
 h5,
 h6,
 p {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 ul {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 ul li {
-    list-style: none;
+  list-style: none;
 }
 
 video {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 figure {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .clearfloat:after {
-    display: table;
-    content: "";
-    clear: both;
+  display: table;
+  content: "";
+  clear: both;
 }
 
 .horizontal {
-    display: none;
+  display: none;
 }
 
 #loading {
-    position: absolute;
-    width: 100%;
-    z-index: 99;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
 }
 
 #Guestloading {
-    position: absolute;
-    width: 100%;
-    z-index: 999999;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  position: absolute;
+  width: 100%;
+  z-index: 999999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .loading-home {
-    height: 86vh;
-    background: -webkit-gradient(linear, left top, right top, color-stop(18%, #4db1eb), to(#168ace));
-    background: -webkit-linear-gradient(left, #4db1eb 18%, #168ace 100%);
-    background: -o-linear-gradient(left, #4db1eb 18%, #168ace 100%);
-    background: linear-gradient(90deg, #4db1eb 18%, #168ace 100%);
+  height: 86vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(18%, #4db1eb), to(#168ace));
+  background: -webkit-linear-gradient(left, #4db1eb 18%, #168ace 100%);
+  background: -o-linear-gradient(left, #4db1eb 18%, #168ace 100%);
+  background: linear-gradient(90deg, #4db1eb 18%, #168ace 100%);
 }
 .loading-home .loading-logo {
-    height: 43vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  height: 43vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .loading-home .loading-logo .logo {
-    width: 100px;
+  width: 100px;
 }
 .loading-home .loading-holdon {
-    height: 43vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  height: 43vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .loading-home .loading-holdon .loading {
-    text-align: center;
-    color: #fff;
+  text-align: center;
+  color: #fff;
 }
 .loading-home .loading-holdon .loading p {
-    margin: 10px auto;
+  margin: 10px auto;
 }
 .loading-home .loading-holdon .loading .logo {
-    width: 100px;
-    margin: 0px auto;
+  width: 100px;
+  margin: 0px auto;
 }
 .loading-home .loading-holdon .loading .progress-bar-white {
-    margin: 0px auto;
-    width: 250px;
-    height: 10px;
-    background: none !important;
-    border: 1px solid #fff;
-    position: relative;
-    border-radius: 5px;
+  margin: 0px auto;
+  width: 250px;
+  height: 10px;
+  background: none !important;
+  border: 1px solid #fff;
+  position: relative;
+  border-radius: 5px;
 }
 .loading-home .loading-holdon .loading .progress-bar-white .progress_bar {
-    position: absolute;
-    top: -1px;
-    height: 9px;
-    border-radius: 5px;
-    background: #fff;
-    width: 0%;
-    -webkit-transition: all 2s ease;
-    -o-transition: all 2s ease;
-    transition: all 2s ease;
-    -webkit-transition-delay: 0.2s;
-    -o-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+  position: absolute;
+  top: -1px;
+  height: 9px;
+  border-radius: 5px;
+  background: #fff;
+  width: 0%;
+  -webkit-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .footer-sub {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .log-in {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .log-in .login_box {
-    background-color: #fafaff;
-    width: 100%;
-    height: 65vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  background-color: #fafaff;
+  width: 100%;
+  height: 65vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .log-in .login_box .log-in_box {
-    width: 30%;
-    margin: 0px auto;
+  width: 30%;
+  margin: 0px auto;
 }
 .log-in .login_box .log-in_box .logo {
-    width: 120px;
-    margin: 0px auto;
+  width: 120px;
+  margin: 0px auto;
 }
 .log-in .login_box .log-in_box .logo .logo-hand2-blue {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 .log-in .login_box .log-in_box .ipt_log-in {
-    margin: 3rem 0rem;
+  margin: 3rem 0rem;
 }
 .log-in .login_box .log-in_box .ipt_log-in .input-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0px;
 }
 .log-in .login_box .log-in_box .ipt_log-in .input-group .input-group-prepend {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 .log-in .login_box .log-in_box .ipt_log-in .input-group .form-control {
-    width: calc(80% - 105px) !important;
-    border: none;
-    border-bottom: 1px solid #656565;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: none !important;
+  width: calc(80% - 105px) !important;
+  border: none;
+  border-bottom: 1px solid #656565;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: none !important;
 }
 .log-in .login_box .log-in_box .ipt_log-in .input-group .forget {
-    width: 75px;
-    text-align: end;
+  width: 75px;
+  text-align: end;
 }
 .log-in .login_box .log-in_box .ipt_log-in .btn-login {
-    width: 100%;
-    background-color: #1f88ce;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  width: 100%;
+  background-color: #1f88ce;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .log-in .login_box .log-in_box .ipt_log-in .btn-login:hover {
-    background-color: #4db1eb;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  background-color: #4db1eb;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .log-in .login_box .log-in_box .ipt_log-in .btn:focus {
-    outline: none;
+  outline: none;
 }
 .log-in .register_box {
-    background-color: #fff;
-    width: 100%;
-    height: 35vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  height: 35vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .log-in .register_box .sec_register {
-    width: 30%;
-    margin: 3rem auto;
+  width: 30%;
+  margin: 3rem auto;
 }
 .log-in .register_box .sec_register .btn-register {
-    width: 100%;
-    border: 1px solid #1f88ce;
-    color: #1f88ce;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 5px 0px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  width: 100%;
+  border: 1px solid #1f88ce;
+  color: #1f88ce;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .log-in .register_box .sec_register .btn-register:hover {
-    background-color: #1f88ce;
-    color: #fff;
+  background-color: #1f88ce;
+  color: #fff;
 }
 .log-in .register_box .sec_register .btn-guest {
-    width: 100%;
-    border: 1px solid #414141;
-    color: #414141;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 5px 0px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  width: 100%;
+  border: 1px solid #414141;
+  color: #414141;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 .log-in .register_box .sec_register .btn-guest:hover {
-    background-color: #414141;
-    color: #fff;
+  background-color: #414141;
+  color: #fff;
 }
 .log-in .register_box .sec_register .using {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .log-in .register_box .sec_register .using::before {
-    content: "\f29c";
-    font-family: "FontAwesome";
-    margin-right: 5px;
+  content: "\f29c";
+  font-family: "FontAwesome";
+  margin-right: 5px;
 }
 
 .guest-loading {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, color-stop(18%, #4db1eb), to(#168ace));
+  background: -webkit-linear-gradient(left, #4db1eb 18%, #168ace 100%);
+  background: -o-linear-gradient(left, #4db1eb 18%, #168ace 100%);
+  background: linear-gradient(90deg, #4db1eb 18%, #168ace 100%);
+}
+.guest-loading .logo-ttrs {
+  position: fixed;
+  top: 20%;
+  width: 120px;
+}
+.guest-loading .logo {
+  width: 120px;
+  text-align: center;
+  color: #fff;
+}
+.guest-loading .logo img {
+  margin-bottom: 3rem;
+}
+.guest-loading .icon-loading {
+  position: fixed;
+  bottom: 20%;
+}
+.guest-loading .icon-loading .lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.guest-loading .icon-loading .lds-roller div {
+  -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  -webkit-transform-origin: 40px 40px;
+  -ms-transform-origin: 40px 40px;
+  transform-origin: 40px 40px;
+}
+.guest-loading .icon-loading .lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(1) {
+  -webkit-animation-delay: -0.036s;
+  animation-delay: -0.036s;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(2) {
+  -webkit-animation-delay: -0.072s;
+  animation-delay: -0.072s;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(3) {
+  -webkit-animation-delay: -0.108s;
+  animation-delay: -0.108s;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(4) {
+  -webkit-animation-delay: -0.144s;
+  animation-delay: -0.144s;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(5) {
+  -webkit-animation-delay: -0.18s;
+  animation-delay: -0.18s;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(6) {
+  -webkit-animation-delay: -0.216s;
+  animation-delay: -0.216s;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(7) {
+  -webkit-animation-delay: -0.252s;
+  animation-delay: -0.252s;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(8) {
+  -webkit-animation-delay: -0.288s;
+  animation-delay: -0.288s;
+}
+.guest-loading .icon-loading .lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+
+@-webkit-keyframes lds-roller {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-roller {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.guest-user {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.guest-user .guest-user_box {
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fafaff;
+}
+.guest-user .guest-user_box .th_national_card {
+  color: #026faf;
+  text-align: center;
+  width: 50%;
+}
+.guest-user .guest-user_box .th_national_card .head {
+  font-size: 24px;
+}
+.guest-user .guest-user_box .th_national_card .national_card {
+  width: 55%;
+  margin: 3rem auto;
+}
+.guest-user .guest-user_box1 {
+  width: 100%;
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.guest-user .guest-user_box1 .ipt_log-in {
+  width: 35%;
+}
+.guest-user .guest-user_box1 .ipt_log-in .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+.guest-user .guest-user_box1 .ipt_log-in .input-group .form-control {
+  border: none;
+  border-bottom: 1px solid #c7c7cc;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-confirm {
+  width: 100%;
+  background-color: #1f88ce;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 10px 0px;
+}
+.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-confirm:hover {
+  background-color: #4db1eb;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-cancel {
+  width: 100%;
+  border: 1px solid #939393;
+  color: #939393;
+  border-radius: 20px;
+  padding: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 10px 0px;
+}
+.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-cancel:hover {
+  background-color: #939393;
+  color: #fff;
+}
+.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn:focus {
+  outline: none;
+}
+.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .using {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .using::before {
+  content: "\f29c";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+}
+
+.report-problem {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.report-problem .report-problem_box .logo {
+  width: 100px;
+  margin: 0px auto;
+}
+.report-problem .report-problem_box .form_report {
+  margin-top: 3rem;
+}
+.report-problem .report-problem_box .form_report .head {
+  text-align: center;
+  color: #414141;
+  font-size: 24px;
+}
+.report-problem .report-problem_box .form_report .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+.report-problem .report-problem_box .form_report .input-group .form-control {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #c7c7cc;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin: 5px 0px;
+  border-radius: 0%;
+}
+.report-problem .report-problem_box .form_report .input-group .form_problem {
+  width: 100%;
+  display: block;
+  margin: 5px 0px;
+}
+.report-problem .report-problem_box .form_report .input-group .form_problem .txt_problem {
+  padding: 6px 12px;
+  color: #6c757c;
+  font-weight: 400;
+}
+.report-problem .report-problem_box .form_report .input-group .form_problem .form-control_problem {
+  width: 100%;
+  border: 1px solid #c7c7cc;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 6px 12px;
+}
+.report-problem .report-problem_box .form_report .input-group .form_problem .form-control_problem:focus {
+  outline: none;
+}
+.report-problem .report-problem_box .form_report .input-group .custom-file {
+  width: 120px;
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+}
+.report-problem .report-problem_box .form_report .input-group .custom-file .icon-paperclip::before {
+  content: "\f0c6";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+}
+.report-problem .report-problem_box .form_report .input-group .custom-file .custom-file-label {
+  width: 120px;
+  text-align: center;
+  color: #707070;
+  background-color: #fff;
+  border: 1px solid #cbcbcb;
+  border-radius: 20px;
+  padding: 6px 10px !important;
+  margin: 0px !important;
+}
+.report-problem .report-problem_box .form_report .input-group .custom-file .custom-file-label::after {
+  display: none;
+}
+.report-problem .report-problem_box .form_report .input-group .custom-file .custom-file-input {
+  width: 120px;
+}
+.report-problem .report-problem_box .form_report .sec_confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.report-problem .report-problem_box .form_report .sec_confirm .btn-cancel {
+  width: 45%;
+  border: 1px solid #707070;
+  color: #707070;
+  border-radius: 20px;
+  padding: 6px 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.report-problem .report-problem_box .form_report .sec_confirm .btn-cancel:hover {
+  background-color: #707070;
+  color: #fff;
+}
+.report-problem .report-problem_box .form_report .sec_confirm .btn-send {
+  width: 45%;
+  background-color: #1f88ce;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.report-problem .report-problem_box .form_report .sec_confirm .btn-send:hover {
+  background-color: #4db1eb;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.report-problem .report-problem_box .form_report .sec_confirm .btn:focus {
+  outline: none;
+}
+
+.shortcuts-phonekeypad {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.shortcuts-phonekeypad .vrs_map {
+  width: 100%;
+  background-color: #168ace;
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.shortcuts-phonekeypad .vrs_map .map-location {
+  width: 100%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 15px;
+  position: absolute;
+}
+.shortcuts-phonekeypad .vrs_map .map-location::before {
+  content: "";
+  width: 23px;
+  height: 23px;
+  background: url(../img/logo-location.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  margin-right: 10px;
+}
+.shortcuts-phonekeypad .vrs_map .txt-vrs {
+  color: #fff;
+  text-align: left;
+  padding: 0px 15px;
+}
+.shortcuts-phonekeypad .txt-setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  padding: 0px;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  right: 0;
+}
+.shortcuts-phonekeypad .icon_setting::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-settings-gray.png) center no-repeat;
+  vertical-align: sub;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fafaff;
+}
+.shortcuts-phonekeypad .shortcuts .head-title {
+  color: #414141;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 5rem;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box {
+  width: 100%;
+  height: calc(100% - 40px);
+  /* margin: 20px auto; */
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /* border-radius: 15px; */
+  position: relative;
+  background-color: #ececec;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon {
+  width: 80px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-vri::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/logo-hand-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-helpdesk::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-callcenter-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-emergency {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-emergency.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .phone-keypad::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-call-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ms-conversation::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-message-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ms-history::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-conversation-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc {
+  padding-right: 25px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc .head {
+  color: black;
+  text-align: left !important;
+  /* font-weight: bold; */
+  font-size: 2.5vh;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc .desc {
+  color: black;
+  font-size: 14px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box .exp-vdo {
+  color: #1f88ce;
+  font-size: 26px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 9;
+  right: 15px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(28%, #34a2ed), to(#1f88ce));
+  background: -webkit-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
+  background: -o-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
+  background: linear-gradient(0deg, #34a2ed 28%, #1f88ce 100%);
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon {
+  width: 80px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-vri::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/logo-hand-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-helpdesk::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-callcenter-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-emergency {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-emergency-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .phone-keypad::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-call-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ms-conversation::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-message-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ms-history::before {
+  content: "";
+  width: 35px;
+  height: 35px;
+  background: url(../img/icon-conversation-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 35px;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .txt-desc .head {
+  color: #fff;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .txt-desc .desc {
+  color: #fff;
+}
+.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .exp-vdo {
+  color: #fff;
+}
+.shortcuts-phonekeypad .shortcuts-menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #e4e4e4;
+  /* border-top: 1px solid #D6D6D6;  */
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu {
+  width: 33%;
+  text-align: center;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .txt-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: white;
+  padding: 15px 0px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-shortcuts::before {
+  content: "";
+  width: 10vh;
+  background: url(../img/icon-shortcut-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-message::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-message-gray.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-call::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-call-gray.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-setting::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-settings-gray.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-shortcuts {
+  color: #1f88ce;
+  cursor: pointer;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-shortcuts::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-shortcut-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-message {
+  color: #1f88ce;
+  cursor: pointer;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-message::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-message-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-call {
+  color: white;
+  cursor: pointer;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-call::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-call-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-setting {
+  color: #1f88ce;
+  cursor: pointer;
+}
+.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-setting::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-settings-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .active .txt-menu {
+  color: white !important;
+  background-color: #00a5fa;
+}
+.shortcuts-phonekeypad .shortcuts-menu .active .icn-shortcuts::before {
+  content: "";
+  /* width: 20px; */
+  /* height: 20px; */
+  background: url(../img/icon-shortcut-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .active .icn-message::before {
+  content: "";
+  /* width: 20px; */
+  /* height: 20px; */
+  background: url(../img/icon-message-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .shortcuts-menu .active .icn-setting::before {
+  content: "";
+  /* width: 20px; */
+  /* height: 20px; */
+  background: url(../img/icon-settings-blue.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .conversation {
+  padding: 0px;
+}
+.shortcuts-phonekeypad .conversation .vrs_map {
+  width: 100%;
+  background-color: #168ace;
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.shortcuts-phonekeypad .conversation .vrs_map .d-flex {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.shortcuts-phonekeypad .conversation .vrs_map .txt-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  padding: 0px;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  margin-top: -11px;
+  left: 0;
+}
+.shortcuts-phonekeypad .conversation .vrs_map .icon_back::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../img/icon-back-white.png) center no-repeat;
+  vertical-align: sub;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 7px;
+  margin-right: 5px;
+}
+.shortcuts-phonekeypad .conversation .vrs_map .txt-vrs {
+  color: #fff;
+  text-align: center;
+  padding: 3px 15px;
+}
+.shortcuts-phonekeypad .phonekeypad {
+  width: 100%;
+  height: 100vh;
+  border-left: 1px solid #d6d6d6;
+  position: relative;
+}
+.shortcuts-phonekeypad .phonekeypad .show-keypad {
+  /* height: 76vh; */
+  /* height: calc(73vh - 10px); */
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad {
+  background-color: transparent;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .title {
+  font-size: 3.5vh;
+  color: #939393;
+  text-align: center;
+  /* margin-top: 3rem;  */
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .show-number {
+  height: 7rem;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .show-number .dig {
+  right: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+  cursor: pointer;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .show-number #output {
+  width: 100%;
+  font-size: 5vh;
+  font-weight: bold;
+  color: #333;
+  margin: 0px auto;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0px auto;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .row .digit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /* width: 70px; */
+  /* height: 70px; */
+  width: 11vh;
+  /* background-color: #e4e4e4; */
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 10px auto;
+  font-size: 28px;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .row .digit:hover {
+  background-color: #efefee;
+  color: #fff;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .botrow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .botrow #call {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #66bb6a;
+  width: 70px;
+  height: 70px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+}
+.shortcuts-phonekeypad .phonekeypad .container_keypad .botrow #call:hover {
+  background-color: #81c784;
+}
+
+#slideMessage {
+  display: none;
+}
+
+.message-conversation {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  left: 0;
+  bottom: 54px;
+  overflow: hidden;
+}
+.message-conversation .show_date_history {
+  display: none;
+}
+.message-conversation a.article {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  display: table;
+  text-decoration: none;
+  color: white;
+  background-color: #39acfc;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font: 400 15px "Open Sans", sans-serif;
+}
+.message-conversation form.chat * {
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.message-conversation form.chat {
+  margin: 0;
+  cursor: default;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+  user-select: none;
+}
+.message-conversation form.chat span.spinner {
+  -moz-animation: loading-bar 1s 1;
+  -webkit-animation: loading-bar 1s 1;
+  animation: loading-bar 1s 1;
+  display: block;
+  height: 2px;
+  background-color: #39acfc;
+  -webkit-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+.chat {
+  overflow-y: scroll;
+}
+.message-conversation form.chat .messages {
+  /*display: block;*/
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /*position: relative;*/
+  position: fixed;
+  display: table-cell;
+  /*height: 90%;*/
+  height: calc(90vh - 28px);
+  /*width: 100%;*/
+  width: 43vh;
+  padding: 2% 3%;
+}
+.message-conversation form.chat ::-webkit-scrollbar {
+  width: 3px;
+  height: 1px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 10;
+}
+.message-conversation form.chat ::-webkit-scrollbar-track {
+  background-color: white;
+}
+.message-conversation form.chat ::-webkit-scrollbar-thumb {
+  background-color: #bec4c8;
+  border-radius: 3px;
+}
+.message-conversation form.chat .message {
+  display: block;
+  width: 98%;
+  padding: 0.5%;
+}
+.message-conversation form.chat .message p {
+  margin: 0;
+}
+.message-conversation form.chat .myMessage,
+.message-conversation form.chat .fromThem {
+  max-width: 50%;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+}
+.message-conversation form.chat .message:hover .myMessage {
+  -webkit-transform: translateX(-130px);
+  -ms-transform: translateX(-130px);
+  transform: translateX(-130px);
+}
+.message-conversation form.chat .message:hover .fromThem {
+  -webkit-transform: translateX(130px);
+  -ms-transform: translateX(130px);
+  transform: translateX(130px);
+}
+.message-conversation form.chat .message:hover .date {
+  opacity: 1;
+}
+.message-conversation form.chat .myMessage,
+.message-conversation .fromThem {
+  position: relative;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  clear: both;
+  font: 400 15px "Open Sans", sans-serif;
+}
+.message-conversation form.chat .myMessage {
+  background: #39acfc;
+  color: white;
+  float: right;
+  clear: both;
+  border-bottom-right-radius: 20px 0px\9;
+}
+.message-conversation form.chat .myMessage:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -2px;
+  right: 0px;
+  height: 19px;
+  border-right: 20px solid #39acfc;
+  border-radius: 2px;
+  -webkit-transform: translate(0, -2px);
+  -ms-transform: translate(0, -2px);
+  transform: translate(0, -2px);
+  border-bottom-left-radius: 15px 0px\9;
+  -webkit-transform: translate(-1px, -2px) \9;
+  -ms-transform: translate(-1px, -2px) \9;
+  transform: translate(-1px, -2px) \9;
+}
+.message-conversation form.chat .myMessage:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: -2px;
+  right: -42px;
+  width: 12px;
+  height: 20px;
+  background: none;
+  border-bottom-left-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+  -ms-transform: translate(-30px, -2px);
+  transform: translate(-30px, -2px);
+}
+.message-conversation form.chat .fromThem {
+  background: #e5e5ea;
+  color: black;
+  float: left;
+  clear: both;
+  border-bottom-left-radius: 30px 0px\9;
+}
+.message-conversation form.chat .fromThem:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: -2px;
+  left: 0px;
+  height: 19px;
+  border-left: 20px solid #e5e5ea;
+  border-radius: 2px;
+  -webkit-transform: translate(0, -2px);
+  -ms-transform: translate(0, -2px);
+  transform: translate(0, -2px);
+  border-bottom-right-radius: 15px 0px\9;
+  -webkit-transform: translate(-1px, -2px) \9;
+  -ms-transform: translate(-1px, -2px) \9;
+  transform: translate(-1px, -2px) \9;
+}
+.message-conversation form.chat .fromThem:after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  bottom: -2px;
+  left: 4px;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border-bottom-right-radius: 10px;
+  -webkit-transform: translate(-30px, -2px);
+  -ms-transform: translate(-30px, -2px);
+  transform: translate(-30px, -2px);
+}
+.message-conversation form.chat .date {
+  position: absolute;
+  top: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: #8b8b90;
+  opacity: 0;
+  z-index: 4;
+}
+.message-conversation form.chat .myMessage .date {
+  left: 105%;
+}
+.message-conversation form.chat .fromThem .date {
+  right: 105%;
+}
+.message-conversation .sec-send-message {
+  bottom: 0;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 10%;
+}
+.message-conversation .sec-send-message .btn-no-message::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url(../img/icon-nomessage-blue.png) center no-repeat;
+  vertical-align: sub;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 25px;
+}
+.message-conversation form.chat input {
+  font: 400 13px "Open Sans", sans-serif;
+  border: 0;
+  padding: 0 15px;
+  outline: 0;
+}
+.message-conversation form.chat input[type="text"] {
+  width: 50%;
+  border-radius: 20px;
+  padding: 6px 12px;
+  background-color: #fafafa;
+  border: 1px solid #c8c7cc;
+  float: left;
+  margin: 0px 20px;
+}
+.message-conversation form.chat input[type="submit"] {
+  width: 15%;
+  border-radius: 20px;
+  padding: 6px 12px;
+  background: #168ace;
+  color: #fff;
+  font-weight: 700;
+  text-align: "center";
+}
+.message-conversation form.chat input[type="submit"]:hover {
+  background: #39acfc;
+}
+.message-conversation .btn-backpage {
+  display: none;
+}
+.message-conversation form.chat .myMessage,
+.message-conversation form.chat .fromThem {
+  font-size: 12px;
+}
+.message-conversation form.chat .message:hover .myMessage {
+  -ms-transform: translateY(18px);
+  transform: translateY(18px);
+  -webkit-transform: translateY(18px);
+}
+.message-conversation form.chat .message:hover .fromThem {
+  -ms-transform: translateY(18px);
+  transform: translateY(18px);
+  -webkit-transform: translateY(18px);
+}
+.message-conversation form.chat .myMessage .date,
+.message-conversation form.chat .fromThem .date {
+  top: -20px;
+  left: auto;
+  right: 0;
+  font-size: 12px;
+}
+.message-conversation form.chat .myMessage,
+.message-conversation form.chat .fromThem {
+  max-width: 90%;
+}
+
+@-moz-keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
     width: 100%;
-    height: 100vh;
+  }
+}
+
+@-webkit-keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.history .show_date_history {
+  padding: 10px 0px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #668a9f;
+}
+
+.history form.chat .messages {
+  height: calc(90% - 44px);
+}
+
+.history .sec-send-message .btn-backpage {
+  display: block;
+  width: 80%;
+  border: 1px solid #1f88ce;
+  color: #1f88ce;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+}
+.history .sec-send-message .btn-backpage:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #1f88ce;
+}
+
+.history .sec-send-message .btn-no-message {
+  display: none;
+}
+
+.history .sec-send-message input[type="text"] {
+  display: none;
+}
+
+.history .sec-send-message input[type="submit"] {
+  display: none;
+}
+
+.setting .txt-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #1f88ce;
+  font-size: 14px;
+  position: absolute;
+  top: -3px;
+  left: 0px;
+  background-color: #fff;
+  border: none;
+  padding: 5px 10px 5px 2px;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.setting .txt-back:focus {
+  outline: none;
+}
+
+.setting .icon_back::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../img/icon-back-blue.png) center no-repeat;
+  vertical-align: sub;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 7px;
+  margin-right: 5px;
+}
+
+.setting .setting_form {
+  width: 80%;
+  margin: 0px auto;
+  margin-top: 2rem;
+}
+.setting .setting_form .title,
+.setting .setting_form .number {
+  font-size: 16px;
+}
+.setting .setting_form .usr_name_version {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid rgba(112, 112, 112, 0.2);
+  border-radius: 5px;
+  margin: 10px 0px;
+  background-color: #fff;
+}
+.setting .setting_form .setting_select {
+  width: 100%;
+  border: 1px solid rgba(112, 112, 112, 0.2);
+  border-radius: 5px;
+  margin: 10px 0px;
+}
+.setting .setting_form .setting_select li {
+  border-bottom: 1px solid rgba(112, 112, 112, 0.2);
+  background-color: #fff;
+  border-radius: 5px;
+}
+.setting .setting_form .setting_select li .btn-function_select {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.setting .setting_form .setting_select li .btn-function_select:hover {
+  color: #ffffff;
+  background: #1f88ce;
+}
+.setting .setting_form .setting_select li .btn-function_select i {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+.setting .setting_form .setting_select li .btn-function_select.down {
+  color: #ffffff;
+  background: #1f88ce;
+}
+.setting .setting_form .setting_select li .btn-function_select.down i {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  -o-transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
+}
+.setting .setting_form .setting_select li .function_select {
+  width: 50%;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  z-index: 9;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 0.25rem;
+}
+.setting .setting_form .setting_select li .function_select p {
+  margin-bottom: 10px;
+}
+.setting .setting_form .setting_select li .stun_turn input {
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #d9d9d9;
+  padding: 6px 12px;
+}
+.setting .setting_form .setting_select li .stun_turn input:focus {
+  outline: none;
+}
+.setting .setting_form .setting_select li .stun_turn .btn_cancle {
+  display: block;
+  width: 45%;
+  border: 1px solid #707070;
+  background: #ffffff;
+  color: #707070;
+  padding: 6px 0px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 0.5rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.setting .setting_form .setting_select li .stun_turn .btn_cancle:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #707070;
+}
+.setting .setting_form .setting_select li .stun_turn .btn_save {
+  display: block;
+  width: 45%;
+  border: 1px solid #1f88ce;
+  background: #1f88ce;
+  color: #fff;
+  padding: 6px 0px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 0.5rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.setting .setting_form .setting_select li .stun_turn .btn_save:hover {
+  border: 1px solid #4db1eb;
+  color: #ffffff;
+  background: #4db1eb;
+}
+.setting .setting_form .setting_select li:last-child {
+  border-bottom: none;
+}
+.setting .setting_form .btn-logout {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid rgba(112, 112, 112, 0.2);
+  border-radius: 5px;
+  margin: 10px 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #fff;
+}
+.setting .setting_form .btn-logout .title {
+  color: #b10c0c;
+}
+.setting .setting_form .btn-close_setting {
+  display: block;
+  width: 100%;
+  border: 1px solid #1f88ce;
+  color: #1f88ce;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 2rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.setting .setting_form .btn-close_setting:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #1f88ce;
+}
+.setting .setting_form .btn:focus {
+  outline: none;
+}
+
+.how-to-use {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fafaff;
+}
+.how-to-use .head-title {
+  color: #414141;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.how-to-use .exp_box {
+  text-align: center;
+  margin: 1rem auto;
+}
+.how-to-use .exp_box .exp_vdo {
+  margin: 0px auto;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.how-to-use .exp_box .exp_title {
+  margin-top: 1.5rem;
+}
+.how-to-use .btn-back {
+  display: block;
+  width: 100%;
+  border: 1px solid #1f88ce;
+  color: #1f88ce;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 2rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.how-to-use .btn-back:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #1f88ce;
+}
+.how-to-use .btn:focus {
+  outline: none;
+}
+
+.map_location {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fafaff;
+}
+.map_location .txt-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #1f88ce;
+  padding: 0px;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  margin-top: -19px;
+  left: 15px;
+  background-color: #fff;
+  border: none;
+  padding: 5px 10px 5px 2px;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.map_location .txt-back:focus {
+  outline: none;
+}
+.map_location .icon_back::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../img/icon-back-blue.png) center no-repeat;
+  vertical-align: sub;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 7px;
+  margin-right: 5px;
+}
+.map_location .head-title {
+  color: #414141;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.map_location .exp_box {
+  text-align: center;
+  margin: 1rem auto;
+}
+.map_location .exp_box .exp_vdo {
+  margin: 0px auto;
+  cursor: pointer;
+}
+.map_location .exp_box .exp_title {
+  margin-top: 1.5rem;
+}
+.map_location .btn-back {
+  display: block;
+  width: 100%;
+  border: 1px solid #1f88ce;
+  color: #1f88ce;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 2rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.map_location .btn-back:hover {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: #1f88ce;
+}
+.map_location .btn:focus {
+  outline: none;
+}
+
+.modal {
+  background-color: #545454d1;
+}
+.modal .modal_exp_vdo {
+  position: relative;
+}
+.modal .modal_exp_vdo .close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #168ace;
+  opacity: 1 !important;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 100;
+  z-index: 9;
+  color: #168ace;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.modal .modal_exp_vdo .close span {
+  display: block;
+  margin-top: -2px;
+}
+.modal .modal_exp_vdo .close:hover {
+  background-color: #168ace;
+  border: 1px solid #168ace;
+  color: #fff;
+}
+.modal .modal_exp_vdo .close:focus {
+  outline: none;
+}
+.modal .modal_exp_vdo .modal-body {
+  padding: 0;
+  width: 100%;
+}
+.modal .modal_exp_vdo .exp_title {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: -3rem;
+  color: #fff;
+}
+
+.form_search {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(142, 142, 147, 0.1);
+  border-radius: 10px;
+  padding: 6px 6px 6px 0px;
+  margin-bottom: 2rem;
+}
+.form_search .btn_search {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #8e8e93;
+}
+.form_search .btn_search:focus {
+  outline: none;
+}
+.form_search .inp_search {
+  width: calc(100% - 30px);
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 10px;
+}
+.form_search .inp_search:focus {
+  outline: none;
+  background: none;
+}
+
+.vdo-calling .head-sec {
+  width: 100%;
+  background-color: #0b2836;
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+}
+.vdo-calling .head-sec .head-call {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.vdo-calling .head-sec .head-call .phone-numer {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.vdo-calling .head-sec .head-call .phone-numer::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../img/icon-calling-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  margin-right: 5px;
+}
+.vdo-calling .head-sec .head-call .txt-vrs {
+  width: 33%;
+  text-align: center;
+}
+.vdo-calling .head-sec .head-call .cam_img {
+  width: 20px;
+}
+.vdo-calling .head-sec .head-call .calling-time {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.vdo-calling .head-sec .head-call .calling-time::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: url(../img/icon-time-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  margin-right: 5px;
+}
+
+.vdo-calling .incoming-sec {
+  width: 100%;
+  height: calc(100vh - 44px);
+  background-color: #0f3548;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.vdo-calling .incoming-sec .incoming-calls {
+  width: 40%;
+  text-align: center;
+  color: #fff;
+}
+.vdo-calling .incoming-sec .incoming-calls .txt-incoming-calls {
+  font-size: 24px;
+}
+.vdo-calling .incoming-sec .incoming-calls .txt-phone-number {
+  font-size: 32px;
+  margin-top: 0.5rem;
+}
+.vdo-calling .incoming-sec .incoming-calls .img-logo {
+  width: 130px;
+  margin: 5rem auto;
+}
+.vdo-calling .incoming-sec .incoming-calls .img-logo .logo-ttrs {
+  width: 90px;
+  margin: 0px auto;
+}
+.vdo-calling .incoming-sec .incoming-calls .img-logo .logo-hand {
+  margin-top: 1rem;
+}
+.vdo-calling .incoming-sec .incoming-calls .btn-start-conversation {
+  display: block;
+  width: 70%;
+  background: #00d16b;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 10px auto;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.vdo-calling .incoming-sec .incoming-calls .btn-start-conversation:hover {
+  background: #12e07b;
+}
+.vdo-calling .incoming-sec .incoming-calls .btn-start-conversation .start-conversation::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-calling-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.vdo-calling .incoming-sec .incoming-calls .btn-end-conversation {
+  display: block;
+  width: 70%;
+  border: 1px solid #f8423b;
+  color: #f8423b;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 10px auto;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.vdo-calling .incoming-sec .incoming-calls .btn-end-conversation:hover {
+  background: #f8423b;
+  color: #fff;
+}
+.vdo-calling .incoming-sec .incoming-calls .btn-end-conversation:hover .end-conversation::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-hangup-red.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.vdo-calling .incoming-sec .incoming-calls .btn-end-conversation .end-conversation::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-hangup-white.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.vdo-calling .incoming-sec .incoming-calls .end {
+  background: #f8423b;
+  color: #fff;
+  text-align: center;
+}
+.vdo-calling .incoming-sec .incoming-calls .end:hover {
+  background: #f85a54;
+}
+.vdo-calling .incoming-sec .incoming-calls .end .end-conversation::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-hangup-red.png) center no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin-right: 5px;
+}
+.vdo-calling .incoming-sec .incoming-calls .function-calls {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.vdo-calling .incoming-sec .incoming-calls .function-calls li {
+  width: 20%;
+}
+.vdo-calling .incoming-sec .incoming-calls .function-calls li button {
+  color: #fff;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 14px;
+}
+.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-novideo::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-novideo-white.png) center no-repeat;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin: 10px auto;
+}
+.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-mute::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-mutemicrophone-white.png) center no-repeat;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  margin: 10px auto;
+}
+.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-voiceoff::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-volumeoff-white.png) center no-repeat;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin: 10px auto;
+}
+.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-message::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-message-white.png) center no-repeat;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin: 10px auto;
+}
+.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-hangup::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon-hangup-white.png) center no-repeat;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  margin: 10px auto;
+}
+.vdo-calling .incoming-sec .incoming-calls .waiting .img-logo_waiting {
+  width: 100px;
+  margin: 0px 10px;
+}
+.vdo-calling .incoming-sec .incoming-calls .waiting .txt-waiting {
+  margin: 0px 10px;
+}
+.vdo-calling .incoming-sec .incoming-calls .waiting .txt-waiting .no_waiting {
+  background-color: #fff;
+  color: #103448;
+  padding: 5px;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+.vdo-calling .incoming-sec .incoming-calls .waiting_vdo {
+  height: auto;
+  margin: 2rem 0rem;
+}
+.vdo-calling .incoming-sec .calls-waiting {
+  width: 100%;
+}
+.vdo-calling .incoming-sec .calls-waiting .waiting {
+  width: 80%;
+  margin: 0px auto;
+}
+.vdo-calling .incoming-sec .calls-waiting .waiting .head-title {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+.vdo-calling .incoming-sec .calls-waiting .function-calls {
+  width: 80%;
+  margin: 0px auto;
+}
+.vdo-calling .incoming-sec .calls-waiting .function-conversation li {
+  width: 30%;
+}
+.vdo-calling .incoming-sec .calls-waiting .function-conversation li .icon-video_call::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url(../img/icon-videocall-white.png) center no-repeat;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin: 10px auto;
+}
+.vdo-calling .incoming-sec .calls-waiting .function-conversation li .icon-conversation::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url(../img/icon-message-white.png) center no-repeat;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin: 10px auto;
+}
+
+.vdocall-keypad {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+.vdocall-keypad #main {
+  width: 100%;
+  -webkit-transition: margin-right 0.5s;
+  -o-transition: margin-right 0.5s;
+  transition: margin-right 0.5s;
+}
+.vdocall-keypad #main .function-calls {
+  width: 100%;
+}
+.vdocall-keypad #mySidenav {
+  width: 0%;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  top: 0;
+  right: 0;
+}
+.vdocall-keypad #mySidenav .shortcuts {
+  width: 100%;
+  padding: 0px;
+}
+.vdocall-keypad #mySidenav .shortcuts .vrs_map {
+  display: none;
+}
+.vdocall-keypad #mySidenav .conversation {
+  width: 100%;
+}
+.vdocall-keypad #mySidenav .conversation .message-conversation {
+  bottom: 0px;
+}
+.vdocall-keypad #open-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.call-message .message-conversation {
+  top: 38px;
+  bottom: 0;
+}
+
+.vdo_call_show {
+  position: absolute;
+  width: 100px;
+  /* height: 130px; */
+  top: 29px;
+  /* left: 15px;  */
+}
+
+.footer-sub {
+  height: 14vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer-sub .sub-img {
+  margin: 0px 10px;
+}
+.footer-sub .img-nbtc {
+  width: 70px;
+}
+.footer-sub .img-yimsoo {
+  width: 90px;
+}
+.footer-sub .img-nstda {
+  width: 170px;
+  height: auto;
+}
+.footer-sub .img-nectec {
+  width: 170px;
+  height: auto;
+}
+
+@media only screen and (max-width: 812px) and (orientation: landscape) {
+  .horizontal {
+    display: block !important;
+  }
+  .horizontal .no-horizontal {
+    position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -347,139 +2659,69 @@ figure {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
     background: -webkit-gradient(linear, left top, right top, color-stop(18%, #4db1eb), to(#168ace));
     background: -webkit-linear-gradient(left, #4db1eb 18%, #168ace 100%);
     background: -o-linear-gradient(left, #4db1eb 18%, #168ace 100%);
     background: linear-gradient(90deg, #4db1eb 18%, #168ace 100%);
-}
-.guest-loading .logo-ttrs {
-    position: fixed;
-    top: 20%;
-    width: 120px;
-}
-.guest-loading .logo {
-    width: 120px;
+  }
+  .horizontal .no-horizontal .loading-logo .logo {
+    width: 100px;
+    margin: 0px auto;
+  }
+  .horizontal .no-horizontal .loading-logo .logo img {
+    -webkit-animation: rotate 2.5s ease infinite backwards;
+    animation: rotate 2.5s ease infinite backwards;
+  }
+  /* @-webkit-keyframes rotate {
+    0% {
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg); }
+    50% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    100% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); } } */
+  .horizontal .no-horizontal .loading-logo p {
     text-align: center;
     color: #fff;
+    font-size: 18px;
+    margin-top: 2rem;
+  }
 }
-.guest-loading .logo img {
-    margin-bottom: 3rem;
-}
-.guest-loading .icon-loading {
-    position: fixed;
-    bottom: 20%;
-}
-.guest-loading .icon-loading .lds-roller {
-    display: inline-block;
-    position: relative;
+
+@media only screen and (max-width: 767px) {
+  .loading-home .loading-logo .logo {
     width: 80px;
-    height: 80px;
-}
-.guest-loading .icon-loading .lds-roller div {
-    -webkit-animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    -webkit-transform-origin: 40px 40px;
-    -ms-transform-origin: 40px 40px;
-    transform-origin: 40px 40px;
-}
-.guest-loading .icon-loading .lds-roller div:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #fff;
-    margin: -4px 0 0 -4px;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(1) {
-    -webkit-animation-delay: -0.036s;
-    animation-delay: -0.036s;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(1):after {
-    top: 63px;
-    left: 63px;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(2) {
-    -webkit-animation-delay: -0.072s;
-    animation-delay: -0.072s;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(2):after {
-    top: 68px;
-    left: 56px;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(3) {
-    -webkit-animation-delay: -0.108s;
-    animation-delay: -0.108s;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(3):after {
-    top: 71px;
-    left: 48px;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(4) {
-    -webkit-animation-delay: -0.144s;
-    animation-delay: -0.144s;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(4):after {
-    top: 72px;
-    left: 40px;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(5) {
-    -webkit-animation-delay: -0.18s;
-    animation-delay: -0.18s;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(5):after {
-    top: 71px;
-    left: 32px;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(6) {
-    -webkit-animation-delay: -0.216s;
-    animation-delay: -0.216s;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(6):after {
-    top: 68px;
-    left: 24px;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(7) {
-    -webkit-animation-delay: -0.252s;
-    animation-delay: -0.252s;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(7):after {
-    top: 63px;
-    left: 17px;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(8) {
-    -webkit-animation-delay: -0.288s;
-    animation-delay: -0.288s;
-}
-.guest-loading .icon-loading .lds-roller div:nth-child(8):after {
-    top: 56px;
-    left: 12px;
-}
-
-@-webkit-keyframes lds-roller {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes lds-roller {
-    0% {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-.guest-user {
+  }
+  .loading-home .loading-holdon .loading p {
+    margin: 5px auto;
+  }
+  .loading-home .loading-holdon .loading .logo {
+    width: 90px;
+  }
+  .loading-home .loading-holdon .loading .progress-center {
+    height: 5px;
+    border: 1px solid #fff;
+  }
+  .footer-sub .img-nbtc {
+    width: 30px;
+  }
+  .footer-sub .img-yimsoo {
+    width: 35px;
+  }
+  .footer-sub .img-nstda {
+    width: 90px;
+    height: auto;
+  }
+  .footer-sub .img-nectec {
+    width: 90px;
+    height: auto;
+  }
+  .log-in {
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -492,556 +2734,334 @@ figure {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-}
-.guest-user .guest-user_box {
-    width: 100%;
-    height: 50vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background-color: #fafaff;
-}
-.guest-user .guest-user_box .th_national_card {
-    color: #026faf;
-    text-align: center;
-    width: 50%;
-}
-.guest-user .guest-user_box .th_national_card .head {
-    font-size: 24px;
-}
-.guest-user .guest-user_box .th_national_card .national_card {
-    width: 55%;
-    margin: 3rem auto;
-}
-.guest-user .guest-user_box1 {
-    width: 100%;
-    height: 50vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-.guest-user .guest-user_box1 .ipt_log-in {
-    width: 35%;
-}
-.guest-user .guest-user_box1 .ipt_log-in .input-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 20px 0px;
-}
-.guest-user .guest-user_box1 .ipt_log-in .input-group .form-control {
-    border: none;
-    border-bottom: 1px solid #c7c7cc;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-confirm {
-    width: 100%;
-    background-color: #1f88ce;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    margin: 10px 0px;
-}
-.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-confirm:hover {
-    background-color: #4db1eb;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-cancel {
-    width: 100%;
-    border: 1px solid #939393;
-    color: #939393;
-    border-radius: 20px;
-    padding: 10px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    margin: 10px 0px;
-}
-.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-cancel:hover {
-    background-color: #939393;
-    color: #fff;
-}
-.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn:focus {
-    outline: none;
-}
-.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .using {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-.guest-user .guest-user_box1 .ipt_log-in .sec_confirm .using::before {
-    content: "\f29c";
-    font-family: "FontAwesome";
-    margin-right: 5px;
-}
-
-.report-problem {
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-.report-problem .report-problem_box .logo {
-    width: 100px;
-    margin: 0px auto;
-}
-.report-problem .report-problem_box .form_report {
-    margin-top: 3rem;
-}
-.report-problem .report-problem_box .form_report .head {
-    text-align: center;
-    color: #414141;
-    font-size: 24px;
-}
-.report-problem .report-problem_box .form_report .input-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin: 20px 0px;
-}
-.report-problem .report-problem_box .form_report .input-group .form-control {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #c7c7cc;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    margin: 5px 0px;
-    border-radius: 0%;
-}
-.report-problem .report-problem_box .form_report .input-group .form_problem {
-    width: 100%;
-    display: block;
-    margin: 5px 0px;
-}
-.report-problem .report-problem_box .form_report .input-group .form_problem .txt_problem {
-    padding: 6px 12px;
-    color: #6c757c;
-    font-weight: 400;
-}
-.report-problem .report-problem_box .form_report .input-group .form_problem .form-control_problem {
-    width: 100%;
-    border: 1px solid #c7c7cc;
-    border-radius: 5px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    padding: 6px 12px;
-}
-.report-problem .report-problem_box .form_report .input-group .form_problem .form-control_problem:focus {
-    outline: none;
-}
-.report-problem .report-problem_box .form_report .input-group .custom-file {
-    width: 120px;
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
-}
-.report-problem .report-problem_box .form_report .input-group .custom-file .icon-paperclip::before {
-    content: "\f0c6";
-    font-family: "FontAwesome";
-    margin-right: 5px;
-}
-.report-problem .report-problem_box .form_report .input-group .custom-file .custom-file-label {
-    width: 120px;
-    text-align: center;
-    color: #707070;
-    background-color: #fff;
-    border: 1px solid #cbcbcb;
-    border-radius: 20px;
-    padding: 6px 10px !important;
-    margin: 0px !important;
-}
-.report-problem .report-problem_box .form_report .input-group .custom-file .custom-file-label::after {
-    display: none;
-}
-.report-problem .report-problem_box .form_report .input-group .custom-file .custom-file-input {
-    width: 120px;
-}
-.report-problem .report-problem_box .form_report .sec_confirm {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-.report-problem .report-problem_box .form_report .sec_confirm .btn-cancel {
-    width: 45%;
-    border: 1px solid #707070;
-    color: #707070;
-    border-radius: 20px;
-    padding: 6px 10px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.report-problem .report-problem_box .form_report .sec_confirm .btn-cancel:hover {
-    background-color: #707070;
-    color: #fff;
-}
-.report-problem .report-problem_box .form_report .sec_confirm .btn-send {
-    width: 45%;
-    background-color: #1f88ce;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 6px 10px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.report-problem .report-problem_box .form_report .sec_confirm .btn-send:hover {
-    background-color: #4db1eb;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.report-problem .report-problem_box .form_report .sec_confirm .btn:focus {
-    outline: none;
-}
-
-.shortcuts-phonekeypad {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
-.shortcuts-phonekeypad .vrs_map {
-    width: 100%;
-    background-color: #168ace;
-    padding: 10px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-.shortcuts-phonekeypad .vrs_map .map-location {
-    width: 100%;
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0px 15px;
-    position: absolute;
-}
-.shortcuts-phonekeypad .vrs_map .map-location::before {
-    content: "";
-    width: 23px;
-    height: 23px;
-    background: url(../img/logo-location.png) center no-repeat;
-    vertical-align: middle;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 23px;
-    margin-right: 10px;
-}
-.shortcuts-phonekeypad .vrs_map .txt-vrs {
-    color: #fff;
-    text-align: left;
-    padding: 0px 15px;
-}
-.shortcuts-phonekeypad .txt-setting {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #fff;
-    padding: 0px;
-    font-size: 14px;
-    position: absolute;
-    top: 50%;
-    margin-top: -11px;
-    right: 0;
-}
-.shortcuts-phonekeypad .icon_setting::before {
-    content: "";
+  }
+  .log-in .login_box .log-in_box {
+    width: 80%;
+  }
+  .log-in .login_box .log-in_box .logo {
+    width: 70px;
+  }
+  .log-in .login_box .log-in_box .logo .logo-hand2-blue {
+    margin-top: 20px;
+  }
+  .log-in .login_box .log-in_box .ipt_log-in .input-group {
+    margin: 15px 0px;
+  }
+  .log-in .login_box .log-in_box .ipt_log-in .input-group .input-group-prepend {
     width: 20px;
     height: 20px;
-    background: url(../img/icon-settings-gray.png) center no-repeat;
-    vertical-align: sub;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 20px;
+  }
+  .log-in .login_box .log-in_box .ipt_log-in .input-group .form-control {
+    font-size: 12px;
+    padding: 0px;
+  }
+  .log-in .login_box .log-in_box .ipt_log-in .input-group .forget {
+    font-size: 12px;
+    width: 65px;
+  }
+  .log-in .login_box .log-in_box .ipt_log-in .btn-login {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  .log-in .login_box .log-in_box .ipt_log-in .btn:focus {
+    outline: none;
+  }
+  .log-in .register_box .sec_register {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .log-in .register_box .sec_register .btn-register {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #0e6daf;
+    border-color: #0e6daf;
+    color: #fff;
+  }
+  .log-in .register_box .sec_register .btn-guest {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  .guest-user .guest-user_box .th_national_card {
+    width: 80%;
+  }
+  .guest-user .guest-user_box .th_national_card .national_card {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .guest-user .guest-user_box1 .ipt_log-in {
+    width: 80%;
+  }
+  .guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-confirm {
+    padding: 5px 10px;
+    margin: 5px 0px;
+  }
+  .guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-cancel {
+    padding: 5px 10px;
+    margin: 5px 0px;
+  }
+  .guest-user .guest-user_box1 .ipt_log-in .sec_confirm .mt-5 {
+    margin-top: 2rem !important;
+  }
+  .how-to-use {
+    height: auto;
+    padding: 2rem 0rem;
+  }
+  .how-to-use .btn-back {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-top: 2rem;
+  }
+  .map_location {
+    padding: 2rem 0rem;
+  }
+  .map_location .head-title {
+    margin-bottom: 1rem;
+  }
+  .map_location .exp_box {
+    margin: 0.5rem 0rem;
+  }
+  .map_location .exp_box .exp_vdo iframe {
+    height: 350px;
+  }
+  .map_location .btn-back {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-top: 1rem;
+    background: #1f88ce;
+    color: #fff;
+  }
+  .modal .modal_exp_vdo .close {
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    font-size: 28px;
+  }
+  .modal .modal_exp_vdo .close span {
+    margin-top: -3px;
+  }
+  .report-problem {
+    height: auto;
+    padding: 2rem 0rem;
+  }
+  .report-problem .report-problem_box .form_report {
+    margin-top: 2rem;
+  }
+  .report-problem .report-problem_box .form_report .input-group {
+    margin: 10px 0px;
+  }
+  .report-problem .report-problem_box .form_report .input-group .form_problem .form-control_problem {
+    padding: 5px 10px;
+  }
+  .report-problem .report-problem_box .form_report .sec_confirm .btn-cancel {
+    padding: 5px 10px;
+  }
+  .report-problem .report-problem_box .form_report .sec_confirm .btn-send {
+    padding: 5px 10px;
+  }
+  .shortcuts-phonekeypad .vrs_map {
+    top: 0;
+    right: 0;
+    padding: 5px 0px;
+    position: fixed;
+    z-index: 999;
+  }
+  .shortcuts-phonekeypad .vrs_map .map-location {
+    padding: 0px 5px;
+  }
+  .shortcuts-phonekeypad .vrs_map .map-location::before {
     margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts {
-    position: relative;
+  }
+  .shortcuts-phonekeypad .vrs_map .txt-vrs {
+    padding: 0px 5px;
+  }
+  .shortcuts-phonekeypad .shortcuts {
     width: 100%;
-    height: 100vh;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #fafaff;
-}
-.shortcuts-phonekeypad .shortcuts .head-title {
-    color: #414141;
-    font-size: 24px;
-    text-align: center;
-    margin-top: 5rem;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box {
-    width: 100%;
-    height: calc(100% - 40px);
-    /* margin: 20px auto; */
-    padding: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    /* border-radius: 15px; */
-    position: relative;
-    background-color: #ececec;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon {
+    height: calc(100vh - 34px);
+    margin-top: 30px;
+  }
+  .shortcuts-phonekeypad .shortcuts .head-title {
+    font-size: 20px;
+    margin-top: 1rem;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box {
+    /* margin: 10px auto; */
+    padding: 10px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon {
     width: 80px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-vri::before {
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-vri::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/logo-hand-blue.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-helpdesk::before {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-helpdesk::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-callcenter-blue.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-emergency {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-emergency {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-emergency.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .phone-keypad::before {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .phone-keypad::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-call-blue.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ms-conversation::before {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ms-conversation::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-message-blue.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ms-history::before {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ms-history::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-conversation-blue.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc {
-    padding-right: 25px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc .head {
-    color: black;
-    text-align: left !important;
-    /* font-weight: bold; */
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc .head {
     font-size: 2.5vh;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc .desc {
+    /* font-weight: bold; */
     color: black;
-    font-size: 14px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box .exp-vdo {
-    color: #1f88ce;
-    font-size: 26px;
-    cursor: pointer;
-    position: absolute;
-    z-index: 9;
-    right: 15px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover {
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc .desc {
+    font-size: 12px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(28%, #34a2ed), to(#1f88ce));
     background: -webkit-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
     background: -o-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
     background: linear-gradient(0deg, #34a2ed 28%, #1f88ce 100%);
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon {
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon {
     width: 80px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-vri::before {
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-vri::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/logo-hand-white.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-helpdesk::before {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-helpdesk::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-callcenter-white.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-emergency {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-emergency {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-emergency-white.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .phone-keypad::before {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .phone-keypad::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-call-white.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ms-conversation::before {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ms-conversation::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-message-white.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ms-history::before {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ms-history::before {
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     background: url(../img/icon-conversation-white.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
-    background-size: 35px;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .txt-desc .head {
+    background-size: 40px;
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .txt-desc .head {
     color: #fff;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .txt-desc .desc {
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .txt-desc .desc {
     color: #fff;
-}
-.shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .exp-vdo {
+  }
+  .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .exp-vdo {
     color: #fff;
-}
-.shortcuts-phonekeypad .shortcuts-menu {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    background-color: #e4e4e4;
-    /* border-top: 1px solid #D6D6D6;  */
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu {
+  }
+  .shortcuts-phonekeypad .shortcuts-menu {
+    position: fixed;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu {
     width: 33%;
     text-align: center;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .txt-menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    color: white;
-    padding: 15px 0px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-shortcuts::before {
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .txt-menu {
+    display: -ms-grid;
+    display: grid;
+    padding: 0px 0px;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-shortcuts::before {
     content: "";
     width: 10vh;
+    /* width: 20px; */
+    height: 20px;
     background: url(../img/icon-shortcut-white.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-message::before {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-message::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -1050,20 +3070,20 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-call::before {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-call::before {
     content: "";
     width: 20px;
     height: 20px;
-    background: url(../img/icon-call-gray.png) center no-repeat;
+    background: url(../img/icon-call-white.png) center no-repeat;
     vertical-align: middle;
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-setting::before {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-setting::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -1072,13 +3092,13 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-shortcuts {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-shortcuts {
     color: #1f88ce;
     cursor: pointer;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-shortcuts::before {
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-shortcuts::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -1087,13 +3107,13 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-message {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-message {
     color: #1f88ce;
     cursor: pointer;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-message::before {
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-message::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -1102,13 +3122,13 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-call {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-call {
     color: white;
     cursor: pointer;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-call::before {
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-call::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -1117,13 +3137,13 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-setting {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-setting {
     color: #1f88ce;
     cursor: pointer;
-}
-.shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-setting::before {
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-setting::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -1132,13 +3152,12 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .active .txt-menu {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .active .txt-menu {
     color: white !important;
-    background-color: #00a5fa;
-}
-.shortcuts-phonekeypad .shortcuts-menu .active .icn-shortcuts::before {
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .active .icn-shortcuts::before {
     content: "";
     /* width: 20px; */
     /* height: 20px; */
@@ -1147,9 +3166,9 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .active .icn-message::before {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .active .icn-message::before {
     content: "";
     /* width: 20px; */
     /* height: 20px; */
@@ -1158,9 +3177,20 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .shortcuts-menu .active .icn-setting::before {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .active .icn-call::before {
+    content: "";
+    /* width: 20px; */
+    /* height: 20px; */
+    background: url(../img/icon-call-blue.png) center no-repeat;
+    vertical-align: middle;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .shortcuts-menu .active .icn-setting::before {
     content: "";
     /* width: 20px; */
     /* height: 20px; */
@@ -1169,653 +3199,92 @@ figure {
     display: inline-block;
     background-repeat: no-repeat;
     background-size: 20px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .conversation {
+    margin: 5px auto;
+  }
+  .shortcuts-phonekeypad .conversation {
     padding: 0px;
-}
-.shortcuts-phonekeypad .conversation .vrs_map {
+  }
+  .shortcuts-phonekeypad .conversation .vrs_map {
     width: 100%;
     background-color: #168ace;
-    padding: 10px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-.shortcuts-phonekeypad .conversation .vrs_map .d-flex {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-.shortcuts-phonekeypad .conversation .vrs_map .txt-back {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #fff;
-    padding: 0px;
-    font-size: 14px;
-    position: absolute;
-    top: 50%;
-    margin-top: -11px;
-    left: 0;
-}
-.shortcuts-phonekeypad .conversation .vrs_map .icon_back::before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background: url(../img/icon-back-white.png) center no-repeat;
-    vertical-align: sub;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 7px;
-    margin-right: 5px;
-}
-.shortcuts-phonekeypad .conversation .vrs_map .txt-vrs {
+    padding: 5px 0px;
+  }
+  .shortcuts-phonekeypad .conversation .vrs_map .txt-vrs {
     color: #fff;
     text-align: center;
     padding: 3px 15px;
-}
-.shortcuts-phonekeypad .phonekeypad {
+  }
+  .shortcuts-phonekeypad .conversation .message-conversation {
+    bottom: 0;
+  }
+  .shortcuts-phonekeypad .phonekeypad {
     width: 100%;
-    height: 100vh;
-    border-left: 1px solid #d6d6d6;
-    position: relative;
-}
-.shortcuts-phonekeypad .phonekeypad .show-keypad {
-    /* height: 76vh; */
-    /* height: calc(73vh - 10px); */
-    height: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad {
-    background-color: transparent;
+    border-left: none;
+  }
+  .shortcuts-phonekeypad .phonekeypad .container_keypad {
     width: 100%;
-    text-align: center;
-    margin: 0px;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .title {
-    font-size: 3.5vh;
-    color: #939393;
-    text-align: center;
-    /* margin-top: 3rem;  */
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .show-number {
-    height: 7rem;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .show-number .dig {
-    right: 0;
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 28px;
-    cursor: pointer;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .show-number #output {
-    width: 100%;
-    font-size: 5vh;
-    font-weight: bold;
-    color: #333;
-    margin: 0px auto;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .row {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0px auto;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .row .digit {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    /* width: 70px; */
-    /* height: 70px; */
+  }
+  .shortcuts-phonekeypad .phonekeypad .container_keypad .title {
+    font-size: 24px;
+    margin-top: 0rem;
+  }
+  .shortcuts-phonekeypad .phonekeypad .container_keypad .show-number {
+    height: 3rem;
+  }
+  .shortcuts-phonekeypad .phonekeypad .container_keypad .show-number .dig {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+  .shortcuts-phonekeypad .phonekeypad .container_keypad .show-number #output {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  .shortcuts-phonekeypad .phonekeypad .container_keypad .row .digit {
+    /* width: 55px;
+        height: 55px; */
     width: 11vh;
-    /* background-color: #e4e4e4; */
-    border-radius: 50%;
-    cursor: pointer;
-    margin: 10px auto;
-    font-size: 28px;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .row .digit:hover {
-    background-color: #efefee;
-    color: #fff;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .botrow {
+    margin: 5px auto;
+    font-size: 24px;
+  }
+  .shortcuts-phonekeypad .phonekeypad .container_keypad .botrow {
+    margin-top: 1rem;
+  }
+  .shortcuts-phonekeypad .phonekeypad .container_keypad .botrow #call {
+    width: 55px;
+    height: 55px;
+    font-size: 24px;
+  }
+  .message-conversation {
+    top: 0px;
+    bottom: 52px;
+  }
+  .message-conversation .sec-send-message .btn-backpage {
+    display: none;
+  }
+  .history .messages {
+    height: 90% !important;
+  }
+  .setting .setting_form {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 2rem;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .botrow #call {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #66bb6a;
-    width: 70px;
-    height: 70px;
-    color: white;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 28px;
-}
-.shortcuts-phonekeypad .phonekeypad .container_keypad .botrow #call:hover {
-    background-color: #81c784;
-}
-
-#slideMessage {
-    display: none;
-}
-
-.message-conversation {
-    position: absolute;
-    top: 44px;
-    right: 0;
-    left: 0;
-    bottom: 54px;
-    overflow: hidden;
-}
-.message-conversation .show_date_history {
-    display: none;
-}
-.message-conversation a.article {
-    position: fixed;
-    bottom: 15px;
-    left: 15px;
-    display: table;
-    text-decoration: none;
-    color: white;
-    background-color: #39acfc;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font: 400 15px "Open Sans", sans-serif;
-}
-.message-conversation form.chat * {
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-.message-conversation form.chat {
-    margin: 0;
-    cursor: default;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Chrome/Safari/Opera */
-    -khtml-user-select: none;
-    /* Konqueror */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* IE/Edge */
-    user-select: none;
-}
-.message-conversation form.chat span.spinner {
-    -moz-animation: loading-bar 1s 1;
-    -webkit-animation: loading-bar 1s 1;
-    animation: loading-bar 1s 1;
-    display: block;
-    height: 2px;
-    background-color: #39acfc;
-    -webkit-transition: width 0.2s;
-    -o-transition: width 0.2s;
-    transition: width 0.2s;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 4;
-}
-.chat {
-    overflow-y: scroll;
-}
-.message-conversation form.chat .messages {
-    /*display: block;*/
-    overflow-x: hidden;
-    overflow-y: scroll;
-    /*position: relative;*/
-    position: fixed;
-    display: table-cell;
-    /*height: 90%;*/
-    height: calc(90vh - 28px);
-    /*width: 100%;*/
-    width: 43vh;
-    padding: 2% 3%;
-}
-.message-conversation form.chat ::-webkit-scrollbar {
-    width: 3px;
-    height: 1px;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    z-index: 10;
-}
-.message-conversation form.chat ::-webkit-scrollbar-track {
-    background-color: white;
-}
-.message-conversation form.chat ::-webkit-scrollbar-thumb {
-    background-color: #bec4c8;
-    border-radius: 3px;
-}
-.message-conversation form.chat .message {
-    display: block;
-    width: 98%;
-    padding: 0.5%;
-}
-.message-conversation form.chat .message p {
-    margin: 0;
-}
-.message-conversation form.chat .myMessage,
-.message-conversation form.chat .fromThem {
-    max-width: 50%;
-    word-wrap: break-word;
-    margin-bottom: 20px;
-}
-.message-conversation form.chat .message:hover .myMessage {
-    -webkit-transform: translateX(-130px);
-    -ms-transform: translateX(-130px);
-    transform: translateX(-130px);
-}
-.message-conversation form.chat .message:hover .fromThem {
-    -webkit-transform: translateX(130px);
-    -ms-transform: translateX(130px);
-    transform: translateX(130px);
-}
-.message-conversation form.chat .message:hover .date {
-    opacity: 1;
-}
-.message-conversation form.chat .myMessage,
-.message-conversation .fromThem {
-    position: relative;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 20px;
-    clear: both;
-    font: 400 15px "Open Sans", sans-serif;
-}
-.message-conversation form.chat .myMessage {
-    background: #39acfc;
-    color: white;
-    float: right;
-    clear: both;
-    border-bottom-right-radius: 20px 0px\9;
-}
-.message-conversation form.chat .myMessage:before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: -2px;
-    right: 0px;
-    height: 19px;
-    border-right: 20px solid #39acfc;
-    border-radius: 2px;
-    -webkit-transform: translate(0, -2px);
-    -ms-transform: translate(0, -2px);
-    transform: translate(0, -2px);
-    border-bottom-left-radius: 15px 0px\9;
-    -webkit-transform: translate(-1px, -2px) \9;
-    -ms-transform: translate(-1px, -2px) \9;
-    transform: translate(-1px, -2px) \9;
-}
-.message-conversation form.chat .myMessage:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: -2px;
-    right: -42px;
-    width: 12px;
-    height: 20px;
-    background: none;
-    border-bottom-left-radius: 10px;
-    -webkit-transform: translate(-30px, -2px);
-    -ms-transform: translate(-30px, -2px);
-    transform: translate(-30px, -2px);
-}
-.message-conversation form.chat .fromThem {
-    background: #e5e5ea;
-    color: black;
-    float: left;
-    clear: both;
-    border-bottom-left-radius: 30px 0px\9;
-}
-.message-conversation form.chat .fromThem:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    bottom: -2px;
-    left: 0px;
-    height: 19px;
-    border-left: 20px solid #e5e5ea;
-    border-radius: 2px;
-    -webkit-transform: translate(0, -2px);
-    -ms-transform: translate(0, -2px);
-    transform: translate(0, -2px);
-    border-bottom-right-radius: 15px 0px\9;
-    -webkit-transform: translate(-1px, -2px) \9;
-    -ms-transform: translate(-1px, -2px) \9;
-    transform: translate(-1px, -2px) \9;
-}
-.message-conversation form.chat .fromThem:after {
-    content: "";
-    position: absolute;
-    z-index: 3;
-    bottom: -2px;
-    left: 4px;
-    width: 26px;
-    height: 20px;
-    background: none;
-    border-bottom-right-radius: 10px;
-    -webkit-transform: translate(-30px, -2px);
-    -ms-transform: translate(-30px, -2px);
-    transform: translate(-30px, -2px);
-}
-.message-conversation form.chat .date {
-    position: absolute;
-    top: 10px;
+    margin-top: 1rem;
+  }
+  .setting .setting_form .title,
+  .setting .setting_form .number {
     font-size: 14px;
-    white-space: nowrap;
-    vertical-align: middle;
-    color: #8b8b90;
-    opacity: 0;
-    z-index: 4;
-}
-.message-conversation form.chat .myMessage .date {
-    left: 105%;
-}
-.message-conversation form.chat .fromThem .date {
-    right: 105%;
-}
-.message-conversation .sec-send-message {
-    bottom: 0;
-    position: fixed;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    height: 10%;
-}
-.message-conversation .sec-send-message .btn-no-message::before {
-    content: "";
-    width: 25px;
-    height: 25px;
-    background: url(../img/icon-nomessage-blue.png) center no-repeat;
-    vertical-align: sub;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 25px;
-}
-.message-conversation form.chat input {
-    font: 400 13px "Open Sans", sans-serif;
-    border: 0;
-    padding: 0 15px;
-    outline: 0;
-}
-.message-conversation form.chat input[type="text"] {
-    width: 50%;
-    border-radius: 20px;
-    padding: 6px 12px;
-    background-color: #fafafa;
-    border: 1px solid #c8c7cc;
-    float: left;
-    margin: 0px 20px;
-}
-.message-conversation form.chat input[type="submit"] {
-    width: 15%;
-    border-radius: 20px;
-    padding: 6px 12px;
-    background: #168ace;
-    color: #fff;
-    font-weight: 700;
-    text-align: "center";
-}
-.message-conversation form.chat input[type="submit"]:hover {
-    background: #39acfc;
-}
-.message-conversation .btn-backpage {
-    display: none;
-}
-.message-conversation form.chat .myMessage,
-.message-conversation form.chat .fromThem {
-    font-size: 12px;
-}
-.message-conversation form.chat .message:hover .myMessage {
-    -ms-transform: translateY(18px);
-    transform: translateY(18px);
-    -webkit-transform: translateY(18px);
-}
-.message-conversation form.chat .message:hover .fromThem {
-    -ms-transform: translateY(18px);
-    transform: translateY(18px);
-    -webkit-transform: translateY(18px);
-}
-.message-conversation form.chat .myMessage .date,
-.message-conversation form.chat .fromThem .date {
-    top: -20px;
-    left: auto;
-    right: 0;
-    font-size: 12px;
-}
-.message-conversation form.chat .myMessage,
-.message-conversation form.chat .fromThem {
-    max-width: 90%;
-}
-
-@-moz-keyframes loading-bar {
-    0% {
-        width: 0%;
-    }
-    90% {
-        width: 90%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@-webkit-keyframes loading-bar {
-    0% {
-        width: 0%;
-    }
-    90% {
-        width: 90%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes loading-bar {
-    0% {
-        width: 0%;
-    }
-    90% {
-        width: 90%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-.history .show_date_history {
-    padding: 10px 0px;
-    display: block;
-    width: 100%;
-    text-align: center;
-    color: #668a9f;
-}
-
-.history form.chat .messages {
-    height: calc(90% - 44px);
-}
-
-.history .sec-send-message .btn-backpage {
-    display: block;
-    width: 80%;
-    border: 1px solid #1f88ce;
-    color: #1f88ce;
-    padding: 6px 12px;
-    border-radius: 20px;
-    text-align: center;
-}
-.history .sec-send-message .btn-backpage:hover {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    background: #1f88ce;
-}
-
-.history .sec-send-message .btn-no-message {
-    display: none;
-}
-
-.history .sec-send-message input[type="text"] {
-    display: none;
-}
-
-.history .sec-send-message input[type="submit"] {
-    display: none;
-}
-
-.setting .txt-back {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #1f88ce;
-    font-size: 14px;
-    position: absolute;
-    top: -3px;
-    left: 0px;
-    background-color: #fff;
-    border: none;
-    padding: 5px 10px 5px 2px;
-    border-radius: 5px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.setting .txt-back:focus {
-    outline: none;
-}
-
-.setting .icon_back::before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background: url(../img/icon-back-blue.png) center no-repeat;
-    vertical-align: sub;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 7px;
-    margin-right: 5px;
-}
-
-.setting .setting_form {
-    width: 80%;
-    margin: 0px auto;
-    margin-top: 2rem;
-}
-.setting .setting_form .title,
-.setting .setting_form .number {
-    font-size: 16px;
-}
-.setting .setting_form .usr_name_version {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 10px;
-    border: 1px solid rgba(112, 112, 112, 0.2);
-    border-radius: 5px;
-    margin: 10px 0px;
-    background-color: #fff;
-}
-.setting .setting_form .setting_select {
+  }
+  .setting .setting_form .setting_select {
     width: 100%;
     border: 1px solid rgba(112, 112, 112, 0.2);
     border-radius: 5px;
     margin: 10px 0px;
-}
-.setting .setting_form .setting_select li {
+  }
+  .setting .setting_form .setting_select li {
     border-bottom: 1px solid rgba(112, 112, 112, 0.2);
     background-color: #fff;
     border-radius: 5px;
-}
-.setting .setting_form .setting_select li .btn-function_select {
+  }
+  .setting .setting_form .setting_select li .btn-function_select {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1829,12 +3298,12 @@ figure {
     padding: 10px;
     -webkit-box-shadow: none;
     box-shadow: none;
-}
-.setting .setting_form .setting_select li .btn-function_select:hover {
+  }
+  .setting .setting_form .setting_select li .btn-function_select:hover {
     color: #ffffff;
     background: #1f88ce;
-}
-.setting .setting_form .setting_select li .btn-function_select i {
+  }
+  .setting .setting_form .setting_select li .btn-function_select i {
     -webkit-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -1843,12 +3312,12 @@ figure {
     -o-transition: transform 0.5s ease 0s;
     transition: transform 0.5s ease 0s;
     transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-}
-.setting .setting_form .setting_select li .btn-function_select.down {
+  }
+  .setting .setting_form .setting_select li .btn-function_select.down {
     color: #ffffff;
     background: #1f88ce;
-}
-.setting .setting_form .setting_select li .btn-function_select.down i {
+  }
+  .setting .setting_form .setting_select li .btn-function_select.down i {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -1857,391 +3326,71 @@ figure {
     -o-transition: transform 0.5s ease 0s;
     transition: transform 0.5s ease 0s;
     transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-}
-.setting .setting_form .setting_select li .function_select {
-    width: 50%;
-    position: absolute;
-    right: 10px;
-    top: 0;
-    z-index: 9;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
-    border-radius: 0.25rem;
-}
-.setting .setting_form .setting_select li .function_select p {
-    margin-bottom: 10px;
-}
-.setting .setting_form .setting_select li .stun_turn input {
-    border-radius: 5px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border: 1px solid #d9d9d9;
-    padding: 6px 12px;
-}
-.setting .setting_form .setting_select li .stun_turn input:focus {
-    outline: none;
-}
-.setting .setting_form .setting_select li .stun_turn .btn_cancle {
-    display: block;
-    width: 45%;
-    border: 1px solid #707070;
-    background: #ffffff;
-    color: #707070;
-    padding: 6px 0px;
-    border-radius: 20px;
-    text-align: center;
+  }
+  .setting .setting_form .setting_select li .function_select {
+    width: 70%;
+  }
+  .setting .setting_form .setting_select li .function_select .card-body {
+    padding: 0.5rem 1.25rem !important;
+  }
+  .setting .setting_form .setting_select li .function_select p {
     font-size: 12px;
-    margin-top: 0.5rem;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.setting .setting_form .setting_select li .stun_turn .btn_cancle:hover {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    background: #707070;
-}
-.setting .setting_form .setting_select li .stun_turn .btn_save {
-    display: block;
-    width: 45%;
-    border: 1px solid #1f88ce;
-    background: #1f88ce;
-    color: #fff;
-    padding: 6px 0px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 0.5rem;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.setting .setting_form .setting_select li .stun_turn .btn_save:hover {
-    border: 1px solid #4db1eb;
-    color: #ffffff;
-    background: #4db1eb;
-}
-.setting .setting_form .setting_select li:last-child {
+    margin-bottom: 5px;
+  }
+  .setting .setting_form .setting_select li .stun_turn .btn_cancle {
+    padding: 5px 0px;
+  }
+  .setting .setting_form .setting_select li .stun_turn .btn_save {
+    padding: 5px 0px;
+  }
+  .setting .setting_form .setting_select li:last-child {
     border-bottom: none;
-}
-.setting .setting_form .btn-logout {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: 10px;
-    border: 1px solid rgba(112, 112, 112, 0.2);
-    border-radius: 5px;
-    margin: 10px 0px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color: #fff;
-}
-.setting .setting_form .btn-logout .title {
-    color: #b10c0c;
-}
-.setting .setting_form .btn-close_setting {
-    display: block;
-    width: 100%;
-    border: 1px solid #1f88ce;
-    color: #1f88ce;
-    padding: 6px 12px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 18px;
-    margin-top: 2rem;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.setting .setting_form .btn-close_setting:hover {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    background: #1f88ce;
-}
-.setting .setting_form .btn:focus {
-    outline: none;
-}
-
-.how-to-use {
-    width: 100%;
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background-color: #fafaff;
-}
-.how-to-use .head-title {
-    color: #414141;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-.how-to-use .exp_box {
-    text-align: center;
-    margin: 1rem auto;
-}
-.how-to-use .exp_box .exp_vdo {
-    margin: 0px auto;
-    cursor: pointer;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-.how-to-use .exp_box .exp_title {
-    margin-top: 1.5rem;
-}
-.how-to-use .btn-back {
-    display: block;
-    width: 100%;
-    border: 1px solid #1f88ce;
-    color: #1f88ce;
-    padding: 6px 12px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 18px;
-    margin-top: 2rem;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.how-to-use .btn-back:hover {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    background: #1f88ce;
-}
-.how-to-use .btn:focus {
-    outline: none;
-}
-
-.map_location {
-    width: 100%;
-    height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    background-color: #fafaff;
-}
-.map_location .txt-back {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #1f88ce;
-    padding: 0px;
-    font-size: 14px;
-    position: absolute;
-    top: 50%;
-    margin-top: -19px;
-    left: 15px;
-    background-color: #fff;
-    border: none;
-    padding: 5px 10px 5px 2px;
-    border-radius: 5px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.map_location .txt-back:focus {
-    outline: none;
-}
-.map_location .icon_back::before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background: url(../img/icon-back-blue.png) center no-repeat;
-    vertical-align: sub;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 7px;
-    margin-right: 5px;
-}
-.map_location .head-title {
-    color: #414141;
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-.map_location .exp_box {
-    text-align: center;
-    margin: 1rem auto;
-}
-.map_location .exp_box .exp_vdo {
-    margin: 0px auto;
-    cursor: pointer;
-}
-.map_location .exp_box .exp_title {
-    margin-top: 1.5rem;
-}
-.map_location .btn-back {
-    display: block;
-    width: 100%;
-    border: 1px solid #1f88ce;
-    color: #1f88ce;
-    padding: 6px 12px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 18px;
-    margin-top: 2rem;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.map_location .btn-back:hover {
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    background: #1f88ce;
-}
-.map_location .btn:focus {
-    outline: none;
-}
-
-.modal {
-    background-color: #545454d1;
-}
-.modal .modal_exp_vdo {
-    position: relative;
-}
-.modal .modal_exp_vdo .close {
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-    border: 1px solid #168ace;
-    opacity: 1 !important;
-    border-radius: 50%;
-    font-size: 30px;
-    font-weight: 100;
-    z-index: 9;
-    color: #168ace;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-}
-.modal .modal_exp_vdo .close span {
-    display: block;
-    margin-top: -2px;
-}
-.modal .modal_exp_vdo .close:hover {
-    background-color: #168ace;
-    border: 1px solid #168ace;
-    color: #fff;
-}
-.modal .modal_exp_vdo .close:focus {
-    outline: none;
-}
-.modal .modal_exp_vdo .modal-body {
-    padding: 0;
-    width: 100%;
-}
-.modal .modal_exp_vdo .exp_title {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    bottom: -3rem;
-    color: #fff;
-}
-
-.form_search {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: rgba(142, 142, 147, 0.1);
-    border-radius: 10px;
-    padding: 6px 6px 6px 0px;
-    margin-bottom: 2rem;
-}
-.form_search .btn_search {
-    width: 30px;
-    height: 30px;
-    background: none;
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: #8e8e93;
-}
-.form_search .btn_search:focus {
-    outline: none;
-}
-.form_search .inp_search {
-    width: calc(100% - 30px);
-    background: none;
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    border-radius: 10px;
-}
-.form_search .inp_search:focus {
-    outline: none;
-    background: none;
-}
-
-.vdo-calling .head-sec {
-    width: 100%;
-    background-color: #0b2836;
-    padding: 10px 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    color: #fff;
-}
-.vdo-calling .head-sec .head-call {
-    width: 40%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+  }
+  .setting .setting_form .btn-close_setting {
+    padding: 5px 10px;
     font-size: 16px;
-}
-.vdo-calling .head-sec .head-call .phone-numer {
+    margin-top: 1rem;
+    margin-bottom: 61px;
+  }
+  .setting .setting_form .btn-close_setting:hover {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background: #1f88ce;
+  }
+  .setting .setting_form .btn:focus {
+    outline: none;
+  }
+  .vdo-calling .head-sec {
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 10px 0px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+  }
+  .vdo-calling .head-sec .head-call {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+  .vdo-calling .head-sec .head-call .phone-numer {
     width: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2252,8 +3401,8 @@ figure {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-}
-.vdo-calling .head-sec .head-call .phone-numer::before {
+  }
+  .vdo-calling .head-sec .head-call .phone-numer::before {
     content: "";
     width: 15px;
     height: 15px;
@@ -2263,15 +3412,12 @@ figure {
     background-repeat: no-repeat;
     background-size: 15px;
     margin-right: 5px;
-}
-.vdo-calling .head-sec .head-call .txt-vrs {
+  }
+  .vdo-calling .head-sec .head-call .txt-vrs {
     width: 33%;
     text-align: center;
-}
-.vdo-calling .head-sec .head-call .cam_img {
-    width: 20px;
-}
-.vdo-calling .head-sec .head-call .calling-time {
+  }
+  .vdo-calling .head-sec .head-call .calling-time {
     width: 33%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2282,8 +3428,8 @@ figure {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-}
-.vdo-calling .head-sec .head-call .calling-time::before {
+  }
+  .vdo-calling .head-sec .head-call .calling-time::before {
     content: "";
     width: 15px;
     height: 15px;
@@ -2293,61 +3439,42 @@ figure {
     background-repeat: no-repeat;
     background-size: 15px;
     margin-right: 5px;
-}
-
-.vdo-calling .incoming-sec {
+  }
+  .vdo-calling .incoming-sec {
+    height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0f3548), color-stop(67%, #0e3244), to(#0a2431));
+    background: -webkit-linear-gradient(top, #0f3548 0%, #0e3244 67%, #0a2431 100%);
+    background: -o-linear-gradient(top, #0f3548 0%, #0e3244 67%, #0a2431 100%);
+    background: linear-gradient(180deg, #0f3548 0%, #0e3244 67%, #0a2431 100%);
+  }
+  .vdo-calling .incoming-sec .incoming-calls {
     width: 100%;
-    height: calc(100vh - 44px);
-    background-color: #0f3548;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-.vdo-calling .incoming-sec .incoming-calls {
-    width: 40%;
-    text-align: center;
-    color: #fff;
-}
-.vdo-calling .incoming-sec .incoming-calls .txt-incoming-calls {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .txt-incoming-calls {
     font-size: 24px;
-}
-.vdo-calling .incoming-sec .incoming-calls .txt-phone-number {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .txt-phone-number {
     font-size: 32px;
     margin-top: 0.5rem;
-}
-.vdo-calling .incoming-sec .incoming-calls .img-logo {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .img-logo {
     width: 130px;
-    margin: 5rem auto;
-}
-.vdo-calling .incoming-sec .incoming-calls .img-logo .logo-ttrs {
+    margin: 3rem auto;
+  }
+  .vdo-calling .incoming-sec .incoming-calls .img-logo .logo-ttrs {
     width: 90px;
     margin: 0px auto;
-}
-.vdo-calling .incoming-sec .incoming-calls .img-logo .logo-hand {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .img-logo .logo-hand {
     margin-top: 1rem;
-}
-.vdo-calling .incoming-sec .incoming-calls .btn-start-conversation {
-    display: block;
-    width: 70%;
-    background: #00d16b;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 20px;
-    text-align: center;
-    margin: 10px auto;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.vdo-calling .incoming-sec .incoming-calls .btn-start-conversation:hover {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .btn-start-conversation {
+    width: 90%;
+  }
+  .vdo-calling .incoming-sec .incoming-calls .btn-start-conversation:hover {
     background: #12e07b;
-}
-.vdo-calling .incoming-sec .incoming-calls .btn-start-conversation .start-conversation::before {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .btn-start-conversation .start-conversation::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -2357,24 +3484,13 @@ figure {
     background-repeat: no-repeat;
     background-size: 20px;
     margin-right: 5px;
-}
-.vdo-calling .incoming-sec .incoming-calls .btn-end-conversation {
-    display: block;
-    width: 70%;
-    border: 1px solid #f8423b;
-    color: #f8423b;
-    padding: 6px 12px;
-    border-radius: 20px;
-    text-align: center;
-    margin: 10px auto;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-.vdo-calling .incoming-sec .incoming-calls .btn-end-conversation:hover {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .btn-end-conversation {
+    width: 90%;
     background: #f8423b;
     color: #fff;
-}
-.vdo-calling .incoming-sec .incoming-calls .btn-end-conversation:hover .end-conversation::before {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .btn-end-conversation .end-conversation::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -2384,38 +3500,8 @@ figure {
     background-repeat: no-repeat;
     background-size: 20px;
     margin-right: 5px;
-}
-.vdo-calling .incoming-sec .incoming-calls .btn-end-conversation .end-conversation::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: url(../img/icon-hangup-white.png) center no-repeat;
-    vertical-align: middle;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    margin-right: 5px;
-}
-.vdo-calling .incoming-sec .incoming-calls .end {
-    background: #f8423b;
-    color: #fff;
-    text-align: center;
-}
-.vdo-calling .incoming-sec .incoming-calls .end:hover {
-    background: #f85a54;
-}
-.vdo-calling .incoming-sec .incoming-calls .end .end-conversation::before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    background: url(../img/icon-hangup-red.png) center no-repeat;
-    vertical-align: middle;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 20px;
-    margin-right: 5px;
-}
-.vdo-calling .incoming-sec .incoming-calls .function-calls {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .function-calls {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2426,17 +3512,15 @@ figure {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-}
-.vdo-calling .incoming-sec .incoming-calls .function-calls li {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .function-calls li {
     width: 20%;
-}
-.vdo-calling .incoming-sec .incoming-calls .function-calls li button {
-    color: #fff;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    font-size: 14px;
-}
-.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-novideo::before {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .function-calls li button {
+    font-size: 10px;
+    padding: 0px;
+  }
+  .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-novideo::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -2445,8 +3529,8 @@ figure {
     background-repeat: no-repeat;
     background-size: 20px;
     margin: 10px auto;
-}
-.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-mute::before {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-mute::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -2455,8 +3539,8 @@ figure {
     background-repeat: no-repeat;
     background-size: 15px;
     margin: 10px auto;
-}
-.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-voiceoff::before {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-voiceoff::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -2465,8 +3549,8 @@ figure {
     background-repeat: no-repeat;
     background-size: 20px;
     margin: 10px auto;
-}
-.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-message::before {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-message::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -2475,8 +3559,8 @@ figure {
     background-repeat: no-repeat;
     background-size: 20px;
     margin: 10px auto;
-}
-.vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-hangup::before {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-hangup::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -2485,15 +3569,15 @@ figure {
     background-repeat: no-repeat;
     background-size: 20px;
     margin: 10px auto;
-}
-.vdo-calling .incoming-sec .incoming-calls .waiting .img-logo_waiting {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .waiting .img-logo_waiting {
     width: 100px;
     margin: 0px 10px;
-}
-.vdo-calling .incoming-sec .incoming-calls .waiting .txt-waiting {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .waiting .txt-waiting {
     margin: 0px 10px;
-}
-.vdo-calling .incoming-sec .incoming-calls .waiting .txt-waiting .no_waiting {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .waiting .txt-waiting .no_waiting {
     background-color: #fff;
     color: #103448;
     padding: 5px;
@@ -2501,31 +3585,34 @@ figure {
     text-align: center;
     border-radius: 5px;
     margin-top: 1rem;
-}
-.vdo-calling .incoming-sec .incoming-calls .waiting_vdo {
-    height: auto;
-    margin: 2rem 0rem;
-}
-.vdo-calling .incoming-sec .calls-waiting {
+  }
+  .vdo-calling .incoming-sec .incoming-calls .waiting_vdo {
+    height: 46vh;
+    margin: 1rem 0rem 2rem 0rem;
+  }
+  .vdo-calling .incoming-sec .calls-waiting {
     width: 100%;
-}
-.vdo-calling .incoming-sec .calls-waiting .waiting {
-    width: 80%;
+  }
+  .vdo-calling .incoming-sec .calls-waiting .waiting {
+    width: 100%;
+    height: 30vh;
     margin: 0px auto;
-}
-.vdo-calling .incoming-sec .calls-waiting .waiting .head-title {
+    background-color: #092736;
+    border-radius: 5px;
+  }
+  .vdo-calling .incoming-sec .calls-waiting .waiting .head-title {
     color: #fff;
     font-size: 24px;
     text-align: center;
-}
-.vdo-calling .incoming-sec .calls-waiting .function-calls {
+  }
+  .vdo-calling .incoming-sec .calls-waiting .function-calls {
     width: 80%;
     margin: 0px auto;
-}
-.vdo-calling .incoming-sec .calls-waiting .function-conversation li {
+  }
+  .vdo-calling .incoming-sec .calls-waiting .function-conversation li {
     width: 30%;
-}
-.vdo-calling .incoming-sec .calls-waiting .function-conversation li .icon-video_call::before {
+  }
+  .vdo-calling .incoming-sec .calls-waiting .function-conversation li .icon-video_call::before {
     content: "";
     width: 30px;
     height: 30px;
@@ -2534,8 +3621,8 @@ figure {
     background-repeat: no-repeat;
     background-size: 30px;
     margin: 10px auto;
-}
-.vdo-calling .incoming-sec .calls-waiting .function-conversation li .icon-conversation::before {
+  }
+  .vdo-calling .incoming-sec .calls-waiting .function-conversation li .icon-conversation::before {
     content: "";
     width: 30px;
     height: 30px;
@@ -2544,9 +3631,8 @@ figure {
     background-repeat: no-repeat;
     background-size: 30px;
     margin: 10px auto;
-}
-
-.vdocall-keypad {
+  }
+  .vdocall-keypad {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2554,17 +3640,18 @@ figure {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
-}
-.vdocall-keypad #main {
+  }
+  .vdocall-keypad #main {
     width: 100%;
+    height: 100vh;
     -webkit-transition: margin-right 0.5s;
     -o-transition: margin-right 0.5s;
     transition: margin-right 0.5s;
-}
-.vdocall-keypad #main .function-calls {
+  }
+  .vdocall-keypad #main .function-calls {
     width: 100%;
-}
-.vdocall-keypad #mySidenav {
+  }
+  .vdocall-keypad #mySidenav {
     width: 0%;
     position: absolute;
     z-index: 1;
@@ -2573,1328 +3660,241 @@ figure {
     transition: 0.5s;
     top: 0;
     right: 0;
-}
-.vdocall-keypad #mySidenav .shortcuts {
+  }
+  .vdocall-keypad #mySidenav .shortcuts {
     width: 100%;
     padding: 0px;
-}
-.vdocall-keypad #mySidenav .shortcuts .vrs_map {
+  }
+  .vdocall-keypad #mySidenav .shortcuts .vrs_map {
     display: none;
-}
-.vdocall-keypad #mySidenav .conversation {
+  }
+  .vdocall-keypad #mySidenav .conversation {
     width: 100%;
-}
-.vdocall-keypad #mySidenav .conversation .message-conversation {
+  }
+  .vdocall-keypad #mySidenav .conversation .message-conversation {
     bottom: 0px;
-}
-.vdocall-keypad #open-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.call-message .message-conversation {
-    top: 38px;
-    bottom: 0;
-}
-
-.vdo_call_show {
-    position: absolute;
-    width: 100px;
-    /* height: 130px; */
-    top: 29px;
-    /* left: 15px;  */
-}
-
-.footer-sub {
-    height: 14vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-.footer-sub .sub-img {
-    margin: 0px 10px;
-}
-.footer-sub .img-nbtc {
-    width: 70px;
-}
-.footer-sub .img-yimsoo {
-    width: 90px;
-}
-.footer-sub .img-nstda {
-    width: 170px;
-    height: auto;
-}
-.footer-sub .img-nectec {
-    width: 170px;
-    height: auto;
-}
-
-@media only screen and (max-width: 812px) and (orientation: landscape) {
-    .horizontal {
-        display: block !important;
-    }
-    .horizontal .no-horizontal {
-        position: fixed;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        z-index: 99999;
-        background: -webkit-gradient(linear, left top, right top, color-stop(18%, #4db1eb), to(#168ace));
-        background: -webkit-linear-gradient(left, #4db1eb 18%, #168ace 100%);
-        background: -o-linear-gradient(left, #4db1eb 18%, #168ace 100%);
-        background: linear-gradient(90deg, #4db1eb 18%, #168ace 100%);
-    }
-    .horizontal .no-horizontal .loading-logo .logo {
-        width: 100px;
-        margin: 0px auto;
-    }
-    .horizontal .no-horizontal .loading-logo .logo img {
-        -webkit-animation: rotate 2.5s ease infinite backwards;
-        animation: rotate 2.5s ease infinite backwards;
-    }
-    /* @-webkit-keyframes rotate {
-    0% {
-      -webkit-transform: rotate(90deg);
-      transform: rotate(90deg); }
-    50% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg); }
-    100% {
-      -webkit-transform: rotate(0deg);
-      transform: rotate(0deg); } } */
-    .horizontal .no-horizontal .loading-logo p {
-        text-align: center;
-        color: #fff;
-        font-size: 18px;
-        margin-top: 2rem;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .loading-home .loading-logo .logo {
-        width: 80px;
-    }
-    .loading-home .loading-holdon .loading p {
-        margin: 5px auto;
-    }
-    .loading-home .loading-holdon .loading .logo {
-        width: 90px;
-    }
-    .loading-home .loading-holdon .loading .progress-center {
-        height: 5px;
-        border: 1px solid #fff;
-    }
-    .footer-sub .img-nbtc {
-        width: 30px;
-    }
-    .footer-sub .img-yimsoo {
-        width: 35px;
-    }
-    .footer-sub .img-nstda {
-        width: 90px;
-        height: auto;
-    }
-    .footer-sub .img-nectec {
-        width: 90px;
-        height: auto;
-    }
-    .log-in {
-        height: 100vh;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-    .log-in .login_box .log-in_box {
-        width: 80%;
-    }
-    .log-in .login_box .log-in_box .logo {
-        width: 70px;
-    }
-    .log-in .login_box .log-in_box .logo .logo-hand2-blue {
-        margin-top: 20px;
-    }
-    .log-in .login_box .log-in_box .ipt_log-in .input-group {
-        margin: 15px 0px;
-    }
-    .log-in .login_box .log-in_box .ipt_log-in .input-group .input-group-prepend {
-        width: 20px;
-        height: 20px;
-    }
-    .log-in .login_box .log-in_box .ipt_log-in .input-group .form-control {
-        font-size: 12px;
-        padding: 0px;
-    }
-    .log-in .login_box .log-in_box .ipt_log-in .input-group .forget {
-        font-size: 12px;
-        width: 65px;
-    }
-    .log-in .login_box .log-in_box .ipt_log-in .btn-login {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-    .log-in .login_box .log-in_box .ipt_log-in .btn:focus {
-        outline: none;
-    }
-    .log-in .register_box .sec_register {
-        width: 80%;
-        margin: 2rem auto;
-    }
-    .log-in .register_box .sec_register .btn-register {
-        font-size: 14px;
-        padding: 5px 10px;
-        background-color: #0e6daf;
-        border-color: #0e6daf;
-        color: #fff;
-    }
-    .log-in .register_box .sec_register .btn-guest {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-    .guest-user .guest-user_box .th_national_card {
-        width: 80%;
-    }
-    .guest-user .guest-user_box .th_national_card .national_card {
-        width: 80%;
-        margin: 2rem auto;
-    }
-    .guest-user .guest-user_box1 .ipt_log-in {
-        width: 80%;
-    }
-    .guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-confirm {
-        padding: 5px 10px;
-        margin: 5px 0px;
-    }
-    .guest-user .guest-user_box1 .ipt_log-in .sec_confirm .btn-cancel {
-        padding: 5px 10px;
-        margin: 5px 0px;
-    }
-    .guest-user .guest-user_box1 .ipt_log-in .sec_confirm .mt-5 {
-        margin-top: 2rem !important;
-    }
-    .how-to-use {
-        height: auto;
-        padding: 2rem 0rem;
-    }
-    .how-to-use .btn-back {
-        padding: 5px 10px;
-        font-size: 16px;
-        margin-top: 2rem;
-    }
-    .map_location {
-        padding: 2rem 0rem;
-    }
-    .map_location .head-title {
-        margin-bottom: 1rem;
-    }
-    .map_location .exp_box {
-        margin: 0.5rem 0rem;
-    }
-    .map_location .exp_box .exp_vdo iframe {
-        height: 350px;
-    }
-    .map_location .btn-back {
-        padding: 5px 10px;
-        font-size: 16px;
-        margin-top: 1rem;
-        background: #1f88ce;
-        color: #fff;
-    }
-    .modal .modal_exp_vdo .close {
-        top: -10px;
-        right: -10px;
-        width: 25px;
-        height: 25px;
-        font-size: 28px;
-    }
-    .modal .modal_exp_vdo .close span {
-        margin-top: -3px;
-    }
-    .report-problem {
-        height: auto;
-        padding: 2rem 0rem;
-    }
-    .report-problem .report-problem_box .form_report {
-        margin-top: 2rem;
-    }
-    .report-problem .report-problem_box .form_report .input-group {
-        margin: 10px 0px;
-    }
-    .report-problem .report-problem_box .form_report .input-group .form_problem .form-control_problem {
-        padding: 5px 10px;
-    }
-    .report-problem .report-problem_box .form_report .sec_confirm .btn-cancel {
-        padding: 5px 10px;
-    }
-    .report-problem .report-problem_box .form_report .sec_confirm .btn-send {
-        padding: 5px 10px;
-    }
-    .shortcuts-phonekeypad .vrs_map {
-        top: 0;
-        right: 0;
-        padding: 5px 0px;
-        position: fixed;
-        z-index: 999;
-    }
-    .shortcuts-phonekeypad .vrs_map .map-location {
-        padding: 0px 5px;
-    }
-    .shortcuts-phonekeypad .vrs_map .map-location::before {
-        margin-right: 5px;
-    }
-    .shortcuts-phonekeypad .vrs_map .txt-vrs {
-        padding: 0px 5px;
-    }
-    .shortcuts-phonekeypad .shortcuts {
-        width: 100%;
-        height: calc(100vh - 34px);
-        margin-top: 30px;
-    }
-    .shortcuts-phonekeypad .shortcuts .head-title {
-        font-size: 20px;
-        margin-top: 1rem;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box {
-        /* margin: 10px auto; */
-        padding: 10px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon {
-        width: 80px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-vri::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/logo-hand-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-helpdesk::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-callcenter-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ttrs-emergency {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-emergency.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .phone-keypad::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-call-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ms-conversation::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-message-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .img-icon .ms-history::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-conversation-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc .head {
-        font-size: 2.5vh;
-        /* font-weight: bold; */
-        color: black;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box .txt-desc .desc {
-        font-size: 12px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover {
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(28%, #34a2ed), to(#1f88ce));
-        background: -webkit-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
-        background: -o-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
-        background: linear-gradient(0deg, #34a2ed 28%, #1f88ce 100%);
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon {
-        width: 80px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-vri::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/logo-hand-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-helpdesk::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-callcenter-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ttrs-emergency {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-emergency-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .phone-keypad::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-call-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ms-conversation::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-message-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .img-icon .ms-history::before {
-        content: "";
-        width: 40px;
-        height: 40px;
-        background: url(../img/icon-conversation-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 40px;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .txt-desc .head {
-        color: #fff;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .txt-desc .desc {
-        color: #fff;
-    }
-    .shortcuts-phonekeypad .shortcuts .shortcuts-box:hover .exp-vdo {
-        color: #fff;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu {
-        position: fixed;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu {
-        width: 33%;
-        text-align: center;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .txt-menu {
-        display: -ms-grid;
-        display: grid;
-        padding: 0px 0px;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-shortcuts::before {
-        content: "";
-        width: 10vh;
-        /* width: 20px; */
-        height: 20px;
-        background: url(../img/icon-shortcut-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-message::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-message-gray.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-call::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-call-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu .icn-setting::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-settings-gray.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-shortcuts {
-        color: #1f88ce;
-        cursor: pointer;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-shortcuts::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-shortcut-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-message {
-        color: #1f88ce;
-        cursor: pointer;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-message::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-message-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-call {
-        color: white;
-        cursor: pointer;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-call::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-call-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-setting {
-        color: #1f88ce;
-        cursor: pointer;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .btn_shortcuts-menu:hover .icn-setting::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-settings-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .active .txt-menu {
-        color: white !important;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .active .icn-shortcuts::before {
-        content: "";
-        /* width: 20px; */
-        /* height: 20px; */
-        background: url(../img/icon-shortcut-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .active .icn-message::before {
-        content: "";
-        /* width: 20px; */
-        /* height: 20px; */
-        background: url(../img/icon-message-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .active .icn-call::before {
-        content: "";
-        /* width: 20px; */
-        /* height: 20px; */
-        background: url(../img/icon-call-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .shortcuts-menu .active .icn-setting::before {
-        content: "";
-        /* width: 20px; */
-        /* height: 20px; */
-        background: url(../img/icon-settings-blue.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 5px auto;
-    }
-    .shortcuts-phonekeypad .conversation {
-        padding: 0px;
-    }
-    .shortcuts-phonekeypad .conversation .vrs_map {
-        width: 100%;
-        background-color: #168ace;
-        padding: 5px 0px;
-    }
-    .shortcuts-phonekeypad .conversation .vrs_map .txt-vrs {
-        color: #fff;
-        text-align: center;
-        padding: 3px 15px;
-    }
-    .shortcuts-phonekeypad .conversation .message-conversation {
-        bottom: 0;
-    }
-    .shortcuts-phonekeypad .phonekeypad {
-        width: 100%;
-        border-left: none;
-    }
-    .shortcuts-phonekeypad .phonekeypad .container_keypad {
-        width: 100%;
-    }
-    .shortcuts-phonekeypad .phonekeypad .container_keypad .title {
-        font-size: 24px;
-        margin-top: 0rem;
-    }
-    .shortcuts-phonekeypad .phonekeypad .container_keypad .show-number {
-        height: 3rem;
-    }
-    .shortcuts-phonekeypad .phonekeypad .container_keypad .show-number .dig {
-        width: 55px;
-        height: 55px;
-        font-size: 24px;
-    }
-    .shortcuts-phonekeypad .phonekeypad .container_keypad .show-number #output {
-        font-size: 24px;
-        font-weight: normal;
-    }
-    .shortcuts-phonekeypad .phonekeypad .container_keypad .row .digit {
-        /* width: 55px;
-        height: 55px; */
-        width: 11vh;
-        margin: 5px auto;
-        font-size: 24px;
-    }
-    .shortcuts-phonekeypad .phonekeypad .container_keypad .botrow {
-        margin-top: 1rem;
-    }
-    .shortcuts-phonekeypad .phonekeypad .container_keypad .botrow #call {
-        width: 55px;
-        height: 55px;
-        font-size: 24px;
-    }
-    .message-conversation {
-        top: 0px;
-        bottom: 52px;
-    }
-    .message-conversation .sec-send-message .btn-backpage {
-        display: none;
-    }
-    .history .messages {
-        height: 90% !important;
-    }
-    .setting .setting_form {
-        width: 100%;
-        margin-top: 1rem;
-    }
-    .setting .setting_form .title,
-    .setting .setting_form .number {
-        font-size: 14px;
-    }
-    .setting .setting_form .setting_select {
-        width: 100%;
-        border: 1px solid rgba(112, 112, 112, 0.2);
-        border-radius: 5px;
-        margin: 10px 0px;
-    }
-    .setting .setting_form .setting_select li {
-        border-bottom: 1px solid rgba(112, 112, 112, 0.2);
-        background-color: #fff;
-        border-radius: 5px;
-    }
-    .setting .setting_form .setting_select li .btn-function_select {
-        width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        padding: 10px;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-    }
-    .setting .setting_form .setting_select li .btn-function_select:hover {
-        color: #ffffff;
-        background: #1f88ce;
-    }
-    .setting .setting_form .setting_select li .btn-function_select i {
-        -webkit-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transition: -webkit-transform 0.5s ease 0s;
-        transition: -webkit-transform 0.5s ease 0s;
-        -o-transition: transform 0.5s ease 0s;
-        transition: transform 0.5s ease 0s;
-        transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-    }
-    .setting .setting_form .setting_select li .btn-function_select.down {
-        color: #ffffff;
-        background: #1f88ce;
-    }
-    .setting .setting_form .setting_select li .btn-function_select.down i {
-        -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-        -webkit-transition: -webkit-transform 0.5s ease 0s;
-        transition: -webkit-transform 0.5s ease 0s;
-        -o-transition: transform 0.5s ease 0s;
-        transition: transform 0.5s ease 0s;
-        transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-    }
-    .setting .setting_form .setting_select li .function_select {
-        width: 70%;
-    }
-    .setting .setting_form .setting_select li .function_select .card-body {
-        padding: 0.5rem 1.25rem !important;
-    }
-    .setting .setting_form .setting_select li .function_select p {
-        font-size: 12px;
-        margin-bottom: 5px;
-    }
-    .setting .setting_form .setting_select li .stun_turn .btn_cancle {
-        padding: 5px 0px;
-    }
-    .setting .setting_form .setting_select li .stun_turn .btn_save {
-        padding: 5px 0px;
-    }
-    .setting .setting_form .setting_select li:last-child {
-        border-bottom: none;
-    }
-    .setting .setting_form .btn-close_setting {
-        padding: 5px 10px;
-        font-size: 16px;
-        margin-top: 1rem;
-        margin-bottom: 61px;
-    }
-    .setting .setting_form .btn-close_setting:hover {
-        border: 1px solid #ffffff;
-        color: #ffffff;
-        background: #1f88ce;
-    }
-    .setting .setting_form .btn:focus {
-        outline: none;
-    }
-    .vdo-calling .head-sec {
-        width: 100%;
-        top: 0;
-        right: 0;
-        padding: 10px 0px;
-        position: absolute;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        color: #fff;
-    }
-    .vdo-calling .head-sec .head-call {
-        width: 90%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        font-size: 15px;
-    }
-    .vdo-calling .head-sec .head-call .phone-numer {
-        width: 33%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-    }
-    .vdo-calling .head-sec .head-call .phone-numer::before {
-        content: "";
-        width: 15px;
-        height: 15px;
-        background: url(../img/icon-calling-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 15px;
-        margin-right: 5px;
-    }
-    .vdo-calling .head-sec .head-call .txt-vrs {
-        width: 33%;
-        text-align: center;
-    }
-    .vdo-calling .head-sec .head-call .calling-time {
-        width: 33%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-    }
-    .vdo-calling .head-sec .head-call .calling-time::before {
-        content: "";
-        width: 15px;
-        height: 15px;
-        background: url(../img/icon-time-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 15px;
-        margin-right: 5px;
-    }
-    .vdo-calling .incoming-sec {
-        height: 100vh;
-        background: -webkit-gradient(linear, left top, left bottom, from(#0f3548), color-stop(67%, #0e3244), to(#0a2431));
-        background: -webkit-linear-gradient(top, #0f3548 0%, #0e3244 67%, #0a2431 100%);
-        background: -o-linear-gradient(top, #0f3548 0%, #0e3244 67%, #0a2431 100%);
-        background: linear-gradient(180deg, #0f3548 0%, #0e3244 67%, #0a2431 100%);
-    }
-    .vdo-calling .incoming-sec .incoming-calls {
-        width: 100%;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .txt-incoming-calls {
-        font-size: 24px;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .txt-phone-number {
-        font-size: 32px;
-        margin-top: 0.5rem;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .img-logo {
-        width: 130px;
-        margin: 3rem auto;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .img-logo .logo-ttrs {
-        width: 90px;
-        margin: 0px auto;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .img-logo .logo-hand {
-        margin-top: 1rem;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .btn-start-conversation {
-        width: 90%;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .btn-start-conversation:hover {
-        background: #12e07b;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .btn-start-conversation .start-conversation::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-calling-white.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin-right: 5px;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .btn-end-conversation {
-        width: 90%;
-        background: #f8423b;
-        color: #fff;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .btn-end-conversation .end-conversation::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-hangup-red.png) center no-repeat;
-        vertical-align: middle;
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin-right: 5px;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .function-calls {
-        width: 100%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .function-calls li {
-        width: 20%;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .function-calls li button {
-        font-size: 10px;
-        padding: 0px;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-novideo::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-novideo-white.png) center no-repeat;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 10px auto;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-mute::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-mutemicrophone-white.png) center no-repeat;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: 15px;
-        margin: 10px auto;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-voiceoff::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-volumeoff-white.png) center no-repeat;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 10px auto;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-message::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-message-white.png) center no-repeat;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 10px auto;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .function-calls li .icon-hangup::before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: url(../img/icon-hangup-white.png) center no-repeat;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: 20px;
-        margin: 10px auto;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .waiting .img-logo_waiting {
-        width: 100px;
-        margin: 0px 10px;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .waiting .txt-waiting {
-        margin: 0px 10px;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .waiting .txt-waiting .no_waiting {
-        background-color: #fff;
-        color: #103448;
-        padding: 5px;
-        display: block;
-        text-align: center;
-        border-radius: 5px;
-        margin-top: 1rem;
-    }
-    .vdo-calling .incoming-sec .incoming-calls .waiting_vdo {
-        height: 46vh;
-        margin: 1rem 0rem 2rem 0rem;
-    }
-    .vdo-calling .incoming-sec .calls-waiting {
-        width: 100%;
-    }
-    .vdo-calling .incoming-sec .calls-waiting .waiting {
-        width: 100%;
-        height: 30vh;
-        margin: 0px auto;
-        background-color: #092736;
-        border-radius: 5px;
-    }
-    .vdo-calling .incoming-sec .calls-waiting .waiting .head-title {
-        color: #fff;
-        font-size: 24px;
-        text-align: center;
-    }
-    .vdo-calling .incoming-sec .calls-waiting .function-calls {
-        width: 80%;
-        margin: 0px auto;
-    }
-    .vdo-calling .incoming-sec .calls-waiting .function-conversation li {
-        width: 30%;
-    }
-    .vdo-calling .incoming-sec .calls-waiting .function-conversation li .icon-video_call::before {
-        content: "";
-        width: 30px;
-        height: 30px;
-        background: url(../img/icon-videocall-white.png) center no-repeat;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: 30px;
-        margin: 10px auto;
-    }
-    .vdo-calling .incoming-sec .calls-waiting .function-conversation li .icon-conversation::before {
-        content: "";
-        width: 30px;
-        height: 30px;
-        background: url(../img/icon-message-white.png) center no-repeat;
-        display: block;
-        background-repeat: no-repeat;
-        background-size: 30px;
-        margin: 10px auto;
-    }
-    .vdocall-keypad {
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
-    }
-    .vdocall-keypad #main {
-        width: 100%;
-        height: 100vh;
-        -webkit-transition: margin-right 0.5s;
-        -o-transition: margin-right 0.5s;
-        transition: margin-right 0.5s;
-    }
-    .vdocall-keypad #main .function-calls {
-        width: 100%;
-    }
-    .vdocall-keypad #mySidenav {
-        width: 0%;
-        position: absolute;
-        z-index: 1;
-        -webkit-transition: 0.5s;
-        -o-transition: 0.5s;
-        transition: 0.5s;
-        top: 0;
-        right: 0;
-    }
-    .vdocall-keypad #mySidenav .shortcuts {
-        width: 100%;
-        padding: 0px;
-    }
-    .vdocall-keypad #mySidenav .shortcuts .vrs_map {
-        display: none;
-    }
-    .vdocall-keypad #mySidenav .conversation {
-        width: 100%;
-    }
-    .vdocall-keypad #mySidenav .conversation .message-conversation {
-        bottom: 0px;
-    }
-    .vdocall-keypad #open-close {
-        top: 5px;
-        right: 5px;
-    }
+  }
+  .vdocall-keypad #open-close {
+    top: 5px;
+    right: 5px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-    .map_location {
-        padding: 0.5rem 0rem;
-    }
-    .map_location .head-title {
-        margin-bottom: 0.5rem;
-    }
-    .map_location .exp_box .exp_vdo iframe {
-        height: 250px;
-    }
-    .map_location .btn-back {
-        margin-top: 0.5rem;
-    }
+  .map_location {
+    padding: 0.5rem 0rem;
+  }
+  .map_location .head-title {
+    margin-bottom: 0.5rem;
+  }
+  .map_location .exp_box .exp_vdo iframe {
+    height: 250px;
+  }
+  .map_location .btn-back {
+    margin-top: 0.5rem;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .horizontal {
-        display: none;
-    }
-    .guest-user .guest-user_box .th_national_card {
-        width: 60%;
-    }
-    .guest-user .guest-user_box1 .ipt_log-in {
-        width: 45%;
-    }
-    .vdo-calling .head-sec .head-call {
-        width: 60%;
-    }
-    .vdo-calling .incoming-sec .calls-waiting {
-        width: 60%;
-    }
-    .vdo-calling .incoming-sec .incoming-calls {
-        width: 100%;
-    }
-    .waiting_vdo {
-        height: 30vh !important;
-        margin: 1rem 0rem 2rem 0rem;
-    }
-    .vdo_call_show {
-        position: absolute;
-        width: 150px;
-        height: 180px;
-        top: 60px;
-        /* left: 15px;  */
-    }
+  .horizontal {
+    display: none;
+  }
+  .guest-user .guest-user_box .th_national_card {
+    width: 60%;
+  }
+  .guest-user .guest-user_box1 .ipt_log-in {
+    width: 45%;
+  }
+  .vdo-calling .head-sec .head-call {
+    width: 60%;
+  }
+  .vdo-calling .incoming-sec .calls-waiting {
+    width: 60%;
+  }
+  .vdo-calling .incoming-sec .incoming-calls {
+    width: 100%;
+  }
+  .waiting_vdo {
+    height: 30vh !important;
+    margin: 1rem 0rem 2rem 0rem;
+  }
+  .vdo_call_show {
+    position: absolute;
+    width: 150px;
+    height: 180px;
+    top: 60px;
+    /* left: 15px;  */
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .horizontal {
-        display: none;
-    }
-    .log-in .login_box .log-in_box {
-        width: 50%;
-    }
-    .log-in .register_box .sec_register {
-        width: 50%;
-    }
-    .vdo-calling .head-sec .head-call {
-        width: 60%;
-    }
-    .vdo-calling .incoming-sec .incoming-calls {
-        width: 100%;
-    }
-    .btn-end-conversation {
-        width: 90%;
-        background: #f8423b;
-        color: #fff !important;
-    }
-    .btn-end-conversation .end-conversation::before {
-        content: "";
-        width: 25px !important;
-        height: 25px !important;
-        background: url(../img/icon-hangup-red.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 25px !important;
-        margin-right: 5px !important;
-    }
-    .shortcuts-box {
-        padding: 10px;
-    }
-    .shortcuts-box .txt-desc {
-        padding: 0px 10px;
-    }
-    .shortcuts-box .img-icon {
-        width: 80px;
-    }
-    .shortcuts-box .img-icon .ttrs-vri::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/logo-hand-blue.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box .img-icon .ttrs-helpdesk::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-callcenter-blue.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box .img-icon .ttrs-emergency {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-emergency.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box .img-icon .phone-keypad::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-call-blue.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box .img-icon .ms-conversation::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-message-blue.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box .img-icon .ms-history::before {
-        content: "";
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-conversation-blue.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box:hover {
-        background: -webkit-gradient(linear, left bottom, left top, color-stop(28%, #34a2ed), to(#1f88ce));
-        background: -webkit-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
-        background: -o-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
-        background: linear-gradient(0deg, #34a2ed 28%, #1f88ce 100%);
-    }
-    .shortcuts-box:hover .img-icon {
-        width: 80px;
-    }
-    .shortcuts-box:hover .img-icon .ttrs-vri::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/logo-hand-white.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box:hover .img-icon .ttrs-helpdesk::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-callcenter-white.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box:hover .img-icon .ttrs-emergency {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-emergency-white.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box:hover .img-icon .phone-keypad::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-call-white.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box:hover .img-icon .ms-conversation::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-message-white.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
-    .shortcuts-box:hover .img-icon .ms-history::before {
-        content: "" !important;
-        width: 30px !important;
-        height: 30px !important;
-        background: url(../img/icon-conversation-white.png) center no-repeat !important;
-        vertical-align: middle !important;
-        display: inline-block !important;
-        background-repeat: no-repeat !important;
-        background-size: 30px !important;
-    }
+  .horizontal {
+    display: none;
+  }
+  .log-in .login_box .log-in_box {
+    width: 50%;
+  }
+  .log-in .register_box .sec_register {
+    width: 50%;
+  }
+  .vdo-calling .head-sec .head-call {
+    width: 60%;
+  }
+  .vdo-calling .incoming-sec .incoming-calls {
+    width: 100%;
+  }
+  .btn-end-conversation {
+    width: 90%;
+    background: #f8423b;
+    color: #fff !important;
+  }
+  .btn-end-conversation .end-conversation::before {
+    content: "";
+    width: 25px !important;
+    height: 25px !important;
+    background: url(../img/icon-hangup-red.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 25px !important;
+    margin-right: 5px !important;
+  }
+  .shortcuts-box {
+    padding: 10px;
+  }
+  .shortcuts-box .txt-desc {
+    padding: 0px 10px;
+  }
+  .shortcuts-box .img-icon {
+    width: 80px;
+  }
+  .shortcuts-box .img-icon .ttrs-vri::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/logo-hand-blue.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box .img-icon .ttrs-helpdesk::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-callcenter-blue.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box .img-icon .ttrs-emergency {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-emergency.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box .img-icon .phone-keypad::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-call-blue.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box .img-icon .ms-conversation::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-message-blue.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box .img-icon .ms-history::before {
+    content: "";
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-conversation-blue.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box:hover {
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(28%, #34a2ed), to(#1f88ce));
+    background: -webkit-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
+    background: -o-linear-gradient(bottom, #34a2ed 28%, #1f88ce 100%);
+    background: linear-gradient(0deg, #34a2ed 28%, #1f88ce 100%);
+  }
+  .shortcuts-box:hover .img-icon {
+    width: 80px;
+  }
+  .shortcuts-box:hover .img-icon .ttrs-vri::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/logo-hand-white.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box:hover .img-icon .ttrs-helpdesk::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-callcenter-white.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box:hover .img-icon .ttrs-emergency {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-emergency-white.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box:hover .img-icon .phone-keypad::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-call-white.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box:hover .img-icon .ms-conversation::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-message-white.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
+  .shortcuts-box:hover .img-icon .ms-history::before {
+    content: "" !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: url(../img/icon-conversation-white.png) center no-repeat !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px !important;
+  }
 }

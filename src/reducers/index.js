@@ -8,12 +8,12 @@ import chooseCameraReducer from "./chooseCameraReducer";
 import { combineReducers } from "redux";
 
 const allReducers = combineReducers({
-    chooseCamera: chooseCameraReducer,
-    registerData: registerDataReducer,
-    controlVideo: controlVideoReducer,
-    webStatus: webStatusReducer,
-    webSocketLogs: webSocketLogsReducer,
-    messagedata: messagedataReducer,
+  chooseCamera: chooseCameraReducer,
+  registerData: registerDataReducer,
+  controlVideo: controlVideoReducer,
+  webStatus: webStatusReducer,
+  webSocketLogs: webSocketLogsReducer,
+  messagedata: messagedataReducer,
 });
 
 export default allReducers;

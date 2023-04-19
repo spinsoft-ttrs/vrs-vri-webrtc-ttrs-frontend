@@ -8,12 +8,7 @@ import VideoStopwatch from "./components/VideoStopwatch";
 import Statusbar from "../../components/Statusbar";
 import { isFirefox } from "react-device-detect";
 import { PreviewText, DetectSize } from "./fuctions";
-import {
-  setMessagedata,
-  setRegisterData,
-  setWebStatus,
-  setControlVideo,
-} from "../../actions";
+import { setMessagedata, setRegisterData, setControlVideo } from "../../actions";
 import { closeRoom } from "../../actions/fetchAPI";
 // eslint-disable-next-line no-unused-vars
 import adapter from "webrtc-adapter";
@@ -75,7 +70,7 @@ constraints = {
   },
 };
 
-var localVideo, remoteVideo;
+let localVideo, remoteVideo;
 
 const VideoCall = () => {
   const remoteAudioRef = useRef(null);
@@ -88,7 +83,6 @@ const VideoCall = () => {
   const [iOSDevice, setiOSDevice] = useState("");
   const controlVideo = useSelector((state) => state.controlVideo);
   const registerData = useSelector((state) => state.registerData);
-  const webStatus = useSelector((state) => state.webStatus);
   // const selectDeviceLabel = useSelector(state => state.chooseCamera);
   const dispatch = useDispatch();
 
@@ -145,14 +139,10 @@ const VideoCall = () => {
         document.getElementById("slideMessage").style.display = "block";
         document.getElementById("img_vdocall").classList.add("vdo_call_show");
         document.getElementById("call-mobile").classList.add("call-mobile");
-        document
-          .getElementById("waiting_mobile")
-          .classList.add("waiting_mobile");
+        document.getElementById("waiting_mobile").classList.add("waiting_mobile");
       } else {
         document.getElementById("slideMessage").style.display = "none";
-        document
-          .getElementById("img_vdocall")
-          .classList.remove("vdo_call_show");
+        document.getElementById("img_vdocall").classList.remove("vdo_call_show");
         document.getElementById("call-mobile").classList.remove("call-mobile");
       }
     } else {
@@ -307,9 +297,6 @@ const VideoCall = () => {
             },
           ],
         };
-        // pcConfig = {
-        //     iceServers: [{urls: "stun:stun.l.google.com:19302"}]
-        // }
         options = {
           eventHandlers: eventHandlers,
           mediaStream: mediaStream,
@@ -382,36 +369,25 @@ const VideoCall = () => {
               //   console.log(resp);
               // }, [4000]);
 
-              dispatch(
-                setRegisterData(
-                  "callNumber",
-                  e.message._request.body.split("|")[1]
-                )
-              );
+              dispatch(setRegisterData("callNumber", e.message._request.body.split("|")[1]));
               if (localStorage.getItem("callType") === "callEmergency") {
                 setTimeout(() => {
                   if (localStorage.getItem("fullname") !== "") {
                     registerData.userAgent.sendMessage(
-                      `sip:${e.message._request.body.split("|")[1]}@${
-                        registerData.domain
-                      }`,
+                      `sip:${e.message._request.body.split("|")[1]}@${registerData.domain}`,
                       `ชื่อ ${localStorage.getItem("fullname")}`
                     );
                   }
                   if (localStorage.getItem("phone") !== "") {
                     registerData.userAgent.sendMessage(
-                      `sip:${e.message._request.body.split("|")[1]}@${
-                        registerData.domain
-                      }`,
+                      `sip:${e.message._request.body.split("|")[1]}@${registerData.domain}`,
                       `เบอร์โทรศัพท์ ${localStorage.getItem("phone")}`
                     );
                   }
                   switch (localStorage.getItem("callType")) {
                     case "callEmergency":
                       registerData.userAgent.sendMessage(
-                        `sip:${e.message._request.body.split("|")[1]}@${
-                          registerData.domain
-                        }`,
+                        `sip:${e.message._request.body.split("|")[1]}@${registerData.domain}`,
                         `ประเภทฉุกเฉิน ${localStorage.getItem("typeEmergency")}`
                       );
                       break;
@@ -437,14 +413,7 @@ const VideoCall = () => {
                   setConnection(true);
                 }, 4000);
               } else if (!e.message._request.body.startsWith("<rtt")) {
-                dispatch(
-                  setMessagedata(
-                    e.originator,
-                    e.originator,
-                    dayjs().format("HH:mm:ss"),
-                    e.message._request.body
-                  )
-                );
+                dispatch(setMessagedata(e.originator, e.originator, dayjs().format("HH:mm:ss"), e.message._request.body));
                 setMsgRealtime("");
               } else {
                 if (e.originator !== "local") {
@@ -460,10 +429,7 @@ const VideoCall = () => {
       },
       () => {
         console.log("userAgent Call", registerData.callNumber);
-        registerData.userAgent.call(
-          `sip:${registerData.callNumber}@${registerData.domain}`,
-          options
-        );
+        registerData.userAgent.call(`sip:${registerData.callNumber}@${registerData.domain}`, options);
       },
     ]);
   };
@@ -490,12 +456,8 @@ const VideoCall = () => {
           .getUserMedia(constraints)
           .then((stream) => {
             localVideo.srcObject = stream;
-            peerconnection.connection
-              .getSenders()[1]
-              .replaceTrack(stream.getVideoTracks()[0]);
-            peerconnection.connection
-              .getSenders()[0]
-              .replaceTrack(stream.getAudioTracks()[0]);
+            peerconnection.connection.getSenders()[1].replaceTrack(stream.getVideoTracks()[0]);
+            peerconnection.connection.getSenders()[0].replaceTrack(stream.getAudioTracks()[0]);
           })
           .catch((e) => console.error(e));
       });
@@ -606,37 +568,21 @@ const VideoCall = () => {
       <div className="vdocall-keypad">
         {!matchMedia.matches ? <Chat messageRealtime={msgRealtime} /> : <div />}
         <div className="vdo-calling" id="main">
-          <Statusbar
-            handleChooseCamera={handleChooseCamera}
-            stopWatch={<VideoStopwatch start={connection} />}
-          />
+          <Statusbar handleChooseCamera={handleChooseCamera} stopWatch={<VideoStopwatch start={connection} />} />
           <div className={`incoming-sec ${detectDeviceAndScreen()}`}>
             <div className="incoming-calls calls-waiting" id="call-mobile">
-              <div
-                className={`${handleIOSClass()} img-vdo d-block mb-3  `}
-                id="img_vdocall"
-              >
+              <div className={`${handleIOSClass()} img-vdo d-block mb-3  `} id="img_vdocall">
                 <audio ref={remoteAudioRef}></audio>
                 <div id="img_videocallheader">
                   {matchMedia.matches ? (
                     <div>
                       {" "}
-                      <ChatInVideo
-                        messageRealtime={msgRealtime}
-                        iOSDevice={iOSDevice}
-                      />{" "}
-                      <ControlVideo2 />{" "}
+                      <ChatInVideo messageRealtime={msgRealtime} iOSDevice={iOSDevice} /> <ControlVideo2 />{" "}
                     </div>
                   ) : (
                     <div />
                   )}
-                  <video
-                    id="local-video"
-                    className="local-video"
-                    muted
-                    autoPlay
-                    playsInline
-                  />
+                  <video id="local-video" className="local-video" muted autoPlay playsInline />
                 </div>
               </div>
               <div id="waiting_mobile">
