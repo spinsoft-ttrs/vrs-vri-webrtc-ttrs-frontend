@@ -5,83 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e8e9260-85f5-4e93-b798-c8e323ed1949" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/.env.production" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/docker-image.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docker-image.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bootstrap/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bootstrap/react-bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/react-bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bootstrap/react-dom.production.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/react-dom.production.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bootstrap/react.production.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/bootstrap/react.production.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RouterApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RouterV3App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RouterV3App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/fetchAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/fetchAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/_body.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/_body.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/_foot.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/_foot.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bootstrap-grid.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bootstrap-grid.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bootstrap-reboot.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/v3style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/v3style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/bootstrap.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Statusbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Statusbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/chooseCameraReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/chooseCameraReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/controlVideoReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/controlVideoReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/messagedataReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/messagedataReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/registerData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/registerData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/webSocketLogsReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/webSocketLogsReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/webStatusReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/webStatusReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ChooseConversation/ChooseConversation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ChooseConversation/ChooseConversation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dialpad/Dialpad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dialpad/Dialpad.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dialpad/PhoneKeyboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dialpad/PhoneKeyboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dialpad/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dialpad/Setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Dialpad/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Dialpad/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Emergency/Emergency.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Emergency/Emergency.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Emergency/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Emergency/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/EndCall/EndCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/EndCall/EndCall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Help/Help.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Help/Help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Help/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Help/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HelpDesk/HelpDesk.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HelpDesk/HelpDesk.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/HelpDesk/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/HelpDesk/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Login/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/PublicService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PublicService/PublicService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/PublicServiceEmergency.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PublicService/PublicServiceEmergency.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PublicService/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ReceivingCall/ReceivingCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ReceivingCall/ReceivingCall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Register/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/TestView/TestView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/TestView/TestView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/TestView/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/TestView/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/VideoCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/VideoCall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/components/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/components/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/components/ChatInVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/components/ChatInVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/components/ControlVideo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/components/ControlVideo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/components/ControlVideo2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/components/ControlVideo2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/components/SwitchCamera.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/components/SwitchCamera.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/components/VideoStopwatch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/components/VideoStopwatch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/components/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/components/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/fuctions/CheckMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/fuctions/CheckMobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/fuctions/CodecsHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/fuctions/CodecsHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/fuctions/DetectSize.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/fuctions/DetectSize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/fuctions/PreviewText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/fuctions/PreviewText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +36,7 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop-03",
+    "git-widget-placeholder": "develop-04",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
     "ignore.virus.scanning.warn.message": "true",
