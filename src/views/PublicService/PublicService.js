@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setRegisterData, setWebStatus } from "../../actions";
+import { getGeolocation, getPublicExtension } from "../../actions/fetchAPI";
 import "./css/style.css";
+import { isIpadOS } from "../../utils/checkDevice";
 import public_normal from "./img/Web-TTRS VDO-circle-01.png";
 const { detect } = require("detect-browser");
 const browser = detect();
@@ -23,75 +25,26 @@ const PublicService = () => {
     setAgency(event.target.value);
   };
 
-  const handleAccessPublicService = () => {
+  const handleAccessPublicService = async () => {
     localStorage.setItem("directlogin", "");
-    // console.log(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`);
     if (fullName.trim() !== "" && phone.trim() !== "" && agency.trim() !== "") {
-      // fetch(`${process.env.REACT_APP_URL_MAIN_API}/extension/public`, {
-      //   method: "POST",
-      //   headers: {
-      //     Accept: "application/json",
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     type: "webrtc-public",
-      //     agency,
-      //     phone,
-      //     fullName,
-      //     emergency: 0,
-      //     emergency_options_data: "",
-      //     user_agent: navigator.userAgent + "",
-      //   }),
-      // })
-      //   .then((response) => {
-      //     return response.json();
-      //   })
-      //   .then((data) => {
-      //     if (data.status === "OK") {
-      //       localStorage.setItem("fullname", fullName);
-      //       localStorage.setItem("phone", phone);
-      //       localStorage.setItem("agency", agency);
-      //       dispatch(setRegisterData("secret", data.data.secret));
-      //       dispatch(setRegisterData("extension", data.data.ext));
-      //       dispatch(setRegisterData("domain", data.data.domain));
-      //       dispatch(setRegisterData("websocket", data.data.websocket));
-      //       dispatch(setRegisterData("callNumber", 14131));
-      //       dispatch(setWebStatus("register"));
-      //     }
-      //   });
-
-      fetch(`${process.env.REACT_APP_URL_MAIN_API}/get/extension/static`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        // body: JSON.stringify({
-        //   type: "webrtc-public",
-        //   agency,
-        //   phone,
-        //   fullName,
-        //   emergency: 0,
-        //   emergency_options_data: "",
-        //   user_agent: navigator.userAgent + "",
-        // }),
-      })
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          // if (data.status === "OK") {
-          localStorage.setItem("fullname", fullName);
-          localStorage.setItem("phone", phone);
-          localStorage.setItem("agency", agency);
-          dispatch(setRegisterData("secret", data.secret));
-          dispatch(setRegisterData("extension", data.extension));
-          dispatch(setRegisterData("domain", data.domain));
-          dispatch(setRegisterData("websocket", data.websocket));
-          dispatch(setRegisterData("callNumber", 14131));
-          dispatch(setWebStatus("register"));
-          // }
-        });
+      const extensionData = await getPublicExtension({
+        type: "webrtc-public",
+        agency,
+        phone,
+        fullName,
+        emergency: 0,
+        emergencyOptionsData: "",
+      });
+      localStorage.setItem("fullname", fullName);
+      localStorage.setItem("phone", phone);
+      localStorage.setItem("agency", agency);
+      dispatch(setRegisterData("secret", extensionData.secret));
+      dispatch(setRegisterData("extension", extensionData.extension));
+      dispatch(setRegisterData("domain", extensionData.domain));
+      dispatch(setRegisterData("websocket", extensionData.websocket));
+      dispatch(setRegisterData("callNumber", 14131));
+      dispatch(setWebStatus("register"));
     } else {
       handleClassInputInvalid(fullName, "fieldFullName", "is-invalid");
       handleClassInputInvalid(phone, "fieldPhone", "is-invalid");
@@ -105,9 +58,6 @@ const PublicService = () => {
     } else {
       document.getElementById(id).classList.remove(className);
     }
-  };
-  const isIpadOS = () => {
-    return navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform);
   };
   useEffect(() => {
     if (!isIpadOS()) {
@@ -126,15 +76,13 @@ const PublicService = () => {
   const getCurrentLocation = () => {
     if (localStorage.getItem("locationName") === null) {
       navigator.geolocation.getCurrentPosition(
-        (position) => {
-          fetch(
-            `https://api.longdo.com/map/services/address?lon=${position.coords.longitude}&lat=${position.coords.latitude}&locale=th&key=16b1beda30815bcf31c05d8ad184ca32`
-          )
-            .then((response) => response.json())
-            .then((data) => {
-              setLocationName(`${data.district} ${data.subdistrict} ${data.province}`);
-              localStorage.setItem("locationName", `${data.district} ${data.subdistrict} ${data.province}`);
-            });
+        async (position) => {
+          const { district, subdistrict, province } = await getGeolocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+          setLocationName(`${district} ${subdistrict} ${province}`);
+          localStorage.setItem("locationName", `${district} ${subdistrict} ${province}`);
         },
         (error) => {
           if (error.code === 1) {

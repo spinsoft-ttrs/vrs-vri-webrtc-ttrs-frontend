@@ -1,9 +1,40 @@
-export const urlapi = process.env.REACT_APP_URL_MAIN_API;
-export const urlSipAPI = process.env.REACT_APP_URL_SIP_API;
+export const URL_API = process.env.REACT_APP_URL_MAIN_API;
+export const URL_SIP_API = process.env.REACT_APP_URL_SIP_API;
 const needle = require("needle");
 
+export const getPublicExtension = async ({ type, agency, phone, fullName, emergency, emergencyOptionsData }) => {
+  fetch(`${process.env.REACT_APP_URL_MAIN_API}/get/extension/static`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      type,
+      agency,
+      phone,
+      fullName,
+      emergency,
+      emergency_options_data: emergencyOptionsData,
+      user_agent: navigator.userAgent.toString(),
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
+};
+
+export const getGeolocation = async ({ latitude, longitude }) => {
+  fetch(`https://api.longdo.com/map/services/address?lon=${longitude}&lat=${latitude}&locale=th&key=16b1beda30815bcf31c05d8ad184ca32`)
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    });
+};
+
 export const getExtensionFromToken = (token, callback) => {
-  fetch(`${urlapi}/getextension`, {
+  fetch(`${URL_API}/getextension`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -18,8 +49,9 @@ export const getExtensionFromToken = (token, callback) => {
       callback(data);
     });
 };
+
 export const getextensionEmregency = (callback) => {
-  fetch(`${urlapi}/getextensionemregency`, {
+  fetch(`${URL_API}/getextensionemregency`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
@@ -50,7 +82,7 @@ export const sendLog = (data) => {
 };
 
 export const callLog = (data, callback) => {
-  fetch(`${urlapi}/access/calllog`, {
+  fetch(`${URL_API}/access/calllog`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -71,7 +103,7 @@ export const callLog = (data, callback) => {
     });
 };
 export const savelocation = (data, callback) => {
-  fetch(`${urlapi}/location/savelocation`, {
+  fetch(`${URL_API}/location/savelocation`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -93,7 +125,7 @@ export const savelocation = (data, callback) => {
 };
 
 export const getSetting = (token, callback) => {
-  fetch(`${urlapi}/setting`, {
+  fetch(`${URL_API}/setting`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -110,7 +142,7 @@ export const getSetting = (token, callback) => {
 };
 
 export const verifyToken = (token, callback) => {
-  fetch(`${urlapi}/verify`, {
+  fetch(`${URL_API}/verify`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -129,7 +161,7 @@ export const verifyToken = (token, callback) => {
 };
 
 export const verifyUUID = (uuid, callback) => {
-  fetch(`${urlapi}/extension/detail`, {
+  fetch(`${URL_API}/extension/detail`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -148,7 +180,7 @@ export const verifyUUID = (uuid, callback) => {
     });
 };
 export const closeRoom = (uuid) => {
-  fetch(`${urlapi}/extension/close`, {
+  fetch(`${URL_API}/extension/close`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -166,7 +198,7 @@ export const closeRoom = (uuid) => {
 
 export const reToken = (data, callback) => {
   needle.post(
-    `${urlSipAPI}/refresh`,
+    `${URL_SIP_API}/refresh`,
     {
       token: data,
     },
@@ -177,7 +209,7 @@ export const reToken = (data, callback) => {
 };
 
 export const verifyAuth = (token, callback) => {
-  fetch(`${urlapi}/auth/verifyauth`, {
+  fetch(`${URL_API}/auth/verifyauth`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -197,7 +229,7 @@ export const verifyAuth = (token, callback) => {
 
 export const refreshExtension = (data, callback) => {
   needle.post(
-    `${urlapi}/extension/refreshExtension`,
+    `${URL_API}/extension/refreshExtension`,
     {
       extension: data.extension,
     },
