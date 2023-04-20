@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setRegisterData, setWebStatus } from "../../actions";
-import { getGeolocation, getPublicExtension } from "../../actions/fetchAPI";
+import { getPublicExtension } from "../../actions/fetchAPI";
 import "./css/style.css";
 import { isIpadOS } from "../../utils/checkDevice";
 import public_normal from "./img/Web-TTRS VDO-circle-01.png";
+import LocationBar from "./LocationBar";
 const { detect } = require("detect-browser");
 const browser = detect();
+const emergency = 0;
 
-const PublicService = () => {
-  const [locationName, setLocationName] = useState("");
+export default function PublicService() {
+  const dispatch = useDispatch();
   const [fullName, setFullName] = useState(localStorage.getItem("fullname") === null ? "" : localStorage.getItem("fullname"));
   const [phone, setPhone] = useState(localStorage.getItem("phone") === null ? "" : localStorage.getItem("phone"));
   const [agency, setAgency] = useState(localStorage.getItem("agency") === null ? "" : localStorage.getItem("agency"));
-  const dispatch = useDispatch();
 
   const handleName = (event) => {
     setFullName(event.target.value);
@@ -33,7 +34,7 @@ const PublicService = () => {
         agency,
         phone,
         fullName,
-        emergency: 0,
+        emergency,
         emergencyOptionsData: "",
       });
       localStorage.setItem("fullname", fullName);
@@ -70,38 +71,11 @@ const PublicService = () => {
       }
     }
     localStorage.setItem("callType", "callPublic");
-    getCurrentLocation();
   }, []);
-
-  const getCurrentLocation = () => {
-    if (localStorage.getItem("locationName") === null) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const { district, subdistrict, province } = await getGeolocation({
-            latitude: position.coords.latitude,
-            longitude: position.coords.longitude,
-          });
-          setLocationName(`${district} ${subdistrict} ${province}`);
-          localStorage.setItem("locationName", `${district} ${subdistrict} ${province}`);
-        },
-        (error) => {
-          if (error.code === 1) {
-            alert("ไม่สามารถเรียกตำแหน่งปัจจุบันได้");
-          }
-        }
-      );
-    } else {
-      setLocationName(localStorage.getItem("locationName"));
-    }
-  };
 
   return (
     <>
-      <div className="vrs_map" style={{ backgroundColor: "#168ACE", textAlign: "center" }}>
-        <div className="txt-vrs" style={{ color: "white", paddingTop: "2px", marginLeft: "5px" }}>
-          {locationName}
-        </div>
-      </div>
+      <LocationBar />
       <br />
       <div className="container">
         <div className="row justify-content-md-center">
@@ -109,7 +83,7 @@ const PublicService = () => {
             <img src={public_normal} className="public-image" alt="Public Service" />
           </div>
           <h2 className="entry-title" style={{ marginTop: "15px" }}>
-            สนทนาวิดีโอ{" "}
+            สนทนาวิดีโอ
           </h2>
           <h2 className="entry-title">(ติดต่อขอใช้บริการล่ามภาษามือทางไกล)</h2>
         </div>
@@ -163,6 +137,4 @@ const PublicService = () => {
       </div>
     </>
   );
-};
-
-export default PublicService;
+}

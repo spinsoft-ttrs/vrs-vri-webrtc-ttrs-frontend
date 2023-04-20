@@ -3,11 +3,12 @@ import { useDispatch } from "react-redux";
 import { setRegisterData, setWebStatus } from "../../actions";
 import "./css/style.css";
 import public_emer from "./img/Emer-VDO-Web-circle-01.png";
+import LocationBar from "./LocationBar";
 const { detect } = require("detect-browser");
 const browser = detect();
+const emergency = 1;
 
 const PublicServiceEmergency = () => {
-  const [locationName, setLocationName] = useState("");
   const [fullName, setFullName] = useState(localStorage.getItem("fullname") === null ? "" : localStorage.getItem("fullname"));
   const [phone, setPhone] = useState(localStorage.getItem("phone") === null ? "" : localStorage.getItem("phone"));
   const [agency, setAgency] = useState(localStorage.getItem("agency") === null ? "" : localStorage.getItem("agency"));
@@ -38,7 +39,7 @@ const PublicServiceEmergency = () => {
           agency,
           phone,
           fullName,
-          emergency: 1,
+          emergency,
           emergency_options_data: emergencyText[typeEmergency],
           user_agent: navigator.userAgent,
         }),
@@ -57,7 +58,6 @@ const PublicServiceEmergency = () => {
             dispatch(setRegisterData("domain", data.data.domain));
             dispatch(setRegisterData("websocket", data.data.websocket));
             dispatch(setRegisterData("callNumber", 14124));
-            // dispatch(setRegisterData("callNumber", 14152 ));
             dispatch(setWebStatus("register"));
           }
         });
@@ -91,40 +91,11 @@ const PublicServiceEmergency = () => {
       }
     }
     localStorage.setItem("callType", "callPublic");
-    getCurrentLocation();
   }, []);
-
-  const getCurrentLocation = () => {
-    if (localStorage.getItem("locationName") === null) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          fetch(
-            `https://api.longdo.com/map/services/address?lon=${position.coords.longitude}&lat=${position.coords.latitude}&locale=th&key=16b1beda30815bcf31c05d8ad184ca32`
-          )
-            .then((response) => response.json())
-            .then((data) => {
-              setLocationName(`${data.district} ${data.subdistrict} ${data.province}`);
-              localStorage.setItem("locationName", `${data.district} ${data.subdistrict} ${data.province}`);
-            });
-        },
-        (error) => {
-          if (error.code === 1) {
-            alert("ไม่สามารถเรียกตำแหน่งปัจจุบันได้");
-          }
-        }
-      );
-    } else {
-      setLocationName(localStorage.getItem("locationName"));
-    }
-  };
 
   return (
     <>
-      <div className="vrs_map" style={{ backgroundColor: "#168ACE", textAlign: "center" }}>
-        <div className="txt-vrs" style={{ color: "white", paddingTop: "2px", marginLeft: "5px" }}>
-          {locationName}
-        </div>
-      </div>
+      <LocationBar />
       <br />
       <div className="container">
         <div className="row justify-content-md-center">
