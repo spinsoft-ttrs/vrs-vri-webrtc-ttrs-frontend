@@ -179,7 +179,7 @@ export const verifyUUID = (uuid, callback) => {
       callback(data);
     });
 };
-export const closeRoom = (uuid) => {
+export const closeRoom = (uuid, extension) => {
   fetch(`${URL_API}/extension/close`, {
     method: "POST",
     headers: {
@@ -188,6 +188,7 @@ export const closeRoom = (uuid) => {
     },
     body: JSON.stringify({
       threadid: uuid,
+      extension : extension
     }),
   })
     .then((response) => {

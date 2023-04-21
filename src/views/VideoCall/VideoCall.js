@@ -261,7 +261,9 @@ const VideoCall = () => {
         dispatch(setControlVideo("openTerminate", false));
       }
       localStorage.setItem("directlogin", "");
-      closeRoom(localStorage.getItem("uuid"));
+      const uuid = localStorage.getItem("uuid");
+      console.log(registerData.userAgent)
+      closeRoom(uuid, "");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [controlVideo.openTerminate]);
