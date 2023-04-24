@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e8e9260-85f5-4e93-b798-c8e323ed1949" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/PublicService/PublicLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RouterApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RouterV3App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RouterV3App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/fetchAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/fetchAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Emergency/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Emergency/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/PublicService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PublicService/PublicService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/PublicServiceEmergency.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PublicService/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PublicService/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/TestView/TestView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/TestView/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/TestView/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/VideoCall/VideoCall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/VideoCall/VideoCall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
-    </list>
+    <list default="true" id="1e8e9260-85f5-4e93-b798-c8e323ed1949" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
