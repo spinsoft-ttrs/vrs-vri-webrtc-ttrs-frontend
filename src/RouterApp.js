@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService, PublicServiceEmergency, TestView } from "./views";
+import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService } from "./views";
 import { setWebStatus, setRegisterData } from "./actions";
 import { verifyAuth, verifyUUID, reToken, refreshExtension } from "./actions/fetchAPI";
 
@@ -118,14 +118,12 @@ const RouterApp = (props) => {
     }, 15 * 60000); // 60 * 1000 milsec
   };
   switch (webStatus) {
-    case "test":
-      return <TestView />;
     case "public":
-      return <PublicService />;
+      return <PublicService emergency={0} />;
     case "publicEmergency":
-      return <PublicServiceEmergency />;
+      return <PublicService emergency={1} />;
     case "publicemergency":
-      return <PublicServiceEmergency />;
+      return <PublicService emergency={1} />;
     case "callVRS":
       return <VideoCall />;
     case "callVRI":

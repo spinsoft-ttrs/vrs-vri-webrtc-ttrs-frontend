@@ -2,11 +2,10 @@
   margin: auto;
 }
 .entry-title {
-  color: rgb(22, 138, 206) !important;
   font-size: 20px !important;
 }
 .emergency {
-  color: Red;
+  color: Red ;
 }
 .red {
   color: red;

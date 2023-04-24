@@ -31,8 +31,8 @@
     "xml-js": "^1.6.11"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "dev": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -54,5 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "2.8.8"
   }
 }

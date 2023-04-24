@@ -9,5 +9,3 @@ export { default as ChooseConversation } from "./ChooseConversation";
 export { default as HelpDesk } from "./HelpDesk";
 export { default as Emergency } from "./Emergency";
 export { default as PublicService } from "./PublicService/PublicService";
-export { default as PublicServiceEmergency } from "./PublicService/PublicServiceEmergency";
-export { default as TestView } from "./TestView";

@@ -1,11 +1,12 @@
 .logo {
   margin: auto;
 }
-.entry-title {
-  color: #e01010 !important;
-}
 .emergency {
-  color: Red;
+  color: #dc3545 !important;
+}
+.emergency-button {
+  background-color: #dc3545 !important;
+  border: none;
 }
 .red {
   color: red;

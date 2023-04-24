@@ -1,9 +1,14 @@
-export const URL_API = process.env.REACT_APP_URL_MAIN_API;
-export const URL_SIP_API = process.env.REACT_APP_URL_SIP_API;
+export let URL_API = process.env.REACT_APP_URL_MAIN_API;
+export let URL_SIP_API = process.env.REACT_APP_URL_SIP_API;
 const needle = require("needle");
 
+if (process.env.NODE_ENV === "development") {
+  console.log(process.env.NODE_ENV);
+  URL_API = "http://localhost:3000";
+}
+
 export const getPublicExtension = async ({ type, agency, phone, fullName, emergency, emergencyOptionsData }) => {
-  fetch(`${process.env.REACT_APP_URL_MAIN_API}/get/extension/static`, {
+  const response = await fetch(`${URL_API}/extension/static`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -18,19 +23,19 @@ export const getPublicExtension = async ({ type, agency, phone, fullName, emerge
       emergency_options_data: emergencyOptionsData,
       user_agent: navigator.userAgent.toString(),
     }),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      return data;
-    });
+  });
+  if (response.ok) {
+    return await response.json();
+  }
+  return {};
 };
 
 export const getGeolocation = async ({ latitude, longitude }) => {
-  fetch(`https://api.longdo.com/map/services/address?lon=${longitude}&lat=${latitude}&locale=th&key=16b1beda30815bcf31c05d8ad184ca32`)
-    .then((response) => response.json())
-    .then((data) => {
-      return data;
-    });
+  const response = await fetch(`https://api.longdo.com/map/services/address?lon=${longitude}&lat=${latitude}&locale=th&key=16b1beda30815bcf31c05d8ad184ca32`);
+  if (response.ok) {
+    return await response.json();
+  }
+  return {};
 };
 
 export const getExtensionFromToken = (token, callback) => {
@@ -179,7 +184,7 @@ export const verifyUUID = (uuid, callback) => {
       callback(data);
     });
 };
-export const closeRoom = (uuid, extension) => {
+export const closeRoom = (extension) => {
   fetch(`${URL_API}/extension/close`, {
     method: "POST",
     headers: {
@@ -187,8 +192,7 @@ export const closeRoom = (uuid, extension) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      threadid: uuid,
-      extension : extension
+      extension: extension,
     }),
   })
     .then((response) => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService, PublicServiceEmergency, TestView } from "./views";
+import { VideoCall, ReceivingCall, Register, Dialpad, Login, Help, HelpDesk, Emergency, PublicService } from "./views";
 import { setWebStatus, setRegisterData } from "./actions";
 import { getExtensionFromToken, getextensionEmregency } from "./actions/fetchAPI";
 import { AuthProvider } from "oidc-react";
@@ -108,14 +108,12 @@ const RouterV3App = (props) => {
   }, [token, props.uuid, dispatch]);
 
   switch (webStatus) {
-    case "test":
-      return <TestView />;
     case "public":
       return <PublicService />;
     case "publicEmergency":
-      return <PublicServiceEmergency />;
+      return <PublicService emergency={1} />;
     case "publicemergency":
-      return <PublicServiceEmergency />;
+      return <PublicService emergency={1} />;
     case "callVRS":
       return <VideoCall />;
     case "callVRI":
