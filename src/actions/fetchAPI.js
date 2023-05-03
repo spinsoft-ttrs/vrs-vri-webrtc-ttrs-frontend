@@ -165,7 +165,7 @@ export const verifyToken = (token, callback) => {
     });
 };
 
-export const verifyUUID = ({ uuid, identification, name, lastname }, callback) => {
+export const verifyUUID = (uuid, callback) => {
   fetch(`${URL_API}/extension/detail`, {
     method: "POST",
     headers: {
@@ -173,10 +173,7 @@ export const verifyUUID = ({ uuid, identification, name, lastname }, callback) =
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      uuid,
-      name,
-      lastname,
-      identification,
+      uuid: uuid,
       userAgent: navigator.userAgent,
     }),
   })
