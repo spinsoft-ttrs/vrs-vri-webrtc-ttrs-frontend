@@ -15,10 +15,10 @@ export default function PublicService({ emergency }) {
   const [phone, setPhone] = useState(localStorage.getItem("phone") === null ? "" : localStorage.getItem("phone"));
   const [agency, setAgency] = useState(localStorage.getItem("agency") === null ? "" : localStorage.getItem("agency"));
   // const callDestination = emergency !== 1 ? 14131 : 9999;
-  const callDestination = emergency !== 1 ? 14120 : 14124;
-
+  // Production
   // 14120 เบอร์โทร Public Service เข้าล่าม
   // 14131 เบอร์โทร Public Service เข้าเครื่อง MA
+  const callDestination = emergency !== 1 ? 14120 : 14124;
 
   const handleName = (event) => {
     setFullName(event.target.value);
@@ -49,9 +49,6 @@ export default function PublicService({ emergency }) {
       dispatch(setRegisterData("extension", extensionData.extension));
       dispatch(setRegisterData("domain", extensionData.domain));
       dispatch(setRegisterData("websocket", extensionData.websocket));
-
-      // 14120 เบอร์โทร Public Service เข้าล่าม
-      // 14131 เบอร์โทร Public Service เข้าเครื่อง MA
       dispatch(setRegisterData("callNumber", callDestination));
       dispatch(setWebStatus("register"));
     } else {
