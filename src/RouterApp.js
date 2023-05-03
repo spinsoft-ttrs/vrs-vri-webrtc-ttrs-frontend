@@ -32,13 +32,11 @@ const RouterApp = (props) => {
         break;
       default:
         const session = sessionStorage.getItem("oidc.user:https://accounts.ttrs.in.th/auth/realms/TTRS-Users:TTRS_VRSWeb");
+        let profile = {};
         if (session !== null) {
-          const profile = JSON.parse(session);
-          console.log(profile);
+          profile = JSON.parse(session);
         }
-        verifyUUID(props.uuid, (result) => {
-          // const profile =
-          // oidc.user:https://accounts.ttrs.in.th/auth/realms/TTRS-Users:TTRS_VRSWeb
+        verifyUUID({ uuid: props.uuid, name: profile.name, lastname: profile.lastname, identification: profile.identification }, (result) => {
           localStorage.setItem("uuid", props.uuid);
           if (result === "expired") {
             window.location.href = "https://ttrs.or.th";
