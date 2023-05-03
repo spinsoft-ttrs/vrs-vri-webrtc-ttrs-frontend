@@ -14,7 +14,7 @@ export default function PublicService({ emergency }) {
   const [fullName, setFullName] = useState(localStorage.getItem("fullname") === null ? "" : localStorage.getItem("fullname"));
   const [phone, setPhone] = useState(localStorage.getItem("phone") === null ? "" : localStorage.getItem("phone"));
   const [agency, setAgency] = useState(localStorage.getItem("agency") === null ? "" : localStorage.getItem("agency"));
-  // const callDestination = emergency !== 1 ? 14131 : 9999;
+  // const callDestination = emergency !== 1 ? 14131 : 9999
   // Production
   // 14120 เบอร์โทร Public Service เข้าล่าม
   // 14131 เบอร์โทร Public Service เข้าเครื่อง MA
