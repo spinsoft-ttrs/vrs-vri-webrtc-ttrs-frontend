@@ -36,7 +36,7 @@ const RouterApp = (props) => {
         if (session !== null) {
           profile = JSON.parse(session);
         }
-        verifyUUID({ uuid: props.uuid, name: profile.name, lastname: profile.lastname, identification: profile.identification }, (result) => {
+        verifyUUID({ uuid: props.uuid, name: profile?.given_name, lastname: profile?.family_name, identification: profile?.preferred_username }, (result) => {
           localStorage.setItem("uuid", props.uuid);
           if (result === "expired") {
             window.location.href = "https://ttrs.or.th";
