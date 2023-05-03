@@ -31,7 +31,14 @@ const RouterApp = (props) => {
         dispatch(setWebStatus("publicEmergency"));
         break;
       default:
+        const session = sessionStorage.getItem("oidc.user:https://accounts.ttrs.in.th/auth/realms/TTRS-Users:TTRS_VRSWeb");
+        if (session !== null) {
+          const profile = JSON.parse(session);
+          console.log(profile);
+        }
         verifyUUID(props.uuid, (result) => {
+          // const profile =
+          // oidc.user:https://accounts.ttrs.in.th/auth/realms/TTRS-Users:TTRS_VRSWeb
           localStorage.setItem("uuid", props.uuid);
           if (result === "expired") {
             window.location.href = "https://ttrs.or.th";
