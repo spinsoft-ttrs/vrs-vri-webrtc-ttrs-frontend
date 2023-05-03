@@ -1,0 +1,30 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"ALL\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"1e8e9260-85f5-4e93-b798-c8e323ed1949\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/src/views/PublicService/LocationBar.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/views/PublicService/PublicService.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/views/PublicService/PublicService.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/views/PublicService/PublicServiceEmergency.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/views/PublicService/PublicServiceEmergency.js\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"GOROOT\" url=\"file:///opt/homebrew/Cellar/go/1.20.2/libexec\" />\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"PackageJsonUpdateNotifier\">\n    <dismissed value=\"$PROJECT_DIR$/package.json\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2N5HTtVJU5MW2TGlPvq8X0tzPo4\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showExcludedFiles\" value=\"false\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"RunOnceActivity.go.formatter.settings.were.checked\": \"true\",\n    \"RunOnceActivity.go.migrated.go.modules.settings\": \"true\",\n    \"RunOnceActivity.go.modules.go.list.on.any.changes.was.set\": \"true\",\n    \"WebServerToolWindowFactoryState\": \"false\",\n    \"git-widget-placeholder\": \"develop-04\",\n    \"go.import.settings.migrated\": \"true\",\n    \"go.sdk.automatically.set\": \"true\",\n    \"ignore.virus.scanning.warn.message\": \"true\",\n    \"last_opened_file_path\": \"/Users/kasemsan\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"yarn\",\n    \"prettierjs.PrettierConfiguration.Package\": \"/opt/homebrew/lib/node_modules/prettier\",\n    \"settings.editor.selected.configurable\": \"settings.javascript.prettier\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/.github\" />\n      <recent name=\"$PROJECT_DIR$\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"1e8e9260-85f5-4e93-b798-c8e323ed1949\" name=\"Changes\" comment=\"\" />\n      <created>1679018104200</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1679018104200</updated>\n      <workItem from=\"1679018105261\" duration=\"20000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VgoProject\">\n    <settings-migrated>true</settings-migrated>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -5,10 +5,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="1e8e9260-85f5-4e93-b798-c8e323ed1949" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/views/PublicService/LocationBar.js" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/PublicService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PublicService/PublicService.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/views/PublicService/PublicServiceEmergency.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PublicService/PublicServiceEmergency.js" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -43,7 +40,7 @@
+     "go.import.settings.migrated": "true",
+     "go.sdk.automatically.set": "true",
+     "ignore.virus.scanning.warn.message": "true",
+-    "last_opened_file_path": "/Users/kasemsan",
++    "last_opened_file_path": "/Users/kasemsan/Documents/dev/work/vrs-webrtc/vrs-webrtc-ttrs-frontend",
+     "node.js.detected.package.eslint": "true",
+     "node.js.selected.package.eslint": "(autodetect)",
+     "nodejs_package_manager_path": "yarn",

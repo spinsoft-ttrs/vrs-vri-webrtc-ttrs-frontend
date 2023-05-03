@@ -1,25 +1,24 @@
-.logo{
-    margin : auto;
+.logo {
+  margin: auto;
 }
-.entry-title{
-    color : rgb(22, 138, 206) !important;
-    font-size : 20px !important;
+.entry-title {
+  font-size: 20px !important;
 }
-.emergency{
-    color: Red;
+.emergency {
+  color: Red ;
 }
-.red{
-    color:red
+.red {
+  color: red;
 }
-.public-image{
-    width: 150px;
+.public-image {
+  width: 150px;
 }
-.btn-access-public{
-    font-size: 20px !important;
+.btn-access-public {
+  font-size: 20px !important;
 }
-.public-label{
-    font-size: 18px !important;
+.public-label {
+  font-size: 18px !important;
 }
-::placeholder{
-    font-size: 16px;
+::placeholder {
+  font-size: 16px;
 }

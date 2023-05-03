@@ -1,1 +1,1 @@
-export { default } from './Dialpad';
+export { default } from "./Dialpad";
