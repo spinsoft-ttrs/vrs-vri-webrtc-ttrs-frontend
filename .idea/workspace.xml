@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e8e9260-85f5-4e93-b798-c8e323ed1949" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.production" beforeDir="false" afterPath="$PROJECT_DIR$/.env.production" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RouterApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/RouterApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/fetchAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/fetchAPI.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
