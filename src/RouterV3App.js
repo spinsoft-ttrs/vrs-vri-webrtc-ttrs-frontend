@@ -6,7 +6,6 @@ import { getExtensionFromToken, getextensionEmregency } from "./actions/fetchAPI
 import { AuthProvider } from "oidc-react";
 
 const RouterV3App = (props) => {
-  console.log(props.uuid);
   const oidcConfig = {
     onSignIn: () => {
       console.log(`oidc.user:${process.env.REACT_APP_ISSUER}:${process.env.REACT_APP_CLIENT_ID}`);

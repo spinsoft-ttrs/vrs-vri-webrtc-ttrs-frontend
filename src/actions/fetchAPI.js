@@ -6,6 +6,7 @@ if (process.env.NODE_ENV === "development") {
   console.log(process.env.NODE_ENV);
   URL_API = "http://localhost:3000";
 }
+console.log(URL_API);
 
 export const getPublicExtension = async ({ type, agency, phone, fullName, emergency, emergencyOptionsData }) => {
   const response = await fetch(`${URL_API}/extension/static`, {

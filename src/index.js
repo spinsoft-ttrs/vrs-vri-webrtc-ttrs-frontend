@@ -13,6 +13,7 @@ const AppRouter = () => (
   <Router>
     <Switch>
       <Route exact path="/:uuid" component={router} />
+      <Route path="/" component={routerV3Normal} />
       <Route path="/v3/emergency" component={routerV3Emergency} />
       <Route path="/v3/normal" component={routerV3Normal} />
       <Route path="/login" component={LoginApp} />
