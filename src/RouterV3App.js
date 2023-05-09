@@ -72,6 +72,7 @@ const RouterV3App = (props) => {
         }
       });
     } else if (props.uuid === "emergency") {
+      localStorage.setItem("callType", "callEmergency");
       getextensionEmregency((result) => {
         if (result === "expired") {
           window.location.href = "https://ttrs.or.th";
