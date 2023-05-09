@@ -3,9 +3,10 @@ WORKDIR /usr/src/app
 COPY package.json package.json
 RUN npm install
 COPY . .
+#For Develop dev-ttrs
 RUN npm run build:develop
 
-FROM nginx:alpine
+FROM nginx:alpine3.17
 COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
