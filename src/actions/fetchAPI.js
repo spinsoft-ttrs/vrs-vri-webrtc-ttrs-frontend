@@ -2,11 +2,11 @@ export let URL_API = process.env.REACT_APP_URL_MAIN_API;
 export let URL_SIP_API = process.env.REACT_APP_URL_SIP_API;
 const needle = require("needle");
 
-if (process.env.NODE_ENV === "development") {
-  console.log(process.env.NODE_ENV);
-  URL_API = "http://localhost:3000";
-}
-console.log(URL_API);
+// if (process.env.NODE_ENV === "development") {
+// console.log(process.env.NODE_ENV);
+// URL_API = "http://localhost:3000";
+// }
+// console.log(URL_API);
 
 export const getPublicExtension = async ({ type, agency, phone, fullName, emergency, emergencyOptionsData }) => {
   const response = await fetch(`${URL_API}/extension/static`, {
@@ -57,6 +57,7 @@ export const getExtensionFromToken = (token, callback) => {
 };
 
 export const getextensionEmregency = (callback) => {
+  console.log(URL_API);
   fetch(`${URL_API}/getextensionemregency`, {
     method: "PUT",
     headers: {
