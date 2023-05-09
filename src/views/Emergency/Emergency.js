@@ -37,6 +37,7 @@ const HelpDesk = () => {
     console.log("FULLNAME", fullName);
     updateExtensionDetail(
       {
+        extension: "",
         name: fullName,
         mobile: phone,
         threadid: localStorage.getItem("threadid"),
