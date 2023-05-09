@@ -34,11 +34,15 @@ const HelpDesk = () => {
     return navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform);
   };
   const handleAccessEmergency = () => {
-    updateExtensionDetail({
-      name: fullName,
-      mobile: phone,
-      threadid: localStorage.getItem("threadid"),
-    });
+    console.log("FULLNAME", fullName);
+    updateExtensionDetail(
+      {
+        name: fullName,
+        mobile: phone,
+        threadid: localStorage.getItem("threadid"),
+      },
+      () => {}
+    );
     localStorage.setItem("fullname", fullName);
     localStorage.setItem("phone", phone);
     localStorage.setItem("typeEmergency", typeEmergency);

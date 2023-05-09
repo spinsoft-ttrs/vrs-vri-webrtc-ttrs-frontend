@@ -56,7 +56,7 @@ export const getExtensionFromToken = (token, callback) => {
     });
 };
 
-export const getextensionEmregency = (token, callback) => {
+export const getextensionEmregency = (callback) => {
   fetch(`${URL_API}/getextensionemregency`, {
     method: "PUT",
     headers: {
@@ -72,7 +72,7 @@ export const getextensionEmregency = (token, callback) => {
     });
 };
 
-export const updateExtensionDetail = (threadid, fullName, mobile, callback) => {
+export const updateExtensionDetail = ({ threadid, name, mobile }, callback) => {
   fetch(`${URL_API}/updateextensiondetail`, {
     method: "POST",
     headers: {
@@ -80,9 +80,9 @@ export const updateExtensionDetail = (threadid, fullName, mobile, callback) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      threadid: threadid,
-      name: fullName,
-      mobile: mobile,
+      threadid,
+      name,
+      mobile,
     }),
   })
     .then((response) => {
