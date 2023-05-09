@@ -57,13 +57,11 @@ export const getExtensionFromToken = (token, callback) => {
 };
 
 export const getextensionEmregency = (token, callback) => {
-  console.log(URL_API);
   fetch(`${URL_API}/getextensionemregency`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      Authorization: token,
     },
   })
     .then((response) => {
@@ -73,6 +71,28 @@ export const getextensionEmregency = (token, callback) => {
       callback(data);
     });
 };
+
+export const updateExtensionDetail = (threadid, fullName, mobile, callback) => {
+  fetch(`${URL_API}/updateextensiondetail`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      threadid: threadid,
+      name: fullName,
+      mobile: mobile,
+    }),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      callback({});
+    });
+};
+
 export const sendLog = (data) => {
   // fetch(`${urlapi}/log`, {
   //     method : 'POST',

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setWebStatus, setRegisterData } from "../../actions";
 import "./css/style.css";
 import public_emer from "./img/Emer-VDO-Web-circle-01.png";
+import { updateExtensionDetail } from "../../actions/fetchAPI";
 const { detect } = require("detect-browser");
 const browser = detect();
 
@@ -33,6 +34,11 @@ const HelpDesk = () => {
     return navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform);
   };
   const handleAccessEmergency = () => {
+    updateExtensionDetail({
+      name: fullName,
+      mobile: phone,
+      threadid: localStorage.getItem("threadid"),
+    });
     localStorage.setItem("fullname", fullName);
     localStorage.setItem("phone", phone);
     localStorage.setItem("typeEmergency", typeEmergency);
