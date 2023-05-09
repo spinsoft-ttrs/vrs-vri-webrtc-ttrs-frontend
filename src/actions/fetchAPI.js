@@ -72,7 +72,7 @@ export const getextensionEmregency = (callback) => {
     });
 };
 
-export const updateExtensionDetail = ({ extension, threadid, name, mobile }, callback) => {
+export const updateExtensionDetail = ({ threadid, name, mobile }, callback) => {
   fetch(`${URL_API}/updateextensiondetail`, {
     method: "POST",
     headers: {
@@ -80,7 +80,6 @@ export const updateExtensionDetail = ({ extension, threadid, name, mobile }, cal
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      extension,
       threadid,
       name,
       mobile,
