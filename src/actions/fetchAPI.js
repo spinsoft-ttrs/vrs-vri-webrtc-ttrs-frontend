@@ -56,13 +56,14 @@ export const getExtensionFromToken = (token, callback) => {
     });
 };
 
-export const getextensionEmregency = (callback) => {
+export const getextensionEmregency = (token, callback) => {
   console.log(URL_API);
   fetch(`${URL_API}/getextensionemregency`, {
     method: "PUT",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      Authorization: token,
     },
   })
     .then((response) => {
