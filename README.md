@@ -1,7 +1,5 @@
 ใช้ yarn
 
-`
-yarn install
-`
+`yarn install`
 
 `yarn build`
