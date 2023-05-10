@@ -48,7 +48,7 @@ const HelpDesk = () => {
     localStorage.setItem("typeEmergency", typeEmergency);
     switch (typeEmergency) {
       case "1":
-        dispatch(setRegisterData("callNumber", 1669));
+        dispatch(setRegisterData("callNumber", 11669));
         break;
       case "2":
         dispatch(setRegisterData("callNumber", 191));
