@@ -18,7 +18,7 @@ export default function PublicService({ emergency }) {
   // Production
   // 14120 เบอร์โทร Public Service เข้าล่าม
   // 14131 เบอร์โทร Public Service เข้าเครื่อง MA
-  const callDestination = emergency !== 1 ? 14120 : 14124;
+  const callDestination = emergency !== 1 ? 514120 : 514124;
   // const callDestination = 9999;
 
   const handleName = (event) => {

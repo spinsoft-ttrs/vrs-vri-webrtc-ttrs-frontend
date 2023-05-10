@@ -22,7 +22,7 @@ const PhoneKeyboard = (props) => {
     } else if (callNumber === "9002") {
       dispatch(setRegisterData("callNumber", "9002"));
     } else {
-      dispatch(setRegisterData("callNumber", callNumber));
+      dispatch(setRegisterData("callNumber", "1" + callNumber));
     }
     if (callNumber !== "") {
       dispatch(setWebStatus("register"));
