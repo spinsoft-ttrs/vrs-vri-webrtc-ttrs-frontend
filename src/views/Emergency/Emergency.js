@@ -51,10 +51,10 @@ const HelpDesk = () => {
         dispatch(setRegisterData("callNumber", 11669));
         break;
       case "2":
-        dispatch(setRegisterData("callNumber", 191));
+        dispatch(setRegisterData("callNumber", 1191));
         break;
       case "3":
-        dispatch(setRegisterData("callNumber", 199));
+        dispatch(setRegisterData("callNumber", 1199));
         break;
       default:
         // dispatch(setRegisterData("callNumber", 14121));
