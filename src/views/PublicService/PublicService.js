@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setRegisterData, setWebStatus } from "../../actions";
-import { getPublicExtension } from "../../actions/fetchAPI";
+import { getPublicExtension, updateExtensionDetail } from "../../actions/fetchAPI";
 import "./css/style.css";
 import { isIpadOS } from "../../utils/checkDevice";
 
@@ -53,6 +53,14 @@ export default function PublicService({ emergency }) {
       dispatch(setRegisterData("websocket", extensionData.websocket));
       dispatch(setRegisterData("callNumber", callDestination));
       dispatch(setWebStatus("register"));
+      updateExtensionDetail(
+        {
+          name: fullName,
+          mobile: phone,
+          threadid: extensionData.threadid,
+        },
+        () => {}
+      );
     } else {
       handleClassInputInvalid(fullName, "fieldFullName", "is-invalid");
       handleClassInputInvalid(phone, "fieldPhone", "is-invalid");
