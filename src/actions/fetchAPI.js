@@ -2,10 +2,11 @@ export let URL_API = process.env.REACT_APP_URL_MAIN_API;
 export let URL_SIP_API = process.env.REACT_APP_URL_SIP_API;
 const needle = require("needle");
 
-if (process.env.NODE_ENV === "development") {
-  console.log(process.env.NODE_ENV);
-  URL_API = "http://localhost:3000";
-}
+// if (process.env.NODE_ENV === "development") {
+// console.log(process.env.NODE_ENV);
+// URL_API = "http://localhost:3000";
+// }
+// console.log(URL_API);
 
 export const getPublicExtension = async ({ type, agency, phone, fullName, emergency, emergencyOptionsData }) => {
   const response = await fetch(`${URL_API}/extension/static`, {
@@ -70,6 +71,28 @@ export const getextensionEmregency = (callback) => {
       callback(data);
     });
 };
+
+export const updateExtensionDetail = ({ threadid, name, mobile }, callback) => {
+  fetch(`${URL_API}/updateextensiondetail`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      threadid,
+      name,
+      mobile,
+    }),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      callback({});
+    });
+};
+
 export const sendLog = (data) => {
   // fetch(`${urlapi}/log`, {
   //     method : 'POST',

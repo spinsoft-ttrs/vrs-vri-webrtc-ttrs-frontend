@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setRegisterData, setWebStatus } from "../../actions";
-import { getPublicExtension } from "../../actions/fetchAPI";
+import { getPublicExtension, updateExtensionDetail } from "../../actions/fetchAPI";
 import "./css/style.css";
 import { isIpadOS } from "../../utils/checkDevice";
 
@@ -18,7 +18,8 @@ export default function PublicService({ emergency }) {
   // Production
   // 14120 เบอร์โทร Public Service เข้าล่าม
   // 14131 เบอร์โทร Public Service เข้าเครื่อง MA
-  const callDestination = emergency !== 1 ? 14120 : 14124;
+  const callDestination = emergency !== 1 ? 514120 : 514124;
+  // const callDestination = 9999;
 
   const handleName = (event) => {
     setFullName(event.target.value);
@@ -51,6 +52,14 @@ export default function PublicService({ emergency }) {
       dispatch(setRegisterData("websocket", extensionData.websocket));
       dispatch(setRegisterData("callNumber", callDestination));
       dispatch(setWebStatus("register"));
+      updateExtensionDetail(
+        {
+          name: fullName,
+          mobile: phone,
+          threadid: extensionData.threadid,
+        },
+        () => {}
+      );
     } else {
       handleClassInputInvalid(fullName, "fieldFullName", "is-invalid");
       handleClassInputInvalid(phone, "fieldPhone", "is-invalid");

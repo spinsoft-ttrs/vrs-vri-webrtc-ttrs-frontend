@@ -6,7 +6,6 @@ import { getExtensionFromToken, getextensionEmregency } from "./actions/fetchAPI
 import { AuthProvider } from "oidc-react";
 
 const RouterV3App = (props) => {
-  console.log(props.uuid);
   const oidcConfig = {
     onSignIn: () => {
       console.log(`oidc.user:${process.env.REACT_APP_ISSUER}:${process.env.REACT_APP_CLIENT_ID}`);
@@ -53,7 +52,7 @@ const RouterV3App = (props) => {
           dispatch(setRegisterData("websocket", result.websocket));
           switch (result.type) {
             case "helpdesk":
-              dispatch(setRegisterData("callNumber", 14127));
+              dispatch(setRegisterData("callNumber", 114127));
               localStorage.setItem("callType", "callHelpdesk");
               if (!result.extension.startsWith("0000")) {
                 dispatch(setWebStatus("register"));
@@ -62,7 +61,7 @@ const RouterV3App = (props) => {
               }
               break;
             case "emergency":
-              dispatch(setRegisterData("callNumber", 14121));
+              dispatch(setRegisterData("callNumber", 114121));
               localStorage.setItem("callType", "callEmergency");
               dispatch(setWebStatus("emergency"));
               break;
@@ -73,7 +72,9 @@ const RouterV3App = (props) => {
         }
       });
     } else if (props.uuid === "emergency") {
+      localStorage.setItem("callType", "callEmergency");
       getextensionEmregency((result) => {
+        localStorage.setItem("threadid", result.threadid);
         if (result === "expired") {
           window.location.href = "https://ttrs.or.th";
         }
@@ -82,13 +83,13 @@ const RouterV3App = (props) => {
         // console.log(localStorage.getItem("typeEmergency"))
         switch (localStorage.getItem("typeEmergency")) {
           case "1":
-            dispatch(setRegisterData("callNumber", 1669));
+            dispatch(setRegisterData("callNumber", 11669));
             break;
           case "2":
-            dispatch(setRegisterData("callNumber", 191));
+            dispatch(setRegisterData("callNumber", 1191));
             break;
           case "3":
-            dispatch(setRegisterData("callNumber", 199));
+            dispatch(setRegisterData("callNumber", 1199));
             break;
           default:
             // dispatch(setRegisterData("callNumber", 14121));

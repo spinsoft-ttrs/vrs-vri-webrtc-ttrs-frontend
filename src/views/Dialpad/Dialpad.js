@@ -26,7 +26,7 @@ const Dialpad = () => {
       case "vri":
         localStorage.setItem("callType", "callVRI");
         dispatch(setWebStatus("register"));
-        dispatch(setRegisterData("callNumber", 14120));
+        dispatch(setRegisterData("callNumber", 114120));
         break;
       default:
         handleLogout();

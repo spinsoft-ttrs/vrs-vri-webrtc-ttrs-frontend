@@ -10,6 +10,7 @@
     "async": "^3.2.4",
     "dayjs": "^1.10.6",
     "detect-browser": "^5.2.0",
+    "env-cmd": "^10.1.0",
     "ice-breaker": "^1.1.0",
     "jssip": "3.10.0",
     "linkify-it": "^3.0.2",
@@ -33,7 +34,8 @@
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "env-cmd -f .env.production react-scripts build",
+    "build:develop": "env-cmd -f .env.develop react-scripts build"
   },
   "eslintConfig": {
     "extends": [

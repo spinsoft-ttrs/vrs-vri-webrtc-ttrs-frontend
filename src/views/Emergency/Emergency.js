@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setWebStatus, setRegisterData } from "../../actions";
 import "./css/style.css";
 import public_emer from "./img/Emer-VDO-Web-circle-01.png";
+import { updateExtensionDetail } from "../../actions/fetchAPI";
 const { detect } = require("detect-browser");
 const browser = detect();
 
@@ -33,18 +34,27 @@ const HelpDesk = () => {
     return navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform);
   };
   const handleAccessEmergency = () => {
+    console.log("FULLNAME", fullName);
+    updateExtensionDetail(
+      {
+        name: fullName,
+        mobile: phone,
+        threadid: localStorage.getItem("threadid"),
+      },
+      () => {}
+    );
     localStorage.setItem("fullname", fullName);
     localStorage.setItem("phone", phone);
     localStorage.setItem("typeEmergency", typeEmergency);
     switch (typeEmergency) {
       case "1":
-        dispatch(setRegisterData("callNumber", 1669));
+        dispatch(setRegisterData("callNumber", 11669));
         break;
       case "2":
-        dispatch(setRegisterData("callNumber", 191));
+        dispatch(setRegisterData("callNumber", 1191));
         break;
       case "3":
-        dispatch(setRegisterData("callNumber", 199));
+        dispatch(setRegisterData("callNumber", 1199));
         break;
       default:
         // dispatch(setRegisterData("callNumber", 14121));
