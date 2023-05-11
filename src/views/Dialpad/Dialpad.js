@@ -95,17 +95,18 @@ const Dialpad = () => {
 
   useEffect(() => {
     if (!isIpadOS()) {
-      if (browser.os !== "Android OS" && browser.os !== "iOS") {
-        checkAllowCameraAndMic();
-      } else {
-        if (browser.os === "Android OS") {
-          alert("อุปกรณ์ไม่รองรับการใช้งาน");
-          window.location.href = "https://play.google.com/store/apps/details?id=ttrs.vrs&hl=en_GB&gl=th";
-        } else if (browser.os === "iOS") {
-          alert("อุปกรณ์ไม่รองรับการใช้งาน");
-          window.location.href = "https://apps.apple.com/th/app/ttrs-video/id1467360876?l=th";
-        }
+      // if (browser.os !== "Android OS" && browser.os !== "iOS") {
+      //   checkAllowCameraAndMic();
+      // } else {
+
+      if (browser.os === "Android OS") {
+        alert("อุปกรณ์ไม่รองรับการใช้งาน");
+        window.location.href = "https://play.google.com/store/apps/details?id=ttrs.vrs&hl=en_GB&gl=th";
+      } else if (browser.os === "iOS") {
+        alert("อุปกรณ์ไม่รองรับการใช้งาน");
+        window.location.href = "https://apps.apple.com/th/app/ttrs-video/id1467360876?l=th";
       }
+      // }
     }
     let promise = new Promise(function (resolve, reject) {
       // dispatch(setRegisterData("domain", registerData.doamin));
