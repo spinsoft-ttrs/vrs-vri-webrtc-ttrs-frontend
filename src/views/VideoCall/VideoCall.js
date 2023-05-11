@@ -212,6 +212,12 @@ const VideoCall = () => {
 
   useEffect(() => {
     if (controlVideo.openTerminate) {
+      try {
+        peerconnection.terminate();
+        session.terminate();
+      } catch (e) {
+        console.log(e);
+      }
       if (connection) {
         localVideo.srcObject.getTracks().forEach(function (track) {
           track.stop();
@@ -221,10 +227,7 @@ const VideoCall = () => {
           track.stop();
         });
         remoteVideo.srcObject = null;
-        peerconnection.terminate();
-        try {
-          session.terminate();
-        } catch (e) {}
+
         registerData.userAgent.unregister();
         dispatch(setControlVideo("openTerminate", false));
         try {
