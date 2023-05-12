@@ -102,20 +102,18 @@ const VideoCall = () => {
     remoteVideo = document.getElementById("remote-video");
     dragElement(document.getElementById("img_vdocall"));
     // if(browser.os === "Android OS"){
-    initAndroid();
-    async function initAndroid() {
+    initCamera().then((r) => r);
+    async function initCamera() {
       console.log("initAndroid");
       try {
         if (isFirefox) {
           console.log("isFirefox");
-          constraints.video = {
-            width: 352,
-            height: 352,
-            frameRate: {
-              min: 15,
-              max: 30,
-            },
-          };
+          constraints.video = true;
+
+          // constraints.video = {
+          //   width: 352,
+          //   height: 352,
+          // };
         }
         mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
         localVideo.srcObject = mediaStream;
