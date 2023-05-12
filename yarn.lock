@@ -11784,10 +11784,10 @@ webpack@4.44.2:
     watchpack "^1.7.4"
     webpack-sources "^1.4.1"
 
-webrtc-adapter@8.2.1:
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-8.2.1.tgz#b71a5025c9ab3eaf9b9bd7020b090cf0a3415680"
-  integrity sha512-uZGIyr9FgjNHwEy8dkSV6Dq7wASbaSeSpibhrzFiRf9eSmUsMd4a55ZIfCdaASeIbalGWEQIkcE59Y9VkgqDZw==
+webrtc-adapter@8.2.2:
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/webrtc-adapter/-/webrtc-adapter-8.2.2.tgz#3497a7a57905b2ec0bf804278a775a348952ca16"
+  integrity sha512-jQWwqiAEAFZamWliJo0Q+dIC6ZMJ8BgCFvW/oXWVFby1Nw14dOUfPwZ3lVe4nafDXdTyCUT7xfLt5xXiioXUCQ==
   dependencies:
     sdp "^3.2.0"
 
