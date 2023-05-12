@@ -76,6 +76,10 @@ export default function PublicService({ emergency }) {
   };
   useEffect(() => {
     if (!isIpadOS()) {
+      if (browser.name === "firefox") {
+        alert("เว็บบราวเซอร์ไม่รอบรับกรุณาใช้ Google Chrome");
+        return;
+      }
       if (browser.os === "Android OS") {
         alert("อุปกรณ์ไม่รองรับการใช้งาน");
         window.location.href = "https://play.google.com/store/apps/details?id=ttrs.vrs&hl=en_GB&gl=th";
