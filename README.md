@@ -1,4 +1,4 @@
-ใช้ yarn
+ใช้ yarn แทน npm
 
 `yarn install`
 
