@@ -111,10 +111,6 @@ const VideoCall = () => {
           constraints.video = {
             width: 352,
             height: 352,
-            frameRate: {
-              min: 15,
-              max: 30,
-            },
           };
         }
         mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
