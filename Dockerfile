@@ -4,9 +4,9 @@ COPY package.json package.json
 RUN npm install
 COPY . .
 #Develop
-RUN npm run build:develop
+#RUN npm run build:develop
 #Production
-RUN #npm run build
+RUN npm run build
 FROM nginx:alpine3.17
 COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
