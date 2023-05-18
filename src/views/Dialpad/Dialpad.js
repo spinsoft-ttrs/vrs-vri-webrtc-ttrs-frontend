@@ -16,6 +16,8 @@ const Dialpad = () => {
   const [cameraEnable, setCameraEnable] = useState(true);
 
   const handleStaticCall = (type) => {
+    if (browser.os === "firefox") return;
+
     // if(type !== "logout"){
     // if(cameraEnable){
     switch (type) {

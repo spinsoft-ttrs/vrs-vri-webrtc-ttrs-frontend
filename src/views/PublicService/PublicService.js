@@ -32,6 +32,8 @@ export default function PublicService({ emergency }) {
   };
 
   const handleAccessPublicService = async () => {
+    if (browser.os === "firefox") return;
+
     localStorage.setItem("directlogin", "");
     if (fullName.trim() !== "" && phone.trim() !== "" && agency.trim() !== "") {
       const extensionData = await getPublicExtension({
