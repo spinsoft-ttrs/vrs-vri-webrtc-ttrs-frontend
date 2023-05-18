@@ -34,8 +34,7 @@ const HelpDesk = () => {
     return navigator.maxTouchPoints && navigator.maxTouchPoints > 2 && /MacIntel/.test(navigator.platform);
   };
   const handleAccessEmergency = () => {
-    console.log("HandleAccess Emergency", browser.os);
-    if (browser.os === "firefox") return;
+    if (browser.name === "firefox") return;
     updateExtensionDetail(
       {
         name: fullName,
