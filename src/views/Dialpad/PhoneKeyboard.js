@@ -18,6 +18,8 @@ const PhoneKeyboard = (props) => {
     setCallNumber(current);
   };
   const handleVRSCall = () => {
+    console.log("HandleVRSCall", browser.os);
+
     if (browser.os === "firefox") return;
     localStorage.setItem("callType", "callVRS");
     if (callNumber === "9999") {
