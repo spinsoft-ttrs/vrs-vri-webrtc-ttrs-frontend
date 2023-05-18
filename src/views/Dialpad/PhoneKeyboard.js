@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import { MdKeyboardBackspace } from "react-icons/md";
 import { setWebStatus, setRegisterData } from "../../actions";
 import "./css/style.css";
+const { detect } = require("detect-browser");
+const browser = detect();
 
 const PhoneKeyboard = (props) => {
   const dispatch = useDispatch();
@@ -16,6 +18,7 @@ const PhoneKeyboard = (props) => {
     setCallNumber(current);
   };
   const handleVRSCall = () => {
+    if (browser.os === "firefox") return;
     localStorage.setItem("callType", "callVRS");
     if (callNumber === "9999") {
       dispatch(setRegisterData("callNumber", "9999"));
