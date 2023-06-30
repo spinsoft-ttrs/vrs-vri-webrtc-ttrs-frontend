@@ -45,7 +45,7 @@ const RouterApp = (props) => {
               case "helpdesk":
                 // helpdesk ทั้งแบบไม่ login และปกติ
                 dispatch(setRegisterData("callNumber", 14127));
-                localStorage.setItem("callType", "callHelpdesk");
+                localStorage.setItem("callHelpdesk", "callType");
                 if (!result.extension.startsWith("0000")) {
                   dispatch(setWebStatus("register"));
                 } else {
