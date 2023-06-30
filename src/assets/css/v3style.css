@@ -1,3 +1,12 @@
-.bg {
-  margin: 0px;
+.system-close-layout {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+.system-close-text {
+  text-align: center;
+  font-size: 30px;
 }

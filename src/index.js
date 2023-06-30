@@ -8,15 +8,19 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { VideoCall, ReceivingCall, ChooseConversation, Register, EndCall, Login, Help } from "./views";
 import "./assets/css/style.css";
+import "./assets/css/v3style.css";
+import SystemClosed from "./views/SystemClosed";
 
 const AppRouter = () => (
   <Router>
     <Switch>
-      <Route exact path="/:uuid" component={router} />
-      {/*<Route path="/" component={routerV3Normal} />*/}
-      <Route path="/v3/emergency" component={routerV3Emergency} />
-      <Route path="/v3/normal" component={routerV3Normal} />
-      <Route path="/login" component={LoginApp} />
+      {/*<Route exact path="/:uuid" component={router} />*/}
+      {/*<Route path="/v3/emergency" component={routerV3Emergency} />*/}
+      {/*<Route path="/v3/normal" component={routerV3Normal} />*/}
+      {/*<Route path="/login" component={LoginApp} />*/}
+
+      <Route path="/" component={SystemClosedRouter} />
+      <Route path="/:uuid" component={SystemClosedRouter} />
       <Route path="/endcall" component={EndCall} />
       <Route path="/register" component={Register} />
       <Route path="/videocall" component={VideoCall} />
@@ -27,10 +31,11 @@ const AppRouter = () => (
   </Router>
 );
 
-const router = ({ match }) => <RouterApp uuid={match.params.uuid} />;
-const LoginApp = () => <Login type="login" />;
-const routerV3Normal = () => <RouterV3App uuid="normal" />;
-const routerV3Emergency = () => <RouterV3App uuid="emergency" />;
+const SystemClosedRouter = () => <SystemClosed />;
+// const router = ({ match }) => <RouterApp uuid={match.params.uuid} />;
+// const LoginApp = () => <Login type="login" />;
+// const routerV3Normal = () => <RouterV3App uuid="normal" />;
+// const routerV3Emergency = () => <RouterV3App uuid="emergency" />;
 const store = createStore(allReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(

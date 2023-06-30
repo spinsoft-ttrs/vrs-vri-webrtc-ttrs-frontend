@@ -108,10 +108,6 @@ const RouterV3App = (props) => {
     }
   }, [token, props.uuid, dispatch]);
 
-  return (
-    <div>System is closed</div>
-  )
-
   switch (webStatus) {
     case "public":
       return <PublicService />;
