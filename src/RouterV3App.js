@@ -108,6 +108,10 @@ const RouterV3App = (props) => {
     }
   }, [token, props.uuid, dispatch]);
 
+  return (
+    <div>System is closed</div>
+  )
+
   switch (webStatus) {
     case "public":
       return <PublicService />;
@@ -147,10 +151,6 @@ const RouterV3App = (props) => {
       return <Help />;
     default:
       return <div></div>;
-    // return (
-    //     <AuthProvider {...oidcConfig}>
-    //         <Dialpad/>
-    //     </AuthProvider> )
   }
 };
 export default RouterV3App;
