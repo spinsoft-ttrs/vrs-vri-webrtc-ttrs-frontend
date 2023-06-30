@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e8e9260-85f5-4e93-b798-c8e323ed1949" name="Changes" comment="dev" />
+    <list default="true" id="1e8e9260-85f5-4e93-b798-c8e323ed1949" name="Changes" comment="dev">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-build-push.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/docker-build-push.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/SystemClosed.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/SystemClosed.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
