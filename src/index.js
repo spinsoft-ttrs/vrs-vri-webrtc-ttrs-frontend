@@ -19,7 +19,7 @@ const AppRouter = () => (
       <Route path="/v3/normal" component={routerV3Normal} />
       <Route path="/login" component={LoginApp} />
 
-      {/*<Route path="/" component={SystemClosedRouter} />*/}
+      <Route path="/" component={routerV3Normal} />
       {/*<Route path="/:uuid" component={SystemClosedRouter} />*/}
 
       <Route path="/endcall" component={EndCall} />
