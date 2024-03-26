@@ -1,5 +1,5 @@
 {
-  "name": "webrtc_frontend_new",
+  "name": "vrs-webrtc-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -55,6 +55,6 @@
     "prettier": "2.8.8"
   },
   "volta": {
-    "node": "15.14.0"
+    "node": "16.20.2"
   }
 }

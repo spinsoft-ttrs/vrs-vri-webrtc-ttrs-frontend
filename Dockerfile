@@ -1,4 +1,4 @@
-FROM node:16.20.0-alpine3.17 as build-stage
+FROM node:16.20.1-alpine3.18 as build-stage
 WORKDIR /usr/src/app
 COPY package.json package.json
 RUN npm install
@@ -7,7 +7,7 @@ COPY . .
 #RUN npm run build:develop
 #Production
 RUN npm run build
-FROM nginx:alpine3.17
+FROM nginx:alpine3.18
 COPY --from=build-stage /usr/src/app/build /usr/share/nginx/html
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
