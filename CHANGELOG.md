@@ -5,3 +5,4 @@
 ### Added
 
 - เปิดใช้งานบริการ
+- อัพเดท keycloak support .or.th
