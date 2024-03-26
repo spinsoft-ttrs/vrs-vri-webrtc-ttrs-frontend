@@ -59,16 +59,15 @@ let constraints;
 // }
 
 constraints = {
-  audio: {
-    sampleRate: 16000,
-    sampleSize: 16,
-  },
-  video: {
-    frameRate: { min: 15, max: 15 },
-    width: { min: 352, max: 352 },
-    height: { min: 352, max: 352 },
-  },
+  audio: true,
+  video: true,
 };
+
+// {
+//   frameRate: { min: 15, max: 15 },
+//   width: { min: 352, max: 352 },
+//   height: { min: 240, max: 240 },
+// }
 
 let localVideo, remoteVideo;
 
@@ -115,6 +114,7 @@ const VideoCall = () => {
           //   height: 352,
           // };
         }
+        console.log(constraints);
         mediaStream = await navigator.mediaDevices.getUserMedia(constraints);
         localVideo.srcObject = mediaStream;
         makeCall(mediaStream);
