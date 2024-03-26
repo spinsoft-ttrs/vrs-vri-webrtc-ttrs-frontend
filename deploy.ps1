@@ -1,1 +1,1 @@
-docker build --push -t thspinsoft/ttrs-vrs-webrtc-frontend:v3.0.1 .
+docker build --push -t thspinsoft/ttrs-vrs-webrtc-frontend:v3.3.1 .

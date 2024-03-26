@@ -4,15 +4,12 @@
   "private": true,
   "dependencies": {
     "@jitsi/sdp-interop": "^1.0.4",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
     "async": "^3.2.4",
     "dayjs": "^1.10.6",
     "detect-browser": "^5.2.0",
     "env-cmd": "^10.1.0",
     "ice-breaker": "^1.1.0",
-    "jssip": "3.10.0",
+    "jssip": "3.10.1",
     "linkify-it": "^3.0.2",
     "needle": "^2.9.0",
     "oidc-react": "^1.5.1",
@@ -39,8 +36,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
